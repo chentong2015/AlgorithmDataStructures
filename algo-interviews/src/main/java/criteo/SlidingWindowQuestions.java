@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // 有关Sliding Windows滑动窗口算法的案例运用
-public class SlidingQuestions {
+public class SlidingWindowQuestions {
 
     public static void main(String[] args) {
         int[] nums = {2, 5, 3, 4, 1, 8};
@@ -21,10 +21,11 @@ public class SlidingQuestions {
     // input = 2 5 3 1 8, k = 3
     // output = 3, 3, 4
     //
-    // O(n)   时间基于遍历完所有的数据
+    // O(n)     时间基于遍历完所有数据
     // O(n-k+1) 空间基于会产生多少结果，最糟糕是O(n), 最佳为O(1)
     public static List<Integer> getSlidingAverage(int[] nums, int k) {
         List<Integer> averageList = new ArrayList<>();
+        // For special cases and parameters
         if (nums == null || nums.length < k) {
             return averageList;
         }
@@ -35,7 +36,7 @@ public class SlidingQuestions {
             return averageList;
         }
 
-        // For the average for first k numbers
+        // For the first k numbers average
         int index = 0;
         int sum = 0;
         while (index < k) {
@@ -44,7 +45,7 @@ public class SlidingQuestions {
         }
         averageList.add(sum / k);
 
-        // For rest of numbers
+        // For remaining of the numbers
         while (index < nums.length) {
             sum += nums[index];
             sum -= nums[index - k]; // remove the first num
@@ -80,7 +81,7 @@ public class SlidingQuestions {
 
         while (rightIndex < nums.length) {
             if (maxIndex == rightIndex - k) { // if the max value is the first value
-                maxIndex++; // Move maxIndex to next step, and refresh it
+                maxIndex++;                   // Move maxIndex to next step, and refresh it
                 int tempIndex = maxIndex;
                 while (tempIndex <= rightIndex) {
                     if (nums[maxIndex] < nums[tempIndex]) {
@@ -90,7 +91,7 @@ public class SlidingQuestions {
                 }
             } else {
                 if (nums[maxIndex] < nums[rightIndex]) {
-                    maxIndex = rightIndex;
+                    maxIndex = rightIndex;     // 更新最大值的位置在窗口的右侧
                 }
             }
             maxList.add(nums[maxIndex]);

@@ -24,7 +24,7 @@ import java.util.List;
 
 // TODO. 分析Mapping的核心逻辑 + 分析复杂度不彻底
 // https://leetcode.com/discuss/interview-question/system-design/685338/Microsoft-or-Onsite-or-Design-the-T9-predictive-text-algorithm-and-system
-public class Model9Mapping {
+public class T9ModelMappingQuestion {
 
     public static void main(String[] args) {
         List<String> dict = List.of("sage", "rage", "raid", "hello", "morning", "blabla");
