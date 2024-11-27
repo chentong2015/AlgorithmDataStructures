@@ -2,6 +2,14 @@ package bits;
 
 public class QuestionBits02 {
 
+    public static void main(String[] args) {
+        System.out.println(isDivisibleBy3("0000")); // true
+        System.out.println(isDivisibleBy3("1001")); // true
+        System.out.println(isDivisibleBy3("0011")); // true
+        System.out.println(isDivisibleBy3("1100")); // true
+        System.out.println(isDivisibleBy3("1101")); // false
+    }
+
     // TODO. 被三整除的二进制在bit位值上需要满足特定的条件
     // Divide by 3
     // Given the bit string, check whether it is divisible by 3.
@@ -17,14 +25,6 @@ public class QuestionBits02 {
             multiValue = multiValue * 2;
         }
         return value % 3 == 0;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(isDivisibleBy3("0000")); // true
-        System.out.println(isDivisibleBy3("1001")); // true
-        System.out.println(isDivisibleBy3("0011")); // true
-        System.out.println(isDivisibleBy3("1100")); // true
-        System.out.println(isDivisibleBy3("1101")); // false
     }
 
     // JDK7 Hashmap源码之位运算
