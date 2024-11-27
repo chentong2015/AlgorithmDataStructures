@@ -4,11 +4,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * String字符串问题的解法
- * 1. 使用2个标识符来定位，减少数据的遍历次数
- * 2. 两个标识符的移动速度可能不同，使用不同的策略 !!
- */
 public class BaseArray4 {
 
     // TODO: 判断什么情况下适合给数组排序，选择牺牲掉一定的复杂度 

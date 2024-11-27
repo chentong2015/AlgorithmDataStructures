@@ -56,10 +56,37 @@ public class LearnArray5 {
     }
 
     // TODO: 数组金典案列, 利用数组空间"暂存数据", 使用3轮遍历 !!
+    // First Missing Positive
     // Given an unsorted integer array nums, find the smallest missing positive integer
-    // You must implement an algorithm that runs in O(n) time and uses constant extra space
-    // 3 4 5 1         -> 2  不能使用排序，不能超过O(n)的时间复杂度
+    // You must implement an algorithm that
+    // - Runs in O(n) time
+    // - Uses O(1) constant extra space
+    //
+    // nums = [1,2,0] -> 3
+    // nums = [3,4,-1,1] -> 2
+    // -1 4 3 1
+    // 1 4 3 -1
+    //
+    // nums = [7,8,9,11,12] -> 1 从最小的正数开始考虑
+    //
+    // 利用数组本身来完成坐标的转换
     public int firstMissingPositive(int[] nums) {
+
+        int firstPositive = 1;
+        for (int index=0; index<nums.length; index++) {
+
+        }
+
+
+
+
+        return 1;
+    }
+
+
+
+
+    public int firstMissingPositive1(int[] nums) {
         // 测试理解：1. 使用HashSet<>存储数据，然后从1开始判断缺失位置  O(n), O(n)
         HashSet<Integer> set = new HashSet<>();
         for (int num : nums) set.add(num);

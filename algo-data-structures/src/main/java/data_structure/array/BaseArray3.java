@@ -59,7 +59,7 @@ public class BaseArray3 {
     }
 
     // TODO: 如何转换问题，观察数据的特点
-    //       在什么条件下结果值可能最大 ? 要么有两个最小的值(负数)*最大值，或者直接是数据中最大的3个值的乘积 !!
+    //  在什么条件下结果值可能最大 ? 要么有两个最小的值(负数)*最大值，或者直接是数据中最大的3个值的乘积 !!
     // Maximum Product of Three Numbers
     // Given an integer array nums, find three numbers whose product is maximum and return the maximum product
     // [0, 1, 2, 3]           -> 6

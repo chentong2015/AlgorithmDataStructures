@@ -4,8 +4,6 @@ import java.util.*;
 
 public class BaseArray2 {
 
-
-
     // TODO: 本质上是一个"连续梯度上升"的问题，通过排序将这一个特征显现出来 !!
     //  通过DP + Binary解决连续梯度上升特征的问题 !! Longest Increasing Subsequence
     // Russian Doll Envelopes
