@@ -1,6 +1,6 @@
 package data_structure.tree;
 
-import beans.TreeNode;
+import bean.TreeNode;
 import data_structure.tree.bean.TreeLinkNode;
 
 public class BinaryTrees {

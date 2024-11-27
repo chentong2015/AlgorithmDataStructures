@@ -1,6 +1,6 @@
 package data_structure.map;
 
-import beans.TreeNode;
+import bean.TreeNode;
 
 import java.util.*;
 

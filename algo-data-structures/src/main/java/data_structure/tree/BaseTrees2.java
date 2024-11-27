@@ -1,6 +1,6 @@
 package data_structure.tree;
 
-import beans.TreeNode;
+import bean.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.Queue;

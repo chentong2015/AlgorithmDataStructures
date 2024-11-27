@@ -11,7 +11,7 @@ package datadog;
 //
 // O((n-1)*n) 一共循环n-1次，每次时间复杂度为n
 // O(1)       没有创建空间复杂度
-public class SubstringCounterOk {
+public class SubstringCounterOK {
 
     // abc
     // a b c ab bc

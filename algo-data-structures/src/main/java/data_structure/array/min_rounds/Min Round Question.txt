@@ -1,0 +1,22 @@
+TODO. 直接利用数组并本身来对数据进行统计, 通过index区间统计
+Minimum Rounds to Complete All Tasks
+You are given a 0-indexed integer array tasks, where tasks[i] represents difficulty level.
+In each round, you can complete either 2 or 3 tasks of the same difficulty level.
+Return the minimum rounds required to complete all the tasks,
+or -1 if it is not possible to complete all the tasks.
+
+参数约束条件:
+1 <= tasks.length <= 10^5
+1 <= tasks[i] <= 10^9
+
+测试案例:
+2,2,2,3,3,4,4,4,4,4 => 4
+2,3,3 => -1
+3,3,4 -> -1
+3,3 -> 1
+2 -> -1
+
+计算逻辑:
+- 每次只能完成2个或3个相同level任务，只需统计任务并合理分配
+- 每次优先考虑先执行3个相同level任务，以便将完成次数最小化
+- 当相同level任务剩余的次数不足2个时，无法按照要求完成

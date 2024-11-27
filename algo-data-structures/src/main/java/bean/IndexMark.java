@@ -1,4 +1,4 @@
-package beans;
+package bean;
 
 public enum IndexMark {
     Good,
