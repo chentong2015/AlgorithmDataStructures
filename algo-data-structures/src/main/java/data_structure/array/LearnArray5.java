@@ -69,10 +69,11 @@ public class LearnArray5 {
         // 第一遍调整值的位置，交换移动到index位置
         for (int index=0; index < nums.length; index++) {
             int value = nums[index];
-
-            // int absValue = Math.abs(a[i])
-            // a[absValue - 1] == a[i] ?
             if (value < 1 || value > nums.length || value == index + 1) {
+                continue;
+            }
+            // 如果目标位置满足条件，则无需再交换为止，避免Time Limit Exceeded
+            if (nums[value -1] == value) {
                 continue;
             }
 
