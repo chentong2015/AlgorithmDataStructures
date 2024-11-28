@@ -55,7 +55,7 @@ public class LearnArray5 {
         return maxScore;
     }
 
-    // TODO: 数组金典案列: 数组的Index坐标就是连接的正整数，判断正整数值是否在该在的Index位置
+    // TODO: 数组金典案列: 数组Index坐标就是连接的正整数，判断正整数是否在对应的Index位置
     // First Missing Positive
     // Given an unsorted integer array nums, find the smallest missing positive integer
     // You must implement an algorithm that
@@ -72,14 +72,13 @@ public class LearnArray5 {
             if (value < 1 || value > nums.length || value == index + 1) {
                 continue;
             }
-            // 如果目标位置满足条件，则无需再交换为止，避免Time Limit Exceeded
-            if (nums[value -1] == value) {
+            // 如果目标位置满足条件，则无需再交换过去，避免Time Limit Exceeded
+            int targetPosition = value - 1;
+            if (nums[targetPosition] == value) {
                 continue;
             }
-
-            int position = value - 1;
-            int temp = nums[position];
-            nums[position] = value;
+            int temp = nums[targetPosition];
+            nums[targetPosition] = value;
             nums[index] = temp;
             // Move back forwards of index
             index--;
