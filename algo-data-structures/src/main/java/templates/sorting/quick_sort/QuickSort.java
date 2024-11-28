@@ -1,4 +1,4 @@
-package templates.sorting.quick_sort_select;
+package templates.sorting.quick_sort;
 
 // Quick Sort(分治法)快速排序, 有时是最佳解
 // 时间复杂度 O(nlog(n)) ~ O(n²) 复杂度的推导需要严格的数学公式计算

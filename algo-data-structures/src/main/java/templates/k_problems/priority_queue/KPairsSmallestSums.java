@@ -1,11 +1,11 @@
-package data_structure.queue.priority_queue;
+package templates.k_problems.priority_queue;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 
-// TODO. PriorityQueue金典运用: 对数据的某个特征进行优先级排序，然后取出结果
+// TODO. PriorityQueue金典运用: 对数据某个特征进行优先级排序，然后取出结果
 public class KPairsSmallestSums {
 
     // Find K Pairs with Smallest Sums

@@ -1,4 +1,4 @@
-package templates.sorting.quick_sort_select;
+package templates.searching.quick_select;
 
 import java.security.SecureRandom;
 import java.util.Arrays;
@@ -6,15 +6,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-// Quick Select: 查找数据中的前K个什么特征的数据
-// 1. 统计集合中每个元素出现的频率(hash table)
-// 2. 根据每个元素的频率，进行Quick Sort快速排序，从低频到高频
-// 3. 直到要取的前k的频率和pivot分区位置相等，则它右边的就是前k个最大频率
-// O(n) O(n)
-
 // TODO. 返回的是出现频率大于K的数据
-//  一表存储非重复的离散数据(用于交换位置)
-//  一表存储每个离散数据的重复次数
+// 一表存储非重复的离散数据(用于交换位置)
+// 一表存储每个离散数据的重复次数
 // 1 4 5 2 7 4 1 1 2
 //
 // 1 -> 3
@@ -38,7 +32,7 @@ public class QuickSelect {
     }
 
     private void countNumFrequencies(int[] nums) {
-        mapCounts = new HashMap();
+        mapCounts = new HashMap<>();
         for (int num : nums) {
             int baseCount = mapCounts.getOrDefault(num, 0);
             mapCounts.put(num, baseCount + 1);

@@ -1,4 +1,4 @@
-package templates.search.k_smallest_pair;
+package templates.k_problems.k_smallest_pair;
 
 import java.util.Arrays;
 

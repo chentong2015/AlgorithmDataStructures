@@ -1,4 +1,4 @@
-package data_structure.queue.priority_queue;
+package templates.k_problems.priority_queue;
 
 import java.util.*;
 
@@ -34,7 +34,7 @@ public class TopKFrequentElements {
             }
         }
 
-        // 从队列中取出最后的结果数据
+        // 从队列中取出最后的结果数据: 将Integer拆箱成int数据
         int[] top = new int[k];
         for (int i = k - 1; i >= 0; i--) {
             top[i] = heap.poll();

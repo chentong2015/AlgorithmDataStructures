@@ -1,4 +1,4 @@
-package templates.search.template;
+package templates.searching.template;
 
 import java.util.ArrayList;
 import java.util.List;

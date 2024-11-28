@@ -1,4 +1,4 @@
-package templates.search;
+package templates.searching;
 
 public class LearnBinarySearch1 {
 

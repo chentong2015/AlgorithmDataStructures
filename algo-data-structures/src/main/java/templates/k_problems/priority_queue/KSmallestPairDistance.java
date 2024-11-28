@@ -1,9 +1,11 @@
-package data_structure.queue.priority_queue;
+package templates.k_problems.priority_queue;
 
 public class KSmallestPairDistance {
 
+    // TODO. 对数据的特征(距离)进行优先级排序，最后从Queue中拿出结果
     // Find K-th Smallest Pair Distance
-    // The distance of a pair of integers a and b is defined as the absolute difference between a and b.
+    // The distance of a pair of integers a and b is defined
+    // as the absolute difference between a and b.
     //
     // Given an integer array nums and an integer k, return the kth smallest distance
     // among all the pairs nums[i] and nums[j] where 0 <= i < j < nums.length.

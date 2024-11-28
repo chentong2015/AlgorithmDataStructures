@@ -1,4 +1,4 @@
-package templates.search.template;
+package templates.searching.template;
 
 // Search for an element or condition which requires accessing the current index and
 // its immediate right neighbor's index in the array

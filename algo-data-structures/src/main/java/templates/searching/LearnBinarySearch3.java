@@ -1,4 +1,4 @@
-package templates.search;
+package templates.searching;
 
 // TODO. 二分法的衍生版本: 找到的median并不是最后结果，而是在二分过程中找边界值
 public class LearnBinarySearch3 {

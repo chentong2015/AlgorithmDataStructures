@@ -1,4 +1,4 @@
-package templates.search.k_sum;
+package templates.k_problems.k_sum;
 
 public class KSumProblem {
 
