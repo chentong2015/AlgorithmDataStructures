@@ -6,13 +6,13 @@ import java.util.List;
 public class NextGreaterElement3 {
 
     public static void main(String[] args) {
-        // System.out.println(nextGreaterElement(101)); // 110
-        // System.out.println(nextGreaterElement(12)); // 21
-        // System.out.println(nextGreaterElement(21)); // -1
-        // System.out.println(nextGreaterElement(123)); // 132
-        // System.out.println(nextGreaterElement(1324)); // 1342
-        // System.out.println(nextGreaterElement(53621)); // 56321
-        // System.out.println(nextGreaterElement(54321)); // -1
+        System.out.println(nextGreaterElement(101)); // 110
+        System.out.println(nextGreaterElement(12)); // 21
+        System.out.println(nextGreaterElement(21)); // -1
+        System.out.println(nextGreaterElement(123)); // 132
+        System.out.println(nextGreaterElement(1324)); // 1342
+        System.out.println(nextGreaterElement(53621)); // 56321
+        System.out.println(nextGreaterElement(54321)); // -1
 
         System.out.println(nextGreaterElement(230241)); // 230412, not 230'421'
     }
