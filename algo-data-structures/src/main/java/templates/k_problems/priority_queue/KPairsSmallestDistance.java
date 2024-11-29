@@ -1,6 +1,6 @@
 package templates.k_problems.priority_queue;
 
-public class KSmallestPairDistance {
+public class KPairsSmallestDistance {
 
     // TODO. 对数据的特征(距离)进行优先级排序，最后从Queue中拿出结果
     // Find K-th Smallest Pair Distance

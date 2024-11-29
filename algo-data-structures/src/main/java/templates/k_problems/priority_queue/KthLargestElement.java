@@ -15,6 +15,9 @@ public class KthLargestElement {
     //
     // 1 <= k <= nums.length <= 10^5
     // -10^4 <= nums[i] <= 10^4
+    //
+    // O(k + (n-k)*log(k)) 最差情况下min-deap最小堆每次插入新数据时都需要循环到堆的底部
+    // O(k)                额外存储了k个结果数据
     public int findKthLargest(int[] nums, int k) {
         PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
         for (int index=0; index < k; index++) {
@@ -28,7 +31,7 @@ public class KthLargestElement {
             }
         }
 
-        // 最后优先级队列的Root节点就是结果
+        // 优先级队列的Root节点就是结果(TopK中的最小值)
         return priorityQueue.poll();
     }
 }
