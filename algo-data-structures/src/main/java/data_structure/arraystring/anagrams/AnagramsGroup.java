@@ -1,12 +1,11 @@
-package data_structure.arraystring.anagrams_group;
+package data_structure.arraystring.anagrams;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-// TODO. HashMap<Key,Value> 金典使用场景:
-//  对数据进行分组，处理的单位是一个完整的字符串
-public class GroupAnagramsSolution2 {
+// TODO. HashMap<Key,Value> 金典场景: 对数据进行分组，处理单位是一个完整字符串
+public class AnagramsGroup {
 
     // TODO. Value值和Result结果共用同一个对象引用，避免重复开辟内层空间 !!
     // - 每个str的key值需要计算一次
@@ -34,7 +33,7 @@ public class GroupAnagramsSolution2 {
         return results;
     }
 
-    // TODO. 基于char[] arr数组为字符串生成唯一的键值key
+    // TODO. 基于char[]数组为生成唯一Anagrams Key键值字符串
     private String generateAnagramsKey(String str) {
         char[] arr = new char[26];
         for(char cur: str.toCharArray()) {

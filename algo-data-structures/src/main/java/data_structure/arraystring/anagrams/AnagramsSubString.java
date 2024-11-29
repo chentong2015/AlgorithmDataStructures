@@ -4,9 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 // TODO. 判断是否一个字符串的子字符串包含另一个字符串的全部字符
-//  构建判断标准的数组 + 使用数组来做Substring的截取 ！！
-//  本质上是在处理SubString，处理String的一个片段Windows
-public class SubStringAnagrams2 {
+//  本质上是在处理String的一个片段Windows SubString
+public class AnagramsSubString {
 
     // Find All Anagrams in a String
     // Given two strings s and p, return an array of all the start indices of p's anagrams in s.
@@ -20,19 +19,20 @@ public class SubStringAnagrams2 {
     public List<Integer> findAnagrams(String str, String subStr) {
         List<Integer> result = new ArrayList<>();
 
-        // TODO. 用于比较的字符统计数组只需要计算一次
+        // TODO. 用于比较的字符统计数组只需统计一次
         int[] subStrCounts = new int[26];
         for (char c : subStr.toCharArray()) {
             subStrCounts[c - 'a']++;
         }
 
-        // TODO. 初始化Sliding Window Counts
-        // 统计str字符串开头subStr.length()长度的字符
+        // TODO. 初始化Sliding Windows: 统计str字符串开头subStr.length()的字符
         char[] chars = str.toCharArray();
         int[] strCounts = new int[26];
         for (int index = 0; index < subStr.length(); index++) {
             strCounts[chars[index] - 'a']++;
         }
+
+        // 比较字符串开头的结果
         if (compareCharArray(strCounts, subStrCounts)) {
             result.add(0);
         }
