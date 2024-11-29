@@ -1,0 +1,36 @@
+T9 Mode Typing Input
+input: sequence_of_digits, not empty
+output: list of strings from dictionary (L : 2.10^5)
+
+---------------------
+  1     2     3     -
+        abc   def   -
+  4     5     6     -
+  ghi   jkl   mno   -
+  7     8     9     -
+  pqrs  tuv   wxyz  -
+---------------------
+
+TODO. 算法核心逻辑
+1. 从输入的数字组合到提取出所有的字符串结果，中间需要从数字->字符的转换
+2. 优先对Dict字典进行处理，创建基于数字组合的Key键值，中间需要从字符->数字的转换
+3. 通过HashMap快速定位结果的index，并从dict中取出结果
+
+input: 7243
+output: "sage", "rage", "raid"
+Dict = ["sage", "rage", "raid", "hello", "morning", "bla" ...]
+         7243    7243    7243    43556    6676467   ....
+
+         7243 -> "sage", "rage", "raid",,,
+         43556 -> "hello"
+         6676467 -> "morning"
+         ...
+
+         7243 -> 0, 1, 2,,,
+         43556 -> 3,,,
+         6676467 -> 4,,,
+         ...
+
+TODO. 复杂度的计算
+- 总的时间复杂度基于Dict中的所有char字符都需要遍历处理
+- 总的空间复杂度基于存储每一个char映射的digit结果 + Map键值的Index存储
