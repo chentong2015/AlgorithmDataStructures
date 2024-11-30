@@ -17,6 +17,7 @@ public class DfsNumberIslands {
         int count = 0;
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[0].length; j++) {
+                // 只要有1出现便进行count的统计
                 if (grid[i][j] == '1') {
                     searchIslandDFS(grid, i, j);
                     count++;
@@ -26,8 +27,8 @@ public class DfsNumberIslands {
         return count;
     }
 
-    // 从一个点开始展开遍历完一个岛屿后，累加统计
     private void searchIslandDFS(char[][] grid, int i, int j) {
+        // 超出边界条件的index直接忽略
         if (i < 0 || j < 0 || i >= grid.length || j >= grid[0].length) {
             return;
         }
@@ -39,7 +40,7 @@ public class DfsNumberIslands {
         // 修改二维数组的元素值来避免DFS无限循环
         grid[i][j] = '0';
 
-        // 从一个点延申到四个不同的方向进行Deap Search
+        // Deap Search 从一个点延伸四个方向的搜索
         searchIslandDFS(grid, i + 1, j);
         searchIslandDFS(grid, i - 1, j);
         searchIslandDFS(grid, i, j + 1);
