@@ -70,14 +70,17 @@ public class LearnArray5 {
             if (value < 1 || value > nums.length || value == index + 1) {
                 continue;
             }
+
             // 如果目标位置满足条件，则无需再交换过去，避免Time Limit Exceeded
             int targetPosition = value - 1;
             if (nums[targetPosition] == value) {
                 continue;
             }
+            // 执行数据的交换
             int temp = nums[targetPosition];
             nums[targetPosition] = value;
             nums[index] = temp;
+
             // Move back forwards of index
             index--;
         }
