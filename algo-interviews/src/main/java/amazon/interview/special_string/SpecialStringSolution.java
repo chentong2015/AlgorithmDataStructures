@@ -1,6 +1,7 @@
 package amazon.interview.special_string;
 
 // TODO. 必须先找到能够升级的position位置 ?
+// https://leetcode.com/discuss/interview-question/5700189/Amazon-Online-Assessment/
 public class SpecialStringSolution {
 
     // a  b  b  d
