@@ -1,4 +1,4 @@
-package amazon.question;
+package amazon.interview.num_to_english;
 
 public class NumWordsConversion {
 
@@ -24,9 +24,7 @@ public class NumWordsConversion {
         if (num < 20) {
             result.append(belowTwenty[num]);
         } else if (num < 100) {
-            result.append(tens[num / 10])
-                    .append(" ")
-                    .append(belowTwenty[num % 10]);
+            result.append(tens[num / 10]).append(" ").append(belowTwenty[num % 10]);
         } else if (num < 1000) {
             result.append(helper(num / 100))
                     .append(" Hundred ")

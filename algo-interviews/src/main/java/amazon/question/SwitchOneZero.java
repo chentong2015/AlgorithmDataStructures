@@ -1,4 +1,4 @@
-package amazon;
+package amazon.question;
 
 import java.util.Arrays;
 

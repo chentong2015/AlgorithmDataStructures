@@ -10,3 +10,7 @@ Live Coding面试步骤
 - Dev过程解释逻辑
 - Test测试验证代码
 - Algo分析复杂度: 判断最糟糕和最优可能
+
+Hackerrank 在线代码测试
+- 可以使用SOUT来进行Debug代码
+- 对于异常的Test Case, 一定要检查输入和输出

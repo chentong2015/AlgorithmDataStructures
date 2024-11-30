@@ -1,7 +1,8 @@
-package amazon;
+package amazon.question;
 
 // Find the password strength.
-// For each substring of the password which contains at least one vowel and one consonant, its strength goes up by 1.
+// For each substring of the password which contains at least one vowel and one consonant,
+// its strength goes up by 1.
 // vowels={'a', 'e', 'i', 'o', 'u'}, and rest of letters are all consonant.
 // thisisbeautiful -> this, is, be, aut, if, ul -> 6
 // hackerrank -> hack, er, rank -> 3
