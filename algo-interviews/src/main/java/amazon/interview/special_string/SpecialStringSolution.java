@@ -34,10 +34,12 @@ public class SpecialStringSolution {
         for(int index = 0; index < nextCharacter.position; index++) {
             stringBuilder.append(s.charAt(index));
         }
+
         char oldChar = s.charAt(nextCharacter.position);
         char newChar = (char) (oldChar + nextCharacter.offset);
         stringBuilder.append(newChar);
-        appendExtraAB(stringBuilder, nextCharacter.position, s.length());
+
+        appendEndingAB(stringBuilder, nextCharacter.position, s.length());
         return stringBuilder.toString();
     }
 
@@ -67,7 +69,7 @@ public class SpecialStringSolution {
         return new NextCharacter(-1, 0);
     }
 
-    private static void appendExtraAB(StringBuilder stringBuilder, int start, int end) {
+    private static void appendEndingAB(StringBuilder stringBuilder, int start, int end) {
         boolean shouldAddA = true;
         for (int right = start + 1; right < end; right++) {
             if (shouldAddA) {
