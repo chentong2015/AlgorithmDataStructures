@@ -42,11 +42,6 @@ public class RemoveKDigits {
         if (index == length) {
             return "0";
         }
-
-        // Params:
-        // value – Array that is the source of characters
-        // offset – The initial offset
-        // count – The length 最后一个参数是截取的长度
         return new String(stack, index, length-index);
     }
 }
