@@ -1,34 +1,82 @@
 package amazon.interview.special_string;
 
-// TODO. 必须先找到能够升级的position位置 ?
 // https://leetcode.com/discuss/interview-question/5700189/Amazon-Online-Assessment/
 public class SpecialStringSolution {
 
-    // a  b  b  d
-    //
-    // a  b  c  a/b/d   -->  第一个出现的将是结果
-    // a  b  d  a
-    public static String getSpecialString(String s) {
-        // Check for one character
+    // TODO. 计算下一个特殊字符串的核心信息: 移动的位置 + 字符升级的偏移量
+    static class NextCharacter {
+        public int position;
+        public int offset;
 
-        StringBuilder stringBuilder = new StringBuilder();
-        char[] charArray = s.toCharArray();
-        stringBuilder.append(charArray[0]);
-
-        int index = 1;
-        while (index < charArray.length) {
-            // ...
-            index++;
+        public NextCharacter(int position, int offset) {
+            this.position = position;
+            this.offset = offset;
         }
+    }
+
+    public static String getSpecialString(String s) {
+        // Find the end position to start getting Next Char
+        int lastPosition = s.length() - 1;
+        for(int index = 1; index < s.length(); index++) {
+            if (s.charAt(index) == s.charAt(index-1)) {
+                lastPosition = index;
+                break;
+            }
+        }
+
+        NextCharacter nextCharacter = findUpgradeNextCharacter(s, lastPosition);
+        if (nextCharacter.position == -1) {
+            return "-1";
+        }
+
+        // Build the next special string: beginning + upgrade char + ending AB
+        StringBuilder stringBuilder = new StringBuilder();
+        for(int index = 0; index < nextCharacter.position; index++) {
+            stringBuilder.append(s.charAt(index));
+        }
+        char oldChar = s.charAt(nextCharacter.position);
+        char newChar = (char) (oldChar + nextCharacter.offset);
+        stringBuilder.append(newChar);
+        appendExtraAB(stringBuilder, nextCharacter.position, s.length());
         return stringBuilder.toString();
     }
 
-    // TODO. 可以通过Stack来递归查找后续能够升级的位置
-    private static int findUpgradePosition(char[] charArray) {
-        return 0;
+    // TODO. 从后往前迭代: 找到第一个能够升级的位置, 如果位置Char已经为‘z'则不能升级
+    private static NextCharacter findUpgradeNextCharacter(String s, int lastPosition) {
+        int index = lastPosition;
+        while (index >= 0) {
+            if (s.charAt(index) == 'z') {
+                index--; // 当前位置的char无法升级，则往前移动一位
+                continue;
+            }
+            if (index == 0) {
+                return new NextCharacter(index, 1);
+            }
+
+            int offset = 1;
+            char nextChar = (char) (s.charAt(index) + offset);
+            if (nextChar == s.charAt(index -1)) {
+                if (nextChar == 'z') {
+                    index--; // 当前位置的char无法升级，则往前移动一位
+                    continue;
+                }
+                offset++;
+            }
+            return new NextCharacter(index, offset);
+        }
+        return new NextCharacter(-1, 0);
     }
 
-    private static String buildLastSubString() {
-        return "";
+    private static void appendExtraAB(StringBuilder stringBuilder, int start, int end) {
+        boolean shouldAddA = true;
+        for (int right = start + 1; right < end; right++) {
+            if (shouldAddA) {
+                stringBuilder.append('a');
+                shouldAddA = false;
+            } else {
+                stringBuilder.append('b');
+                shouldAddA = true;
+            }
+        }
     }
 }

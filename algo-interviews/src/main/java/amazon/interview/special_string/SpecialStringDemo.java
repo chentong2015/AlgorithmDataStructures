@@ -1,22 +1,10 @@
 package amazon.interview.special_string;
 
-public class SpecialStringGenerator {
+// 生成下一个特殊字符串
+// - 特殊字符串中不能包含两个连续的char是相同的
+// - 返回一个字符串能够生成的最小的(字符逻辑上)下一个特殊字符
+public class SpecialStringDemo {
 
-    // xyzxyx -> xyzxyy -> xyzxyz 最后一个字符升级多次
-    // xyzxzy -> xyzxzz -> xyzyab 最有一个字符无法升级，则往前找到能够升级的字符位置
-    public static void main(String[] args) {
-        System.out.println(getSpecialString("xyzxyx"));
-    }
-
-    // 生成下一个特殊字符串
-    // - 特殊字符串中不能包含两个连续的char是相同的
-    // - 返回一个字符串能够生成的最小的(字符逻辑上)下一个特殊字符
-    //
-    // a  b  b  d
-    //
-    // a  b  c  a/b/d   -->  第一个出现的将是结果
-    // a  b  d  a       -->  结果中不能出现相邻重复char
-    // .....
     public static String getSpecialString(String s) {
         if (s.length() == 1) {
             if (s == "z") {
@@ -51,10 +39,15 @@ public class SpecialStringGenerator {
             if (charArray[index -1] == 'z') {
                 return "-1";
             } else {
-                // TODO. 这里最后一个字符的升级必须不能和倒数第二个字符相同
-                char nextChar = (char) (charArray[index - 1] + 1);
                 stringBuilder.deleteCharAt(stringBuilder.length() - 1);
 
+                // TODO. 最后一个字符升级时必须考虑和前一个字符的冲突
+                char nextChar = (char) (charArray[index - 1] + 1);
+                if (nextChar == charArray[index - 2]) {
+                    while (nextChar != 'z' ) {
+                        nextChar = (char) (nextChar + 1);
+                    }
+                }
                 stringBuilder.append(nextChar);
                 return stringBuilder.toString();
             }
