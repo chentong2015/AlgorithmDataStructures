@@ -47,8 +47,9 @@ public class SpecialStringSolution {
     private static NextCharacter findUpgradeNextCharacter(String s, int lastPosition) {
         int index = lastPosition;
         while (index >= 0) {
+            // 当前位置的char无法升级，则往前移动一位
             if (s.charAt(index) == 'z') {
-                index--; // 当前位置的char无法升级，则往前移动一位
+                index--;
                 continue;
             }
             if (index == 0) {
@@ -58,12 +59,14 @@ public class SpecialStringSolution {
             int offset = 1;
             char nextChar = (char) (s.charAt(index) + offset);
             if (nextChar == s.charAt(index -1)) {
+                // 当前位置的char无法升级，则往前移动一位
                 if (nextChar == 'z') {
-                    index--; // 当前位置的char无法升级，则往前移动一位
+                    index--;
                     continue;
                 }
                 offset++;
             }
+            // 在指定位置按照offset来进行升级
             return new NextCharacter(index, offset);
         }
         return new NextCharacter(-1, 0);

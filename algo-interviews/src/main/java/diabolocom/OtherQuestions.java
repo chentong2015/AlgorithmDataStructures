@@ -4,7 +4,7 @@ import java.util.*;
 
 public class OtherQuestions {
 
-    // TODO. 最后的结果=累计所有list2的值 + 两个列表差值最大的前k个数
+    // TODO. 结果 = 累计所有list2的值 + 两个列表差值最大的前k个数
     //  不需要将简单算法的问题复杂化，考虑“从列表中取k个元素”会增加题目难度
     // Task Completion
     // 如何从两个序列中取出指定数量的值，使得最后的和最大
