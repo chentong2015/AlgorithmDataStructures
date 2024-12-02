@@ -1,4 +1,4 @@
-package data_structure.stack.remove_k_digits;
+package data_structure.stack.remove_Kdigits;
 
 public class RemoveKDigits {
 
