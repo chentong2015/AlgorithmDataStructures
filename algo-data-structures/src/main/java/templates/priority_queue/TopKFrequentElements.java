@@ -1,4 +1,4 @@
-package templates.k_problems.priority_queue;
+package templates.priority_queue;
 
 import java.util.*;
 
@@ -23,11 +23,9 @@ public class TopKFrequentElements {
             results.put(num, baseCount + 1);
         }
 
-        // 根据Hashmap中统计的频率进行排序
+        // TODO. 根据Hashmap统计的频率进行排序，只需要在队列中存储k个结果，多的数据会降低队列复杂度
         Queue<Integer> heap = new PriorityQueue<>(Comparator.comparingInt(results::get));
-        for (int n : results.keySet()) {  // O(nlog(k))
-            // 插入新的数据，如果队列中超过k个结果数据，则移除频率低的数据
-            // 通过减少队列中的元素来降低优先队列排序的时间
+        for (int n : results.keySet()) {
             heap.add(n);
             if (heap.size() > k) {
                 heap.poll();

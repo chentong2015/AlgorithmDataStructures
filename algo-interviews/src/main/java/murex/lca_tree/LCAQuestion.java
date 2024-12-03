@@ -1,4 +1,4 @@
-package murex;
+package murex.lca_tree;
 
 
 import murex.model.TreeNode;

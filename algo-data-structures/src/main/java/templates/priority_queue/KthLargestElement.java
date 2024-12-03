@@ -1,4 +1,4 @@
-package templates.k_problems.priority_queue;
+package templates.priority_queue;
 
 import java.util.PriorityQueue;
 
