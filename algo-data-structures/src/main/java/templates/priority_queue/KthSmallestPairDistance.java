@@ -2,7 +2,7 @@ package templates.priority_queue;
 
 import java.util.Arrays;
 
-public class KSmallestPairDistance {
+public class KthSmallestPairDistance {
 
     // TODO: 对数据差值的在距离进行二分法，并且在二分法结束之后再返回结果
     // Find K-th Smallest Pair Distance

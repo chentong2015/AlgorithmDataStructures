@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 // TODO. PriorityQueue金典运用: 对数据某个特征进行优先级排序，然后取出结果
-public class KPairsSmallestSums {
+public class TopKPairsSmallestSums {
 
     // Find K Pairs with Smallest Sums
     // Given two integer arrays nums1 and nums2 sorted in non-decreasing order and an integer k.
