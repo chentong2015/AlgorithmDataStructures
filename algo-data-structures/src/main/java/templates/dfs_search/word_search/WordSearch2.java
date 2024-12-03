@@ -1,4 +1,4 @@
-package templates.dfs.word_search;
+package templates.dfs_search.word_search;
 
 import data_structure.tree.prefix_tree.model.TrieNodeWithWord;
 

@@ -1,4 +1,4 @@
-package templates.dfs.work_ladder;
+package templates.dfs_search.work_ladder;
 
 import java.util.*;
 

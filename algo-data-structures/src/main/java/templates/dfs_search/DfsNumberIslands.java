@@ -1,4 +1,4 @@
-package templates.dfs;
+package templates.dfs_search;
 
 public class DfsNumberIslands {
 

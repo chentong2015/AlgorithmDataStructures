@@ -1,4 +1,4 @@
-package templates.bfs;
+package templates.bfs_search;
 
 import java.util.ArrayDeque;
 import java.util.HashSet;

@@ -1,4 +1,4 @@
-package templates.k_problems.k_smallest_pair;
+package templates.k_problems.priority_queue;
 
 import java.util.Arrays;
 
