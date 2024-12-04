@@ -5,7 +5,7 @@ import java.util.Arrays;
 // Merge Sort(Divide and Conquer) 归并排序, 有时是最佳解
 // O(nlog(n)) 时间复杂度看成是log(n)层高度 * 每一层merge的时间复杂度O(n)
 // O(n)       空间复杂度来自于每一层排序时的sublist, 最大情况时O(n)的临时存储空间
-public class MergeSort {
+public class MergeSorting {
 
     // Top-Down 自顶向下(通过递归来实现)
     // 1  5  3  2  8  7  6  4
@@ -63,7 +63,9 @@ public class MergeSort {
         int length = nums.length;
         counts = new int[length];
         indexes = new int[length];
-        for (int i = 0; i < length; i++) indexes[i] = i;
+        for (int i = 0; i < length; i++) {
+            indexes[i] = i;
+        }
         mergesort(nums, 0, length - 1);
         return counts;
     }
@@ -107,6 +109,7 @@ public class MergeSort {
         }
     }
 
+
     // 使用自定义类型Pair，记录index-> value的对应关系
     public int[] countSmaller2(int[] nums) {
         NumPair[] arr = new NumPair[nums.length];
@@ -119,10 +122,13 @@ public class MergeSort {
     }
 
     private NumPair[] mergeSort(NumPair[] arr, int[] smaller) {
-        if (arr.length <= 1) return arr;
+        if (arr.length <= 1) {
+            return arr;
+        }
         int pivot = arr.length / 2;
         NumPair[] left = mergeSort(Arrays.copyOfRange(arr, 0, pivot), smaller);
         NumPair[] right = mergeSort(Arrays.copyOfRange(arr, pivot, arr.length), smaller);
+
         for (int i = 0, j = 0; i < left.length || j < right.length; ) {
             if (i < left.length && j < right.length && left[i].val > right[j].val) {
                 arr[i + j] = left[i];
@@ -134,5 +140,16 @@ public class MergeSort {
             }
         }
         return arr;
+    }
+
+    class NumPair {
+
+        public int index;
+        public int val;
+
+        public NumPair(int index, int val) {
+            this.index = index;
+            this.val = val;
+        }
     }
 }

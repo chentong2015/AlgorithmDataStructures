@@ -1,9 +1,9 @@
-package templates.sorting.counting_sort;
+package templates.sorting;
 
-// Counting Sort 计数排序：稳定的线性时间排序算法
+// TODO. Counting Sort 计数排序：稳定的线性时间排序算法
 // O(n+k) 当输入的元素是n个0到k之间的整数时
 // O(n+k) 需要额外的统计元素频率的数组
-public class CountingSort {
+public class CountSorting {
 
     // TODO: 计数排序是用来排序0到100之间的数字的最好的算法
     // 10个年龄不同的人，统计出有8个人的年龄比A小，那A的年龄就排在第9位

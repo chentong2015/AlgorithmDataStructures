@@ -1,13 +1,14 @@
-package templates.sorting.bucket_sort;
+package templates.sorting;
 
 import java.util.ArrayList;
 import java.util.List;
 
-// TODO. Bucket Sort 将大量的数据划分到不同的桶中，将桶联系在一起组成从小到大的顺序
+// TODO. Bucket Sort
+//  将大量的数据划分到不同的桶中，将桶联系在一起组成从小到大的顺序
 // 桶排序涉及创建一个数组(桶)，其中的元素表示覆盖要排序的数字范围的桶
 // 想象一下尝试对一副纸牌进行排序: 只需浏览一遍这副牌，就能将其完全分类到13个“桶”中，每个桶对应一个值
 // 然后遍历各个存储桶并执行另一个较小的排序，然后再将整个甲板连接在一起
-public class BucketSortQuestion {
+public class BucketSorting {
 
     // Maximum Gap
     // Given an integer array nums, return the maximum difference
@@ -49,8 +50,7 @@ public class BucketSortQuestion {
             if (b.isEmpty()) {
                 continue;
             }
-            int previousHigh = currentHigh > 0 ? currentHigh
-                    : b.get(0), currentLow = b.get(0);
+            int previousHigh = currentHigh > 0 ? currentHigh : b.get(0), currentLow = b.get(0);
             for (int n : b) {
                 currentHigh = Math.max(currentHigh, n);
                 currentLow = Math.min(currentLow, n);
