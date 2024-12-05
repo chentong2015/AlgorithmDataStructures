@@ -2,6 +2,7 @@ package data_structure.list.arraylist;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 // ArrayList 列表
@@ -13,8 +14,13 @@ public class BaseArrayList {
     // 数组和list列表之间的相互转换
     // Arrays.asList(array) <-> list.toArray()
     private void testConvertArrayAndList() {
+        // TODO. List.of()构建的列表是不可变的List
+        List<Integer> needs = List.of(2,3);
+
+        // TODO. 创建初始化定长的List列表
         Integer[] nums = {1, 2, 3};
         List<Integer> list = new ArrayList<>(Arrays.asList(nums));
+        List<Integer> result = new ArrayList<>(Collections.nCopies(10, 0));
 
         List<String> myList = new ArrayList<>();
         String[] myArray = new String[myList.size()];
@@ -22,9 +28,6 @@ public class BaseArrayList {
         myArray = myList.toArray(myArray);
         // .toArray() 必须提供强制类型转换
         myArray = (String[]) myList.toArray();
-
-        // TODO. List.of()构建的列表是不可变的List
-        List<Integer> needs = List.of(2,3);
     }
 
     // TODO. List列表可以指定index位置进行插入，并且通过位置进行查询数据

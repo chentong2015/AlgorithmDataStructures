@@ -5,7 +5,14 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class LearnArrayList1 {
+public class LearnArrayList {
+
+    public static void main(String[] args) {
+        Integer[] items = {0, 0, 1, 1, 1, 1, 2, 6, 7, 20};
+        List<Integer> excludedNumbers = new ArrayList<>(Arrays.asList(items));
+        List<Integer> result = buildInternalNumbers(excludedNumbers, 10);
+        System.out.println(result.size());
+    }
 
     // TODO. 保存区间的时候没有必要存储remaining数据的所用中间值
     // Build Interval Sections
@@ -40,12 +47,5 @@ public class LearnArrayList1 {
             }
         }
         return remainingNums;
-    }
-
-    public static void main(String[] args) {
-        Integer[] items = {0, 0, 1, 1, 1, 1, 2, 6, 7, 20};
-        List<Integer> excludedNumbers = new ArrayList<>(Arrays.asList(items));
-        List<Integer> result = buildInternalNumbers(excludedNumbers, 10);
-        System.out.println(result.size());
     }
 }
