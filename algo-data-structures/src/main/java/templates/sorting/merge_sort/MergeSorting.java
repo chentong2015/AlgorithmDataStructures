@@ -6,21 +6,21 @@ public class MergeSorting {
 
     public void mergeSort(int[] input) {
         if (input.length > 1) {
-            int pivot = input.length / 2;
-            int[] leftList = Arrays.copyOfRange(input, 0, pivot);
-            int[] rightList =Arrays.copyOfRange(input, pivot, input.length);
+            int middle = input.length / 2;
+            int[] leftList = Arrays.copyOfRange(input, 0, middle);
+            int[] rightList =Arrays.copyOfRange(input, middle, input.length);
 
             // 对左右两侧的数组进行归并排序
             mergeSort(leftList);
             mergeSort(rightList);
 
-            // 最后将归并排序后的有序数据进行合并
-            merge(input, leftList, rightList);
+            // 在合并有序数组时进行排序和位置移动
+            mergeSortedArray(input, leftList, rightList);
         }
     }
 
     // TODO: 有序数组合并的"标准解法"，三个index坐标移动
-    public void merge(int[] result, int[] left, int[] right) {
+    public void mergeSortedArray(int[] result, int[] left, int[] right) {
         int leftIndex = 0;
         int rightIndex = 0;
         int resultIndex = 0;
