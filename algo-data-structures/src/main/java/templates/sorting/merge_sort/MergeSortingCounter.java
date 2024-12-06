@@ -39,20 +39,20 @@ public class MergeSortingCounter {
     }
 
     private void merge(int[] nums, int[] indices, List<Integer> result, int left, int mid, int right) {
-        int[] temp = new int[right - left + 1];
         int[] tempIndices = new int[right - left + 1];
-        int i = left, j = mid + 1, k = 0, count = 0;
+        int i = left;
+        int j = mid + 1;
+        int k = 0;
+        int count = 0;
 
         // Merging two sorted halves and counting smaller elements
         while (i <= mid && j <= right) {
             if (nums[indices[i]] <= nums[indices[j]]) {
                 result.set(indices[i], result.get(indices[i]) + count);
-                temp[k] = indices[i];
                 tempIndices[k] = indices[i];
                 i++;
             } else {
                 count++;
-                temp[k] = indices[j];
                 tempIndices[k] = indices[j];
                 j++;
             }
@@ -62,7 +62,6 @@ public class MergeSortingCounter {
         // Copy remaining elements from left half
         while (i <= mid) {
             result.set(indices[i], result.get(indices[i]) + count);
-            temp[k] = indices[i];
             tempIndices[k] = indices[i];
             i++;
             k++;
@@ -70,7 +69,6 @@ public class MergeSortingCounter {
 
         // Copy remaining elements from right half
         while (j <= right) {
-            temp[k] = indices[j];
             tempIndices[k] = indices[j];
             j++;
             k++;
