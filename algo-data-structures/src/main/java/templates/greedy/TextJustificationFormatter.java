@@ -38,6 +38,7 @@ public class TextJustificationFormatter {
         }
     }
 
+    // TODO. 算法使用的leftSpaces空间复杂度可以优化
     public List<String> fullJustify(String[] words, int maxWidth) {
         List<String> resultLines = new ArrayList<>();
         int[] leftSpaces = new int[words.length];
