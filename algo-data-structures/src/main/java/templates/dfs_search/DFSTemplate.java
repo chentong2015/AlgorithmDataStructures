@@ -1,4 +1,4 @@
-package templates.dfs_search.template;
+package templates.dfs_search;
 
 import org.w3c.dom.Node;
 

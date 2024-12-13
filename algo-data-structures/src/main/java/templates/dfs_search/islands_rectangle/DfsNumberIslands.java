@@ -1,18 +1,19 @@
-package templates.dfs_search;
+package templates.dfs_search.islands_rectangle;
 
+// TODO. DFS 深度优先遍历金典题目
+// Number of Islands
+// Input: grid = [
+//  ["1","1","0","0","0"],
+//  ["1","1","0","0","0"],
+//  ["0","0","1","0","0"],
+//  ["0","0","0","1","1"]
+// ]
+// Output: 3
+//
+// O(n*m) 内层DFSMarking递归算法最多更新所有的cell一次
+// O(1)   空间复杂度降到最低
 public class DfsNumberIslands {
 
-    // Number of Islands
-    // Input: grid = [
-    //  ["1","1","0","0","0"],
-    //  ["1","1","0","0","0"],
-    //  ["0","0","1","0","0"],
-    //  ["0","0","0","1","1"]
-    // ]
-    // Output: 3
-    //
-    // O(n*m) 内层DFSMarking递归算法最多更新所有的cell一次
-    // O(1)   空间复杂度降到最低
     public int numIslands(char[][] grid) {
         int count = 0;
         for (int i = 0; i < grid.length; i++) {

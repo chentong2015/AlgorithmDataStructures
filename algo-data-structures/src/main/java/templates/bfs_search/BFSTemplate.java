@@ -1,4 +1,4 @@
-package templates.bfs_search.template;
+package templates.bfs_search;
 
 import org.w3c.dom.Node;
 

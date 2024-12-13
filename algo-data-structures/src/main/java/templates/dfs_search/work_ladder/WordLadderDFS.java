@@ -35,7 +35,7 @@ public class WordLadderDFS {
         return minLength == Integer.MAX_VALUE ? 0: minLength;
     }
 
-    // 每一层的时间复杂度: 剩余的str数目 * str的字符数目
+    // 每一层时间复杂度: 剩余的str数目 * str的字符数目
     private void backtracking(List<String> wordList, int[] visited, int steps, int visitedIndex, String endWord) {
         String visitedString = wordList.get(visitedIndex);
         if (Objects.equals(visitedString, endWord)) {
