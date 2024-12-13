@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class QuestionRandom {
+public class RandomQuestion {
 
     // Random Pick Index
     // Given an integer array nums with possible duplicates, 
@@ -27,7 +27,7 @@ public class QuestionRandom {
     private Map<Integer, Integer> countNums;
 
     // 需要避免增加额外的数据存储和统计 !!
-    public QuestionRandom(int[] nums) {
+    public RandomQuestion(int[] nums) {
         this.nums = nums;
         countNums = new HashMap<>();
         for (int index = 0; index < nums.length; index++) {
