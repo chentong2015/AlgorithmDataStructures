@@ -1,4 +1,4 @@
-package ge;
+package random;
 
 import java.util.List;
 import java.util.Random;

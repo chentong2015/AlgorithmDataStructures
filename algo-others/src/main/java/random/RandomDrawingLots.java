@@ -3,15 +3,16 @@ package random;
 import java.security.SecureRandom;
 import java.util.*;
 
-// Random drawing lots
+// Random Drawing Lots
 // 关于随机抽签匹配选择的问题: 存在平衡计算的问题
 // 1. 数据中每个Item随机抽到一个目标Item
 // 2. 所有Item都被抽取到，并且没有冲突
 // 3. 两个Item不能互为对方的目标
-public class RandomDrawingQuestion {
+public class RandomDrawingLots {
 
+    // TODO. 正确的做法是随机打乱一组数据，然后将相邻Item进行匹配(理想情况)
     public static void main(String[] args) {
-        String[] items = {"chen", "ting", "victor", "hao" }; // "test", "case"
+        String[] items = {"chen", "ting", "victor", "hao", "test", "case"};
         Map<String, String> result = randomDrawing(items);
 
         for (Map.Entry<String, String> entry: result.entrySet()) {
