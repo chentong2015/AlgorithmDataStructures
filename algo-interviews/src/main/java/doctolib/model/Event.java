@@ -5,8 +5,10 @@ import java.time.LocalDateTime;
 public class Event {
 
     private int id;
+
     // The type of this event
     private Kind kind;
+
     // timestamps: datetime 就是一个时间戳
     // startAt: 起始时刻的时间戳
     // endAt: 结束时刻的时间戳
