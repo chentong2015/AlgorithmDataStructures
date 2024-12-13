@@ -1,4 +1,4 @@
-package templates.dfs_search.islands_rectangle;
+package templates.dfs_search;
 
 // TODO. DFS 深度优先遍历金典题目
 // Number of Islands
