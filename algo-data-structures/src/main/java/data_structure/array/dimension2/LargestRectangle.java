@@ -22,8 +22,8 @@ public class LargestRectangle {
                 {1,0,1,1,1},
                 {1,1,0,1,0},
                 {0,1,1,0,1}};
-        System.out.println(getLengthDown(matrix, 0, 2));
-        System.out.println(getLengthDown(matrix, 1, 2));
+        System.out.println(getHeightDown(matrix, 0, 2));
+        System.out.println(getHeightDown(matrix, 1, 2));
         System.out.println(findLargestRectangle(matrix));
     }
 
@@ -31,15 +31,14 @@ public class LargestRectangle {
         int maxRectangle = 0;
         for (int i=0; i < matrix.length; i++) {
             for (int j=0; j < matrix[0].length; j++) {
-
-                // 计算从当前坐标位置点出发，能够形成的最大长方形的面积
                 int col = j;
-                int maxDeepBefore = matrix.length + 1;
+                int minHeightBefore = matrix.length + 1;
                 while (col < matrix[0].length && matrix[i][col] == 1) {
-                    int currentDeep = getLengthDown(matrix, i, col);
-                    maxDeepBefore = Math.min(maxDeepBefore, currentDeep);
+                    int currentHeight = getHeightDown(matrix, i, col);
+                    minHeightBefore = Math.min(minHeightBefore, currentHeight);
 
-                    int rectangle = maxDeepBefore * (col - j + 1);
+                    // 计算矩形的面积: height * length
+                    int rectangle = minHeightBefore * (col - j + 1);
                     maxRectangle = Math.max(maxRectangle, rectangle);
                     col++;
                 }
@@ -49,7 +48,7 @@ public class LargestRectangle {
     }
 
     // 找到一个位置点往下延伸的最大深度
-    private static int getLengthDown(int[][] matrix, int row, int col) {
+    private static int getHeightDown(int[][] matrix, int row, int col) {
         int index = row + 1;
         while (index < matrix.length && matrix[index][col] == 1) {
             index++;
