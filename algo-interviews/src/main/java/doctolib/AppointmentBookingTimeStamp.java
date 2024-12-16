@@ -8,15 +8,47 @@ import java.util.List;
 
 public class AppointmentBookingTimeStamp {
 
-    public static void main(String[] args) throws Exception {
-        List<Timestamp> slots = getAllTimestamps();
+    // 需要全部通过Unit Tests单元测试
+    private void testSlotsSize() {
+        List<Timestamp> slots = processSlots();
+        if (slots.size() != 2) {
+            throw new RuntimeException("test failed");
+        }
+    }
+
+    private void testFirstSlot() {
+        List<Timestamp> slots = processSlots();
+        LocalDateTime firstSlotTime = slots.get(0).toLocalDateTime();
+        if (firstSlotTime.isAfter(LocalDateTime.now().plusDays(2))) {
+            System.out.println("test success");
+        } else {
+            throw new RuntimeException("test failed");
+        }
+    }
+
+    private void testFirstSlotHour() {
+        List<Timestamp> slots = processSlots();
+        int firstSlotHour = slots.get(0).toLocalDateTime().getHour();
+        int nowHour = LocalDateTime.now().getHour();
+        if (firstSlotHour > nowHour) {
+            System.out.println("test success");
+        } else {
+            throw new RuntimeException("test failed");
+        }
+    }
+
+
+    // 需要实现Functional方法逻辑: 可能使用到排序Collections.sort()方法
+    public static List<Timestamp> processSlots() {
+        List<Timestamp> availableSlots = new ArrayList<>();
         LocalDate startDate = LocalDate.now();
-        for (Timestamp timestamp: slots) {
+        for (Timestamp timestamp: getAllTimestamps()) {
             LocalDate slotDate = timestamp.toLocalDateTime().toLocalDate();
             if (slotDate.isAfter(startDate.plusDays(2))) {
-                System.out.println(timestamp);
+                availableSlots.add(timestamp);
             }
         }
+        return availableSlots;
     }
 
     // TODO. Timestamp时间戳和LocalDateTime时间相当
