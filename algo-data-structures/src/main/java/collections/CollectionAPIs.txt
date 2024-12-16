@@ -1,0 +1,24 @@
+Collections.sort(teams);    实现了Comparable<T>该泛型接口的类型的List, 通过compareTo()中重写的逻辑来实现排序
+Collections.swap();         交换Array中的两个值，或者泛型List中的两个值 !!
+Collections.reverse();      颠倒list中存储对象的地址的顺序 !!!
+Collections.shuffle();      随机洗牌
+Collections.binarySearch(seats, requestSeat); 对集合元素进行二分法查找
+Collections.min();
+Collections.max();
+
+Collections.unmodifiable...()
+  返回一个不可变的View"视图"; 对于返回的集合是"read-only"只读形式的 -> UnSupportedOperationException
+  但是可以通过对象自身的方法实现修改 It's the collection itself, not exactly the object !
+  get()提供了修改对象的可能 stockList.getList().get(key).setChange(newValue);
+  Collections.unmodifiableList()
+  Collections.unmodifiableMap()
+  Collections.unmodifiableSortedMap()
+  Collections.unmodifiableSet()
+  Collections.unmodifiableSortedSet()
+
+由于存在限制的初始化要求，所以不推荐使用该方法
+Collections.copy(List<? super T> dest, List<? extends T> src) {}
+  1. dest可以是T的父类以上类型，而src源list必须是一个具体的List
+  2. dest的集合可容纳的对象长度必须大于等于src提供的长度
+  3. 在copy时，当T类型为不可变类型，则表现为Deep Copy
+  4. 在copy时，当T类型为可变类型，则表现为Shadow Copy

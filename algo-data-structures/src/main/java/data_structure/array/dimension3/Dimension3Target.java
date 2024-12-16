@@ -2,7 +2,8 @@ package data_structure.array.dimension3;
 
 import java.util.*;
 
-// 降维思想: 使用一层遍历，将三维复杂度的问题降维到二维来处理
+// 降维思想:
+// 使用一层遍历，将三维复杂度的问题降维到二维来处理
 // 遍历时需要每次抠除指定index位置的数据，将其和数组末尾值交换，判断结束后还需要恢复 !!
 public class Dimension3Target {
 

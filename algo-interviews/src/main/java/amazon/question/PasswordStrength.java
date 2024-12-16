@@ -25,8 +25,9 @@ public class PasswordStrength {
             } else {
                 hasFoundConsonant = true;
             }
+
+            // 判断符合条件之后，重新开始下一轮的寻找
             if(hasFoundVowel && hasFoundConsonant) {
-                // 判断符合条件之后，重新开始下一轮的寻找
                 strength++;
                 hasFoundVowel = false;
                 hasFoundConsonant = false;
@@ -56,6 +57,7 @@ public class PasswordStrength {
     }
 
     private static boolean isVowel(char c) {
+
         return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c== 'u';
     }
 }
