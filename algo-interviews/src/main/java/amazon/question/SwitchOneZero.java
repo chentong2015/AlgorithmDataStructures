@@ -9,6 +9,13 @@ package amazon.question;
 // [0,0,0,0,1,0,1,0,0] -> 5
 public class SwitchOneZero {
 
+    public static void main(String[] args) {
+        int[] nums = {0,0,1,0,1,0};
+        int minStepsZero = countMovesToRight(nums, 0);
+        int minStepsOne = countMovesToRight(nums, 1);
+        System.out.println(Math.min(minStepsOne, minStepsZero));
+    }
+
     // TODO. 只需要统计移动的步数，并不需要交换数据的位置 > 不要求返回移动好的数组
     //  需要避免移动时将target位置上的值进行覆盖，造成步数统计错误
     public static int countMovesToRight(int[] nums, int target) {
@@ -27,12 +34,5 @@ public class SwitchOneZero {
             }
         }
         return count;
-    }
-
-    public static void main(String[] args) {
-        int[] nums = {0,0,1,0,1,0};
-        int minStepsZero = countMovesToRight(nums, 0);
-        int minStepsOne = countMovesToRight(nums, 1);
-        System.out.println(Math.min(minStepsOne, minStepsZero));
     }
 }
