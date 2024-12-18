@@ -31,7 +31,7 @@ public class WaysSelectionBuilding {
 
     // TODO. 递归思想: 利用前面的累加结果来推导最后的值
     // - 如果当前位置为"0": 只关心前面有多少"01" -> "0"可以来自前面任何位置
-    // - 如果当前位置为"1": 只关心前面有多少"10"
+    // - 如果当前位置为"1": 只关心前面有多少"10" -> 前面的"1"全部可以缩合
     public static long numberOfWays(String s) {
         int zero = 0; // Individual zeroes count
         long zeroOne = 0; // Number of combinations of 01s
@@ -42,12 +42,12 @@ public class WaysSelectionBuilding {
         for(char ch : s.toCharArray()) {
             if(ch == '0') {
                 zero++;
-                oneZero += one; // Each of the previously found 1s can pair up with the current 0 to form 10
-                numWays += zeroOne; // Each of the previously formed 01 can form a triplet with the current 0 to form 010
+                oneZero += one; // Before 1 + Current 0 = Count 10
+                numWays += zeroOne; // Before 01 + Current 0 = Count 010
             } else {
                 one++;
-                zeroOne += zero; // Each of the previously found 0s can pair to form 01
-                numWays += oneZero; // Each of the previously formed 10 can form 101
+                zeroOne += zero; // Before 0 + Current 1 = Count 01
+                numWays += oneZero; // Before 10 + Current 1 = Count 101
             }
         }
         return numWays;

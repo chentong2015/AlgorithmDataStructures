@@ -18,11 +18,15 @@ public class FoundMountainArray {
         int left = 0;
         int right = arr.length - 1;
         while (left < arr.length - 1) {
-            if (arr[left] >= arr[left + 1]) break;
+            if (arr[left] >= arr[left + 1]) {
+                break;
+            }
             left++;
         }
         while (right > 0) {
-            if (arr[right - 1] <= arr[right]) break;
+            if (arr[right - 1] <= arr[right]) {
+                break;
+            }
             right--;
         }
         // 左右两边必须出发至少一步
