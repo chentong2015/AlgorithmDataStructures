@@ -1,4 +1,4 @@
-package amazon.interview.num_to_english;
+package amazon.question.num_to_english;
 
 public class NumWordsConversion {
 
