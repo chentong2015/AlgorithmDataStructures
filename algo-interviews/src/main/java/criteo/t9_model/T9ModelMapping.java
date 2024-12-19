@@ -1,4 +1,4 @@
-package criteo;
+package criteo.t9_model;
 
 import java.util.ArrayList;
 import java.util.HashMap;

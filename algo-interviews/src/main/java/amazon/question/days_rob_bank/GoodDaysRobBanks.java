@@ -20,8 +20,8 @@ public class GoodDaysRobBanks {
 
     // TODO. 算法核心: 压缩数据 + 动态编程(累计历史) + 多次遍历
     // 5, 3, 3, 3, 5, 6, 2
-    // 0  1  2  3  0  0  1 = Decrease 下降数据的统计
-    // 0  4  3  2  1  0  0 = Increase 上升数据的统计
+    // 0  1  2  3  0  0  1 = Decrease 前面下降数据的统计
+    // 0  4  3  2  1  0  0 = Increase 后面上升数据的统计
     public static List<Integer> goodDaysToRobBank(int[] security, int time) {
         int[] decreaseCounts = new int[security.length];
         for(int i = 1; i < security.length - time; i++){

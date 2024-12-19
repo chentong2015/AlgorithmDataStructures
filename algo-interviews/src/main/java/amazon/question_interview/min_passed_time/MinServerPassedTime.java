@@ -1,4 +1,4 @@
-package amazon.question.min_passed_time;
+package amazon.question_interview.min_passed_time;
 
 import java.util.Collections;
 import java.util.List;
