@@ -2,3 +2,9 @@ SDE Application
 https://www.amazon.jobs/zh/faqs
 https://www.amazon.jobs/fr/software-development-interview-prep
 https://www.amazon.jobs/zh/landing_pages/in-software-development-topics
+
+1. Application
+2. Online Assessment
+3. Phone Screen 1h 一轮全面且基础的面试
+4. Interview loop  四轮深度且技术性面试
+https://www.scarletink.com/p/what-to-expect-amazon-interview-process
