@@ -1,0 +1,13 @@
+Find Good Days to Rob the Bank
+given a 0-indexed integer array security[i] is the number of guards on duty on the ith day
+The days are numbered starting from 0. You are also given an integer time.
+
+this means day i is a good day to rob the bank if and only if
+security[i-time] >= security[i-time+1] >= ... >= security[i] <= ... <= security[i+time-1] <= security[i+time].
+
+security = [5,3,3,3,5,6,2], time = 2 -> [2,3]
+On day 2, we have security[0] >= security[1] >= security[2] <= security[3] <= security[4].
+On day 3, we have security[1] >= security[2] >= security[3] <= security[4] <= security[5].
+
+1 <= security.length <= 10^5
+0 <= security[i], time <= 10^5

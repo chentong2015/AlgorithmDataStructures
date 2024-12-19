@@ -1,26 +1,6 @@
-package amazon.question;
+package amazon.question.ways_zero_one;
 
-// Number of Ways to Select Buildings
-// You are given a 0-indexed binary string s which represents
-// the types of buildings along a street where:
-//   s[i] = '0' denotes that the ith building is an office and
-//   s[i] = '1' denotes that the ith building is a restaurant.
-//
-// Select 3 buildings for random inspection.
-// No two consecutive buildings out of the selected buildings can be of the same type.
-// Return the number of valid ways to select 3 buildings.
-//
-// Input: s = "001101" -> 6
-// - [0,2,4] from "001101" forms "010"
-// - [0,3,4] from "001101" forms "010"
-// - [1,2,4] from "001101" forms "010"
-// - [1,3,4] from "001101" forms "010"
-// - [2,4,5] from "001101" forms "101"
-// - [3,4,5] from "001101" forms "101"
-//
-// 3 <= s.length <= 105
-// s[i] is either '0' or '1'
-public class WaysSelectionBuilding {
+public class WaysSelectZeroOne {
 
     public static void main(String[] args) {
         System.out.println(numberOfWays("001101"));
@@ -29,7 +9,7 @@ public class WaysSelectionBuilding {
         // System.out.println(numberOfWays("0001100100"));
     }
 
-    // TODO. 递归思想: 利用前面的累加结果来推导最后的值
+    // TODO. 算法核心: 压缩数据，压缩数据进行统计
     // - 如果当前位置为"0": 只关心前面有多少"01" -> "0"可以来自前面任何位置
     // - 如果当前位置为"1": 只关心前面有多少"10" -> 前面的"1"全部可以缩合
     public static long numberOfWays(String s) {
