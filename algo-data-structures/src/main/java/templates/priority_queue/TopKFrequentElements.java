@@ -23,7 +23,8 @@ public class TopKFrequentElements {
             results.put(num, baseCount + 1);
         }
 
-        // TODO. 根据Hashmap统计的频率进行排序，只需要在队列中存储k个结果，多的数据会降低队列复杂度
+        // TODO. 根据Hashmap统计的频率进行排序
+        //  只需要在队列中存储k个结果，多的数据会降低队列复杂度
         Queue<Integer> heap = new PriorityQueue<>(Comparator.comparingInt(results::get));
         for (int n : results.keySet()) {
             heap.add(n);

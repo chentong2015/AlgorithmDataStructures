@@ -7,30 +7,12 @@ import java.util.Set;
 
 // 1. 没有顺序限制, 不能够取指定位置的Item
 // 2. 不能包含重复的数据, 默认会通过equals()来判断比较其中的元素
-
+//
 // Set<E>接口的实现
 // - HashSet<E>       不保证迭代的顺序，顺序不固定: 没有第一个和最后一个元素的概念
 //   - LinkedHashSet<E> 迭代顺序和插入映射中顺序一致
 //   - TreeSet<E>       排序SortedSet，通过Tree实现对key的自然排序
-public final class BaseHashSet {
-
-    public BaseHashSet(String name, double period) {}
-
-    // 通过重写BaseHashSet类型的equal()方法，自定义对象的比较方法，值下面添加的是两个不同的对象
-    public void compareItemsInSet() {
-        Set<BaseHashSet> mySets = new HashSet<>();
-        mySets.add(new BaseHashSet("name", 100));
-        mySets.add(new BaseHashSet("name", 200));
-    }
-
-    // Array -> ArrayList -> Set
-    public void convertListAndSet() {
-        String sentence = "One day in the year of the fox";
-        String[] wordsArray = sentence.split(" ");
-        List<String> wordsList = Arrays.asList(wordsArray);
-        Set<String> words = new HashSet<>(wordsList);
-        System.out.println(words);
-    }
+public final class HashSetDemo {
 
     public static void main(String[] args) {
         Set<Integer> squares = new HashSet<>();
