@@ -49,8 +49,7 @@ public class TotalAppealString {
         return sum;
     }
 
-    // TODO. Dynamic Programming: 缩小动态编程的存储数据，约束在26个字符
-    //  最后的结果与Index位置坐标强相关，直接根据Index坐标进行计算
+    // TODO. 最终结果的生成和Index坐标有关，缩小动态编程存储数据(26个字符)
     // a  b  b   c   a
     // 1
     // 2  1
@@ -67,10 +66,10 @@ public class TotalAppealString {
 
         for (int i = 0; i < s.length(); ++i){
             int charIndex = s.charAt(i) - 'a';
-            currentAppeal += i - lastPosition[charIndex]; // 从新增的index中减去lastIndex坐标
+            currentAppeal += i - lastPosition[charIndex]; // currentAppeal累计上一轮的结果并添加新增值
 
-            lastPosition[charIndex] = i; // 存储字符的上一个所在位置
-            totalAppeal += currentAppeal ; // currentAppeal表示一层统计结果，totalAppeal累计所有层的结果
+            lastPosition[charIndex] = i; // 存储字符最新的index位置
+            totalAppeal += currentAppeal ; // currentAppeal一层统计结果，totalAppeal累计所有层结果
         }
         return totalAppeal;
     }
