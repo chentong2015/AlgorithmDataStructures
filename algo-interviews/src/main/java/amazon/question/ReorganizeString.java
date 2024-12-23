@@ -1,8 +1,6 @@
 package amazon.question;
 
-import java.util.*;
-
-// TODO. 相邻字符不相等: 本质是不同字符之间抵消特性, 和字符的顺序无关
+// TODO. 相邻字符不等: 本质上是利用不同字符之间抵消特性, 与具体字符无关
 // Reorganize String
 // Given a string s, rearrange the characters of s
 // so that any two adjacent characters are not the same.
@@ -16,42 +14,73 @@ import java.util.*;
 // s consists of lowercase English letters.
 public class ReorganizeString {
 
-    // TODO. 必须从统计较多的字符先开始抵消
-    //
-    // v v v l o -> vlvov
-    // [0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,3,0,0,0,0]
+    // TODO. Alternate placing the most common letters.
+    //  核心算法: 每次选择“剩余频率最高”的两个字符来组合，直到无法选择
+    public static void main(String[] args) {
+        System.out.println(reorganizeString("vvvlo"));
+    }
+
     public static String reorganizeString(String s) {
         int[] counts = new int[26];
         for (char c: s.toCharArray()) {
             counts[c - 'a']++;
         }
-        Arrays.sort(counts);
 
-        int index = 25;
         StringBuilder stringBuilder = new StringBuilder();
-        while (index >= 0) {
-            int currentCount = counts[index];
-            if (currentCount > 0) {
-                for (int j = index - 1; j >= 0; j--) {
-                    int nextCount = counts[j];
-                    while (currentCount > 0 && nextCount > 0) {
-                        stringBuilder.append((char) ('a' + index));
-                        stringBuilder.append((char) ('a' + j));
-                        currentCount--;
-                        nextCount--;
-                    }
-                }
-
-                // 如果后续的字符无法抵消当前的字符数量，则返回空字符串
-                if (currentCount == 1) {
-                    stringBuilder.append((char) ('a' + index));
-                    break;
-                } else if (currentCount > 1){
+        char maxCountChar = findMaxCountChar(counts);
+        while (maxCountChar != ' ') {
+            stringBuilder.append(maxCountChar);
+            char nextCountMaxChar = findNextCountMaxChar(counts, maxCountChar);
+            if (nextCountMaxChar != ' ') {
+                stringBuilder.append(nextCountMaxChar);
+                maxCountChar = findMaxCountChar(counts);
+            } else {
+                int index = maxCountChar - 'a';
+                if (counts[index] > 0) {
                     return "";
                 }
+                break;
             }
-            index++;
         }
         return stringBuilder.toString();
+    }
+
+    // 选择统计中最大的字符，选中后降低它的统计
+    private static char findMaxCountChar(int[] counts) {
+        int maxIndex = -1;
+        for (int index=0; index<26; index++) {
+            if (counts[index] > 0) {
+                if (maxIndex == -1 || counts[index] > counts[maxIndex]) {
+                    maxIndex = index;
+                }
+            }
+        }
+        if (maxIndex != -1) {
+            counts[maxIndex]--;
+            return (char) ('a' + maxIndex);
+        }
+        return ' ';
+    }
+
+    // 选择剩余字符中统计最大的字符，选中后降低它的统计
+    private static char findNextCountMaxChar(int[] counts, char charExcluded) {
+        int maxIndex = -1;
+        for (int index=0; index<26; index++) {
+            char c = (char) ('a' + index);
+            if (c != charExcluded && counts[index] >0) {
+                if (maxIndex == -1) {
+                    maxIndex = index;
+                } else {
+                    if (counts[index] > counts[maxIndex]) {
+                        maxIndex = index;
+                    }
+                }
+            }
+        }
+        if (maxIndex == -1 || counts[maxIndex] == 0) {
+            return ' ';
+        }
+        counts[maxIndex]--;
+        return (char) ('a' + maxIndex);
     }
 }
