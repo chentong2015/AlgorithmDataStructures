@@ -1,6 +1,6 @@
 package templates.dfs_search.word_search;
 
-import data_structure.tree.prefix_tree.model.TrieNodeWithWord;
+import collections.tree.prefix_tree.model.TrieNodeWithWord;
 
 import java.util.ArrayList;
 import java.util.HashSet;

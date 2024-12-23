@@ -1,0 +1,18 @@
+HashMap<,>     包含<key, value>键值对，不保证元素的迭代顺序，不保证顺序不变
+LinkedHashMap  确定迭代的顺序，必须是插入元素的顺序
+TreeMap<,>     对元素进行自然排序，或者提供Comparator
+
+TODO. HashMap和HashTable区别
+1. HashMap中可存储null值，HashTable的key和value均不能设置成null
+2. HashMap数据存储是非同步的，Hashtable数据存储和获取都是同步的，对性能造成影响
+
+Hashtable<K,V> 不常用，性能差
+以整个Hashtable对象为锁来实现线程安全
+加锁的范围太大/力度太大, 即使没有冲突也会受到加锁影响(等锁)
+// public synchronized V get(Object key) {}
+// public synchronized V put(K key, V value) {}
+
+TODO: Hash Table 运用场景
+1. 用于<key,value>键值映射关系
+2. 用于分组，建立Group关系
+3. 用于数据的统计和频率的统计
