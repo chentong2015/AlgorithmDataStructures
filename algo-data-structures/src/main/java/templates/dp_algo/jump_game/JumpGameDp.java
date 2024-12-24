@@ -1,6 +1,6 @@
 package templates.dp_algo.jump_game;
 
-import bean.IndexMark;
+import collections.bean.IndexMark;
 
 import java.util.Arrays;
 

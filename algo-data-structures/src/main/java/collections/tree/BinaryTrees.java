@@ -1,6 +1,6 @@
 package collections.tree;
 
-import bean.TreeNode;
+import collections.bean.TreeNode;
 import collections.tree.bean.TreeLinkNode;
 
 public class BinaryTrees {

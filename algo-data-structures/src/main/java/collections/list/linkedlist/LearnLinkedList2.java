@@ -1,6 +1,6 @@
 package collections.list.linkedlist;
 
-import bean.ListNode;
+import collections.bean.ListNode;
 
 import java.util.HashSet;
 import java.util.Set;

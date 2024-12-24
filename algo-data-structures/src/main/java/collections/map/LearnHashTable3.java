@@ -1,6 +1,6 @@
 package collections.map;
 
-import bean.TreeNode;
+import collections.bean.TreeNode;
 
 import java.util.*;
 

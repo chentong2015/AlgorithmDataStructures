@@ -1,6 +1,6 @@
 package collections.list.linkedlist;
 
-import bean.ListNode;
+import collections.bean.ListNode;
 
 public class LearnLinkedList1 {
 
