@@ -49,9 +49,10 @@ public class LearnStack1 {
     // temperatures = [73,74,75,71,69,72,76,73] -> [1,1,4,2,1,1,0,0] 相当于每个位置后面更大的值
     // 1 <= temperatures.length <= 10^5
     // 30 <= temperatures[i] <= 100 注意温度值的约束范围
+    //
+    // 正确理解：使用stack[top]存储读取过的index位置
+    // 如果后面有位置有更大的值，则更新前面相关index对应结果的数组
     public int[] dailyTemperatures(int[] temperatures) {
-        // 正确理解：使用stack[top]存储读取过的index位置
-        //         如果后面有位置有更大的值，则更新前面相关index对应结果的数组
         int top = -1;
         int length = temperatures.length;
         int[] stack = new int[length];

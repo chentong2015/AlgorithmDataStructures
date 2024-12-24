@@ -6,30 +6,45 @@ package arrays.array.sum_subarray;
 // Since the answer may be large, return the answer modulo 10^9 + 7.
 //
 // arr = [3,1,2,4] -> Output: 17
-// Subarrays are [3], [1], [2], [4], [3,1], [1,2], [2,4], [3,1,2], [1,2,4], [3,1,2,4].
-// Minimums are 3, 1, 2, 4, 1, 1, 2, 1, 1, 1.
+// Subarrays [3], [1], [2], [4], [3,1], [1,2], [2,4], [3,1,2], [1,2,4], [3,1,2,4].
+// Minimums  3, 1, 2, 4, 1, 1, 2, 1, 1, 1.
 //
 // 1 <= arr.length <= 3 * 10^4
 // 1 <= arr[i] <= 3 * 10^4
 public class SumSubarrayMinimums {
 
-    // 存储index位置前面比它小的所有index位置
-    // 3  1  2    4
-    //    1  1+1  1+1+1
+    public static void main(String[] args) {
+        int[] arr = {3,1,2,4};
+        System.out.println(sumSubarrayMins(arr));
+    }
+
+    // TODO. 使用Stack[]数组存储Index位置前面所有它小的坐标
+    //  在Stack添加和取值的时候，通过判断来计算最后的结果
     //
-    // 1  2  3  4
+    // 3  1  2     4      7         3
+    //    1  1+1'  2+1+1' 4+2+1+1'  3+3+2+1+1'
     //
-    public int sumSubarrayMins(int[] arr) {
-        int minSum = 0;
-        int minBefore = arr[0];
-        for (int index =0; index < arr.length; index++) {
-            minSum += arr[index];
-            if (arr[index] < minBefore) {
-                minBefore = arr[index];
+    public static int sumSubarrayMins(int[] arr) {
+        int sumMin = 0;
+        int countIndexBefore = 0;
+        int[] stack = new int[arr.length];
+        for (int index=0; index < arr.length; index++) {
+            sumMin += arr[index];
+
+            while (countIndexBefore > 0 && arr[stack[countIndexBefore - 1]] > arr[index]) {
+                sumMin += arr[index];
+                countIndexBefore--;
             }
+            for (int j = 0; j < countIndexBefore; j++) {
+                sumMin += arr[stack[j]];
+                if (j==0) {
+                    sumMin += arr[stack[j]] * stack[j]; // 最小值之前的统计
+                }
+            }
+
+            stack[countIndexBefore] = index;
+            countIndexBefore++;
         }
-
-
-        return 0;
+        return sumMin;
     }
 }
