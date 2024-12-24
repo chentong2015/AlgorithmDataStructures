@@ -15,8 +15,9 @@ package amazon.question;
 public class ReorganizeString {
 
     // TODO. Alternate placing the most common letters.
-    //  核心算法: 每次选择“剩余频率最高”的两个字符来组合，直到无法选择
+    // 核心算法: 每轮动态选择Top2频率的两个字符来组合，直到无法选择
     public static void main(String[] args) {
+        System.out.println(reorganizeString("aab"));
         System.out.println(reorganizeString("vvvlo"));
     }
 
@@ -27,57 +28,38 @@ public class ReorganizeString {
         }
 
         StringBuilder stringBuilder = new StringBuilder();
-        char maxCountChar = findMaxCountChar(counts);
+        char maxCountChar = findMaxCountChar(counts, ' ');
         while (maxCountChar != ' ') {
             stringBuilder.append(maxCountChar);
-            char nextCountMaxChar = findNextCountMaxChar(counts, maxCountChar);
-            if (nextCountMaxChar != ' ') {
-                stringBuilder.append(nextCountMaxChar);
-                maxCountChar = findMaxCountChar(counts);
+
+            char secondMaxCountChar = findMaxCountChar(counts, maxCountChar);
+            if (secondMaxCountChar != ' ') {
+                stringBuilder.append(secondMaxCountChar);
             } else {
-                int index = maxCountChar - 'a';
-                if (counts[index] > 0) {
+                // 如果第二个最大统计的字符没有找到，则不能再有字符剩余
+                if (counts[maxCountChar - 'a'] > 0) {
                     return "";
                 }
-                break;
             }
+            maxCountChar = findMaxCountChar(counts, ' ');
         }
         return stringBuilder.toString();
     }
 
-    // 选择统计中最大的字符，选中后降低它的统计
-    private static char findMaxCountChar(int[] counts) {
+    // 查找最大统计频率的字符
+    // charExcluded排除某个字符用于查找第二大字符
+    private static char findMaxCountChar(int[] counts, char charExcluded) {
         int maxIndex = -1;
-        for (int index=0; index<26; index++) {
-            if (counts[index] > 0) {
+        for (int index = 0; index < 26; index++) {
+            char c = (char) ('a' + index);
+            if (c != charExcluded && counts[index] >0) {
                 if (maxIndex == -1 || counts[index] > counts[maxIndex]) {
                     maxIndex = index;
                 }
             }
         }
-        if (maxIndex != -1) {
-            counts[maxIndex]--;
-            return (char) ('a' + maxIndex);
-        }
-        return ' ';
-    }
-
-    // 选择剩余字符中统计最大的字符，选中后降低它的统计
-    private static char findNextCountMaxChar(int[] counts, char charExcluded) {
-        int maxIndex = -1;
-        for (int index=0; index<26; index++) {
-            char c = (char) ('a' + index);
-            if (c != charExcluded && counts[index] >0) {
-                if (maxIndex == -1) {
-                    maxIndex = index;
-                } else {
-                    if (counts[index] > counts[maxIndex]) {
-                        maxIndex = index;
-                    }
-                }
-            }
-        }
-        if (maxIndex == -1 || counts[maxIndex] == 0) {
+        // 如果没有找到合适的字符则返回空，反之降低字符的统计
+        if (maxIndex == -1) {
             return ' ';
         }
         counts[maxIndex]--;
