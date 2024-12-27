@@ -1,4 +1,4 @@
-package amazon.question.interviews.generation_next_string;
+package amazon.interviews.generation_next_string;
 
 public class TestCases {
 

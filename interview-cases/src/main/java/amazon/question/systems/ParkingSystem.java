@@ -1,4 +1,4 @@
-package amazon.question;
+package amazon.question.systems;
 
 // Design Parking System
 // Design a parking system for a parking lot.
