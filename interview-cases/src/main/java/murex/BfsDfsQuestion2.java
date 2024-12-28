@@ -1,18 +1,18 @@
 package murex;
 
+// TODO: BFS-DFS，在递归遍历过程中增加判断的条件，使用两次BFS
+// 判断从(0,0)是否能在(m,n)的矩阵中找到4
+// 0 表示可以通过
+// 1 表示墙，不能通过
+// 2 表示窗，只有在拿到key才能通过
+// 3 表示key钥匙
+// 4 表示目标
 public class BfsDfsQuestion2 {
 
-    // TODO: BFS-DFS，在递归遍历过程中增加判断的条件，使用两次BFS
-    // 判断从(0,0)是否能在(m,n)的矩阵中找到4
-    // 0 表示可以通过
-    // 1 表示墙，不能通过
-    // 2 表示窗，只有在拿到key才能通过
-    // 3 表示key钥匙
-    // 4 表示目标
     public static void main(String[] args) {
         int[][] array = {{0, 0, 0, 3},
-                {1, 0, 1, 1},
-                {1, 0, 2, 4}};
+                         {1, 0, 1, 1},
+                         {1, 0, 2, 4}};
         System.out.println(trialOfValor(array));
     }
 
@@ -31,7 +31,7 @@ public class BfsDfsQuestion2 {
     }
 
     // 第一遍递归遍历，先判断能否将key值找到
-    // 第一轮在没有找到key的情况下是无法开窗的，因此无法判断是否能找到target
+    // 第一轮在没有找到key的情况下无法开窗，因此无法判断是否能找到target
     private static void findPointKey(int[][] array, int i, int j, int keyValue) {
         // Check weather the hasFoundKey is already true, to avoid useless iteration
         if (array[i][j] == keyValue) {
