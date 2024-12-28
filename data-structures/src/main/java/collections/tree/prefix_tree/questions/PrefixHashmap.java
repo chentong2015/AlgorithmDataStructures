@@ -1,8 +1,8 @@
-package collections.tree.prefix_tree;
+package collections.tree.prefix_tree.questions;
 
 import java.util.HashMap;
 
-// TODO: Prefix Hashmap 将前缀树和HashMap结合使用，优化具有共同Prefix的key值的存储
+// TODO: Prefix Hashmap
 // 1 <= key.length, prefix.length <= 50
 // key and prefix consist of only lowercase English letters
 //
@@ -12,12 +12,13 @@ import java.util.HashMap;
 // app    0+3+2    cod   0+1
 // appl   0+3      code  0+1
 // apple  0+3
-public class PrefixTreeHashmap {
+public class PrefixHashmap {
 
+    // 将前缀树和HashMap结合使用，优化具有共同Prefix的key值的存储
     private HashMap<String, Integer> map;
     private HashMap<String, Integer> prefixTreeMap;
 
-    public PrefixTreeHashmap() {
+    public PrefixHashmap() {
         map = new HashMap<>();
         prefixTreeMap = new HashMap<>();
     }

@@ -1,24 +1,16 @@
-package collections.tree.dfs_tree;
+package templates.dfs_search.tree_to_linked_list;
 
 import java.util.Stack;
 
-public class LearnTreeDFS1 {
-
-    class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
+// Flatten Binary Tree to Linked List
+// Given the root of a binary tree, flatten the tree into a "linked list":
+//
+// The "linked list" should use the same TreeNode class
+// where the right child pointer points to the next node in the list
+// and the left child pointer is always null.
+//
+// The "linked list" should be in same order as a pre-order traversal of binary tree.
+public class BinaryTreeToLinkedList {
 
     // pre-order traversal 前序遍历 + DFS 深度优先遍历
     //
@@ -44,6 +36,22 @@ public class LearnTreeDFS1 {
                 root.left = null;
             }
             root = root.right; // root节点往右侧下沉，形成List链条
+        }
+    }
+
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
         }
     }
 }

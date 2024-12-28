@@ -1,4 +1,6 @@
-package collections.tree.prefix_tree.impl;
+package collections.tree.prefix_tree;
+
+import collections.tree.prefix_tree.model.TrieNodeWithEnd;
 
 // 如果在当前root的指定位置有找到对应的字符, 则取下一个node child, 最后表明key的结束
 // O(m) O(m) 最差情况下需要添加m个node(造成的空间)
@@ -9,6 +11,7 @@ package collections.tree.prefix_tree.impl;
 // e ->"code"      t -> end key "leet" 前面具有共享的字符段
 public class PrefixTreeTrieImpl {
 
+    // 整个Trie Tree的根节点位置
     private TrieNodeWithEnd root = new TrieNodeWithEnd();
 
     public void insert(String word) {
@@ -20,12 +23,13 @@ public class PrefixTreeTrieImpl {
             }
             node = node.get(currentChar);
         }
-        node.setEnd(); // 作为单词结尾的位置，标记上结束，作为一个完整的word
+        // 标记一个单词记录的结尾标志
+        node.setEnd();
     }
 
-    public boolean search(String word) {
-        TrieNodeWithEnd node = searchPrefix(word);
-        return node != null && node.isEnd();
+    public boolean startsWith(String prefix) {
+        TrieNodeWithEnd node = searchPrefix(prefix);
+        return node != null;
     }
 
     // 如果没有依次按照字符串的顺序往后找到end位置，则该word不在Prefix tree中
@@ -33,17 +37,11 @@ public class PrefixTreeTrieImpl {
         TrieNodeWithEnd node = root;
         for (int i = 0; i < word.length(); i++) {
             char currentChar = word.charAt(i);
-            if (node.containsKey(currentChar)) {
-                node = node.get(currentChar);
-            } else {
+            if (!node.containsKey(currentChar)) {
                 return null;
             }
+            node = node.get(currentChar);
         }
         return node;
-    }
-
-    public boolean startsWith(String prefix) {
-        TrieNodeWithEnd node = searchPrefix(prefix);
-        return node != null;
     }
 }

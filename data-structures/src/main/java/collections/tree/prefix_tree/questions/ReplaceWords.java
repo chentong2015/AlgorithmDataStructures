@@ -1,4 +1,4 @@
-package collections.tree.prefix_tree;
+package collections.tree.prefix_tree.questions;
 
 import collections.tree.prefix_tree.model.TrieNodeWithWord;
 
@@ -21,7 +21,7 @@ import java.util.List;
 // dictionary和sentence都有长度限制(数目非空)
 // 只包含英语小写字母
 // 句子首位不包含空格
-public class PrefixTreeReplaceWords {
+public class ReplaceWords {
 
     // TODO: 类型Prefix Tree的问题，解决的办法确没有使用Prefix Tree Node
     // O(S) O(L) 使用HashSet存储dictionary中的root

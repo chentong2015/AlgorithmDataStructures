@@ -1,4 +1,4 @@
-package collections.tree.prefix_tree.impl;
+package collections.tree.prefix_tree.model;
 
 //                     abcdefghijklmnopqrstuvwxyz
 //                  link                       link
@@ -19,6 +19,7 @@ public class TrieNodeWithEnd {
 
     // char-'a'转换index位置，对应的node children位置上添加结点
     public void put(char ch, TrieNodeWithEnd node) {
+
         links[ch - 'a'] = node;
     }
 
