@@ -1,4 +1,4 @@
-package amazon.question.triangular_sum_array;
+package amazon.Interviews.triangular_sum_array;
 
 public class TriangularSumArray {
 

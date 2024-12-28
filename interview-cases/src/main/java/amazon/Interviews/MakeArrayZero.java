@@ -1,4 +1,4 @@
-package amazon.question;
+package amazon.Interviews;
 
 import java.util.HashSet;
 import java.util.Set;

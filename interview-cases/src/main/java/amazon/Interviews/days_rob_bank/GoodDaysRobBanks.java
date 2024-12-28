@@ -1,4 +1,4 @@
-package amazon.question.days_rob_bank;
+package amazon.Interviews.days_rob_bank;
 
 import java.util.ArrayList;
 import java.util.List;

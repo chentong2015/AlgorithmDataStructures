@@ -1,4 +1,4 @@
-package amazon.interviews.generation_next_string;
+package amazon.OnlineAssessment.generation_next_string;
 
 public class TestCases {
 

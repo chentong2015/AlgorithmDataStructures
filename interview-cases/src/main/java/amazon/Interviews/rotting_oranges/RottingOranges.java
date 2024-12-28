@@ -1,4 +1,4 @@
-package amazon.question.rotting_oranges;
+package amazon.Interviews.rotting_oranges;
 
 import java.util.HashSet;
 import java.util.Set;
