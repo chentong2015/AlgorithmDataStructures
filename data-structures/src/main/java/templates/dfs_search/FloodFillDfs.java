@@ -1,6 +1,6 @@
 package templates.dfs_search;
 
-public class DfsFloodFill {
+public class FloodFillDfs {
 
     // Flood Fill
     // An image is represented by an m x n integer grid image,

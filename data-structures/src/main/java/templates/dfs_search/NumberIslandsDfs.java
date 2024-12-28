@@ -12,7 +12,7 @@ package templates.dfs_search;
 //
 // O(n*m) 内层DFSMarking递归算法最多更新所有的cell一次
 // O(1)   空间复杂度降到最低
-public class DfsNumberIslands {
+public class NumberIslandsDfs {
 
     public int numIslands(char[][] grid) {
         int count = 0;

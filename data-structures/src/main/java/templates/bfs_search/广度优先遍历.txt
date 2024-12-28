@@ -1,3 +1,5 @@
 BFS(Breadth First Search) 广度优先遍历
 
-BFS的本质是通过Queue+While循环来实现Level层级遍历的效果
+BFS的本质:
+通过Queue + While循环来实现Level层级遍历的效果
+使用While循环之前需要对初始化第一层Level的数据到Queue中
