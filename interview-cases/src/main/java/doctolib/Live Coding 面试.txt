@@ -1,5 +1,7 @@
-You will write a function that takes a date as input and returns an object/hash
-containing the doctor's available slots for the next seven days, starting on the input date.
+Build an algorithm around data selection from a database based on timestamps.
+- takes a date as input
+- returns an object/hash containing the doctor's available slots
+  (for the next seven days, starting on the input date.)
 
 面试的形式和流程:
 - 先提供要测试通过的Unit Test

@@ -52,27 +52,24 @@ public class PrefixTreeSearchComplete {
     }
 
     public List<String> searchSuggestions(TrieNode root, String prefix) {
-        List<String> suggestions = new ArrayList<>();
-
         TrieNode pointer = root;
         for (char c: prefix.toCharArray()) {
             if (pointer.containsChild(c)) {
                 pointer = pointer.getChild(c);
             } else {
-                return suggestions;
+                return new ArrayList<>();
             }
         }
 
-        // Only return the top 3 suggestions
+        List<String> suggestions = new ArrayList<>();
         collectChildren(pointer, suggestions);
-        if (suggestions.size() > 3) {
-            Collections.sort(suggestions);
-            return List.of(suggestions.get(0), suggestions.get(1), suggestions.get(2));
+        if (suggestions.size() < 4) {
+            return suggestions;
         }
-        return suggestions;
+        return List.of(suggestions.get(0), suggestions.get(1), suggestions.get(2));
     }
 
-    // TODO. 使用递归搜索节点下的所有可能的单词: 只搜索有子节点的位置
+    // TODO. 递归搜索节点下所有可能的单词: 收集所有的单词，单词自动从小到大排序
     private void collectChildren(TrieNode pointer, List<String> suggestions) {
         if (pointer.getWord() != null) {
             suggestions.add(pointer.getWord());
