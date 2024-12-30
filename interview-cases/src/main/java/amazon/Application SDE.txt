@@ -5,15 +5,12 @@
 
 https://www.amazon.jobs/fr/software-development-interview-prep
 https://www.amazon.jobs/zh/landing_pages/in-software-development-topics
-
 https://www.scarletink.com/p/what-to-expect-amazon-interview-process
 
-
-TODO. Leadership Principles
+TODO. Leadership Principles 工作原则
 领导力原则本质是约束“如何工作?”和“如何解决问题?”的方式
 领导力原则应用在不同场景，通过STAR方法对其应用进行阐述
 
 https://www.linkedin.com/pulse/how-interview-amazon-leadership-david-anderson/
 https://www.scarletink.com/p/interviewing-at-amazon-leadership-principles
-
 https://www.amazon.jobs/content/en/our-workplace/leadership-principles
