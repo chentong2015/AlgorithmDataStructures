@@ -13,8 +13,9 @@ public class TriangularSumArray {
     //   4   7  6
     //     1   3
     //       4
+    //
     // O(n-1 + n-2 + ... 1) 时间复杂度主要体现在计算中间值
-    // O(1)
+    // O(1)  直接利用原始的数组存储中间结果
     public static int triangularSum(int[] nums) {
         int times = nums.length - 1;
         while (times > 0) {
