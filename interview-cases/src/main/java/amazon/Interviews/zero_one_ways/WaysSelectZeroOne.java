@@ -1,4 +1,4 @@
-package amazon.Interviews.ways_zero_one;
+package amazon.Interviews.zero_one_ways;
 
 public class WaysSelectZeroOne {
 
