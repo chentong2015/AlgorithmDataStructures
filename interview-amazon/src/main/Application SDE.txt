@@ -1,5 +1,5 @@
 1. Job Application 分析投递职位的工作内容
-2. Online Assessment
+2. Online Assessment 两道Algo+工作决策
 3. Phone Screen 1h 一轮全面且基础的面试
 4. Interview loop  四轮深度且技术性面试
 

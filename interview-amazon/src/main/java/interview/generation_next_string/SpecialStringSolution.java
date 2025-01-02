@@ -25,20 +25,24 @@ public class SpecialStringSolution {
         }
 
         NextCharacter nextCharacter = findUpgradeNextCharacter(s, lastPosition);
+
+        // Can't find the position to get Next Char
         if (nextCharacter.position == -1) {
             return "-1";
         }
 
-        // Build the next special string: beginning + upgrade char + ending AB
+        // 1. copy the beginning of source char
         StringBuilder stringBuilder = new StringBuilder();
         for(int index = 0; index < nextCharacter.position; index++) {
             stringBuilder.append(s.charAt(index));
         }
 
+        // 2. upgrade the char at position to next char
         char oldChar = s.charAt(nextCharacter.position);
         char newChar = (char) (oldChar + nextCharacter.offset);
         stringBuilder.append(newChar);
 
+        // 3. add ending characters for making it smallest
         appendEndingAB(stringBuilder, nextCharacter.position, s.length());
         return stringBuilder.toString();
     }
@@ -52,20 +56,23 @@ public class SpecialStringSolution {
                 index--;
                 continue;
             }
+
             if (index == 0) {
                 return new NextCharacter(index, 1);
             }
 
             int offset = 1;
             char nextChar = (char) (s.charAt(index) + offset);
-            if (nextChar == s.charAt(index -1)) {
+            if (s.charAt(index - 1) == nextChar) {
                 // 当前位置的char无法升级，则往前移动一位
                 if (nextChar == 'z') {
                     index--;
                     continue;
                 }
+                // 如果相等冲突，当前位置还需要再升级一位
                 offset++;
             }
+
             // 在指定位置按照offset来进行升级
             return new NextCharacter(index, offset);
         }
