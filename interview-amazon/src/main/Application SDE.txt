@@ -5,7 +5,9 @@
 
 https://www.amazon.jobs/fr/software-development-interview-prep
 https://www.amazon.jobs/zh/landing_pages/in-software-development-topics
+
 https://www.scarletink.com/p/what-to-expect-amazon-interview-process
+https://www.amazon.jobs/content/en/how-we-hire/interview-loop
 
 TODO. Leadership Principles 领导力原则
 - 本质是定义并约束了“如何工作”和“如何解决问题”
