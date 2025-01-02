@@ -1,4 +1,4 @@
-package amazon.Interviews;
+package questions;
 
 // Find the password strength.
 // For each substring of the password which contains at least one vowel and one consonant,

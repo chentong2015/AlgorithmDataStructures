@@ -1,4 +1,4 @@
-package amazon.Interviews.max_num_robots;
+package questions.max_num_robots;
 
 import java.util.LinkedList;
 

@@ -1,4 +1,4 @@
-package amazon.Interviews;
+package questions;
 
 // Maximum Length of Subarray With Positive Product
 // Given an array of integers nums, find the maximum length of a subarray

@@ -1,4 +1,4 @@
-package amazon.Interviews.rotting_oranges;
+package questions.rotting_oranges;
 
 import java.util.ArrayDeque;
 import java.util.Queue;

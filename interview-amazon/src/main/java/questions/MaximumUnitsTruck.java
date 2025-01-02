@@ -1,4 +1,4 @@
-package amazon.Interviews;
+package questions;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;

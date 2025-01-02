@@ -1,4 +1,4 @@
-package amazon.Interviews.zero_one_swaps;
+package questions.zero_one_swaps;
 
 // Minimum Number of Swaps to Make the Binary String Alternating
 // Given a binary string s, return the minimum number of character swaps to make it alternating,

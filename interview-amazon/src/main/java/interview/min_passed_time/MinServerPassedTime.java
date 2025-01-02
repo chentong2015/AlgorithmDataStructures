@@ -1,4 +1,4 @@
-package amazon.OnlineAssessment.min_passed_time;
+package interview.min_passed_time;
 
 import java.util.Collections;
 import java.util.List;

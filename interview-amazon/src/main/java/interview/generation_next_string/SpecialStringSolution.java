@@ -1,4 +1,4 @@
-package amazon.OnlineAssessment.generation_next_string;
+package interview.generation_next_string;
 
 // https://leetcode.com/discuss/interview-question/5700189/Amazon-Online-Assessment/
 public class SpecialStringSolution {
