@@ -1,0 +1,11 @@
+TODO. 路径映射传递问题的本质: Graph图的问题
+通过构建Graph图形结构，方便快速的找到两点之间的路径(长度)
+
+Currency Exchange Path
+Input data format
+{"EUR", "CHS", 1.2}
+{"EUR", "USD", 2.2}
+{"USD", "RMB", 1.5}
+
+Input: Currency A and B
+Output: A -> B paths

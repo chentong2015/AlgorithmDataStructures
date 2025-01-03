@@ -58,7 +58,6 @@ public class CourseSchedule {
     }
 
     // TODO. 使用DFS暴力破解会造成非常大的时间复杂度 => 不推荐
-    // Check if there is circle condition
     private boolean dfs(Map<Integer, List<Integer>> courseMap, int startKey, int target) {
         boolean isFoundTarget = false;
         if (courseMap.containsKey(startKey)) {

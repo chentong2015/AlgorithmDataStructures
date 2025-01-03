@@ -1,0 +1,9 @@
+TODO. 依赖验证问题的本质: 判断构成的Graph图形是否有循环形成
+如果图形中的一个Node节点能够找到一条路径返回，则依赖关系不成立
+
+Excel Formula Validation Question
+A00 -> B01
+       -> C05 -> C11
+    -> B08
+A01 -> K09
+    -> M99

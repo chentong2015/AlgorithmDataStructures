@@ -13,8 +13,8 @@ import java.util.Set;
 // 在回退(Backtracking回溯算法)的过程中，遍历了每一条完整的通路
 public class DFSTemplate {
 
-    // TODO: 递归方式方便实现，递归的层级过大会造成stack overflow栈溢出 !!
-    // DFS Template I - Recursion
+    // TODO: DFS Template I - Recursion 递归方式
+    //  递归的层级过大会造成stack overflow栈溢出 !!
     // Don't have to use any stacks when we implement DFS recursively
     // 递归DFS找到指定的节点Node / 找指定的路径通路，同时标记已经visited的节点
     public boolean DFS(Node cur, Node target, Set<Node> visited) {
@@ -32,9 +32,8 @@ public class DFSTemplate {
         return false;
     }
 
-    // TODO: 模板二，显式使用stack栈数据结构来实现DFS深度优先遍历
-    //  应用场景：二叉树的前序，中序，后续遍历
-    // DFS - Template II
+    // TODO: DFS - Template II 使用stack栈数据结构
+    // 应用场景：二叉树的前序，中序，后续遍历
     boolean DFS(int root, int target) {
         // Set<Node> visited;
         // Stack<Node> stack;
