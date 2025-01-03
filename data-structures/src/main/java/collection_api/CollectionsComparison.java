@@ -1,4 +1,4 @@
-package collections;
+package collection_api;
 
 import java.util.Comparator;
 
