@@ -4,7 +4,8 @@ package collections.queue.impl;
 //  从而没有办法在指定的长度范围下再添加新的item
 //                      head = 1
 // Circular Queue   |  | 3 | 5 | 6 | 9 | 15 |  count=5
-//           tail=-1                   tail = 5 循环的队列可以有效的节省长度，从开头再开始入新的元素到队列
+//           tail=-1                   tail = 5
+//           循环的队列可以有效的节省长度，从开头再开始入新的元素到队列
 // 1. 使用定长的数组，可能处于满队列的情况
 // 2. 使用双指针来标记起使位置和结束位置
 public class CircularQueueImplementation {

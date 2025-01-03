@@ -28,13 +28,15 @@ public class BaseLinkedList {
         Iterator<String> item = linkedList.iterator(); // iterator 迭代: 只能往前，无法返回前一个节点 !!!
         // .hasNext() 是否item有指向能读取的element
         while (item.hasNext()) {
-            System.out.println("Show the current value: " + item.next()); // 返回当前节点的值，然后移动到下一个节点 !!!
+            // 返回当前节点的值，然后移动到下一个节点 !!!
+            System.out.println("Current value: " + item.next());
         }
     }
 
     // 方法问题: 在改变LinkedList中数据的同时，还返回了值 !!
     private static boolean addInOrder(LinkedList<String> linkedList, String newItem) {
-        ListIterator<String> stringListIterator = linkedList.listIterator(); // 使用list iterator才能找到前一个节点 !!!
+        // 使用list iterator才能找到前一个节点 !!!
+        ListIterator<String> stringListIterator = linkedList.listIterator();
         // .hasNext()
         // 初始的时候，必须使用.next()拿到第一个节点的值 !!
         while (stringListIterator.hasNext()) {
