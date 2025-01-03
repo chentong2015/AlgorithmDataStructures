@@ -1,5 +1,6 @@
-TODO. 路径映射传递问题的本质: Graph图的问题
-通过构建Graph图形结构，方便快速的找到两点之间的路径(长度)
+TODO. 路径映射传递问题的本质: Graph图
+构建Graph图形结构，方便快速的找到两点之间的路径(长度)
+创建的Graph图形结构必须保留，以便使用Graph结构随机查找两个节点之间的距离
 
 Currency Exchange Path
 Input data format

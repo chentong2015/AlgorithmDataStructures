@@ -6,15 +6,15 @@ import java.util.*;
 // Spring使用三级缓存(因为有AOP)来部分解决这个问题
 public class CircularDependency {
 
-    private static Set<String> finishedCells;  // 一级缓存
-    private static Set<String> creatingCells;  // 二级缓存
-    private static HashMap<String, String> allCells = new HashMap<>(); // 包含所有的Cells信息
+    private Set<String> finishedCells;  // 一级缓存
+    private Set<String> creatingCells;  // 二级缓存
+    private HashMap<String, String> cellsValidationMap = new HashMap<>(); // 包含所有的Cells信息
 
-    public boolean validExcelFormulas(HashMap<String, String> cells) {
-        allCells = cells;
-        finishedCells = new HashSet<>();
-        creatingCells = new HashSet<>();
-        for (Map.Entry<String, String> cell : cells.entrySet()) {
+    public boolean validExcelFormulas(HashMap<String, String> cellsValidationMap) {
+        this.cellsValidationMap = cellsValidationMap;
+        this.finishedCells = new HashSet<>();
+        this.creatingCells = new HashSet<>();
+        for (Map.Entry<String, String> cell : cellsValidationMap.entrySet()) {
             if (!validSingleFormula(cell.getKey(), cell.getValue())) {
                 return false;
             }
@@ -25,20 +25,29 @@ public class CircularDependency {
     // 验证一个单独的Cell是否是有效的
     private boolean validSingleFormula(String key, String formula) {
         // 使用缓存来判断已经计算过的Cell，避免重复执行逻辑
-        if (finishedCells.contains(key)) return true;
+        if (finishedCells.contains(key)) {
+            return true;
+        }
         // 添加正在被创建的Cell key
         creatingCells.add(key);
+
         Set<String> relatedCellKeys = parseAllRelatedCellKeys(formula);
         for (String relatedCellKey : relatedCellKeys) {
-            if (relatedCellKey.length() > 0) {
-                if (finishedCells.contains(relatedCellKey)) continue;
-                // TODO: 如果用来计算的相关的单元格正在被创建中，则表示出现了循环依赖，无法计算
-                if (creatingCells.contains(relatedCellKey)) return false;
-                // 这里没有考虑Cell Formula公式的有效性
-                // 成功计算之后，可以设置成Cell单元格的计算值
-                boolean result = validSingleFormula(relatedCellKey, allCells.get(relatedCellKey));
+            if (!relatedCellKey.isEmpty()) {
+                if (finishedCells.contains(relatedCellKey)) {
+                    continue;
+                }
+                // 如果用来计算的相关的单元格正在被创建中，则表示出现了循环依赖，无法计算
+                if (creatingCells.contains(relatedCellKey)) {
+                    return false;
+                }
+
+                // 考虑Cell Formula公式的有效性
+                boolean result = validSingleFormula(relatedCellKey, cellsValidationMap.get(relatedCellKey));
                 // 如果递归中有错，则整个Excel Formula无效
-                if (!result) return false;
+                if (!result) {
+                    return false;
+                }
             }
         }
         // 移除掉正在创建的cell, 保存已经创建好的cell
@@ -50,8 +59,8 @@ public class CircularDependency {
     private Set<String> parseAllRelatedCellKeys(String formula) {
         Set<String> relatedCellKeys = new HashSet<>();
         if (formula.contains(",")) {
-            // 将数组转成list，然后直接添加到结果Set集中
-            relatedCellKeys.addAll(Arrays.asList(formula.split(",")));
+            List<String> tempList = Arrays.asList(formula.split(","));
+            relatedCellKeys.addAll(tempList);
         } else {
             relatedCellKeys.add(formula);
         }
