@@ -3,18 +3,13 @@ package collections.queue.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-// 如何自定义实现一个"队列"类型
-// 1. 使用动态的数组，支持不断的往队列中扩充元素
+// TODO. 自定义实现一个"队列"类型
+// 1. 使用动态数组，支持不断的往队列中扩充元素
 // 2. 需要指针始终指向出队列的那个元素
 public class QueueImplementation {
 
-    private int startIndex;
-    private List<Integer> data;
-
-    public QueueImplementation() {
-        startIndex = 0;
-        data = new ArrayList<>();
-    }
+    private int startIndex = 0;
+    private List<Integer> data = new ArrayList<>();
 
     public boolean enQueue(int item) {
         data.add(item);
@@ -30,7 +25,7 @@ public class QueueImplementation {
         return false;
     }
 
-    // 拿到第一个出队的元素
+    // TODO. 使用列表在出队时会造成O(n)的复杂度 ！
     public int front() {
         return data.get(startIndex);
     }

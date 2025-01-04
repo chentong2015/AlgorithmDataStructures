@@ -1,0 +1,5 @@
+PriorityQueue<E> 基于优先级的堆Heap
+- 基于特定Comparator比较器来比较元素并排序，默认
+
+TODO. PriorityQueue优先级队列：比较统计Top K特征结果
+===> 理解排序的判断条件和元素的先后 ！！

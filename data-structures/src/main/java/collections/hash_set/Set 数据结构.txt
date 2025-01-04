@@ -1,0 +1,24 @@
+TODO. Set<>数据结构
+1. 没有顺序限制, 不能够取指定位置的Item
+2. 不能包含重复的数据, 默认通过equals()来判断比较元素
+
+HashSet<E>       不保证迭代的顺序，顺序不固定: 没有第一个和最后一个元素的概念
+LinkedHashSet<E> 迭代顺序和插入映射中顺序一致
+SortedSet<E>     符合排序规则的Set元素集
+  - TreeSet<E>   通过比较器实现对元素的排序
+
+
+TODO. Set<>运用场景
+用于判断重复元素，记录读过的数据：以空间复杂度换取时间复杂度
+用于计算交集和并集，从不同的Set集合中计算合并结果 !
+
+TODO. Set和List的区别
+1. Duplicate Item
+   List中允许插入重复的元素
+   Set中不允许重复元素存在(主要用于存储离散的数据)
+2. Ordered collection vs Unordered
+   List是有序集合，会保留元素插入时的顺序
+   Set是无序集合，没有index位置的概念
+3. Search Item by Index (id)
+   List可以通过index下标来访问
+   Set不能使用index来直接获取元素
