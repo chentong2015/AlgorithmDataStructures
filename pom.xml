@@ -13,8 +13,6 @@
         <module>data-structures</module>
         <module>interview-amazon</module>
         <module>interview-cases</module>
-        <module>other-problems</module>
-        <module>other-problems</module>
     </modules>
 
     <properties>

@@ -1,5 +1,5 @@
 TODO. 三种常见Map类型
-HashMap<K,V>      不保证元素的迭代顺序，可能和插入的顺序不一致
+HashMap<K,V>      不保证元素的迭代顺序，可能和插入顺序不一致
 LinkedHashMap<,>  插入元素的顺序就是元素迭代访问的顺序
 SortedMap<,>      符合排序规则的Hash键值对
  - TreeMap<,>     根据比较器规则(基于Key或value)对存储的Entry进行排序
@@ -11,10 +11,13 @@ TODO: Hash Table 运用场景
 3. 用于数据的统计和频率的统计
 
 TODO. HashTable和HashMap区别
-1. HashMap中可存储null值，HashTable的key和value均不能设置成null
-2. HashMap数据存储是非同步的，Hashtable数据存储和获取都是同步的，对性能造成影响
+1. HashMap中可存储null值，
+   HashTable的key和value均不能设置成null
+2. HashMap数据存储是非同步的，
+   Hashtable数据存储和获取都是同步的，对性能造成影响
 
-Hashtable<K,V> 不常用，性能差，以整个Hashtable对象为锁来实现线程安全
+TODO. Hashtable<K,V> 不推荐使用
+性能差，以整个Hashtable对象为锁来实现线程安全
 加锁的范围太大/力度太大，即使没有冲突也会受到加锁影响(等锁)
 // public synchronized V get(Object key) {}
 // public synchronized V put(K key, V value) {}
