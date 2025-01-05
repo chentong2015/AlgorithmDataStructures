@@ -5,11 +5,11 @@ Collections.shuffle();        随机洗牌，随机打乱list中元素
 Collections.binarySearch(, ); 对集合元素进行二分法查找
 
 Collections.unmodifiable...() 返回一个不可变的View视图(read-only只读形式)
-  Collections.unmodifiableList()
-  Collections.unmodifiableMap()
-  Collections.unmodifiableSortedMap()
-  Collections.unmodifiableSet()
-  Collections.unmodifiableSortedSet()
+  Collections.unmodifiableList();
+  Collections.unmodifiableMap();
+  Collections.unmodifiableSortedMap();
+  Collections.unmodifiableSet();
+  Collections.unmodifiableSortedSet();
 
 Collections.copy(List<? super T> dest, List<? extends T> src) {}
   由于存在限制的初始化要求，所以不推荐使用该方法

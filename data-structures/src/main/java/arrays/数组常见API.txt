@@ -1,0 +1,7 @@
+int[] nums;
+Arrays.sort(nums);     排序数组元素
+Arrays.binarySearch(); 在数组中二分查询
+Arrays.copyOfRange();  拷贝数组区间
+
+Arrays.asList(nums);   将数组转换成List列表
+Arrays.asList(1,2,3);  直接通过值生成List列表

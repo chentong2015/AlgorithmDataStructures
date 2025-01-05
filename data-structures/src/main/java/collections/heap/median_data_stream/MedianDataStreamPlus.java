@@ -1,6 +1,6 @@
-package collections.heap.two_heap_storage;
+package collections.heap.median_data_stream;
 
-// Follow up: 根据特定的输入数据，进步优化算法
+// 根据特定的输入数据，进步优化算法
 //
 // If all integer numbers from the stream are in the range [0, 100],
 // how would you optimize your solution?

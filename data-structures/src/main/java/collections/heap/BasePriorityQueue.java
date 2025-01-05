@@ -7,9 +7,9 @@ import java.util.Queue;
 
 public class BasePriorityQueue {
 
-    // 输出顺序: A B C D
-    private void testPriorityQueue2() {
-        Queue<String> queue = new PriorityQueue<>();
+    // 输出顺序: A B C D 基于自然排序
+    private void testPriorityQueue() {
+        Queue<String> queue = new PriorityQueue<>(); // Min-Heap 默认最小堆
         queue.offer("D");
         queue.offer("B");
         queue.offer("A");
@@ -19,11 +19,10 @@ public class BasePriorityQueue {
         }
     }
 
-    // 输出顺序: 1.5 2.0 3.0 4.0
-    // 反序输出: 4.0 3.0 2.0 1.5
-    private void testPriorityQueue1() {
-        Queue<Double> queue = new PriorityQueue<>(Collections.reverseOrder());
-        Queue<Double> queue2 = new PriorityQueue<>(Comparator.reverseOrder());
+    public static void main(String[] args) {
+        Queue<Double> queue = new PriorityQueue<>(); // Min-Heap 默认自然排序
+        Queue<Double> queue1 = new PriorityQueue<>(Collections.reverseOrder()); // Max-Heap
+        Queue<Double> queue2 = new PriorityQueue<>(Comparator.reverseOrder()); // Max-Heap
         queue.offer(3.0);
         queue.offer(1.5);
         queue.offer(2.0);

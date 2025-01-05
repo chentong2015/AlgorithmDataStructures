@@ -1,4 +1,4 @@
-package collections.heap.two_heap_storage;
+package collections.heap.median_data_stream;
 
 import java.util.Collections;
 import java.util.PriorityQueue;

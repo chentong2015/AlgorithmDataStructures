@@ -21,7 +21,7 @@ public class TopKPairsSmallestSums {
     public List<List<Integer>> kSmallestPairs(int[] nums1, int[] nums2, int k) {
         List<List<Integer>> result = new ArrayList<>();
 
-        // TODO. 优先队列在插入数据时会将数据排序并插入相应的位置
+        // TODO. 存储int[]数据，必须定义堆(优先队列)的比较器规则
         // Priority queue to store pairs with the smallest sums, sorted by the sum
         PriorityQueue<int[]> priorityQueue = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
 

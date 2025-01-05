@@ -5,18 +5,16 @@ import java.util.Comparator;
 
 public class CollectionsComparison {
 
-    // TODO. 两种反转排序的API
+    // TODO. 排序的反转 + 比较特定的类型
     public static void main(String[] args) {
         Collections.reverseOrder();
         Comparator.reverseOrder();
-    }
 
-    // Comparator.comparing()
-    // Comparator.comparingInt() 源码完整的三种比较结果
-    public static int compare(int x, int y) {
-        return (x < y) ? -1 : ((x == y) ? 0 : 1);
+        // 定义获取比较元素的方式，通过FunctionInterface返回元素
+        // Comparator.comparing(new Function<T, T>());
+        // Comparator.comparingInt(ToIntFunction<? super T>)
+        // Comparator.comparingDouble(ToDoubleFunction<? super T>)
     }
-
 
     // TODO. 实现Comparable接口
     // 1. compareTo()不能跨不同类型进行比较
