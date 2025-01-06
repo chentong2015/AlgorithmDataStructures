@@ -1,4 +1,4 @@
-package collections.heap.median_data_stream;
+package collections.heap.min_max_heap;
 
 import java.util.Collections;
 import java.util.PriorityQueue;
@@ -16,19 +16,19 @@ import java.util.PriorityQueue;
 // At most 50000 calls will be made to addNum and findMedian
 public class MedianDataStream {
 
-    // TODO. 问题的本质是排序数据 + 取Top元素特征的数据
-    private PriorityQueue<Integer> small = new PriorityQueue<>(Collections.reverseOrder());
-    private PriorityQueue<Integer> large = new PriorityQueue<>();
+    private PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+    private PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+
     private boolean even = true;
 
     // O(log(n/2)) 插入堆的复杂度取决于高度，左右两边各存储一半数据
     public void addNum(int num) {
         if (even) {
-            large.offer(num);
-            small.offer(large.poll());
+            minHeap.offer(num);
+            maxHeap.offer(minHeap.poll());
         } else {
-            small.offer(num);
-            large.offer(small.poll());
+            maxHeap.offer(num);
+            minHeap.offer(maxHeap.poll());
         }
         even = !even;
     }
@@ -36,9 +36,8 @@ public class MedianDataStream {
     // O(1) 直接Peek堆顶位置的数据即为中间值
     public double findMedian() {
         if (even) {
-            return (small.peek() + large.peek()) / 2.0;
-        } else {
-            return small.peek();
+            return (maxHeap.peek() + minHeap.peek()) / 2.0;
         }
+        return maxHeap.peek();
     }
 }
