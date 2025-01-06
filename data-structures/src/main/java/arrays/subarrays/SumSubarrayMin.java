@@ -20,16 +20,11 @@ public class SumSubarrayMin {
     // TODO. 利用Monotonic Stack单调栈来存储遍历过程中有用的坐标
     // Input: 3  1  2  4
     // Stack:
-    //          4 存储值
-    //       2  2
-    // 3  1  1  1
-    //    -  -  -
-    //
-    //          3 存储坐标: 用于计算Gap间隔
+    //          3  存储坐标: 用于计算Gap间隔
     //       2  2
     // 0  1  1  1
     //
-    // O(n ~ n*n) 每读取一个新元素就会遍历栈
+    // O(n ~ n*n) 不应该在For循环的过程中反复循环Stack，没有利用栈中计算的结果
     // O(n)       栈中可能存储所有的坐标
     public static int sumSubarrayMins(int[] nums) {
         long sum = 0;

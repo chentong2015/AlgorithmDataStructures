@@ -7,8 +7,8 @@ public class SumSubarrayMin2 {
     // Stack: -1  -1  1    2    统计前面更小值的Index坐标位置
     // Sum[]: 3   2   2+2  4+4  使用这个数组来做累加效果
     //
-    // O(3n) 最佳的时间复杂度
-    // O(n)  对等的空间复杂度
+    // O(n+n+n) 最佳的时间复杂度
+    // O(n)     对等的空间复杂度, 栈数组中存储的坐标
     public static int sumSubarrayMinsMaster(int[] nums) {
         int[] smallIndexBefore = new int[nums.length];
 
@@ -25,11 +25,11 @@ public class SumSubarrayMin2 {
 
         int[] sum = new int[nums.length];
         for (int i = 0; i < nums.length; i++) {
-            // 考虑Gap间隔，统计当前nums[i]能够被当作几次最小值
+            // TODO. 考虑Gap间隔，统计当前nums[i]能够被当作几次最小值
             int gap = i - smallIndexBefore[i];
             sum[i] = nums[i] * gap;
 
-            // TODO. 再累加前面更小值的Index位置的统计Sum, 避免往前循环
+            // TODO. 累加前面更小值的Index位置的统计Sum, 避免往前循环
             if (smallIndexBefore[i] >= 0) {
                 sum[i] += sum[smallIndexBefore[i]];
             }
