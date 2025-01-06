@@ -1,4 +1,4 @@
-package templates.sliding_windows;
+package templates.sliding_window;
 
 // TODO. 最长的不包含重复字符的Substring
 public class LongestSubstringWindow {

@@ -1,18 +1,18 @@
-package templates.sliding_windows;
+package templates.sliding_window.sliding_window_min;
 
 // TODO. 滑动窗口算法高阶版本: 在滑动的过程中抵消字符的统计变化
 // 第一轮统计：   [0,0, 0, 0,,,,,1,2,0,2,0,,,]
+//
 // 第一轮窗口移动：[0,0,-1,-1,,,,,0,0,0,0,0,,,] 将统计的字符全部抵消成0，则SubString区间包含前字符
 //    start滑动: [0,0, 0,-1,,,,,0,0,0,0,0,,,] 将无关的字符+1恢复
 //    start滑动: [0,0, 0, 0,,,,,0,0,0,0,0,,,] 将无关的字符+1恢复
 //    start滑动: [0,0, 0, 0,,,,,1,0,0,0,0,,,] 将查找的字符+1统计
+//
 // 第二轮窗口移动：[0,-1,0, 0,,,,,0,0,0,0,0,,,] 找到字符抵消count=0
 //    start滑动: [0,0, 0, 0,,,,,0,0,0,0,0,,,] 将无关的字符+1回复
 //    start继续: 缩短窗口的统计距离
 public class MinimumSubstringWindow {
 
-
-    // 找出最小的能够覆盖"另一个字符串所有字符"的窗口SubString
     // Minimum Window Substring
     // Given two strings s and t, return the min window in s which will contain all characters in t.
     // If there is no such window in s that covers all characters in t, return the empty string ""

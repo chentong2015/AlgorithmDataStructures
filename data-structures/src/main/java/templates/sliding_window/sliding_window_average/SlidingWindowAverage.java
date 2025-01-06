@@ -1,4 +1,4 @@
-package criteo;
+package templates.sliding_window.sliding_window_average;
 
 import java.util.ArrayList;
 import java.util.List;

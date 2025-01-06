@@ -1,4 +1,4 @@
-package templates.sliding_windows;
+package templates.sliding_window;
 
 import java.util.Arrays;
 

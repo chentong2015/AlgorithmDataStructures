@@ -11,7 +11,7 @@ package arrays.subarrays;
 //
 // 1 <= arr.length <= 3 * 10^4
 // 1 <= arr[i] <= 3 * 10^4
-public class SumSubarrayMinimums {
+public class SumSubarrayMin {
 
     public static void main(String[] args) {
         int[] arr = {3,1,2,4};

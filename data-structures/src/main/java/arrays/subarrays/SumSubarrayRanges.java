@@ -5,7 +5,6 @@ package arrays.subarrays;
 // The range of a subarray of nums is the difference between largest and smallest element in subarray.
 // Return the sum of all subarray ranges of nums.
 //
-// A subarray is a contiguous non-empty sequence of elements within an array.
 // 1 <= nums.length <= 1000
 // -10^9 <= nums[i] <= 10^9
 //

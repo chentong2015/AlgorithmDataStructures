@@ -1,4 +1,4 @@
-package criteo.max_sliding_window;
+package templates.sliding_window.sliding_window_max;
 
 import java.util.LinkedList;
 
