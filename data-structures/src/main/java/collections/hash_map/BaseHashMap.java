@@ -2,7 +2,6 @@ package collections.hash_map;
 
 import java.util.*;
 
-// TODO. Hash表数据结构常见的API
 public class BaseHashMap {
 
     public static void main(String[] args) {
@@ -20,13 +19,15 @@ public class BaseHashMap {
         // 基于Key键值来移除Entry
         hashmap.remove(2);
 
-        // 直接判断键这值是否存在
+        // TODO. 判断Key值是否存在 O(1)复杂度
         boolean foundKay = hashmap.containsKey(2);
+
+        // TODO. 可以直接判断Value键值存在，造成O(n)复杂度
         boolean foundValue = hashmap.containsValue(3);
 
         // 遍历所有的key的集合 hashmap.keySet()
         // 遍历所有的value集合 hashmap.values()
-        // 使用Map.Entry<>来遍历每一对的键值.entrySet()
+        // 使用Map.Entry<>来遍历所有键值对.entrySet()
         for (Map.Entry<Integer, Integer> entry : hashmap.entrySet()) {
             System.out.print(entry.getKey() + "," + entry.getValue());
         }
@@ -34,6 +35,7 @@ public class BaseHashMap {
         if (hashmap.isEmpty()) {
             System.out.println("hash map is empty now!");
         }
+
         System.out.println(hashmap.size());
 
         hashmap.clear();

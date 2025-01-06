@@ -14,6 +14,8 @@ public class BinarySearchTreeValid {
         if (root == null) {
             return true;
         }
+
+        // DFS深度查找，直到子树的叶子节点
         TreeNode tempNode = root.getLeft();
         TreeNode leftMaxNode = tempNode;
         while (tempNode != null) {
@@ -28,6 +30,7 @@ public class BinarySearchTreeValid {
             tempNode = tempNode.getLeft();
         }
 
+        // 左子树找到的最大值 vs 右边子树找到的最小值
         if (leftMaxNode == null && rightMinNode == null) {
             return true;
         }

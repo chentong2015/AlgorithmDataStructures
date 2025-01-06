@@ -9,13 +9,13 @@ public class BasePriorityQueueOrdered {
         // 默认情况无法根据int[]来进行元素比较，必须自定义比较的方式 ！
         Queue<int[]> priorityQueue = new PriorityQueue<>();
 
-        // 根据int[]的第二个位置的值来排序，形成Min-Heap
+        // 根据int[]的第二个位置值来排序，形成Min-Heap
         Queue<int[]> priorityQueue1 = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
 
-        // 根据int[]的第一个位置的值来排序，形成Min-Heap
+        // 根据int[]的第一个位置值来排序，形成Min-Heap
         Queue<int[]> priorityQueue2 = new PriorityQueue<>((a1, a2) -> a1[0] - a2[0]);
 
-        // 根据int[]的第二个位置的值来排序，形成Max-Heap
+        // 根据int[]的第二个位置值来排序，形成Max-Heap
         Queue<int[]> priorityQueue3 = new PriorityQueue<>((a1, a2) -> a2[1] - a1[1]);
         priorityQueue3.offer(new int[]{4, 5});
         priorityQueue3.offer(new int[]{7, 3});
