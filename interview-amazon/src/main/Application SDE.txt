@@ -1,19 +1,11 @@
-1. Job Application 分析投递职位的工作内容
-2. Online Assessment 两道Algo+工作决策
-3. Phone Screen 1h 一轮全面且基础的面试
-4. Interview loop  四轮深度且技术性面试
+Hire Process:
+1. Online Assessment 两道Algo+工作决策
+2. Phone Screen 1h   一轮全面且基础的面试
+3. Interview loop    四轮深度且技术性面试
+4. Reference Check   五个工作日Offer Call
 
 https://www.amazon.jobs/fr/software-development-interview-prep
 https://www.amazon.jobs/zh/landing_pages/in-software-development-topics
 
 https://www.scarletink.com/p/what-to-expect-amazon-interview-process
 https://www.amazon.jobs/content/en/how-we-hire/interview-loop
-
-TODO. Leadership Principles 领导力原则
-- 本质是定义并约束了“如何工作”和“如何解决问题”
-- 基本职场上的问题都能归结到这12条原则上来解释
-- 应用在不同场景，通过STAR方法对其应用进行阐述
-
-https://www.linkedin.com/pulse/how-interview-amazon-leadership-david-anderson/
-https://www.scarletink.com/p/interviewing-at-amazon-leadership-principles
-https://www.amazon.jobs/content/en/our-workplace/leadership-principles
