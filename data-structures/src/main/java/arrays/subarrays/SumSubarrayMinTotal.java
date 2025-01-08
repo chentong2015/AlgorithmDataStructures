@@ -19,9 +19,10 @@ package arrays.subarrays;
 // - [3,1,2] from [1,3,1,2] has a total strength of min([3,1,2]) * sum([3,1,2]) = 1 * 6 = 6
 // - [1,3,1,2] from [1,3,1,2] has a total strength of min([1,3,1,2]) * sum([1,3,1,2]) = 1 * 7 = 7
 // The sum of all the total strengths is 1 + 9 + 1 + 4 + 4 + 4 + 3 + 5 + 6 + 7 = 44.
-public class SumSubarrayMinPlus {
+public class SumSubarrayMinTotal {
 
     public int totalStrength(int[] strength) {
+
 
 
         return 0;

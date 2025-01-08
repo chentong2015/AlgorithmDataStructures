@@ -1,6 +1,6 @@
 package arrays.subarrays;
 
-public class SumSubarrayMin2 {
+public class SumSubarrayMinOk {
 
     // TODO. 优化算法: 一次性将Monotonic Stack单调栈中数据读取出来
     // Input: 3   1   2    4

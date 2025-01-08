@@ -1,14 +1,16 @@
-package collections.tree.segment_tree;
+package collections.tree.binary_indexed_tree;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class LearnBinaryIndexTree {
+public class SmallerNumbersAfterSelf {
 
     // Count of Smaller Numbers After Self
-    // return a new counts array, where counts[i] is the number of smaller elements to the right of nums[i]
-    // nums = [5,2,6,1] -> [2,1,1,0] 统计每个位置的右边小于该位置值的数目
+    // return a new counts array, where counts[i]
+    // is the number of smaller elements to the right of nums[i]
+    //
+    // nums = [5,2,6,1] -> [2,1,1,0]
     public List<Integer> countSmallerBIT(int[] nums) {
         int offset = 10000;       // offset negative to non-negative
         int size = 2 * 10000 + 2; // total possible values in nums plus one dummy

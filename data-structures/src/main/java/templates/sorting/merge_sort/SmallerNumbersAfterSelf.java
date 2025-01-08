@@ -4,9 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-// TODO. 有关Merge Sort归并排序的进阶场景
-// 在归并的过程中统计右侧被甩到左侧的更小的数据
-public class MergeSortingCounter {
+// TODO. 归并排序进阶案例: 在归并排序过程中统计“右侧被甩到左侧的”更小数据
+public class SmallerNumbersAfterSelf {
 
     // Count of Smaller Numbers After Self
     // Given an integer array nums, return an integer array counts
