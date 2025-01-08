@@ -1,5 +1,7 @@
 package arrays.subarrays;
 
+// TODO. 问题本质: 最大值子数组统计值 - 最小值子数组统计值 = Ranges子数组统计
+//  Sum SubArray Max - Sum SubArray Min = Sum SubArray Range
 // Sum of Subarray Ranges
 // You are given an integer array nums.
 // The range of a subarray of nums is the difference between largest and smallest element in subarray.
@@ -15,36 +17,27 @@ package arrays.subarrays;
 //
 // nums = [1,3,3] -> sum = 4
 // nums = [4,-2,-3,4,1] -> sum = 59
-//
-// Follow-up: Could you find a solution with O(n) time complexity ?
 public class SumSubarrayRanges {
 
-    // TODO. DP + Stack 暂存读取过的“有用特征数据“
-    // 1   3   3
-    // -1  0   0  = min id before
-    // -1  -1  -1 = max id before
-    // 0 + 2 + 2  = 4
-    //
-    // 1   2   3
-    // -1  0   1  = min id before
-    // -1  -1  -1 = max id before
-    // 0 + 1 + 1+2 = 4
-    //
-    // 4,  -2,  -3,  4,   1
-    // -1  -1   -1   2    2 = min id before
-    // -1  0    1    -1   3 = max id before
-    // 0 + 6+ 1+7+ 7+6+ 3+4+3+3
+    // TODO. 根据问题的约束条件，考虑暴力破解(执行常数次的循环)
     public static long subArrayRanges(int[] nums) {
-        if (nums.length == 1) {
-            return 0;
+        long sum = 0;
+        int startIndex = 0;
+        while (startIndex < nums.length - 1) {
+            int min = nums[startIndex];
+            int max = nums[startIndex];
+
+            // 往后面迭代的同时，更新截取的SubArray区间的最值
+            for (int right = startIndex + 1; right < nums.length; right++) {
+                if (nums[right] > max) {
+                    max = nums[right];
+                } else if (nums[right] < min) {
+                    min = nums[right];
+                }
+                sum+= max - min;
+            }
+            startIndex++;
         }
-
-        return 0;
-    }
-
-    public static void main(String[] args) {
-        int[] nums = {1, 2, 3, 4};
-        int[] nums1 = {4, -2, -3, 4, 1};
-        System.out.println(subArrayRanges(nums1));
+        return sum;
     }
 }
