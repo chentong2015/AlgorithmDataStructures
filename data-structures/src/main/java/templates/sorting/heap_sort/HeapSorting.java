@@ -1,4 +1,4 @@
-package templates.sorting;
+package templates.sorting.heap_sort;
 
 // Heap Sort 堆排序，不是最佳解
 // 平均时间复杂度	O(nlog(n))

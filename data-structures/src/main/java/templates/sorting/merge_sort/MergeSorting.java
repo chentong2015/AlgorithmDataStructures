@@ -10,7 +10,7 @@ public class MergeSorting {
             int[] leftList = Arrays.copyOfRange(input, 0, middle);
             int[] rightList =Arrays.copyOfRange(input, middle, input.length);
 
-            // 对左右两侧的数组进行归并排序
+            // 对左右差分的数组进行归并(递归)排序
             mergeSort(leftList);
             mergeSort(rightList);
 
