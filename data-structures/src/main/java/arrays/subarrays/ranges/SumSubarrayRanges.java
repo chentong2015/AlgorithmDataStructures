@@ -1,4 +1,4 @@
-package arrays.subarrays;
+package arrays.subarrays.ranges;
 
 // TODO. 问题本质: 最大值子数组统计值 - 最小值子数组统计值 = Ranges子数组统计
 //  Sum SubArray Max - Sum SubArray Min = Sum SubArray Range

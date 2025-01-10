@@ -1,4 +1,4 @@
-package doctolib.model;
+package doctolib.sample;
 
 import java.time.LocalDateTime;
 

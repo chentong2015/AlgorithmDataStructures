@@ -1,14 +1,11 @@
-package doctolib;
-
-import doctolib.model.Event;
-import doctolib.model.Kind;
+package doctolib.sample;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AppointmentBooking {
+public class SampleBooking {
 
     public List<LocalDateTime> getSlotsForNext7Days(LocalDate startDate) {
         List<Event> events = new ArrayList<>();
