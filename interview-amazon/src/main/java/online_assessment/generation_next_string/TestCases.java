@@ -1,4 +1,4 @@
-package interview.generation_next_string;
+package online_assessment.generation_next_string;
 
 public class TestCases {
 

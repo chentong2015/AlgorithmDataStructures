@@ -1,4 +1,4 @@
-package interview.generation_next_string;
+package online_assessment.generation_next_string;
 
 // 生成下一个特殊字符串
 // - 特殊字符串中不能包含两个连续的char是相同的

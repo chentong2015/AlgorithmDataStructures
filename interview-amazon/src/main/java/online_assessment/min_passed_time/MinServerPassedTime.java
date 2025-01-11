@@ -1,4 +1,4 @@
-package interview.min_passed_time;
+package online_assessment.min_passed_time;
 
 import java.util.Collections;
 import java.util.List;
