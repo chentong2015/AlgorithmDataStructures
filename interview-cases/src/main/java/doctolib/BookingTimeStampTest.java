@@ -5,20 +5,30 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+// TODO. Unit Test单元测试 -> TDD 测试驱动开发
+// - 后续测试的实现需要兼容之前测试(反向思考)
+// - 测试对于不同StartDate起始日期的输出结果
+// - 测试Slot时段的添加和删除效果
+// - 测试返回结果的不同Slots时段(多个TimeStamp)
 public class BookingTimeStampTest {
 
-    public static void main(String[] args) {
-        BookingTimeStampTest timeStampTest = new BookingTimeStampTest();
-        timeStampTest.test0_empty();
-        timeStampTest.test1_slot_size();
-        timeStampTest.test2_first_slot();
-        timeStampTest.test3_slot_order();
-        timeStampTest.test4_slot_open();
+    // 模拟测试: 模拟从数据库中查询的所有Open Events时间戳
+    private List<Timestamp> getOpenTimestamps() {
+        List<Timestamp> slots = new ArrayList<>();
+        slots.add(Timestamp.valueOf(LocalDateTime.now()));
+        slots.add(Timestamp.valueOf(LocalDateTime.now().plusDays(7).plusHours(4)));
+        slots.add(Timestamp.valueOf(LocalDateTime.now().plusDays(6).plusHours(5)));
+        slots.add(Timestamp.valueOf(LocalDateTime.now().plusDays(1)));
+        slots.add(Timestamp.valueOf(LocalDateTime.now().plusDays(3).plusHours(2)));
+        slots.add(Timestamp.valueOf(LocalDateTime.now().plusDays(4).plusHours(6)));
+        slots.add(Timestamp.valueOf(LocalDateTime.now().plusDays(2).plusMinutes(20)));
+        return slots;
     }
 
-    private void test0_empty() {
-        BookingTimeStamp bookingTimeStamp = new BookingTimeStamp();
-        List<Timestamp> result = bookingTimeStamp.processSlots(new ArrayList<>());
+    private void test0_empty_slots() {
+        BookingTimeStamp booking = new BookingTimeStamp();
+        LocalDateTime startDateTime = LocalDateTime.now();
+        List<Timestamp> result = booking.processSlots(new ArrayList<>(), startDateTime);
 
         if (result.isEmpty()) {
             System.out.println("test 0 OK");
@@ -28,11 +38,11 @@ public class BookingTimeStampTest {
     }
 
     private void test1_slot_size() {
-        BookingTimeStamp bookingTimeStamp = new BookingTimeStamp();
-        List<Timestamp> openSlots = bookingTimeStamp.getOpenTimestamps();
-        List<Timestamp> result = bookingTimeStamp.processSlots(openSlots);
+        BookingTimeStamp booking = new BookingTimeStamp();
+        LocalDateTime startDateTime = LocalDateTime.now();
+        List<Timestamp> result = booking.processSlots(getOpenTimestamps(), startDateTime);
 
-        if (result.size() > 3) {
+        if (result.size() == 5) {
             System.out.println("test 1 OK");
         } else {
             System.out.println("test 1 Failed");
@@ -40,9 +50,9 @@ public class BookingTimeStampTest {
     }
 
     private void test2_first_slot() {
-        BookingTimeStamp bookingTimeStamp = new BookingTimeStamp();
-        List<Timestamp> openSlots = bookingTimeStamp.getOpenTimestamps();
-        List<Timestamp> result = bookingTimeStamp.processSlots(openSlots);
+        BookingTimeStamp booking = new BookingTimeStamp();
+        LocalDateTime startDateTime = LocalDateTime.now();
+        List<Timestamp> result = booking.processSlots(getOpenTimestamps(), startDateTime);
 
         LocalDateTime firstSlotTime = result.get(0).toLocalDateTime();
         if (firstSlotTime.isAfter(LocalDateTime.now())) {
@@ -53,9 +63,9 @@ public class BookingTimeStampTest {
     }
 
     private void test3_slot_order() {
-        BookingTimeStamp bookingTimeStamp = new BookingTimeStamp();
-        List<Timestamp> openSlots = bookingTimeStamp.getOpenTimestamps();
-        List<Timestamp> result = bookingTimeStamp.processSlots(openSlots);
+        BookingTimeStamp booking = new BookingTimeStamp();
+        LocalDateTime startDateTime = LocalDateTime.now();
+        List<Timestamp> result = booking.processSlots(getOpenTimestamps(), startDateTime);
 
         LocalDateTime firstTime = result.get(0).toLocalDateTime();
         LocalDateTime secondTime = result.get(1).toLocalDateTime();
@@ -66,11 +76,24 @@ public class BookingTimeStampTest {
         }
     }
 
-    // 测试复杂的，关于具体时刻逻辑的单元测试
-    private void test4_slot_open() {
-        BookingTimeStamp bookingTimeStamp = new BookingTimeStamp();
-        List<Timestamp> openSlots = bookingTimeStamp.getOpenTimestamps();
-        List<Timestamp> result = bookingTimeStamp.processSlots(openSlots);
+    private void test4_slot_with_wrong_start_date() {
+        BookingTimeStamp booking = new BookingTimeStamp();
 
+        LocalDateTime startDateTime = LocalDateTime.now().plusDays(8);
+        List<Timestamp> result = booking.processSlots(getOpenTimestamps(), startDateTime);
+        if (result.isEmpty()) {
+            System.out.println("test 4 OK");
+        } else {
+            System.out.println("test 4 Failed");
+        }
+    }
+
+    public static void main(String[] args) {
+        BookingTimeStampTest timeStampTest = new BookingTimeStampTest();
+        timeStampTest.test0_empty_slots();
+        timeStampTest.test1_slot_size();
+        timeStampTest.test2_first_slot();
+        timeStampTest.test3_slot_order();
+        timeStampTest.test4_slot_with_wrong_start_date();
     }
 }

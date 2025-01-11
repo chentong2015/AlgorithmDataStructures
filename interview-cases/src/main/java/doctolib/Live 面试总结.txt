@@ -1,18 +1,6 @@
-形式和流程
 1. 先提供要测试通过的Unit Test
 2. 根据单元测试完成Function主体
-3. 继续补充单元测试
-4. 判断是否需要重构代码
-5. 完善Function主体以保证测试通过
-
-TODO. Function关键信息
-- TimeStamp 表示一个DateTime，DB存储的一个时刻
-- Slot=TimeStamp+15m 定长15分钟的时间段
-- Database 查询返回的列表表示Opening Event可预定的TimeStamp
-- 使用Collections.sort()排列List集合数据
-- 考虑预定Slot的先后顺序，从早到晚显示
-
-TODO. Unit Test单元测试
-- 后续测试的实现需要兼容之前测试(反向思考)
-- 单元测试需要测试“Open”以及“Not Open”Slot时段
-- 总预定时段由不同Slots时段组成(包含多个TimeStamp)
+3. 继续补充单元测试，更新方法
+4. 判断是否需要Refactor重构代码
+   - 优化使用的数据结构来计算
+   - 考虑使用.stream().filter().map().toList()优化
