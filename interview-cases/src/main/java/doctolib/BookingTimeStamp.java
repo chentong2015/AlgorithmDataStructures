@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-// TODO. Function关键信息
+// TODO. Function关键信息: 方法的功能完全取决于测试
 //- SQL返回结果表示可预定的TimeStamp(Opening Event)
 //  - TimeStamp 数据表存储的时刻/表示一个DateTime
 //  - Slot=[TimeStamp + 15m] 定长15分钟的时间段
