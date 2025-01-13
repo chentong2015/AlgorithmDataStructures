@@ -1,4 +1,4 @@
-package collections.tree.prefix_tree.node;
+package collections.tree.prefix_tree.base;
 
 public class TrieNodeWithWord {
 

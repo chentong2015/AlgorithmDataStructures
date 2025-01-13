@@ -1,6 +1,6 @@
-package collections.tree.prefix_tree.questions;
+package collections.tree.prefix_tree.replace_words;
 
-import collections.tree.prefix_tree.node.TrieNodeWithWord;
+import collections.tree.prefix_tree.base.TrieNodeWithWord;
 
 import java.util.HashSet;
 import java.util.List;

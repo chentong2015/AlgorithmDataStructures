@@ -1,0 +1,12 @@
+TODO. 前缀树使用场景
+优先运用于字符串(字典)的拼接，组合，查找，自动补全
+前缀树会存储所有有用的(唯一)字符数据，可能造成空间复杂度 ！
+
+1. 优化数据的存储，减少存储空间
+2. 提高字符串的查找速度，使用tree具有更到的时间复杂度
+3. 运用来实战场景: 搜索，推荐
+   - Searching Complete
+   - Spell Checker
+   - Solving word games
+   - Text on key9 predictive text 手机9宫格输入器预测单词
+   - Longest prefix matching algorithm in IP routing 最长前缀匹配算法

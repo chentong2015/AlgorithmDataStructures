@@ -1,6 +1,6 @@
-package collections.tree.prefix_tree.questions;
+package collections.tree.prefix_tree.word_searching;
 
-import collections.tree.prefix_tree.node.TrieNodeWithWord;
+import collections.tree.prefix_tree.base.TrieNodeWithWord;
 
 import java.util.ArrayList;
 import java.util.List;

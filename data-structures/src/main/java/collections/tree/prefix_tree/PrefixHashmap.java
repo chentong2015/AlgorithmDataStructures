@@ -1,4 +1,4 @@
-package collections.tree.prefix_tree.questions;
+package collections.tree.prefix_tree;
 
 import java.util.HashMap;
 
