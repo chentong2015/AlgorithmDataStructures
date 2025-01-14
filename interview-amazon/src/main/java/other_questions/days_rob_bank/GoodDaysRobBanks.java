@@ -1,4 +1,4 @@
-package questions.days_rob_bank;
+package other_questions.days_rob_bank;
 
 import java.util.ArrayList;
 import java.util.List;

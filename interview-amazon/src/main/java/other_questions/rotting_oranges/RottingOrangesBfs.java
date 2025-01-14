@@ -1,4 +1,4 @@
-package questions.rotting_oranges;
+package other_questions.rotting_oranges;
 
 import java.util.ArrayDeque;
 import java.util.Queue;

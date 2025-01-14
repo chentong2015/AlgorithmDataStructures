@@ -1,4 +1,4 @@
-package questions;
+package other_questions;
 
 // TODO. 相邻字符不等: 本质上是利用不同字符之间抵消特性, 与具体字符无关
 // Reorganize String

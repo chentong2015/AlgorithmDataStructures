@@ -21,10 +21,7 @@ package arrays.subarrays.sum;
 // The sum total strengths 1 + 9 + 1 + 4 + 4 + 4 + 3 + 5 + 6 + 7 = 44.
 public class SumSubarraySum {
 
-    // TODO. 判断每增加一个元素，对结果有什么影响(需要什么暂存数据) ?
     public int totalStrength(int[] strength) {
-
-
 
         return 0;
     }

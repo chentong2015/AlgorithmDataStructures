@@ -1,4 +1,4 @@
-package questions.triangular_sum_array;
+package other_questions.triangular_sum_array;
 
 public class TriangularSumArray {
 

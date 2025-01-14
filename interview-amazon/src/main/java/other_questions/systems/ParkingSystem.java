@@ -1,4 +1,4 @@
-package questions.systems;
+package other_questions.systems;
 
 // Design Parking System
 // Design a parking system for a parking lot.

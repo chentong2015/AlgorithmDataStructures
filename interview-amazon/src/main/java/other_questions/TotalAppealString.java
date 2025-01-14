@@ -1,4 +1,4 @@
-package questions;
+package other_questions;
 
 import java.util.Arrays;
 import java.util.HashMap;

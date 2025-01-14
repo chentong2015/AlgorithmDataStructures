@@ -1,4 +1,4 @@
-package questions.max_num_robots;
+package other_questions.max_num_robots;
 
 import java.util.LinkedList;
 

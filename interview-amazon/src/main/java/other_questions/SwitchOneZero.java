@@ -1,4 +1,4 @@
-package questions;
+package other_questions;
 
 // Sort 1's and 0's in array to the end. Either end is fine.
 // Find the minimum number of adjacent swaps required to sort.

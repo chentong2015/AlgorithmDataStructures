@@ -1,4 +1,4 @@
-package questions.zero_one_ways;
+package other_questions.zero_one_ways;
 
 public class WaysSelectZeroOne {
 
