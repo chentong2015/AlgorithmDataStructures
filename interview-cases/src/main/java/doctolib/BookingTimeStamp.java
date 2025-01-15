@@ -43,9 +43,11 @@ public class BookingTimeStamp {
         return result;
     }
 
-    // TODO. 解析Doctor opening slots: 分类ID + 排序时间戳 + 合并时间戳
+    // TODO. 解析Doctor opening slots: 分类ID + 排序 + 合并(移除时间戳)
     // - 提供从DB表格查询出来的乱数据
     // - 通过方法解析后，返回的结果能够之间被前端使用和显示
+    //
+    // 总的时间复杂度和Timestamp的数量有关
     public HashMap<Long, List<Timestamp>> processSlotsPlus(List<Event> events, Timestamp startTimestamp) {
         // TreeMap<Long, List<Timestamp>> 根据Key值自然排序
         HashMap<Long, List<Timestamp>> result = new HashMap<>();
@@ -83,11 +85,10 @@ public class BookingTimeStamp {
                 int nextIndex = index + 1;
                 while (nextIndex < timestamps.size() && timestamps.get(nextIndex).toLocalDateTime().isBefore(nextDateTime)) {
                     nextIndex++;
+                    // timestamps.remove(nextIndex) 直接在原本List列表上移除会造成时间复杂度
                 }
-                // Move to the next valid timestamp
                 index = nextIndex;
             }
-
             // Update the new entry value
             entry.setValue(timestampsUpdated);
         }
