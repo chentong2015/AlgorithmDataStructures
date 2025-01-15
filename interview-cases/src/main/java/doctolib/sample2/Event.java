@@ -1,11 +1,11 @@
-package doctolib;
+package doctolib.sample2;
 
 import java.sql.Timestamp;
 
 public class Event {
 
-    long doctorId;
-    Timestamp timestamp;
+    public long doctorId;
+    public Timestamp timestamp;
 
     public Event(long doctorId, Timestamp timestamp) {
         this.doctorId = doctorId;

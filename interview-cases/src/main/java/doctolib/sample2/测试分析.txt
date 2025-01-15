@@ -1,11 +1,4 @@
-1. 先提供要测试通过的Unit Test
-2. 根据单元测试完成Function主体
-3. 继续补充单元测试，更新方法
-4. 判断是否需要Refactor重构代码
-   - 优化使用的数据结构来计算
-   - 考虑使用.stream().filter().map().toList()优化
-
- TODO. Function关键信息: 方法的功能完全取决于测试
+TODO. Function关键信息: 方法的功能完全取决于测试
 - SQL返回结果表示可预定的TimeStamp(Opening Event)
   - TimeStamp 数据表存储的时刻/表示一个DateTime
   - Slot=[TimeStamp + 15m] 定长15分钟的时间段

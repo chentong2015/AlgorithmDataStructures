@@ -1,4 +1,4 @@
-package doctolib;
+package doctolib.sample2;
 
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
@@ -28,7 +28,7 @@ public class BookingTimeStampTest2 {
     // 2025-01-15 15:37:38.84123
     // ----------
     public static void main(String[] args) {
-        BookingTimeStamp booking = new BookingTimeStamp();
+        BookingTimeStamp2 booking = new BookingTimeStamp2();
         Timestamp timestampStart = Timestamp.valueOf(LocalDateTime.now());
         HashMap<Long, List<Timestamp>> result = booking.processSlotsPlus(getOpenSlots(), timestampStart);
 
