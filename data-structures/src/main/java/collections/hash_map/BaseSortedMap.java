@@ -12,7 +12,7 @@ public class BaseSortedMap {
         map.put(8, "item8");
         map.put(7, "item7");
 
-        // TODO. 排序后的结果为List<Entry>列表集合
+        // TODO. 返回排序结果List<Entry>列表
         List<Map.Entry<Integer, String>> listEntry = map.entrySet()
                 .stream()
                 .sorted(Map.Entry.comparingByKey())

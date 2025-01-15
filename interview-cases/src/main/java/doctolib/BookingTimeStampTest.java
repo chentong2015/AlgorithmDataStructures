@@ -5,12 +5,16 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-// TODO. Unit Test单元测试 -> TDD 测试驱动开发
-// - 后续测试的实现需要兼容之前测试(反向思考)
-// - 测试对于不同StartDate起始日期的输出结果
-// - 测试Slot时段的添加和删除效果
-// - 测试返回结果的不同Slots时段(多个TimeStamp)
 public class BookingTimeStampTest {
+
+    public static void main(String[] args) {
+        BookingTimeStampTest timeStampTest = new BookingTimeStampTest();
+        timeStampTest.test0_empty_slots();
+        timeStampTest.test1_slot_size();
+        timeStampTest.test2_first_slot();
+        timeStampTest.test3_slot_order();
+        timeStampTest.test4_slot_with_wrong_start_date();
+    }
 
     // 模拟测试: 模拟从数据库中查询的所有Open Events时间戳
     private List<Timestamp> getOpenTimestamps() {
@@ -86,14 +90,5 @@ public class BookingTimeStampTest {
         } else {
             System.out.println("test 4 Failed");
         }
-    }
-
-    public static void main(String[] args) {
-        BookingTimeStampTest timeStampTest = new BookingTimeStampTest();
-        timeStampTest.test0_empty_slots();
-        timeStampTest.test1_slot_size();
-        timeStampTest.test2_first_slot();
-        timeStampTest.test3_slot_order();
-        timeStampTest.test4_slot_with_wrong_start_date();
     }
 }

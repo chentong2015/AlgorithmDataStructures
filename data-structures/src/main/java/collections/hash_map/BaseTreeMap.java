@@ -7,7 +7,6 @@ import java.util.*;
 // - 自定义比较器实现根据Key值的倒叙排序
 public class BaseTreeMap {
 
-    // TODO. TreeMap无法根据Value值来排序
     public static void main(String[] args) {
         // TODO. 默认根据Key值自然排序Entry数据
         TreeMap<Integer, Integer> treeMap0 = new TreeMap<>();
@@ -15,7 +14,7 @@ public class BaseTreeMap {
         treeMap0.put(3, 30);
         treeMap0.put(9, 90);
 
-        // TODO. 自定义根据Key键值倒叙排序
+        // TODO. 自定义根据Key键值倒叙排序，但无法根据Value值来排序 ！
         TreeMap<Integer, String> treeMap = new TreeMap<>(new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {

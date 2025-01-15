@@ -4,57 +4,98 @@ import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
-// TODO. Function关键信息: 方法的功能完全取决于测试
-//- SQL返回结果表示可预定的TimeStamp(Opening Event)
-//  - TimeStamp 数据表存储的时刻/表示一个DateTime
-//  - Slot=[TimeStamp + 15m] 定长15分钟的时间段
-//- Collections.sort()排列List<>集合数据
-//- StartDate起始日期不同，返回集合结果不同
 public class BookingTimeStamp {
 
-    public static void main(String[] args) {
-        LocalDateTime startDateTime = LocalDateTime.of(2024, 6, 10, 12, 0);
-        LocalDateTime localDateTime = LocalDateTime.of(2024, 6, 10, 12, 1);
-        // 必须是完全相同的时刻才会返回True
-        System.out.println(localDateTime.isEqual(startDateTime));
-    }
-
-    // LocalDateTime类型拥有更加丰富的API
+    // TODO. LocalDateTime类型拥有更丰富的API: 计算时间和时刻的偏移
     public List<Timestamp> processSlots(List<Timestamp> openSlots, LocalDateTime startDateTime) {
         List<Timestamp> result = new ArrayList<>();
         if (openSlots.isEmpty()) {
             return result;
         }
+        // LocalDateTime -> Timestamp
+        Timestamp timestampStart = Timestamp.valueOf(startDateTime);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm");
+        String timestampFormatted = simpleDateFormat.format(timestampStart);
 
-        // 过滤时间戳的7天范围, 以start为起点以及之后的时间
         for (Timestamp timestamp: openSlots) {
-            LocalDateTime localDateTime = timestamp.toLocalDateTime();
-            if (localDateTime.isAfter(startDateTime) && localDateTime.isBefore(startDateTime.plusDays(7))) {
+            // 考虑时刻的判断(比较Time时刻信息，小时，分钟)
+            LocalDateTime tempDateTime = timestamp.toLocalDateTime();
+            int hour = tempDateTime.getHour();
+            int minutes = tempDateTime.getMinute();
+            tempDateTime = tempDateTime.plusHours(2);
+            tempDateTime = tempDateTime.plusMinutes(20);
+            if (tempDateTime.isAfter(startDateTime) && tempDateTime.isBefore(startDateTime.plusDays(7))) {
                 result.add(timestamp);
+            }
 
-                // 将转换后的LocalDateTime再恢复成Timestamp
-                result.add(Timestamp.valueOf(localDateTime));
+            // 考虑日期的判断(比较Date相关信息，天，月份)
+            LocalDate startDate = startDateTime.toLocalDate();
+            LocalDate tempDate = tempDateTime.toLocalDate();
+            if (tempDate.isEqual(startDate) && tempDate.isBefore(startDate.plusDays(7))) {
+                System.out.println();
             }
         }
+
+        // 对结果List进行排序，减少时间复杂度
         Collections.sort(result);
         return result;
     }
 
-    // Timestamp类型提供的API较少
-    public List<Timestamp> processSlotsPlus(List<Timestamp> openSlots, Timestamp startTimestamp) {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm::ss");
-        String timestampFormatted = simpleDateFormat.format(startTimestamp);
+    // TODO. 解析Doctor opening slots: 分类ID + 排序时间戳 + 合并时间戳
+    // - 提供从DB表格查询出来的乱数据
+    // - 通过方法解析后，返回的结果能够之间被前端使用和显示
+    public HashMap<Long, List<Timestamp>> processSlotsPlus(List<Event> events, Timestamp startTimestamp) {
+        // TreeMap<Long, List<Timestamp>> 根据Key值自然排序
+        HashMap<Long, List<Timestamp>> result = new HashMap<>();
 
-        List<Timestamp> result = new ArrayList<>();
-        for (Timestamp timestamp: openSlots) {
-            if (timestamp.after(startTimestamp)) {
-                result.add(timestamp);
+        // 1. Filtering + Group By ID
+        for (Event event : events) {
+            long doctorId = event.doctorId;
+            Timestamp timestamp = event.timestamp;
+            LocalDateTime nextSevenDateTime = startTimestamp.toLocalDateTime().plusDays(7);
+            if (timestamp.after(startTimestamp) && timestamp.toLocalDateTime().isBefore(nextSevenDateTime)) {
+                if (result.containsKey(doctorId)) {
+                    result.get(doctorId).add(timestamp);
+                } else {
+                    List<Timestamp> timestamps = new ArrayList<>();
+                    timestamps.add(timestamp);
+                    result.put(doctorId, timestamps);
+                }
             }
         }
+
+        // 2. Sort timestamp list
+        for (Map.Entry<Long, List<Timestamp>> entry : result.entrySet()) {
+            List<Timestamp> timestamps = entry.getValue();
+            Collections.sort(timestamps);
+
+            // 3. Merge timestamp opening slot
+            List<Timestamp> timestampsUpdated = new ArrayList<>();
+            int index = 0;
+            while (index < timestamps.size()) {
+                Timestamp timestamp = timestamps.get(index);
+                timestampsUpdated.add(timestamp);
+
+                // Remove next timestamp inside [timestamp, timestamp + 20m]
+                LocalDateTime nextDateTime = timestamp.toLocalDateTime().plusMinutes(20);
+                int nextIndex = index + 1;
+                while (nextIndex < timestamps.size() && timestamps.get(nextIndex).toLocalDateTime().isBefore(nextDateTime)) {
+                    nextIndex++;
+                }
+                // Move to the next valid timestamp
+                index = nextIndex;
+            }
+
+            // Update the new entry value
+            entry.setValue(timestampsUpdated);
+        }
         return result;
+    }
+
+    static class Event {
+        long doctorId;
+        Timestamp timestamp;
     }
 }
