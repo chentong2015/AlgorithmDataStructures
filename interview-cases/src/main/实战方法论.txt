@@ -13,3 +13,12 @@ Live Coding面试步骤
 - Dev过程解释逻辑
 - Test测试验证代码
 - Algo分析复杂度: 判断最糟糕和最优可能
+
+https://www.hackerrank.com/
+chen2015*/TCHong123&
+使用SOUT来检测方法的Input输入
+使用SOUT输入来Debug异常的Case
+
+https://coderpad.io/
+提供语言原生API提示，不支持psvm和sout等缩写
+必须使用编程语言原生的API，否则可能判断出错

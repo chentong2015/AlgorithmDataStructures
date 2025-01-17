@@ -10,8 +10,9 @@ import java.util.*;
 // 空间复杂度较差
 public class WordsConcatenated {
 
-    // TODO. memoryWords 存储遍历的单词的“判断结果”，优化时间复杂度
-    //  如果已经有结果(True或False)，则无需再次进行递归遍历
+    // TODO. DP 动态编程: 记录历史操作的数据/结果
+    // - set 记录离散的数据元素
+    // - memoryWords 记录遍历过程中每个单词的"判断结果"，以便后续重复利用
     public List<String> findAllConcatenatedWordsInADict(String[] words) {
         Set<String> set = new HashSet<>(Arrays.asList(words));
         Map<String, Boolean> memoryWords = new HashMap<>();
@@ -23,7 +24,7 @@ public class WordsConcatenated {
         return result;
     }
 
-    // TODO. 递归String = Prefix + Suffix 拆解字符串前缀和后缀
+    // TODO. String = Prefix + Suffix 拆解字符串前缀和后缀
     // prefix 前缀必须能够找到对应的Word
     // suffix 后缀也必须找到对应的Word
     // suffix 或者后面又能继续查分成(prefix + suffix)进行判断
@@ -35,6 +36,7 @@ public class WordsConcatenated {
         for(int i = 1; i < word.length(); i++){
             String prefix = word.substring(0, i);
             String suffix = word.substring(i);
+            // DFS 深度递归算法
             if(set.contains(prefix) && (set.contains(suffix) || concatable(suffix, set, memoryWords))){
                 memoryWords.put(word, true);
                 return true;
