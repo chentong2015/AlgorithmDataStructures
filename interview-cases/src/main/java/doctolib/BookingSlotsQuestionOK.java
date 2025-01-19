@@ -30,8 +30,7 @@ public class BookingSlotsQuestionOK {
         Map<String, List<String>> availabilities = new HashMap<>();
         for (int index = 0; index < 7; index++) {
             String key = buildKey(startDateTime.plusDays(index));
-            List<String> slots = mapSlots.getOrDefault(key, new ArrayList<>());
-            availabilities.put(key, slots);
+            availabilities.put(key, mapSlots.getOrDefault(key, new ArrayList<>()));
         }
         return availabilities;
     }
