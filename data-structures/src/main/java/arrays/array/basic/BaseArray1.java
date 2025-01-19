@@ -1,4 +1,4 @@
-package arrays.array;
+package arrays.array.basic;
 
 public class BaseArray1 {
 

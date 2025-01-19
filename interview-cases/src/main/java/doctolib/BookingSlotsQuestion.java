@@ -28,13 +28,16 @@ public class BookingSlotsQuestion {
         events.add(new BookingEvent(1, LocalDateTime.now(), LocalDateTime.now().plusHours(1), "opening"));
         events.add(new BookingEvent(2, LocalDateTime.now(), LocalDateTime.now().plusHours(2), "appointment"));
 
+        // TODO. 遍历所有BookingEvents以创建日期和Slot时间的映射关系
+        Map<String, List<String>> mapSlots = new HashMap<>();
+
         Map<String, List<String>> availabilities = new HashMap<>();
         for (int index=0; index < 7; index++) {
             LocalDate currentDate = startDateTime.plusDays(index).toLocalDate();
             String key = dateTimeFormatter.format(currentDate);
             List<String> slots = new ArrayList<>();
 
-            // 处理每一天Slot的创建，将时间段添加到Value中
+            // 创建特定某一天currentDate日期的所有Slots
             for (BookingEvent event: events) {
                 createSlots(slots, currentDate, event);
             }

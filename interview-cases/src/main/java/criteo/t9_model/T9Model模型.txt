@@ -11,11 +11,6 @@ output: list of strings from dictionary (L : 2.10^5)
   pqrs  tuv   wxyz  -
 ---------------------
 
-TODO. 算法核心逻辑
-1. 从输入的数字组合到提取出所有的字符串结果，中间需要从数字->字符的转换
-2. 优先对Dict字典进行处理，创建基于数字组合的Key键值，中间需要从字符->数字的转换
-3. 通过HashMap快速定位结果的index，并从dict中取出结果
-
 input: 7243
 output: "sage", "rage", "raid"
 Dict = ["sage", "rage", "raid", "hello", "morning", "bla" ...]
@@ -30,6 +25,11 @@ Dict = ["sage", "rage", "raid", "hello", "morning", "bla" ...]
          43556 -> 3,,,
          6676467 -> 4,,,
          ...
+
+TODO. 算法核心逻辑: 先解析构建数据结构，再从数据结果中取值
+从输入的数字组合到提取出所有的字符串结果，中间需要从数字->字符的转换
+1. 优先对Dict字典进行处理，创建基于数字组合的Key键值，中间需要从字符->数字的转换
+2. 通过HashMap快速定位结果的index，并从dict中取出结果
 
 TODO. 复杂度的计算
 - 总的时间复杂度基于Dict中的所有char字符都需要遍历处理
