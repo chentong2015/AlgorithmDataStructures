@@ -1,4 +1,4 @@
-package interview.graph_node;
+package amazon.interview.graph_node;
 
 import java.util.*;
 
