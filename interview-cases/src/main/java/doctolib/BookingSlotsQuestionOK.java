@@ -4,10 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 // TODO. 算法的本质: 先构建数据结构，再从数据结果中取值
 public class BookingSlotsQuestionOK {
@@ -23,6 +20,7 @@ public class BookingSlotsQuestionOK {
         // TODO. 遍历BookingEvents以创建日期与Slot映射
         Map<String, List<String>> mapSlots = new HashMap<>();
         for (BookingEvent event: events) {
+            // Filter the date range for space complexity
             processEvent(mapSlots, event);
         }
 
@@ -30,7 +28,9 @@ public class BookingSlotsQuestionOK {
         Map<String, List<String>> availabilities = new HashMap<>();
         for (int index = 0; index < 7; index++) {
             String key = buildKey(startDateTime.plusDays(index));
-            availabilities.put(key, mapSlots.getOrDefault(key, new ArrayList<>()));
+            List<String> slots = mapSlots.getOrDefault(key, new ArrayList<>());
+            Collections.sort(slots);
+            availabilities.put(key, slots);
         }
         return availabilities;
     }

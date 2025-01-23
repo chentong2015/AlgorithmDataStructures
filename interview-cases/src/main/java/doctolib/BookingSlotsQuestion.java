@@ -9,10 +9,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-// TODO. 完整测试的内容
-// 1. 在单元测试中往DB Event表中插入数据
-// 2. 方法中通过Select获取数据List Event
-// 3. 通过List Event来创建结果的Slots时间
+// TODO. Function关键信息: 方法的功能完全取决于测试
+// - SQL返回结果表示可预定的TimeStamp(Opening Event)
+//   - TimeStamp 数据表存储的时刻/表示一个DateTime
+//   - Slot=[TimeStamp + 15m] 定长15分钟的时间段
+// - Collections.sort()排列List<>集合数据
+// - StartDate起始日期不同，返回集合结果不同
+//
+// TODO. Unit Test单元测试 -> TDD 测试驱动开发
+// - 后续测试的实现需要兼容之前测试
+// - 测试对于不同StartDate起始日期的输出结果
+// - 测试返回结果Slots时段的分组
+// - 测试返回结果Slots合并时间(测试重点)
 public class BookingSlotsQuestion {
 
     DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
