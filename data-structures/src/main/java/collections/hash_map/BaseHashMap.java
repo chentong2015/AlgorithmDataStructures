@@ -9,7 +9,8 @@ public class BaseHashMap {
         Map<Integer, Integer> hashmap = new HashMap<>(10);
         hashmap.put(1, 1);
         hashmap.put(1, 2); // 更新已经存在的值
-        System.out.println(hashmap.get(1)); // 根据Key来获取Value
+        System.out.println(hashmap.get(1));  // 根据Key来获取Value
+        System.out.println(hashmap.get(11)); // 不存在的Key返回Null
 
         // 利用if和or条件进行存储和取值
         hashmap.putIfAbsent(0, 0);
