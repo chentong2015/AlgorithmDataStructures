@@ -13,6 +13,7 @@ public class CountPairsFormCompleteDayIII {
             count[hour % 24]++;
         }
 
+        // 数据的拼接可以只考虑一半时间
         long res = 0;
         for(int i=1; i<12; i++){
             res += count[i] * count[24-i];
