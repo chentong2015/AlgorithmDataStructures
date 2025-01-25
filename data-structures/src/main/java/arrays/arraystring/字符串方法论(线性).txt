@@ -1,19 +1,20 @@
-TODO. String 字符串问题算法本质
+TODO. String 字符串问题，一定要利用题目的约束条件
 1. String 将字符串问题转成字符数组问题
    char[] chars = str.toCharArray();
-
-2. 将字符串char映射到int值, 利用有限的字符数组优化时间复杂度
-   int[] count = new int[26]; // 标准英文字符
-   int[] chars = new int[128];// ASCII基本字符集(最高位0)
-
-   .charAt(index)-'a'  // 26个字符偏移量的计算
-   .charAt(index)-' '  // 128个字符集偏移量的计算，0为空格
-
-3. 将char->int映射到整数进行字符统计
-   int[] map = new int[128];
    for (char c : t.toCharArray()) {
-        map[c]++;
+        chars[c]++;
    }
+
+2. String consists only of lowercase english letters
+   TODO. 本质上是在处理Char字符(字符的统计，字符的起始位置，字符的偏移..)
+
+   将字符串char映射到int值, 利用有限数组优化时间复杂度
+   str.charAt(index)-'a'  // 26个字符偏移量的计算
+   str.charAt(index)-' '  // 128个字符集偏移量的计算，0为空格
+
+   将char->int映射到整数进行字符统计
+   int[] count = new int[26]; // 标准英文字符
+   int[] count = new int[128]; // ASCII基本字符集(最高位0)
 
 4. String Sliding Windows 截取子字符串区间
    每追加新的字符时，都需要移除Windows窗口的开头字符

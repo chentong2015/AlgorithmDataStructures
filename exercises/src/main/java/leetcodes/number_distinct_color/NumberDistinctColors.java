@@ -45,6 +45,7 @@ public class NumberDistinctColors {
                     continue;
                 }
 
+                // 判断移除的旧颜色是否只有一个，重新统计颜色
                 if (colorCountMap.get(oldColor) == 1) {
                     colorCountMap.remove(oldColor);
                     count--;
@@ -56,6 +57,7 @@ public class NumberDistinctColors {
             // TODO. 处理新的ID + 处理新的颜色
             indexMap.put(key, newColor);
             if (colorCountMap.containsKey(newColor)) {
+                // 新的颜色已经存在，则不增加统计
                 colorCountMap.put(newColor, colorCountMap.get(newColor) + 1);
             } else {
                 colorCountMap.put(newColor, 1);
