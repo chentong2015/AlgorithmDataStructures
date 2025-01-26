@@ -17,70 +17,47 @@ public class StringKSpecialFreq {
         System.out.println(stringKSpecialFreq.minimumDeletions("uzzezzuzenzu", 0));
     }
 
-    // TODO. 只考虑最终结果的区间，根据k参数控制区间偏移量
-    //  不关心删除的字符是什么，也不关系选择什么删除字符
-    //
-    // aabcaba, k=0 -> 3
-    // a b c
-    // 4 2 1
-    //
+    // TODO. 一定要基于26个字符范围来循环，而非基于统计频率的N值
+    //  只考虑最终结果的区间范围，不关心删除的字符以及位置
     // dabdcbdcdcd, k=2 -> 2
     // a b c d
     // 1 2 3 5
     //
-    // aaabaaa, k=2 -> 1
-    // a b
-    // 6 1
-    //
-    // vvnowvov, k=2 -> 1 特殊情况，所选择的最终区间为[1,3]
+    // vvnowvov, k=2 -> 1 特殊情况最终区间为[1,3]
     // 4 2 1 1
     //
     // uzzezzuzenzu, k=0 -> 6
-    // 6 3 2 1
+    // 1 2 3 6
+    //
+    // O(n)   最差情况是移动n次区间范围
+    // O(26)  没有空间复杂度
     public int minimumDeletions(String word, int k) {
         int[] freqArray = new int[26];
         for (char c: word.toCharArray()) {
             freqArray[c - 'a']++;
         }
-
         Arrays.sort(freqArray);
-        for (int index=0; index < 13; index++) {
-            int temp = freqArray[index];
-            freqArray[index] = freqArray[25 - index];
-            freqArray[25 - index] = temp;
-        }
 
         int minSteps = Integer.MAX_VALUE;
-        for (int index=0; index < 26; index++) {
-            int count = freqArray[index];
-            if (count == 0) {
-                break;
+        int countDeletionLeft = 0;
+        for (int i = 0; i < 26; i++) {
+            if (freqArray[i] == 0) {
+                continue;
+            }
+            // 统计右侧需要删除的字符数量
+            int countDeletionRight = 0;
+            for(int j = i+1; j < 26; j++) {
+                if (freqArray[j] > freqArray[i] + k) {
+                    countDeletionRight += freqArray[j] - (freqArray[i] + k);
+                }
             }
 
-            // TODO. 这里需要考虑所有偏移情况
-            for (int offset = count + k; offset >= count; offset--) {
-                int countSteps = countSteps(freqArray, offset, Math.max(offset - k, 0));
-                minSteps = Math.min(minSteps, countSteps);
-            }
+            // TODO. [freq, freq+k] 统计区间之外左右两侧的删除数量
+            minSteps = Math.min(minSteps, countDeletionLeft + countDeletionRight);
+
+            // 累计左侧低频率的统计字符
+            countDeletionLeft += freqArray[i];
         }
-        return minSteps;
-    }
-
-    private int countSteps(int[] freqArray, int max, int min) {
-        int count = 0;
-        for (int index=0; index < 26; index++) {
-            int freq = freqArray[index];
-            if (freq == 0) {
-                break;
-            }
-
-            if (freq > max) {
-                count += freq - max;
-            }
-            if (freq < min) {
-                count += Math.min(min - freq, freq);
-            }
-        }
-        return count;
+        return minSteps == Integer.MAX_VALUE ? 0: minSteps;
     }
 }

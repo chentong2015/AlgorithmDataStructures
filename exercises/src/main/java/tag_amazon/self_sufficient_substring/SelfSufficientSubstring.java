@@ -51,7 +51,7 @@ public class SelfSufficientSubstring {
     // - 没有出现的字符不可能作为Substring的开头字符
     // - 如果遍历的新字符在前面出现过，则以startIndex位置往后不可能构成有效结果
     // - 根据遍历的新字符，刷新最右边的endIndex
-    // - 如果index == endIndex，说明遍历到了Substring的最右边位置
+    // - 如果index==endIndex，说明遍历到了Substring的最右边位置
     // - 最终Substring最大的长度不能取整个字符串的长度
     private static int getAns(String fullString, int[] start, int[] end) {
         int maxLength = -1;
@@ -70,8 +70,11 @@ public class SelfSufficientSubstring {
                 endIndex = Math.max(endIndex, end[newCharIndex]);
 
                 // TODO. 只有index == endIndex才是有效位置
-                if (index == endIndex && index - startIndex + 1 < fullString.length()) {
-                    maxLength = Math.max(maxLength, index - startIndex + 1);
+                if (index == endIndex) {
+                    int length = index - startIndex + 1;
+                    if (length < fullString.length()) {
+                        maxLength = Math.max(maxLength, length);
+                    }
                 }
             }
         }

@@ -7,7 +7,7 @@ TODO. String 字符串问题，一定要利用题目的约束条件
 
 2. String consists only of lowercase english letters
    TODO. 本质上是在处理Char字符(字符的统计，字符的起始位置，字符的偏移..)
-
+   TODO. 优先考虑基于26个字符来循环，降低循环的次数
    将字符串char映射到int值, 利用有限数组优化时间复杂度
    str.charAt(index)-'a'  // 26个字符偏移量的计算
    str.charAt(index)-' '  // 128个字符集偏移量的计算，0为空格
