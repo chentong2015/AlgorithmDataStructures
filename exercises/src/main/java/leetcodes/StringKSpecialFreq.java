@@ -55,7 +55,7 @@ public class StringKSpecialFreq {
             // TODO. [freq, freq+k] 统计区间之外左右两侧的删除数量
             minSteps = Math.min(minSteps, countDeletionLeft + countDeletionRight);
 
-            // 累计左侧低频率的统计字符
+            // 累计左侧低频率的统计, 低频率在区间的移动中只能全部被删除
             countDeletionLeft += freqArray[i];
         }
         return minSteps == Integer.MAX_VALUE ? 0: minSteps;

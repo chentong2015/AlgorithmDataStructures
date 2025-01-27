@@ -16,6 +16,10 @@ TODO. String 字符串问题，一定要利用题目的约束条件
    int[] count = new int[26]; // 标准英文字符
    int[] count = new int[128]; // ASCII基本字符集(最高位0)
 
+3. Z-function TODO. 找字符串的后缀是它的前缀
+   z[i] tells us how many characters, starting from the position i,
+   match with the first characters of the string.
+
 4. String Sliding Windows 截取子字符串区间
    每追加新的字符时，都需要移除Windows窗口的开头字符
 

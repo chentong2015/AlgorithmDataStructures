@@ -62,6 +62,7 @@ public class SelfSufficientSubstring {
             }
             int endIndex = end[k];
 
+            // TODO. 从当前startIndex位置开始遍历，单个字符也算有效长度
             for (int index = startIndex; index < fullString.length(); index++) {
                 int newCharIndex = fullString.charAt(index) - 'a';
                 if (start[newCharIndex] < startIndex) {
