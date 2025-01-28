@@ -1,21 +1,6 @@
 package wothers.math;
 
-public class LearnMath1 {
-
-    // Power of Three
-    // Could you solve it without loops/recursion? 不用循环和递归都能实现
-    public boolean isPowerOfThree(int n) {
-        // 测试理解：判断一个值是否能够被3完全整除 !!
-        //         O(log3(n))   O(1)
-        if (n < 1) {
-            return false;
-        }
-        while (n % 3 == 0) { // 是3的倍数  ==>  并不代表是3个阶乘 !!
-            n /= 3;
-        }
-        return n == 1; // 最后的基数是1，从1*3的任何次方
-        //  return (Math.log10(n) / Math.log10(3)) % 1 == 0; 数学公式计算log3(n)
-    }
+public class BaseMath1 {
 
     // 判断质数的算法: 只能被一和自身进行整除
     public boolean isPrimeDigit(int digit) {
@@ -30,6 +15,21 @@ public class LearnMath1 {
             }
         }
         return true;
+    }
+
+    // Power of Three
+    // Could you solve it without loops/recursion? 不用循环和递归都能实现
+    public boolean isPowerOfThree(int n) {
+        // 测试理解：判断一个值是否能够被3完全整除 !!
+        //         O(log3(n))   O(1)
+        if (n < 1) {
+            return false;
+        }
+        while (n % 3 == 0) { // 是3的倍数  ==>  并不代表是3个阶乘 !!
+            n /= 3;
+        }
+        return n == 1; // 最后的基数是1，从1*3的任何次方
+        //  return (Math.log10(n) / Math.log10(3)) % 1 == 0; 数学公式计算log3(n)
     }
 
     // Count Primes

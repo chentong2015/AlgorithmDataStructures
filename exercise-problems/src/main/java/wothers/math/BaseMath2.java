@@ -1,13 +1,6 @@
 package wothers.math;
 
-public class LearnMath2 {
-
-    public static void main(String[] args) {
-        char c = '1';
-        char d = '2';
-        // System.out.println((c - '0') * (d- '0'));
-        System.out.println(multiply("498828660196", "840477629533"));
-    }
+public class BaseMath2 {
 
     // TODO. 纯数学的乘法累计计算: 将大位数的乘法转换成所有位置个位数乘法的和
     // Multiply Strings
