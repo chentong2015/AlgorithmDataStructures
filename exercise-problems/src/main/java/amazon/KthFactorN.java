@@ -20,7 +20,8 @@ package amazon;
 // [1, 2, 4], -1
 public class KthFactorN {
 
-    // TODO. 数学逻辑: 在遍历一半数据的过程中也同时判断质数
+    // TODO. 遍历一半数据/同时判断质数
+    //  后半段数据不可能是factor，因为value*2 > n不可能再被整除
     //
     // n = 46, k = 4
     // 1 2 23 46
