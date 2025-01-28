@@ -1,4 +1,4 @@
-package hard_questions.z_function_kmp;
+package hard_questions.kmp_z_function;
 
 // Minimum Time to Revert Word to Initial State
 //
@@ -14,7 +14,7 @@ package hard_questions.z_function_kmp;
 // 1 <= word.length <= 10^6
 // 1 <= k <= word.length
 // word consists only of lowercase English letters
-public class MinTimeRevertWord {
+public class MinRevertWordZFunction {
 
     // TODO. 本质上只需要判断字符的第几个K端的字符能够完全匹配开头
     // 补全时可以补全任意顺序的任意字符，从而最大限度的还原初始字符
@@ -26,13 +26,12 @@ public class MinTimeRevertWord {
     //
     // abac aba, k=4
     //      aba caba
-    public static int minimumTimeToInitialState(String word, int k) {
+    public int minTimeToInitialState(String word, int k) {
+        int[] zArray = zFunction(word);
         int count = 1;
-        int n = word.length();
-
-        int[] z = zFunction(word);
-        while (k * count < n) {
-            if (z[k * count] >= n - k * count) {
+        while (k * count < word.length()) {
+            // 判断index统计的字符长度是否大于剩余字符长度
+            if (zArray[k * count] >= word.length() - k * count) {
                 break;
             }
             count++;
@@ -40,25 +39,29 @@ public class MinTimeRevertWord {
         return count;
     }
 
-    private static int[] zFunction(String s) {
-        int n = s.length();
-        int z[] = new int[n];
-        int R = 0;
-        int L = 0;
-        for(int i = 1; i < n; i++) {
-            z[i] = 0;
-            if (R > i) {
-                z[i] = Math.min(R - i, z[i - L]);
+    // 统计从当前位置开始后续有多少字符长度是前缀
+    // a b a c a b a
+    // 7 0 1 0 3 0 1
+    private int[] zFunction(String s) {
+        int[] zArray = new int[s.length()];
+        int left = 0;
+        int right = 0;
+        for(int index = 1; index < s.length(); index++) {
+            zArray[index] = 0;
+            if (index < right) {
+                zArray[index] = Math.min(right - index, zArray[index - left]);
             }
-            while (i + z[i] < n && s.charAt(i+z[i]) == s.charAt(z[i])) {
-                z[i]++;
+            while (index + zArray[index] < s.length()
+                   && s.charAt(zArray[index]) == s.charAt(index + zArray[index])) {
+                zArray[index]++;
             }
-            if (i + z[i] > R) {
-                L = i;
-                R = i + z[i];
+            if (index + zArray[index] > right) {
+                left = index;
+                right = index + zArray[index];
             }
         }
-        z[0] = n;
-        return z;
+
+        zArray[0] = s.length();
+        return zArray;
     }
 }

@@ -1,0 +1,4 @@
+找出字符串最长的后缀且是它本身的前缀
+
+Z-Function算法，时间复杂度为O(n)
+https://cp-algorithms.com/string/z-function.html
