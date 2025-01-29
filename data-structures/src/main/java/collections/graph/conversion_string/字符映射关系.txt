@@ -1,0 +1,37 @@
+// Minimum Cost to Convert String I
+// You are given two 0-indexed strings source and target, both of length n and consisting of lowercase English letters.
+// You are also given two 0-indexed character arrays original and changed, and an integer array cost,
+// where cost[i] represents the cost of changing the character original[i] to the character changed[i].
+//
+// You start with the string source. In one operation,
+// you can pick a character x from the string and change it to the character y at a cost of z
+// if there exists any index j such that cost[j] == z, original[j] == x, and changed[j] == y.
+//
+// Return the minimum cost to convert the string source to the string target
+// using any number of operations. If it is impossible to convert source to target, return -1.
+//
+// source, target consist of lowercase English letters.
+// original[i], changed[i] are lowercase English letters.
+
+TODO. 最短路径规划的问题，找到A—>B的最短通路
+"a b c d", "a c b e" -> 28
+original = ["a","b","c","c","e","d"]
+changed  = ["b","c","b","e","b","e"]
+cost     = [ 2,  5,  5,  1,  2,  20]
+
+"aaaa", "bbbb" -> 12
+original = ["a","c"],
+changed  = ["c","b"],
+cost     = [1,   2]
+
+先构建图的路径关系, 存在Circle连接关系
+a -> b
+       -> c
+            -> b 5
+            -> e -> b 1+2=3
+       -> f
+  -> d
+  -> k
+使用DFS判断两个节点的最短距离, 存储Key->Value
+a -> b
+c -> b
