@@ -1,28 +1,21 @@
 package collections.hash_set;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
+// TODO. Set<>元素的比较通过调用类型的equal()方法
 public final class BaseHashSet {
 
-    // Array -> ArrayList -> Set 从数组到Set集合
     public static void main(String[] args) {
-        String sentence = "One day in the year of the fox";
-        String[] wordsArray = sentence.split(" ");
+        // Array -> ArrayList -> Set 从数组到Set集合
+        String[] wordsArray = {"item1", "item2"};
         List<String> wordsList = Arrays.asList(wordsArray);
-
-        // 之间通过List列表数据来构建Set集合
         Set<String> words = new HashSet<>(wordsList);
-        System.out.println(words);
-    }
 
-    // TODO. 重写BaseHashSet类型的equal()方法，自定义集合中元素的比较
-    public void compareItemsInSet() {
-        Set<BaseHashSet> mySets = new HashSet<>();
-        mySets.add(new BaseHashSet());
-        mySets.add(new BaseHashSet());
+        // TODO. 不能遍历的时候同时移除元素，造成并发修改异常 ConcurrentModificationException
+        for (String word: words) {
+            System.out.println("remove item");
+            words.remove(word);
+        }
     }
 
     // TODO. Hash用于计算集合之间的交集和并集的结果
