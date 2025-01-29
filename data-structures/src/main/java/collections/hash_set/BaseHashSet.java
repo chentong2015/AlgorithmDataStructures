@@ -2,7 +2,6 @@ package collections.hash_set;
 
 import java.util.*;
 
-// TODO. Set<>元素的比较通过调用类型的equal()方法
 public final class BaseHashSet {
 
     public static void main(String[] args) {
@@ -11,7 +10,7 @@ public final class BaseHashSet {
         List<String> wordsList = Arrays.asList(wordsArray);
         Set<String> words = new HashSet<>(wordsList);
 
-        // TODO. 不能遍历的时候同时移除元素，造成并发修改异常 ConcurrentModificationException
+        // TODO. 不能遍历的时候同时移除元素，造成并发修改异常
         for (String word: words) {
             System.out.println("remove item");
             words.remove(word);

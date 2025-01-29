@@ -5,20 +5,6 @@ import java.util.*;
 // 对于任意的两组数据，均有适配的算法来找出它们的交集
 public class IntersectionArrays {
 
-    public static void main(String[] args) {
-        List<Integer> results = intersect(List.of(1,3,3,4,5), List.of(2,3,4,7,9,10));
-        for (int item: results) {
-            System.out.println(item);
-        }
-
-        int[] nums1 = { 1,3,4,5 };
-        int[] nums2 = { 2,4,7,9,3 };
-        List<Integer> results2 = intersect2(nums1, nums2);
-        for (int item: results2) {
-            System.out.println(item);
-        }
-    }
-
     // TODO. Intersection of Two Lists/Arrays 排序 + 交集元素不重复
     // 1. 使用两个index坐标，顺次遍历即可
     // O(N+M) O(?) 需要遍历每一个位置上的数据，空间复杂度为交集的大小
@@ -47,25 +33,32 @@ public class IntersectionArrays {
     // 1. 先排序后处理，不使用任何空间
     // 2. 通过HashSet表存储快速的判断key的存在，以空间换时间
     // O(N+M) O(N+?)
-    public static List<Integer> intersect2(int[] nums1, int[] nums2) {
-        HashSet<Integer> set = new HashSet<>();
-        List<Integer> result = new ArrayList<>();
-        int[] numTemp = nums1;
+    public static int[] intersect2(int[] nums1, int[] nums2) {
         if (nums1.length > nums2.length) {
+            int[] numTemp = nums1;
             nums1 = nums2;
             nums2 = numTemp;
         }
 
         // 将数量小的array存储到Hash表中，减少空间复杂度
+        HashSet<Integer> set = new HashSet<>();
         for (int item: nums1) {
             set.add(item);
         }
+
+        Set<Integer> result = new HashSet<>();
         for (int item: nums2) {
             if (set.contains(item)) {
                 result.add(item);
             }
         }
-        return result;
+
+        int index = 0;
+        int[] res = new int[result.size()];
+        for (int item: result) {
+            res[index++] = item;
+        }
+        return res;
     }
 
     // TODO. Intersection of Two Arrays III 乱序 + 交集元素可能重复 > 返回不重复的结果
