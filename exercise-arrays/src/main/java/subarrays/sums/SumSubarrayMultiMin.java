@@ -1,4 +1,4 @@
-package subarrays.sum;
+package subarrays.sums;
 
 // Sum of Total Strength of Wizards
 // Since the answer may be very large, return it modulo 10^9 + 7.

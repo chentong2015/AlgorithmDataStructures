@@ -1,4 +1,4 @@
-package subarrays.sum;
+package subarrays.sums;
 
 // Subarray Sum Equals K
 // Given an array of integers nums and an integer k,
