@@ -1,4 +1,4 @@
-package hard_questions.min_diff_equal;
+package leetcode.min_diff_equal;
 
 import java.util.HashMap;
 import java.util.Map;

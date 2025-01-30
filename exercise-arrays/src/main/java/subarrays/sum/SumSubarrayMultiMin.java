@@ -1,4 +1,4 @@
-package hard_questions.subarrays.subarray_sum;
+package subarrays.sum;
 
 // Sum of Total Strength of Wizards
 // Since the answer may be very large, return it modulo 10^9 + 7.
@@ -19,7 +19,7 @@ package hard_questions.subarrays.subarray_sum;
 // - [3,1,2] total strength of min([3,1,2]) * sum([3,1,2]) = 1 * 6 = 6
 // - [1,3,1,2] total strength of min([1,3,1,2]) * sum([1,3,1,2]) = 1 * 7 = 7
 // The sum total strengths 1 + 9 + 1 + 4 + 4 + 4 + 3 + 5 + 6 + 7 = 44.
-public class SumSubarraySum {
+public class SumSubarrayMultiMin {
 
     public int totalStrength(int[] strength) {
 

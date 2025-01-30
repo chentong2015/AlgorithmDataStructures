@@ -46,11 +46,7 @@ public class MaxSetSizeAfterRemoval {
         return Math.min(count1 + count2 + intersection.size(), nums1.length);
     }
 
-    // TODO. 最多只能从Set1中取一半数据
-    //  超过一半的数据即使和Set2重合也可以被添加
-    //  超过一半的数据可在被Set2数据添加后进行删除，保证新数的统计
-    // - set1中超出一半的数据被set2中的数据替换，无论是否相等
-    // - 最多能从Set2中取一半数据，贡献最多的唯一数
+    // TODO. Set1超过一半的数即使和Set2重合也可以被添加, 因为那些数注定被删除
     public int maximumSetSizePlus(int[] num1, int[] num2) {
         Set<Integer> set1 = new HashSet<>();
         Set<Integer> set2 = new HashSet<>();
@@ -68,6 +64,7 @@ public class MaxSetSizeAfterRemoval {
             if (!set1.contains(num)) {
                 count2++;
             } else if (remaining > 0) {
+                // 贪心(最优)算法: 替换Set1中超一半的数据,
                 count2++;
                 remaining--;
             }

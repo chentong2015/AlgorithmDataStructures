@@ -1,4 +1,4 @@
-package hard_questions.subarrays;
+package subarrays;
 
 public class SumSubarrayMinOk {
 
@@ -11,7 +11,6 @@ public class SumSubarrayMinOk {
     // O(n)     对等的空间复杂度, 栈数组中存储的坐标
     public static int sumSubarrayMinsMaster(int[] nums) {
         int[] smallIndexBefore = new int[nums.length];
-
         // 第一个元素前面没有更小值的坐标
         smallIndexBefore[0] = -1;
 

@@ -1,4 +1,4 @@
-package hard_questions.kmp_z_function;
+package leetcode.kmp_z_function;
 
 public class MinRevertWordKmp {
 
