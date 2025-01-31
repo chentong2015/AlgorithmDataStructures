@@ -1,4 +1,4 @@
-TODO: Sliding windows 关于数组和字符串的滑动窗口算法
+TODO: Sliding windows 滑动窗口算法
 1. 所选的区间内的数据必须是连续Consecutive/Contiguous
 2. 所选的"框选"区间必须是闭合区间[i, j]
 3. 每读取一个新位置的值必须能够确定指针移动
@@ -10,3 +10,11 @@ for(item: items) {
     }
     // refresh result
 }
+
+TODO. Sliding windows 滑动窗口算法不适用于负数
+带有负数值的情况下，滑动窗口会错过某些区间
+nums = 1 2 5 -1 -1 -2, sum = 4
+here sliding window will fail, as moment we wish we found sum is > 4, i.e 1+2 +4 ,
+it will push i to next position, and will one case that is 1 2 5 -1 -1 -2 that sum to 4,
+Sliding window is used in cases when numbers are positive mostly in sum related ques,
+otherwise it won't cover all the cases.

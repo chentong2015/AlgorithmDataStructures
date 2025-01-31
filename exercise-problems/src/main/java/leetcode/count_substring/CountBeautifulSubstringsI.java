@@ -11,10 +11,6 @@ package leetcode.count_substring;
 // vowels == consonants and (vowels * consonants) % k == 0
 //
 // Return the number of non-empty beautiful substrings in the given string s.
-//
-// 1 <= s.length <= 5 * 10^4
-// 1 <= k <= 1000
-// s consists of only English lowercase letters.
 public class CountBeautifulSubstringsI {
 
     public static void main(String[] args) {
