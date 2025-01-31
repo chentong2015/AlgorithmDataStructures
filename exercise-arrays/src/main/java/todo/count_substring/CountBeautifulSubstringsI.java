@@ -1,4 +1,4 @@
-package leetcode.count_substring;
+package todo.count_substring;
 
 // Count Beautiful Substrings I
 // You are given a string s and a positive integer k.
