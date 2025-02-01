@@ -24,9 +24,6 @@ public class SeparateBlackWhiteBalls {
     // ...
     // 0 0 0 0 0 1 1 1 1 1
     // 0 1 2 3 4
-    //
-    // O(n)
-    // O(1)
     public long minimumSteps(String s) {
         int countZero = 0;
         long sumZeroIndex = 0;
@@ -36,11 +33,8 @@ public class SeparateBlackWhiteBalls {
                 sumZeroIndex += index;
             }
         }
-
+        // 返回剩余需要移动的总步数
         long targetZeroIndex = (long) (countZero - 1) * countZero / 2;
-        if (sumZeroIndex == targetZeroIndex) {
-            return 0;
-        }
         return sumZeroIndex - targetZeroIndex;
     }
 }
