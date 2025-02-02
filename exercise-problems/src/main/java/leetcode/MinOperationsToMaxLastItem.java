@@ -63,14 +63,15 @@ public class MinOperationsToMaxLastItem {
             }
         }
 
-        // TODO. 在一定能够成立的条件下，往需要移动次数较少的Nums数组移动
+        // TODO. 在绝对成立的条件下计算移动Nums较少次数的一边
         if (countLessNum1 > countLessNum2) {
-            // 往更接近最少交换次数的方向交换
+            // Switch items to Nums1
             if (middleValue == nums1[length - 1]) {
                 return length - 1 - countLessNum1;
             }
             return length - 1 - countLessNum1 + 1;
         } else {
+            // Switch item to Nums2
             if (middleValue == nums2[length -1]) {
                 return length - 1 - countLessNum2;
             }
