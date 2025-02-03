@@ -1,7 +1,5 @@
 package templates.greedy;
 
-import java.net.DatagramPacket;
-
 // Minimum Increment Operations to Make Array Beautiful
 // You are given a 0-indexed integer array nums having length n, and an integer k.
 // You can perform the following increment operation any number of times (including zero):
@@ -16,8 +14,7 @@ import java.net.DatagramPacket;
 // 0 <= k <= 10^9
 public class MinOperationsArrayBeautiful {
 
-    // TODO. Greedy贪心算法: 每次选择性三个数据中的最优解法
-    //  DP动态编程实现: 使用之前三个历史步数的最小值 + 当前要移动的步数
+    // TODO. Greedy贪心算法: 每读取一个新数据时，累计前面三个差值中最小的一个(最优解)
     // [2,3,0,0,2], k = 4
     // [2,4,0,0,2]
     // [2,4,0,0,3]
@@ -46,12 +43,10 @@ public class MinOperationsArrayBeautiful {
         dp[1] = Math.max(0, k - nums[1]);
         dp[2] = Math.max(0, k - nums[2]);
 
+        // TODO. DP不断地累加前面历史最优的结果
         for(int i = 3; i < length; i++) {
-            // TODO. Greedy 贪心选择前面的最小结果
             long minBefore = Math.min(dp[i-1], dp[i-2]);
             minBefore = Math.min(minBefore, dp[i-3]);
-
-            // 再叠加当前的增加步数
             dp[i] = minBefore + Math.max(0, k-nums[i]);
         }
 
