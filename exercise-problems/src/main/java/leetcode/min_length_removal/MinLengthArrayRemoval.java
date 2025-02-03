@@ -1,8 +1,6 @@
 package leetcode.min_length_removal;
 
-import java.util.Comparator;
 import java.util.List;
-import java.util.PriorityQueue;
 
 // Minimum Array Length After Pair Removals
 // Given an integer array num sorted in non-decreasing order.
@@ -19,7 +17,7 @@ import java.util.PriorityQueue;
 // nums is sorted in non-decreasing order.
 public class MinLengthArrayRemoval {
 
-    // TODO. 将数据对半划分成两侧，对两侧数据判断相消即是最优解 ！
+    // TODO. 将数据对半划分成两侧，对两侧数据判断相消，结果最优
     // nums = [1,2,3,4] -> 0
     // nums = [1,1,2,2,3,3] -> 0
     // nums = [10,10] -> 2
@@ -38,7 +36,7 @@ public class MinLengthArrayRemoval {
         int index = (length + 1) / 2; // 从划分的后半段开始取值
         while (left < length / 2 && index < length) {
             if (nums.get(left) < nums.get(index)) {
-                result -= 2;  // 相消后减少统计次数, 两个值成一对
+                result -= 2;  // 两个值成一对，减少统计次数
             }
             left++; // 再同时往右边移动
             index++;
