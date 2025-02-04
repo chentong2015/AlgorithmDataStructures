@@ -17,7 +17,7 @@ import java.util.List;
 // nums is sorted in non-decreasing order.
 public class MinLengthArrayRemoval {
 
-    // TODO. 将数据对半划分成两侧，对两侧数据判断相消，结果最优
+    // TODO. 将数据对半划分成两侧，对两侧数据判断相消
     // nums = [1,2,3,4] -> 0
     // nums = [1,1,2,2,3,3] -> 0
     // nums = [10,10] -> 2
@@ -28,6 +28,10 @@ public class MinLengthArrayRemoval {
     // 1 1 2  3 3 3
     // 1 2   3 3
     // 2   3
+    //
+    // 由于数据严格的从小到大排序
+    // 如果0位置和n/2+1位置的值无法消除，则[0,,,n/2+1]中的值全部相等
+    // [0,,,,n/2, n/2+1,,,,n]
     public int minLengthAfterRemovals(List<Integer> nums) {
         int length = nums.size();
         int result = nums.size(); // 最大可能的剩余数目
