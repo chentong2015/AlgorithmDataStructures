@@ -1,90 +1,81 @@
 package templates.dp_programming;
 
-import java.util.Arrays;
-
+// Regular Expression Matching ==> Java底层正则表达式的实现
+// Implement regular expression matching with support for '.' 任意多个字符 and '*' 前字符重复0到n次
+// The matching should cover the entire input string (not partial)
+// s = "ab", p = ".*"      -> true
+// s = "aab", p = "c*a*b"  -> true 第一个c字符有可能重复0次
 public class DynamicProgramming1 {
 
-    // TODO: DP典型实例：结合二分法修改记录的历史数据，对dp数据进行扩充
-    // 最长连续增长子序列，可以演变为最长满足条件的增长
-    // Longest Increasing Subsequence
-    // An integer array nums, return the length of the longest strictly increasing subsequence
-    // nums  = [10,9,2,5,3,7,101,18] -> [2,3,7,101] 最长连续增长子序列, 数字之间可以不连续
-    // steps = [1, 1,1,2,2,3,4  ,4]
-    //
-    // Dynamic Programming with Binary Search: O(nlog(n)) O(n)
-    // Store increasing subsequence formed by including currently encountered element
-    // input: [0, 8, 4, 12, 2] 数组需要预留足够的长度
-    //    dp: [0]
-    //    dp: [0, 8]
-    //    dp: [0, 4]
-    //    dp: [0, 4, 12]
-    //    dp: [0, 2, 12] 这里存储的不是正确的排序值，但是数组的长度是最终的答案
-    public int lengthOfLIS(int[] nums) {
-        int[] dp = new int[nums.length];
-        int length = 0;
-        for (int num : nums) {
-            // Returns index of search key
-            // Return (-(insertion point) - 1) if not found
-            int index = Arrays.binarySearch(dp, 0, length, num);
-            if (index < 0) {
-                index = -(index + 1); // 重新计算要插入的点，可能直接追加到最后
-            }
-
-            dp[index] = num;          // 将读取值添加到dp数组中指定位置"insertion point"
-            if (index == length) {    // 如果是插入到最后，则需要延申长度
-                length++;
-            }
+    // TODO. 1 Recursive backtracking
+    // 从第一个字符和第二个字符开始递归，每次往后截取text的子字符串，并且带上前一轮判断的结果
+    // <复杂度和text & pattern字符串长度均有关>
+    public boolean isMatchRecursive(String text, String pattern) {
+        if (pattern.isEmpty()) {
+            return text.isEmpty();
         }
-        return length; // length比插入的index坐标位置要多1
+        // 先确定第一步开头是匹配的，再在此基础上列举出递归的匹配条件
+        boolean firstMatch = false;
+        if (!text.isEmpty()) {
+            firstMatch = text.charAt(0) == pattern.charAt(0) || pattern.charAt(0) == '.';
+        }
+
+        // text比较完第一个字符之后，需要往后截取     (*>0, *将会继续作用在开头的字符，一直匹配到不能再匹配为止)
+        // 或者不截取text, 从第3个字符开始截取pattern(*==0)
+        if (pattern.length() >= 2 && pattern.charAt(1) == '*') {
+            return firstMatch && isMatchRecursive(text.substring(1), pattern) || isMatchRecursive(text, pattern.substring(2));
+        } else {
+            return firstMatch && isMatchRecursive(text.substring(1), pattern.substring(1));
+        }
     }
 
-    // TODO. 动态编程：在遍历过程中存储两个重要的历史记录
-    // 132 Pattern
-    // 132 pattern is a subsequence of three integers nums[i], nums[j] and nums[k]
-    // i < j < k and nums[i] < nums[k] < nums[j]
-    // Return true if there is a 132 pattern in nums, otherwise return false
-    // nums = [1,2,3,4]  -> false
-    // nums = [3,1,4,2]  -> true
-    // nums = [-1,3,2,0] -> true
-    //
-    // 1 2 3 4  5  6    降低的值会依次排布在前面直到出现一个大值，改变排序并插入其中，同时设置kValue的值
-    //             6j   kValue=min
-    //          5j 6    kValue=min
-    //       4j 5  6    kValue=min
-    //
-    // 8 12 9 10 8 7   6
-    //                 6j   kValue=min
-    //                 7j   kValue=6   当设置kValue的值的时候，说明最终条件成立了一半nums[k] < nums[j]
-    //                 8j   kValue=7
-    //                 10j  kValue=8   对于10j而言，它后面小于它的且最大的值是8
-    //
-    //             9j  10   kValue=8   9正好位于8~10之间，所以直接添加在前面
-    //                                 同时也说明9比10后面的值都要大，并不构成132Pattern
-    //
-    //             9   12j  kValue=10  对于12j而言，它后面小于它的且最大的值是10
-    //                                 需要找到比12小的后面的最大值，使得132出现的概率最大
-    //             8<10<12  条件成立
-    //
-    // O(n+n) O(1) 极限情况下内层的while循环会执行(n-1)次
-    public boolean find132Pattern(int[] nums) {
-        int jMaxIndex = nums.length;    // j为最大值的位置
-        int kValue = Integer.MIN_VALUE; // k为j后面的小于j的最大值
-        for (int index = nums.length - 1; index >= 0; index--) {
-            int iValue = nums[index];
-            if (iValue < kValue) {      // i为j前面的小于k的值
-                return true;
+    // TODO 2. Up-Bottom Variation 自顶向下
+    // 分而治之，拆分问题，使用二维数组来存储判断的结果值，避免递归 O(TP) O(TP)
+    public boolean isMatchUpBottom(String text, String pattern) {
+        boolean[][] dp = new boolean[text.length() + 1][pattern.length() + 1];
+        dp[text.length()][pattern.length()] = true;
+        for (int i = text.length(); i >= 0; i--) {
+            for (int j = pattern.length() - 1; j >= 0; j--) {
+                boolean first_match = (i < text.length() && (text.charAt(i) == pattern.charAt(j) || pattern.charAt(j) == '.'));
+                if (j + 1 < pattern.length() && pattern.charAt(j + 1) == '*') {
+                    dp[i][j] = dp[i][j + 2] || first_match && dp[i + 1][j];
+                } else {
+                    dp[i][j] = first_match && dp[i + 1][j + 1];
+                }
             }
-
-            // TODO. 找jValue的后面的小于它的kValue
-            while (jMaxIndex < nums.length && nums[jMaxIndex] < iValue) {
-                kValue = nums[jMaxIndex];
-                jMaxIndex++;
-            }
-
-            // TODO. 将读取的iValue转换成jValue，当成132中的最大值存储
-            jMaxIndex--;
-            nums[jMaxIndex] = iValue;
         }
-        return false;
+        return dp[0][0];
+    }
+
+    // TODO 3. Bottom-Up Variation 自底向上
+    private PatternResult[][] memo;
+
+    public boolean isMatchBottomUp(String text, String pattern) {
+        memo = new PatternResult[text.length() + 1][pattern.length() + 1];
+        return dp(0, 0, text, pattern);
+    }
+
+    public boolean dp(int i, int j, String text, String pattern) {
+        if (memo[i][j] != null) {
+            return memo[i][j] == PatternResult.TRUE;
+        }
+        boolean ans;
+        if (j == pattern.length()) {
+            ans = i == text.length();
+        } else {
+            boolean first_match = (i < text.length() && (pattern.charAt(j) == text.charAt(i) || pattern.charAt(j) == '.'));
+            if (j + 1 < pattern.length() && pattern.charAt(j + 1) == '*') {
+                ans = (dp(i, j + 2, text, pattern) || first_match && dp(i + 1, j, text, pattern));
+            } else {
+                ans = first_match && dp(i + 1, j + 1, text, pattern);
+            }
+        }
+        memo[i][j] = ans ? PatternResult.TRUE : PatternResult.FALSE;
+        return ans;
+    }
+
+    enum PatternResult {
+        TRUE,
+        FALSE
     }
 }

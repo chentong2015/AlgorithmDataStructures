@@ -8,17 +8,18 @@ package leetcode;
 //  There doesn't exist two distinct indices, i and j, nums[i] + nums[j] == target.
 // Return the minimum possible sum that a beautiful array could have modulo 10^9 + 7.
 //
-// 1 <= n <= 109
-// 1 <= target <= 109
+// 1 <= n <= 10^9
+// 1 <= target <= 10^9
 public class MinPossibleSumBeautifulArray {
 
-    // TODO. 分析普遍的规律，将数据划分成两个部分进行求和计算(等差数列)
-    //  target约束低位的数据如何取，n约束剩余的高位数据如何取
-    // n = 3, target = 3
-    // [1,3,4]
+    // TODO. 分析构成target值的两个数组合, 组合数中取小值(从1开始)
+    //  [1, 2, 3, 4, ,,,,, n-3, n-2, n-1, target, target+1, target+2,,,]
     //
     // n = 1, target = 1
     // [1]
+    //
+    // n = 3, target = 3
+    // [1,3,4]
     //
     // n = 4, target = 6
     // 1 2 3 4
@@ -48,7 +49,7 @@ public class MinPossibleSumBeautifulArray {
             int middle = target / 2;
             minSum = ((long) middle * (middle + 1)) / 2;
 
-            // 补充后续剩余的和数, 注意rightValue值可能超过int上限
+            // 补充后续剩余的和数(求和公式)
             int leftCount = n - middle;
             long rightValue = target + leftCount - 1;
             minSum += ((target + rightValue) * leftCount) / 2;
