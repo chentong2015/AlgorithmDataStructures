@@ -1,7 +1,7 @@
 package templates.dp_programming.jump_game;
 
 // [2,3,1,1,4]
-public class JumpGameMaster {
+public class JumpGameDp2 {
 
     // TODO. Jump Game游戏可以转换到Gas Station加油站模型
     // 最终的目标是从一边到另外一边，只要有足够的积累便能通过
