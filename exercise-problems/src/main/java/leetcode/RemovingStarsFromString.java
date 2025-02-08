@@ -1,7 +1,5 @@
 package leetcode;
 
-import java.util.Stack;
-
 // Removing Stars From a String
 // You are given a string s, which contains stars *.
 // In one operation, you can:
