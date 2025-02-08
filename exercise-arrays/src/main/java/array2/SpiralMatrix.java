@@ -3,7 +3,7 @@ package array2;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LearnArray2D3 {
+public class SpiralMatrix {
 
     // Spiral Matrix 螺旋矩阵
     // Given an m x n matrix, return all elements of the matrix in spiral order.
@@ -44,5 +44,4 @@ public class LearnArray2D3 {
         }
         return results;
     }
-
 }

@@ -2,7 +2,7 @@ package array2;
 
 import java.util.Arrays;
 
-public class LearnArray2D2 {
+public class Search2DMatrix {
 
     // TODO：二位数组/矩阵的倾斜角度遍历，每一步比较都能确定移动方向
     // Search a 2D Matrix II
