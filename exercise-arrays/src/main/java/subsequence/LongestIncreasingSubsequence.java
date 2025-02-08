@@ -2,23 +2,30 @@ package subsequence;
 
 import java.util.Arrays;
 
+// Longest Increasing Subsequence
+// An integer array nums, return the length of the longest strictly increasing subsequence
+// Can you come up with an algorithm that runs in O(n log(n)) time complexity?
+//
+// 1 <= nums.length <= 2500
+// -10^4 <= nums[i] <= 10^4
 public class LongestIncreasingSubsequence {
 
-    // TODO: DP典型实例：结合二分法修改记录的历史数据，对dp数据进行扩充
-    // 最长连续增长子序列，可以演变为最长满足条件的增长
-    // Longest Increasing Subsequence
-    // An integer array nums, return the length of the longest strictly increasing subsequence
-    // nums  = [10,9,2,5,3,7,101,18] -> [2,3,7,101] 最长连续增长子序列, 数字之间可以不连续
-    // steps = [1, 1,1,2,2,3,4  ,4]
+    // TODO. 每读取一个数据进行二分查找，存储从低到高的序列片段
+    // [10,9,2,5,3,7,101,18]
+    // [2,3,7,101]
     //
-    // Dynamic Programming with Binary Search: O(nlog(n)) O(n)
-    // Store increasing subsequence formed by including currently encountered element
-    // input: [0, 8, 4, 12, 2] 数组需要预留足够的长度
-    //    dp: [0]
-    //    dp: [0, 8]
-    //    dp: [0, 4]
-    //    dp: [0, 4, 12]
-    //    dp: [0, 2, 12] 这里存储的不是正确的排序值，但是数组的长度是最终的答案
+    // [0,1,0,3,2,3]
+    // [0,1,2,3]
+    //
+    // [0, 8, 4, 12, 2]
+    // dp: [0]
+    // dp: [0, 8]
+    // dp: [0, 4]
+    // dp: [0, 4, 12]
+    // dp: [0, 2, 12] 这里存储的不是正确的排序值，但是数组的长度是最终的答案
+    //
+    // O(nlog(n)) 二分查找时间复杂度
+    // O(n)       DP数组可能存储全部数据
     public int lengthOfLIS(int[] nums) {
         int[] dp = new int[nums.length];
         int length = 0;
