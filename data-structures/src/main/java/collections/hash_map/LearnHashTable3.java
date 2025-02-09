@@ -1,6 +1,6 @@
 package collections.hash_map;
 
-import collections.tree.bean.TreeNode;
+import nonlinear.tree.bean.TreeNode;
 
 import java.util.*;
 
