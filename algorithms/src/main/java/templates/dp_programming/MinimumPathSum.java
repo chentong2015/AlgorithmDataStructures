@@ -20,12 +20,14 @@ public class MinimumPathSum {
                 if (i == 0 && j == 0) {
                     // do nothing 起始位置没有必要做任何计算
                 } else if (i > 0 && j == 0) {
+                    // 第一列只能往下，累计前一行的结果
                     grid[i][j] += grid[i-1][j];
                 } else if (i == 0) {
+                    // 第一行只能往右，累计前一列的结果
                     grid[i][j] += grid[i][j-1];
                 } else {
-                    // 每一个位置只能从它的左边或者上面而来，每个位置都需要计算
-                    grid[i][j] += Math.min(grid[i-1][j], grid[i][j-1]);
+                    // 任意位置，取左边和上边路径的最小值
+                    grid[i][j] += Math.min(grid[i][j-1], grid[i-1][j]);
                 }
             }
         }
