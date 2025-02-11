@@ -30,19 +30,18 @@ public class PartitionArrayMaxSum {
         int[] dp = new int[arr.length];
         dp[0] = arr[0];
         for (int index = 1; index < arr.length; index++) {
-
-            // 从后往前循环，直接找到最大值，并更新Index位置的Max统计
             int maxValue = arr[index];
-            int length = 0;
+            int width = 0;
             for (int left = index; left >= (index - k + 1) && left >= 0; left--) {
+                // TODO. 从后往前保证来最大值的更新, 确定计算的宽度
                 maxValue = Math.max(maxValue, arr[left]);
-                length++;
+                width++;
 
                 // 只有当left大于0时，才考虑dp[left - 1]前面的统计
                 if (left == 0) {
-                    dp[index] = Math.max(dp[index], length * maxValue);
+                    dp[index] = Math.max(dp[index], width * maxValue);
                 } else {
-                    dp[index] = Math.max(dp[index], dp[left - 1] + length * maxValue);
+                    dp[index] = Math.max(dp[index], dp[left - 1] + width * maxValue);
                 }
             }
         }
