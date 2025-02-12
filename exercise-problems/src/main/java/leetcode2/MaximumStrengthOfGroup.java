@@ -48,12 +48,14 @@ public class MaximumStrengthOfGroup {
             }
         }
 
-        // 特殊情况: 当只有一个负数时，返回0作为最大值
+        // 特殊情况: 当没有正数且只有一个负数时，返回0作为最大值
         if (countPositive == 0) {
             if (countNegative <= 1 && hasZero) {
                 return 0;
             }
         }
+
+        // 普通情况: 排除最大的负数值，即为最后的结果
         if (countNegative % 2 == 1) {
             result /= maxValueNegative;
         }
