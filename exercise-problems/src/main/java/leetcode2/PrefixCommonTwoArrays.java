@@ -56,6 +56,7 @@ public class PrefixCommonTwoArrays {
             if (index == 0) {
                 result[index] = addCommon;
             } else {
+                // 累计前一轮的统计值
                 result[index] = result[index - 1] + addCommon;
             }
             set1.add(num1);

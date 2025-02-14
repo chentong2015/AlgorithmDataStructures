@@ -43,7 +43,6 @@ public class PlatesBetweenCandles {
                     break;
                 }
             }
-
             int idLastCandle = -1;
             for (int index = query[1]; index >= query[0]; index--) {
                 if (s.charAt(index) == '|')  {

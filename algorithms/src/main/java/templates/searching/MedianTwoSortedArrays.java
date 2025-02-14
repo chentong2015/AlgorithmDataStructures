@@ -5,7 +5,7 @@ package templates.searching;
 // nums1=[1,2], nums2=[3,4] -> 2.50000
 // 1. 中位数的出现位置index坐标一定在两个数组总长的一半位置(可能一个从一个数组中多取一点，另外一个少取一点)
 // 2. 中位数的目的式将元素平衡的划分成两个部分，使得左边部分的最大值<=右边部分的最小值
-public class LearnBinarySearch2 {
+public class MedianTwoSortedArrays {
 
     // TODO: 二分法查找的变式，对一个数组的查找同时影响第二个数组的查找位置(位置的和为指定的特征值)
     // X1,X2,X3 .... Xn-2,Xn-1,Xn         (Xi-1, Xi)

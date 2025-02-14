@@ -1,19 +1,32 @@
 package templates.searching;
 
-// TODO. 二分法的衍生版本: 找到的median并不是最后结果，而是在二分过程中找边界值
-public class LearnBinarySearch3 {
+// Koko Eating Bananas
+// Koko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas.
+// The guards have gone and will come back in h hours.
+//
+// Koko can decide her bananas-per-hour eating speed of k.
+// Each hour, she chooses some pile of bananas and eats k bananas from that pile.
+// If the pile has less than k bananas, she eats all of them instead
+// and will not eat any more bananas during this hour.
+//
+// Koko likes to eat slowly but still wants to finish eating all the bananas before the guards return.
+// Return the minimum integer k such that she can eat all the bananas within h hours.
+public class KokoEatingBananas {
 
-    // 在指定的时间间隔中，需要吃多少才能保证全部吃完
-    // Koko Eating Bananas
-    // Koko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas.
-    // The guards have gone and will come back in h hours.
-    // Koko can decide her bananas-per-hour eating speed of k.
-    // Each hour, she chooses some pile of bananas and eats k bananas from that pile.
-    // If the pile has less than k bananas, she eats all of them instead and will not eat any more bananas during this hour.
-    //
-    // Koko likes to eat slowly but still wants to finish eating all the bananas before the guards return.
-    // Return the minimum integer k such that she can eat all the bananas within h hours.
-    //
+    public static void main(String[] args) {
+        int[] piles = {312884470};
+        System.out.println(minEatingSpeed(piles, 312884469));
+
+        int[] piles1 = {30,11,23,4,20};
+        System.out.println(minEatingSpeed(piles1, 5));
+        System.out.println(minEatingSpeed(piles1, 6));
+
+        int[] piles2 = {3,6,7,11}; // 1 + 2 + 2 + 3
+        System.out.println(minEatingSpeed(piles2, 8));
+        System.out.println(minEatingSpeed(piles2, 5));
+    }
+
+    // TODO. 二分法的衍生版本: 找到的median并不是最后结果，而是在二分过程中找边界值
     // piles = [30,11,23,4,20], h = 5 Output: 30 (1~30) 可选择值的范围
     // piles = [30,11,23,4,20], h = 6 Output: 23 (1~30)
     // piles = [3,6,7,11],      h = 8 Output: 4 (1~4)
@@ -73,18 +86,5 @@ public class LearnBinarySearch3 {
             }
         }
         return false;
-    }
-
-    public static void main(String[] args) {
-        int[] piles = {312884470};
-        System.out.println(minEatingSpeed(piles, 312884469));
-
-        int[] piles1 = {30,11,23,4,20};
-        System.out.println(minEatingSpeed(piles1, 5));
-        System.out.println(minEatingSpeed(piles1, 6));
-
-        int[] piles2 = {3,6,7,11}; // 1 + 2 + 2 + 3
-        System.out.println(minEatingSpeed(piles2, 8));
-        System.out.println(minEatingSpeed(piles2, 5));
     }
 }
