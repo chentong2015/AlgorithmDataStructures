@@ -1,4 +1,4 @@
-package others.random;
+package extra.random;
 
 import java.security.SecureRandom;
 import java.util.*;
@@ -12,7 +12,7 @@ public class RandomDrawingLots {
 
     // TODO. 正确的做法是随机打乱一组数据，然后将相邻Item进行匹配(理想情况)
     public static void main(String[] args) {
-        String[] items = {"chen", "ting", "victor", "hao", "others", "case"};
+        String[] items = {"chen", "ting", "victor", "hao", "extra", "case"};
         Map<String, String> result = randomDrawing(items);
 
         for (Map.Entry<String, String> entry: result.entrySet()) {

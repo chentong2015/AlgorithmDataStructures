@@ -1,4 +1,4 @@
-package arrays.todoing.count_substring;
+package todo.count_substring;
 
 import java.util.HashMap;
 

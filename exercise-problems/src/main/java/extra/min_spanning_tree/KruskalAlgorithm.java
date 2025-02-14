@@ -1,4 +1,4 @@
-package others.min_spanning_tree;
+package extra.min_spanning_tree;
 
 import java.util.HashSet;
 

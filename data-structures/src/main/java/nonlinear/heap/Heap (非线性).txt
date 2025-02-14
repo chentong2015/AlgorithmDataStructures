@@ -3,7 +3,7 @@ Heap is a Complete Binary Tree
 - It is always balanced.
 - It has the minimum possible height O(log(n)) for the tree
   - the children of a node at index i are nodes at indices 2*i+1 and 2*i+2.
-  - the heap is filled from top to bottom, and from left to right at each layer.
+  - the heap is filled from todo to bottom, and from left to right at each layer.
 
 TODO. Heap的分类: 看根节点是存储大值还是小值
 - Min-Heap: the root of the tree is the smallest number

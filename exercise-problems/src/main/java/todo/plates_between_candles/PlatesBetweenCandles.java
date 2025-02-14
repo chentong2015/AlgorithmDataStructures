@@ -1,4 +1,4 @@
-package amazon.plates_between_candles;
+package todo.plates_between_candles;
 
 // Plates Between Candles
 // You are given a 0-indexed string s consisting of characters '*' and '|' only,
@@ -18,7 +18,7 @@ package amazon.plates_between_candles;
 // 0 <= lefti <= righti < s.length
 public class PlatesBetweenCandles {
 
-    // TODO. 常规的遍历解法会造成Time Limit Exceeded
+    // TODO. 找到影响时间复杂度的两个本质原因: 循环可能造成O(N)复杂度
     // "||**||**|*"
     //     *||**|, query[3, 8]
     //
@@ -36,6 +36,7 @@ public class PlatesBetweenCandles {
         int[] result = new int[queries.length];
 
         for (int[] query: queries) {
+            // TODO. 无需循环完整个Query区间范围内的数据
             int idFirstCandle = -1;
             for (int index = query[0]; index <= query[1]; index++) {
                 if (s.charAt(index) == '|')  {
@@ -44,14 +45,16 @@ public class PlatesBetweenCandles {
                 }
             }
             int idLastCandle = -1;
-            for (int index = query[1]; index >= query[0]; index--) {
-                if (s.charAt(index) == '|')  {
-                    idLastCandle = index;
-                    break;
+            if (idFirstCandle != -1) {
+                for (int index = query[1]; index >= query[0]; index--) {
+                    if (s.charAt(index) == '|')  {
+                        idLastCandle = index;
+                        break;
+                    }
                 }
             }
 
-            // TODO. 检查时缩小Index的查询范围，避免重复遍历
+            // TODO. 循环Query区间范围内的数据也可以避免
             int count = 0;
             if (idFirstCandle != -1 && idLastCandle != -1 && idFirstCandle + 1 < idLastCandle) {
                 for (int index = idFirstCandle + 1; index < idLastCandle; index++) {

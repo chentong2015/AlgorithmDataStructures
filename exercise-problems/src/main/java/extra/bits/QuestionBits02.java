@@ -1,4 +1,4 @@
-package others.bits;
+package extra.bits;
 
 public class QuestionBits02 {
 

@@ -39,8 +39,9 @@ public class FirstLastElementSortedArray {
             } else if (nums[mid] < target) {
                 left = mid + 1;
             } else {
-                idx = mid;
+                // 继续二分法查找
                 // 如果找起始位置则往左侧移动，如果找结束位置则往右侧移动
+                idx = mid;
                 if (isSearchingLeft) {
                     right = mid - 1;
                 } else {
