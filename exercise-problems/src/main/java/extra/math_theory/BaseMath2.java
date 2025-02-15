@@ -1,4 +1,4 @@
-package extra.math;
+package extra.math_theory;
 
 public class BaseMath2 {
 

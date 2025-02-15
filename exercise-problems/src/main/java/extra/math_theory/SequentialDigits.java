@@ -1,4 +1,4 @@
-package extra.math;
+package extra.math_theory;
 
 import java.util.ArrayList;
 import java.util.List;

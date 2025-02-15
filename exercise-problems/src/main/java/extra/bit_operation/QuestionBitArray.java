@@ -1,4 +1,4 @@
-package extra.bits;
+package extra.bit_operation;
 
 // TODO: 数组统一相似问题的研究，"bit位运算" & "求和解法" & "数据相消理论"
 // 1. 找数组中唯一出现一次的数字

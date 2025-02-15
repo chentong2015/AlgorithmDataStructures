@@ -1,0 +1,6 @@
+使用数学计算公式来解决算法问题:
+- 优化算法的计算过程，提供证明
+- 规避复杂的逻辑推理，提供问题的巧妙解法
+
+Number Theory 数论题目
+https://leetcode.com/problem-list/number-theory/
