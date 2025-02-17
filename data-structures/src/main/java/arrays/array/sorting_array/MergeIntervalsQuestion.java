@@ -12,18 +12,19 @@ public class MergeIntervalsQuestion {
     // intervals = [[1,3],[2,6],[8,10],[15,18]] -> [[1,6],[8,10],[15,18]]
     //
     // O(n*log(n)) n是区间的数量
-    // O(n) 最后的结果可能没有合并，将原始区间数目输出
+    // O(n)        最差情况是没有任何合并，输出原始区间数目
     public int[][] merge(int[][] intervals) {
+        // 根据int[]数组的第一个数进行排序
         Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
 
         LinkedList<int[]> merged = new LinkedList<>();
         for (int[] interval : intervals) {
             if (merged.isEmpty() || merged.getLast()[1] < interval[0]) {
                 merged.add(interval);
-            } else {
-                // 更新合并区间的上边界，等效于将合并的区间范围扩大
-                merged.getLast()[1] = Math.max(merged.getLast()[1], interval[1]);
+                continue;
             }
+            // 更新合并区间上边界，范围合并区间的右值
+            merged.getLast()[1] = Math.max(merged.getLast()[1], interval[1]);
         }
         return merged.toArray(new int[merged.size()][]);
     }
