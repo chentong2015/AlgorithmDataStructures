@@ -57,7 +57,7 @@ public class FirstPaintedRowColumn {
             int[] values = map.get(arr[index]);
             rows[values[0]]++;
             cols[values[1]]++;
-            // TODO. 以列的长度来判断rows统计，以行的长度来判断cols统计
+            // TODO. 以列长度判断rows统计，以行长度判断cols统计
             if (rows[values[0]] >= colLength || cols[values[1]] >= rowLength) {
                 return index;
             }
