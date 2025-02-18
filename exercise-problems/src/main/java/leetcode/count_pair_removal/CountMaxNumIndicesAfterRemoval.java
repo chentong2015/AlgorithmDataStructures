@@ -26,6 +26,9 @@ public class CountMaxNumIndicesAfterRemoval {
     //
     // [9,10,10,14,15,16,17,17,24,28,29,31,32,  40,42,48,51,55,64,68,71,83,98,99,99,100]
     // left                                     right
+    //
+    // O(N*logN + N)
+    // O(1)
     public int maxNumOfMarkedIndices(int[] nums) {
         Arrays.sort(nums);
 

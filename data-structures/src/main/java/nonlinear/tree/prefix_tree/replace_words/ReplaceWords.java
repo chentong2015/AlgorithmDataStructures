@@ -1,6 +1,6 @@
 package nonlinear.tree.prefix_tree.replace_words;
 
-import collections.tree.prefix_tree.base.TrieNodeWithWord;
+import nonlinear.tree.prefix_tree.base.TrieNodeWithWord;
 
 import java.util.HashSet;
 import java.util.List;
