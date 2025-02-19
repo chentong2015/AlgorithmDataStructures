@@ -1,4 +1,4 @@
-package nonlinear.tree.prefix_tree.word_complete;
+package nonlinear.tree.prefix_tree.word_autocomplete;
 
 import java.util.ArrayList;
 import java.util.List;

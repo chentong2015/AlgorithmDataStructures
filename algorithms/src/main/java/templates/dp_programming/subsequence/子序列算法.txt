@@ -1,0 +1,10 @@
+TODO. Subsequence 什么是子序列
+子序列是按照顺序排序的一串子字符(不是严格连续)，通过删除某些字符形成
+A subsequence of a string is a new string generated from the original string
+with some characters (can be none) deleted
+without changing the relative order of the remaining characters.
+
+TODO. Subsequence 应用场景
+- 数据比较与猜测(判断字符含义)
+- diff utility & winMerge
+- Git版本比较与修订

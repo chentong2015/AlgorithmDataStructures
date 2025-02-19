@@ -1,4 +1,4 @@
-package templates.dp_programming.subsequence.basic;
+package templates.dp_programming.subsequence.common_sequence;
 
 public class ShortestCommonSuperSequence {
 
