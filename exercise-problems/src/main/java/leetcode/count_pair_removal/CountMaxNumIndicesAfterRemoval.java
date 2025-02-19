@@ -14,7 +14,7 @@ import java.util.Arrays;
 // 1 <= nums[i] <= 10^9
 public class CountMaxNumIndicesAfterRemoval {
 
-    // TODO. 最多消除数目的本质是: 划分两半，对半相消
+    // TODO. MAX消除数目的本质: 划分两半，对半相消
     // [3,5,2,4] -> 2
     // [0,1,1,0] 2 * nums[2] <= nums[1]
     //
@@ -32,15 +32,15 @@ public class CountMaxNumIndicesAfterRemoval {
     public int maxNumOfMarkedIndices(int[] nums) {
         Arrays.sort(nums);
 
+        // 只有当left位置的值能被标记，才往后移动坐标
         int left = 0;
         for (int right = (nums.length + 1) / 2; right < nums.length; right++) {
             if (2 * nums[left] <= nums[right]) {
-                // 只有left位置的值能够被消除，才移动坐标
                 left++;
             }
         }
 
-        // 统计坐标移动的步数
+        // 移动的坐标数目即为标记的统计
         return left * 2;
     }
 }

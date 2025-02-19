@@ -6,19 +6,19 @@ TODO: Recursion递归方法的典型运用，3步操作逻辑
 1. 判断和排除特殊情况，以便直接返回
 2. 正常执行一个(单元)逻辑的基本操作步骤
 3. 调用自身，剩下的交给该方法再做一次
-   public void extra(int value) {
+   public void others(int value) {
        if (value == 0) {
            return;
        }
-       extra(value - 1);
+       others(value - 1);
    }
    //
-   // extra(5)
-   //   extra(4)
-   //     extra(3)
-   //       extra(2)
-   //         extra(1)
-   //           extra(0) return; 递归到底则无法继续递归，开始返回
+   // others(5)
+   //   others(4)
+   //     others(3)
+   //       others(2)
+   //         others(1)
+   //           others(0) return; 递归到底则无法继续递归，开始返回
    //         test1_todo        递归到底返回后继续后续执行
    //       test2_todo
    //     test3_todo
