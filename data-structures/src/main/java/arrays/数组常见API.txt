@@ -1,3 +1,12 @@
+return new int[] {item1, item2, ...} 直接将数组构建出来
+
+Arrays.copyOf(results, count); 从起始点截取指定的长度
+Arrays.copyOfRange(results, 0, count); 定位截取指定区间的数据, 复制到count前一个位置
+System.arraycopy(digits, 0, results, 1, digits.length); 从原始数组copy指定长度到目标数组
+
+Arrays.asList(nums);   将数组转换成List列表
+Arrays.asList(1,2,3);  直接通过值生成List列表
+
 TODO. 一维数组的自然排序
 int[] nums;
 Arrays.sort(nums);
@@ -10,15 +19,5 @@ Arrays.sort(meetings, (a, b) -> a[0] - b[0]);
 TODO. Not found, return (-(insertion point) - 1)
 int[] nums = {1, 5, 6, 8};
 Arrays.binarySearch(nums, 0, nums.length, 1); -> 0
-Arrays.binarySearch(nums, 0, nums.length, 3); -> -2 可将其恢复成插入位置
-
-Arrays.copyOfRange(); 拷贝数组区间
-Arrays.copyOf(results, count); 从起始点截取指定的长度
-Arrays.copyOfRange(results, 0, count); 定位截取指定区间的数据, 复制到count前一个位置
-
-Arrays.asList(nums);   将数组转换成List列表
-Arrays.asList(1,2,3);  直接通过值生成List列表
-
-return new int[] {item1, item2, ...}  返回数据，需要将数组构建出来
-
-System.arraycopy(digits, 0, results, 1, digits.length); 从原始数组copy指定长度到目标数组
+Arrays.binarySearch(nums, 0, nums.length, 3); -> -2 恢复成中间的插入坐标
+Arrays.binarySearch(nums, 0, nums.length, 10); -> -5 插入的坐标位置在最后

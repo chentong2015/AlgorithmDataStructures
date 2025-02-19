@@ -1,14 +1,18 @@
 package templates.dp_programming.subsequence.common_sequence;
 
+// Shortest Common SuperSequence
+// Given two strings str1 and str2, return the shortest string
+// that has both str1 and str2 as subsequences
+// If multiple answers exist, you may return any of them
+//
+// 1 <= str1.length, str2.length <= 1000
+// str1 and str2 consist of lowercase English letters.
 public class ShortestCommonSuperSequence {
 
     // TODO: 和LCS同样的算法，拿到最短公共SuperSequence的长度，并非字符组合的结果
-    // Shortest Common SuperSequence
-    // Given two strings str1 and str2, return the shortest string
-    // that has both str1 and str2 as subsequences
-    // If multiple answers exist, you may return any of them
-    // 1<= n,m <= 1000 其中都是小写字母
-    // str1 = "abac", str2 = "cab"        -> "cabac" 如何从所有的结果中取出一个有效值 !!
+    // str1 = "aaaaaaaa", str2 = "aaaaaaaa" -> "aaaaaaaa"
+    //
+    // str1 = "abac", str2 = "cab"  -> "cabac" 如何从所有的结果中取出一个有效值 !!
     //          a       b     a       c
     //    0     1a     2ab   3aba   4abac
     // c  1c    ac/ca  cab   caba   abac
@@ -20,30 +24,38 @@ public class ShortestCommonSuperSequence {
         int[][] dp = new int[m + 1][n + 1];
         for (int i = 0; i <= m; i++) {
             for (int j = 0; j <= n; j++) {
-                if (i == 0) dp[i][j] = j;                                // 第一行和第列只需要补充指定字符串的长度
-                else if (j == 0) dp[i][j] = i;
-                else if (str1.charAt(i - 1) == str2.charAt(j - 1))
-                    dp[i][j] = dp[i - 1][j - 1] + 1;                     // 如果相等，则在去掉公共字符的基础上补充一个共同字符
-                else
-                    dp[i][j] = Math.min(dp[i - 1][j], dp[i][j - 1]) + 1; // 选择最小的合成长度上面添加一
+                if (i == 0) {
+                    // 第一行和第列只需要补充指定字符串的长度
+                    dp[i][j] = j;
+                } else if (j == 0) {
+                    dp[i][j] = i;
+                } else if (str1.charAt(i - 1) == str2.charAt(j-1)) {
+                    // 如果相等，则在去掉公共字符的基础上补充一个共同字符
+                    dp[i][j] = dp[i-1][j-1] + 1;
+                } else {
+                    // 选择最小的合成长度上面添加一
+                    dp[i][j] = Math.min(dp[i-1][j], dp[i][j-1]) + 1;
+                }
             }
         }
         return dp;
     }
 
     // 根据两个原始的字符串来组成指定长度的Super Sequence
-    public String shortestCommonSuperSequence(String str1, String str2) {
+    public String shortestCommonSupersequence(String str1, String str2) {
         int i = str1.length();
         int j = str2.length();
         int[][] dp = getLengthOfShortestCommonSuperSequence(str1, str2);
         int position = dp[i][j];
+
         char[] arr = new char[position];
         while (i > 0 && j > 0) {
             if (str1.charAt(i - 1) == str2.charAt(j - 1)) {
                 arr[--position] = str1.charAt(i - 1);
                 i--;
                 j--;
-            } else if (dp[i - 1][j] < dp[i][j - 1]) {  // 如果dp[i - 1][j]位置的值更小，则说明使用str1的字符会使得路径更加的短 !!
+                // 如果dp[i - 1][j]位置的值更小，则说明使用str1的字符会使得路径更加的短 !!
+            } else if (dp[i - 1][j] < dp[i][j - 1]) {
                 arr[--position] = str1.charAt(i - 1);
                 i--;
             } else {
