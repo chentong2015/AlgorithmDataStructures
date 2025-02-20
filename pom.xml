@@ -10,11 +10,10 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
+        <module>algorithms</module>
         <module>data-structures</module>
         <module>exercise-problems</module>
         <module>interview-questions</module>
-        <module>algorithms</module>
-        <module>exercise-amazon</module>
     </modules>
 
     <properties>

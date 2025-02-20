@@ -37,6 +37,7 @@ public class PlatesBetweenCandles {
 
         for (int[] query: queries) {
             // TODO. 无需循环完整个Query区间范围内的数据
+            // TODO. 不能使用二分查找，可能错过要查找的目标字符
             int idFirstCandle = -1;
             for (int index = query[0]; index <= query[1]; index++) {
                 if (s.charAt(index) == '|')  {
