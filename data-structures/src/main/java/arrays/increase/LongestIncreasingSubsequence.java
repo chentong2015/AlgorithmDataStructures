@@ -2,7 +2,7 @@ package arrays.increase;
 
 import java.util.Arrays;
 
-// Longest Increasing Subsequence
+// Longest Increasing Subsequence (LIS)
 // An integer array nums, return the length of the longest strictly increasing subsequence
 // Can you come up with an algorithm that runs in O(n log(n)) time complexity?
 //
