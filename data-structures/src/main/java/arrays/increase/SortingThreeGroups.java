@@ -1,4 +1,4 @@
-package templates.dp_programming.subsequence;
+package arrays.increase;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import java.util.List;
 // 1 <= nums[i] <= 3
 public class SortingThreeGroups {
 
-    // TODO. 从数组中将“最长递增链条”抽出来构成1,,,2,,,3,,,结果
+    // TODO.
     //
     // [2,1,3,2,1] -> 3
     // [1,1] [2,2] [1,3] [1,2]

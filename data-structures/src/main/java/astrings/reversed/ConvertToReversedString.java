@@ -1,4 +1,4 @@
-package arrays.strings.reversed;
+package astrings.reversed;
 
 // TODO. 将字符串换成它的反转字符串
 //  只需将“反转字符串序列”中不匹配的字符”甩“到末尾重新组合

@@ -1,5 +1,5 @@
 // Minimum Cost to Convert String I
-// You are given two 0-indexed strings source and target, both of length n and consisting of lowercase English letters.
+// You are given two 0-indexed astrings source and target, both of length n and consisting of lowercase English letters.
 // You are also given two 0-indexed character arrays original and changed, and an integer array cost,
 // where cost[i] represents the cost of changing the character original[i] to the character changed[i].
 //

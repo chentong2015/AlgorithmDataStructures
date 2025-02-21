@@ -1,4 +1,4 @@
-package arrays.strings;
+package astrings;
 
 import java.util.ArrayList;
 import java.util.List;

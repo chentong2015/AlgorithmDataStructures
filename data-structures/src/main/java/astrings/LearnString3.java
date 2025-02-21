@@ -1,4 +1,4 @@
-package arrays.strings;
+package astrings;
 
 // TODO: 一般不能直接使用基础类库的方法 .split() .trim() !!
 public class LearnString3 {

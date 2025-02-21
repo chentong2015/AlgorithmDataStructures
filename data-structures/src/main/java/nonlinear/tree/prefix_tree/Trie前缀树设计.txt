@@ -1,5 +1,5 @@
 Prefix Tree / Trie Tree
-Store and retrieve keys in a dataset of strings / tree data structure
+Store and retrieve keys in a dataset of astrings / tree data structure
 
 TODO. Hash Table 区别
 1. Hash Table 存储具有共同前缀的相同数量的key值，占的内存空间比较大

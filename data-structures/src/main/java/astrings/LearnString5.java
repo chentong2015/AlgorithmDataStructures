@@ -1,4 +1,4 @@
-package arrays.strings;
+package astrings;
 
 public class LearnString5 {
 

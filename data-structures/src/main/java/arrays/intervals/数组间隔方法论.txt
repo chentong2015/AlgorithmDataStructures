@@ -1,0 +1,10 @@
+Array Intervals
+[[1,4],[2,3],[3,4],[2,3]]
+
+一般需要排序将特征体现出来:
+Arrays.sort(intervals, Comparator.comparingInt(interval -> interval[0]));
+
+一组数组间隔的相关问题:
+1. 找到这个间隔的下一个最小间隔区间
+2. 将小的区间放到大的区间中，不断累计
+3. 将区间进行合并，统一公共交集的区间

@@ -7,17 +7,25 @@ System.arraycopy(digits, 0, results, 1, digits.length); 从原始数组copy指�
 Arrays.asList(nums);   将数组转换成List列表
 Arrays.asList(1,2,3);  直接通过值生成List列表
 
-TODO. 一维数组的自然排序
+TODO. 一维数组自然排序
 int[] nums;
 Arrays.sort(nums);
 
-TODO. 二维数组自然排序，比较特定位置的值
+TODO. 二维数组自然排序，比较特定位置的值或者同时比较
 int[][] nums;
 Arrays.sort(nums, Comparator.comparingInt(m -> m[0]));
 Arrays.sort(meetings, (a, b) -> a[0] - b[0]);
+Arrays.sort(envelopes, (arr1, arr2) -> {
+    if (arr1[0] == arr2[0]) {
+        return arr2[1] - arr1[1];
+    } else {
+        return arr1[0] - arr2[0];
+    }
+});
 
-TODO. Not found, return (-(insertion point) - 1)
+TODO. 在限定的范围内二分搜索，找到则返回正数坐标，否则返回负数坐标(插入位置)
+ Not found, return (-(insertion point) - 1)
 int[] nums = {1, 5, 6, 8};
 Arrays.binarySearch(nums, 0, nums.length, 1); -> 0
-Arrays.binarySearch(nums, 0, nums.length, 3); -> -2 恢复成中间的插入坐标
-Arrays.binarySearch(nums, 0, nums.length, 10); -> -5 插入的坐标位置在最后
+Arrays.binarySearch(nums, 0, nums.length, 3); -> -2 恢复成中间的插入坐标 1
+Arrays.binarySearch(nums, 0, nums.length, 10); -> -5 插入的坐标位置在最后 4

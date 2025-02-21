@@ -1,4 +1,4 @@
-package arrays.strings.reversed;
+package astrings.reversed;
 
 public class JavaStringReversed {
 

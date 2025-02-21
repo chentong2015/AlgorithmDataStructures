@@ -1,4 +1,4 @@
-package arrays.array.intervals;
+package arrays.intervals;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -35,7 +35,7 @@ public class FindRightIntervals {
     public int[] findRightInterval(int[][] intervals) {
         int length = intervals.length;
 
-        // 存储startIndex数值的原始坐标位置
+        // 存储startIndex数值(唯一)的原始坐标位置
         Map<Integer, Integer> mapStartIndex = new HashMap<>();
         for (int index = 0; index < length; index++) {
             mapStartIndex.put(intervals[index][0], index);
@@ -44,13 +44,12 @@ public class FindRightIntervals {
         // 根据数组第一个元素进行排序
         Arrays.sort(intervals, Comparator.comparingInt(interval -> interval[0]));
 
-        // TODO. 用于二分法查找，降低时间复杂度
+        // TODO. 记录排序后的startIndex数值(唯一)用于二分法查找
         int[] startIndexArray = new int[length];
         for (int index = 0; index < length; index++) {
             startIndexArray[index] = intervals[index][0];
         }
 
-        // Compute the result values
         int[] result = new int[length];
         for (int index = 0; index < length; index++) {
             // 找到当前starti的原始数组坐标
@@ -64,12 +63,13 @@ public class FindRightIntervals {
             if (findPosition < 0) {
                 findPosition = -(findPosition + 1);
             }
+
             if (findPosition < length) {
                 // 找到startj的原始数组坐标
                 int findPositionValue = startIndexArray[findPosition];
                 result[startPosition] = mapStartIndex.get(findPositionValue);
             } else {
-                // 如果插入的坐标位置是在最后, 说明没有找到startj
+                // 如果插入坐标位置在最后, 说明没有找到startj
                 result[startPosition] = -1;
             }
         }

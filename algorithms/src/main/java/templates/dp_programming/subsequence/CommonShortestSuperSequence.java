@@ -1,4 +1,4 @@
-package templates.dp_programming.subsequence.common_sequence;
+package templates.dp_programming.subsequence;
 
 // Shortest Common SuperSequence
 // Given two strings str1 and str2, return the shortest string
@@ -7,7 +7,7 @@ package templates.dp_programming.subsequence.common_sequence;
 //
 // 1 <= str1.length, str2.length <= 1000
 // str1 and str2 consist of lowercase English letters.
-public class ShortestCommonSuperSequence {
+public class CommonShortestSuperSequence {
 
     // TODO: 和LCS同样的算法，拿到最短公共SuperSequence的长度，并非字符组合的结果
     // str1 = "aaaaaaaa", str2 = "aaaaaaaa" -> "aaaaaaaa"

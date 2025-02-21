@@ -1,4 +1,4 @@
-package templates.dp_programming.subsequence.common_sequence;
+package templates.dp_programming.subsequence;
 
 // TODO. 金典Longest Common Subsequence (LCS)问题
 // https://en.m.wikipedia.org/wiki/Longest_common_subsequence_problem
@@ -7,7 +7,7 @@ package templates.dp_programming.subsequence.common_sequence;
 // Given two strings text1 and text2, return the length of their longest common subsequence.
 // If there is no common subsequence, return 0.
 // A common subsequence of two strings is a subsequence that is common to both strings.
-public class LongestCommonSubsequence {
+public class CommonLongestSubsequence {
 
     // TODO. 二维DP数组解决LCS的问题，不断迭代最优的值
     // text1 = "abcde", text2 = "ace" -> ace -> 3

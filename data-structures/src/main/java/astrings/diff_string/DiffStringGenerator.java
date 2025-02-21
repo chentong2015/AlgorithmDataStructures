@@ -1,4 +1,4 @@
-package arrays.strings.diff_string;
+package astrings.diff_string;
 
 public class DiffStringGenerator {
 

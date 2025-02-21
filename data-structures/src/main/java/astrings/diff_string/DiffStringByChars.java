@@ -1,4 +1,4 @@
-package arrays.strings.diff_string;
+package astrings.diff_string;
 
 // TODO. 使用最佳的复杂度比较两个字符串之间的字符差异  > 扩展到相差n个字符?
 // 通过字符统计+抵消来判断，无需遍历两次完整的CharArray ！

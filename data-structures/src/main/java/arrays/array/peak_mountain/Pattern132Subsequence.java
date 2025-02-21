@@ -1,4 +1,4 @@
-package templates.dp_programming.subsequence;
+package arrays.array.peak_mountain;
 
 public class Pattern132Subsequence {
 

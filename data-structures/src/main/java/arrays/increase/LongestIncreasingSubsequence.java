@@ -1,4 +1,4 @@
-package templates.dp_programming.subsequence.long_increase;
+package arrays.increase;
 
 import java.util.Arrays;
 
