@@ -1,6 +1,6 @@
 package nonlinear.tree.tree_questions;
 
-import collections.tree.bean.TreeLinkNode;
+import nonlinear.tree.bean.TreeLinkNode;
 import nonlinear.tree.bean.TreeNode;
 
 public class LearnTrees1 {

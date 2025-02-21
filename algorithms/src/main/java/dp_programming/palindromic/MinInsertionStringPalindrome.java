@@ -1,6 +1,6 @@
 package dp_programming.palindromic;
 
-import templates.dp_programming.subsequence.CommonLongestSubsequence;
+import dp_programming.subsequence.CommonLongestSubsequence;
 
 public class MinInsertionStringPalindrome {
 

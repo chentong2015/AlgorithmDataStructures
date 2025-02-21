@@ -1,8 +1,8 @@
 byte_dance/ByteQuestion.class
 murex/BfsDfsQuestion2.class
 microsoft/CircularDependency.class
-doctolib/sample2/Event.class
 amazon/interview/graph_node/GraphNodeHandler.class
+sg/CodingQuestion.class
 amazon/online_assessment/generation_next_string/SpecialStringSolution$NextCharacter.class
 amazon/online_assessment/max_health_server/MaximumHealthServer.class
 doctolib/BookingSlotsQuestion.class
@@ -14,19 +14,15 @@ veepee/Result.class
 murex/MurexQuestion2.class
 amazon/interview/number_to_english/NumWordsConversion.class
 adobe/AdobeQuestion.class
-sg/CodingGame.class
 murex/BfsDfsQuestion1.class
 veepee/VeepeeQuestion.class
 alibaba/MajorityVotingAlgorithm.class
 murex/MurexQuestion1$TreeNode.class
 criteo/t9_model/T9ModelMapping.class
-doctolib/sample2/BookingTimeStampTest2.class
 datadog/SubstringCounterOK.class
-doctolib/sample1/BookingTimeStamp.class
 egencia/WordFrequencyCounter.class
 amazon/online_assessment/generation_next_string/SpecialStringDemo.class
 amazon/online_assessment/min_passed_time/MinServerPassedTime.class
-doctolib/sample1/BookingTimeStampTest.class
 amazon/interview/graph_node/GraphNode.class
 sg/LiveCoding.class
 murex/MurexQuestion2$Word.class
@@ -36,7 +32,6 @@ murex/MurexQuestion3$DecryptionResult.class
 adobe/FibonacciQuestion.class
 doctolib/BookingSlotsQuestionOK.class
 natixis/NatixisQuestion.class
-doctolib/sample2/BookingTimeStamp2.class
 adobe/MRUQueue.class
 murex/MurexQuestion1.class
 amazon/online_assessment/generation_next_string/SpecialStringSolution.class
