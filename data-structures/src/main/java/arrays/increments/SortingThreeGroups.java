@@ -1,4 +1,4 @@
-package arrays.increase;
+package arrays.increments;
 
 import java.util.Arrays;
 import java.util.List;
