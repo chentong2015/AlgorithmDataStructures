@@ -27,6 +27,7 @@ public class FirstLastElementSortedArray {
         return new int[] {left, right};
     }
 
+    // TODO. 金典二分查询到相同值的左右边缘
     private int binarySearch(int[] nums, int target, boolean isSearchingLeft) {
         int left = 0;
         int right = nums.length - 1;

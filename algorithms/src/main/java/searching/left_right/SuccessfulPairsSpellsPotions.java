@@ -67,7 +67,6 @@ public class SuccessfulPairsSpellsPotions {
         int left = 0;
         int right = nums.length - 1;
         int idx = -1;
-
         while (left <= right) {
             int mid = left + (right - left) / 2;
             if (nums[mid] > target) {
@@ -75,7 +74,6 @@ public class SuccessfulPairsSpellsPotions {
             } else if (nums[mid] < target) {
                 left = mid + 1;
             } else {
-                // 继续二分法查找则往左侧移动
                 idx = mid;
                 right = mid - 1;
             }
