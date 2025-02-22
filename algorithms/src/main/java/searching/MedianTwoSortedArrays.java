@@ -71,8 +71,7 @@ public class MedianTwoSortedArrays {
         }
     }
 
-    class ItemDoubleBS {
-
+    static class ItemDoubleBS {
         public int leftValue;
         public int middleIndex;
         public int middleValue;

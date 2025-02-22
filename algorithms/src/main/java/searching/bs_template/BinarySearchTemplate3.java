@@ -1,4 +1,4 @@
-package searching.template;
+package searching.bs_template;
 
 import java.util.ArrayList;
 import java.util.List;

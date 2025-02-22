@@ -32,7 +32,7 @@ public class DistinctPrimeFactors {
                 setPrimes.add(index);
             }
         }
-        // TODO. 默认Num能够被查分成Prime乘积，只判断质数是否是Factor因子
+        // TODO. 默认Num是有质数的乘积构成，只判断质数是否是Num的因子
         Set<Integer> setFactors = new HashSet<>();
         for (int num: nums) {
             for (int prime: setPrimes) {
@@ -56,7 +56,7 @@ public class DistinctPrimeFactors {
         return true;
     }
 
-
+    // 最优时间复杂度解法
     public int distinctPrimeFactorsMaster(int[] nums) {
         Set<Integer> set = new HashSet<>();
         for(int num : nums){
