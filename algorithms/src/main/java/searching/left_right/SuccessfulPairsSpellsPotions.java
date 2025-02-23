@@ -42,13 +42,12 @@ public class SuccessfulPairsSpellsPotions {
     // O(N)
     public int[] successfulPairs(int[] spells, int[] potions, long success) {
         int[] result = new int[spells.length];
-
-        // 必须排序后才能使用二分搜索
         Arrays.sort(potions);
+
         for (int index = 0; index < spells.length; index++) {
             int gapIndex = (int) Math.ceil((double) success / spells[index]);
 
-            // TODO. 可能连续使用两次二分查找
+            // TODO. 确定在能找到值的情况下才进行Left二分查找
             int findIndex = Arrays.binarySearch(potions, gapIndex);
             if (findIndex < 0) {
                 findIndex = -(findIndex + 1);

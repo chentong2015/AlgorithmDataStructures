@@ -16,7 +16,7 @@ import java.util.Arrays;
 // All the values of special are unique.
 public class MaxConsecutiveFloors {
 
-    // TODO. 根本无需遍历所有位置数据，直接根据special数组计算最大间隔
+    // TODO. 无需遍历所有的楼层，直接根据special数组计算最大间隔
     // bottom = 2, top = 9, special = [4,6]
     // 2 3 4 5 6 7 8 9
     //     s   s
