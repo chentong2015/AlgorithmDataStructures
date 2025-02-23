@@ -1,4 +1,4 @@
-package astrings.left_right;
+package astrings.start_target;
 
 // Swap Adjacent in LR String
 // In a string composed of 'L', 'R', and 'X' characters, like "RXXLRXRXL",
@@ -60,7 +60,7 @@ public class SwapAdjacentLRString {
         return true;
     }
 
-    // 验证X字符的数量必须一致
+    // TODO. 推荐判断三种字符的数目都一致
     private boolean isSameNumX(String start, String result) {
         int countX1 = 0;
         int countX2 = 0;
