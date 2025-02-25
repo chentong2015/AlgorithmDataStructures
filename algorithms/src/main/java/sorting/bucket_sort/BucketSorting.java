@@ -1,4 +1,4 @@
-package sorting;
+package sorting.bucket_sort;
 
 import java.util.ArrayList;
 import java.util.List;

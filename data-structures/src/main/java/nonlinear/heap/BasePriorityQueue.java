@@ -7,13 +7,18 @@ import java.util.Queue;
 
 public class BasePriorityQueue {
 
-    // 输出顺序: A B C D 基于自然排序
+    // TODO. 区别offer()和add()方法的使用
+    // When using a capacity-restricted queue, .offer() method is generally preferable to .add(),
+    // which can fail to insert an element only by throwing an exception.
     private void testPriorityQueue() {
-        Queue<String> queue = new PriorityQueue<>(); // Min-Heap 默认最小堆
+        // Min-Heap 默认最小堆
+        Queue<String> queue = new PriorityQueue<>();
         queue.offer("D");
         queue.offer("B");
         queue.offer("A");
         queue.offer("C");
+
+        // 输出顺序: A B C D 基于自然排序
         while (!queue.isEmpty()) {
             System.out.println(queue.poll());
         }

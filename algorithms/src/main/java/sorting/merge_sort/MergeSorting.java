@@ -8,7 +8,7 @@ public class MergeSorting {
         if (input.length > 1) {
             int middle = input.length / 2;
             int[] leftList = Arrays.copyOfRange(input, 0, middle);
-            int[] rightList =Arrays.copyOfRange(input, middle, input.length);
+            int[] rightList = Arrays.copyOfRange(input, middle, input.length);
 
             // 对左右差分的数组进行归并(递归)排序
             mergeSort(leftList);
@@ -24,6 +24,7 @@ public class MergeSorting {
         int leftIndex = 0;
         int rightIndex = 0;
         int resultIndex = 0;
+
         while (leftIndex < left.length && rightIndex < right.length) {
             if (left[leftIndex] < right[rightIndex]) {
                 result[resultIndex++] = left[leftIndex++];
@@ -31,6 +32,8 @@ public class MergeSorting {
                 result[resultIndex++] = right[rightIndex++];
             }
         }
+
+        // 将剩下的数据补充结果结果数组
         while (leftIndex < left.length) {
             result[resultIndex++] = left[leftIndex++];
         }
