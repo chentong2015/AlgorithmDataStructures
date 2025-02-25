@@ -1,4 +1,4 @@
-package nonlinear.tree.tree_questions.symmetric_tree;
+package nonlinear.tree_questions.symmetric_tree;
 
 // Symmetric Tree
 // Given the root of a binary tree, check whether it is a mirror of itself

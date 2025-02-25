@@ -1,4 +1,4 @@
-package nonlinear.tree.tree_questions.low_common_ancestor;
+package nonlinear.tree_questions.low_common_ancestor;
 
 import nonlinear.tree.bean.TreeNode;
 
