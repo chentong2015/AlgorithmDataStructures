@@ -4,8 +4,7 @@ package sorting.count_sorting;
 // 使数组中有h个元素至少有h个papers，其余n-h个元素拥有不超过h个paper
 public class HIndexQuestion {
 
-    // TODO: Counting Sort的测试解法，通项公式条件
-    //  citations[index] >= length(citations) - index
+    // TODO: 通项公式条件 citations[index] >= length(citations) - index
     // H-Index
     // Given an array of integers citations
     // citations[i] is the number of citations a researcher received for their ith paper
