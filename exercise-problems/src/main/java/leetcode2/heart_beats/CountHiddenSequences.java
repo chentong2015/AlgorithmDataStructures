@@ -22,7 +22,7 @@ package leetcode2.heart_beats;
 // -10^5 <= lower <= upper <= 10^5
 public class CountHiddenSequences {
 
-    // TODO. 设置初始取值为X，遍历diff数组计算它的最大上下偏差(范围)
+    // TODO. 设置初始取值为X，遍历diff数组找出最大上下偏差(范围)
     // differences = [1,-3,4], lower = 1, upper = 6 -> 2
     // - [3, 4, 1, 5]
     // - [4, 5, 2, 6]
@@ -53,7 +53,7 @@ public class CountHiddenSequences {
             lowerDiff = Math.min(lowerDiff, startValue);
         }
 
-        // TODO. 根据不同情况取rangeDiff最大的偏值
+        // TODO. 计算X值变化的整个rangeDiff最大偏值
         long rangeDiff;
         if (upperDiff == lowerDiff) {
             rangeDiff = Math.abs(upperDiff); // 取相同值的绝对值
@@ -67,6 +67,7 @@ public class CountHiddenSequences {
             }
         }
 
+        // 注意[lower,upper]是闭合区间范围
         int rangeTotal = upper - lower + 1;
         if (rangeTotal <= rangeDiff) {
             return 0;
