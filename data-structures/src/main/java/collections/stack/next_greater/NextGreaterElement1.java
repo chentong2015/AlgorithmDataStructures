@@ -2,25 +2,25 @@ package collections.stack.next_greater;
 
 import java.util.Stack;
 
-// TODO. 使用Stack数据结构来快速判断Next Greater Element
+// Next Greater Element I
+// Two distinct 0-indexed integer arrays nums1 and nums2, where nums1 is a subset of nums2.
+// For each 0 <= i < nums1.length, find the index j such that nums1[i] == nums2[j]
+// and determine the next greater element of nums2[j] in nums2.
+//
+// 1 <= nums1.length <= nums2.length <= 1000
+// 0 <= nums1[i], nums2[i] <= 104
+// All integers in nums1 and nums2 are unique.
+// All the integers of nums1 also appear in nums2.
 public class NextGreaterElement1 {
 
-    // Next Greater Element I
-    // Two distinct 0-indexed integer arrays nums1 and nums2, where nums1 is a subset of nums2.
-    // For each 0 <= i < nums1.length, find the index j such that nums1[i] == nums2[j]
-    // and determine the next greater element of nums2[j] in nums2.
-    //
     // Input: nums1 = [4,1,2], nums2 = [1,3,4,2]
     // Output: [-1,3,-1]
     //
-    // Explanation: The next greater element for each value of nums1 is as follows:
-    // - 4 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.
-    // - 1 is underlined in nums2 = [1,3,4,2]. The next greater element is 3.
-    // - 2 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.
+    // nums1 = [2,4], nums2 = [1,2,3,4]
+    // Output: [3,-1]
     //
-    // 前提条件，一定是离散的数据，且一定是子集的关系
-    //
-    // O(N)  O(1) 直接在原始数组上操作，没有空间复杂度
+    // O(N)
+    // O(1)
     public static void getNextGreaterElement1(int[] nums) {
         Stack<Integer> stack = new Stack<>();
         for (int index = nums.length - 1; index >= 0; index--) {
@@ -38,16 +38,6 @@ public class NextGreaterElement1 {
 
             // 再将currentValue入栈用于计算它前面位置的结果
             stack.push(currentValue);
-        }
-    }
-
-    public static void main(String[] args) {
-        int[] nums = {3, 4, 2, 5, 3, 7, 1};
-        getNextGreaterElement1(nums);
-
-        // 4 5 5 7 7 -1 -1
-        for (int num: nums) {
-            System.out.print(num + " ");
         }
     }
 }

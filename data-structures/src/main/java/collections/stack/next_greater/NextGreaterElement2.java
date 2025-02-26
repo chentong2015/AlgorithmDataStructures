@@ -2,20 +2,22 @@ package collections.stack.next_greater;
 
 import java.util.Stack;
 
+// Next Greater Element II
+// Given a circular integer array nums (i.e., the next element of nums[nums.length - 1] is nums[0]),
+// return the next greater number for every element in nums
+// The next greater number of a number x is the first greater number
+// to its traversing-order next in the array
+//
+// 1 <= nums.length <= 10^4
+// -10^9 <= nums[i] <= 10^9
 public class NextGreaterElement2 {
 
     // TODO. Circular Array 对于循环数组，循环统计N+(N-1)次并定位index位置
-    // Next Greater Element II
-    // Given a circular integer array nums (i.e., the next element of nums[nums.length - 1] is nums[0]),
-    // return the next greater number for every element in nums
-    // The next greater number of a number x is the first greater number to its traversing-order next in the array
-    // 1 <= nums.length <= 10^4
-    // -10^9 <= nums[i] <= 10^9
-    //
     // nums = [1,2,1]     -> [2,-1,2]
     // nums = [1,2,3,4,3] -> [2,3,4,-1,4]
     //
-    // O(2n)=O(n) O(2n)=O(n)
+    // O(2n)=O(n)
+    // O(2n)=O(n)
     public int[] nextGreaterElementsStack(int[] nums) {
         Stack<Integer> stack = new Stack<>();
         int size = nums.length;
