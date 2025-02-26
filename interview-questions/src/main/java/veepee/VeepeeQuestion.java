@@ -2,20 +2,15 @@ package veepee;
 
 import java.util.*;
 
-// Veepee面试经验
-// 1. 分析题目的SCENARIO, 考虑异常的特殊场景
-// 2. 先写测试代码, 从单元测试驱动算法的开发
-// 3. 考虑使用Stream来优化代码
+// Problem
+// Let's consider a second-price, sealed-bid auction:
+// - An object is for sale with a reserve price.
+// - We have several potential buyers, each one being able to place one or more bids.
+// - The buyer winning the auction is the one with the highest bid above or equal to the reserve price.
+// - The winning price is the highest bid price from a non-winning buyer above the reserve price
+//   (or the reserve price if none applies)
 public class VeepeeQuestion {
 
-    // Problem
-    // Let's consider a second-price, sealed-bid auction:
-    // - An object is for sale with a reserve price.
-    // - We have several potential buyers, each one being able to place one or more bids.
-    // - The buyer winning the auction is the one with the highest bid above or equal to the reserve price.
-    // - The winning price is the highest bid price from a non-winning buyer above the reserve price
-    //   (or the reserve price if none applies)
-    //
     // Example
     // Consider 5 potential buyers (A, B, C, D, E) who compete to acquire an object
     // with a reserve price set at 100 euros, bidding as follows:
@@ -78,5 +73,18 @@ public class VeepeeQuestion {
 
         Result result = playerClass.findWinnerAndWinningPrice(0, playersMap);
         // Assertions.assertEquals(result, new Result());
+    }
+
+    static class Result {
+        private String name;
+        private int price;
+
+        public Result() {
+        }
+
+        public Result(String name, int price) {
+            this.name = name;
+            this.price = price;
+        }
     }
 }

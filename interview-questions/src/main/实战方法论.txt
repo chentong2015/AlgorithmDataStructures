@@ -7,6 +7,12 @@ TODO. 面试经验 Pseudo-algorithm伪算法
 6. 思考算法的本质和内在逻辑，可能已经是最优解了!!
 7. 算法的内部不能出现重复的代码!!
 
+TODO. TDD面试经验
+1. 先分析题目SCENARIO, 考虑异常的特殊场景
+2. 先写测试代码, 用测试代码覆盖特殊创建
+3. 单元测试驱动算法API的开发
+3. 考虑使用Stream来优化代码
+
 https://www.hackerrank.com/
 chen2015*/TCHong123&
 使用SOUT来检测方法的Input输入
