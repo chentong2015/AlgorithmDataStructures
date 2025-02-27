@@ -1,4 +1,4 @@
-package leetcode2;
+package leetcode2.maximum_width_ramp;
 
 // Maximum Width Ramp
 // A ramp in an integer array nums is a pair (i, j) for which i < j and nums[i] <= nums[j]
@@ -17,20 +17,20 @@ public class MaximumWidthRamp {
     //
     // TODO. Sorting 算法 O(N*logN)
     // 按照数值sorting之后，每个数值前面数据都是符合大小要求的
-    // 找到前面最小的index和当前的index比较，需要满足坐标要求
-    // [6,0,8,2,1,5]
-    // [0,1,2,5,6,8]
+    // 找到前面最小的index和当前的index比较，直接计算坐标差值
+    // [6,0,8,2,1,5] nums
+    // [0,1,2,5,6,8] numsSorted
     //
-    // TODO. Two Pointers 双指针算法: 双指针往相同方向移动
-    // [6,0,8,2,1,5]
-    // [8,8,8,5,5,5]
+    // TODO. Two Pointers 双指针: 比较当前值和后续最大值
+    // [6,0,8,2,1,5] nums
+    // [8,8,8,5,5,5] rightMax
     // move left: nums[left] > rightMax[right] 不满足要求，移动左边
     // move right: nums[i] <= rightMax[i] 满足要求，更新right - left
     public int maxWidthRamp(int[] nums) {
         int n = nums.length;
         int[] rightMax = new int[n];
         rightMax[n-1] = nums[n-1];
-        for (int i = n-2; i >= 0; i--) {
+        for (int i=n-2; i >= 0; i--) {
             rightMax[i] = Math.max(rightMax[i+1], nums[i]);
         }
 
