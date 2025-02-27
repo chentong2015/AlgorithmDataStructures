@@ -2,9 +2,12 @@ Collections.sort(list);       对list元素排序，不适用于Map数据结构 
 Collections.swap();           交换Array中的两个值，或者泛型List中的两个值 !
 Collections.reverse();        颠倒list中存储对象的地址的顺序 !
 Collections.shuffle();        随机洗牌，随机打乱list中元素
-Collections.binarySearch(, ); 对集合元素进行二分法查找
 
-Collections.unmodifiable...() 返回一个不可变的View视图(read-only只读形式)
+TODO. 对集合元素进行二分法查找, 返回插入坐标
+Collections.binarySearch(, );
+
+返回一个不可变的View视图(read-only只读形式)
+Collections.unmodifiable...()
   Collections.unmodifiableList();
   Collections.unmodifiableMap();
   Collections.unmodifiableSortedMap();
