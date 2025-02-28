@@ -11,7 +11,7 @@ import java.util.Stack;
 //
 // 1 <= nums.length <= 10^4
 // -10^9 <= nums[i] <= 10^9
-public class NextGreaterElement2 {
+public class NextGreaterElementII {
 
     // TODO. Circular Array 循环统计N+(N-1)次并定位index位置
     // nums = [1,2,1]     -> [2,-1,2]

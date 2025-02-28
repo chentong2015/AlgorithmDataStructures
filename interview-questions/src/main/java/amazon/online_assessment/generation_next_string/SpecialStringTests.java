@@ -1,6 +1,6 @@
 package amazon.online_assessment.generation_next_string;
 
-public class TestCases {
+public class SpecialStringTests {
 
     // x z z -> y z z
     // x y z x y x -> x y z x y y -> x y z x y z

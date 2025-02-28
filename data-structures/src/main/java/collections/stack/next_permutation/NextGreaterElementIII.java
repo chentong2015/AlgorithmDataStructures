@@ -9,7 +9,7 @@ package collections.stack.next_permutation;
 // if there is a valid answer but it does not fit in 32-bit integer, return -1.
 //
 // 1 <= n <= 2^31 - 1
-public class NextGreaterElement3 {
+public class NextGreaterElementIII {
 
     // TODO. 注意不是找后面"Next Greater"下一个比它大的数据
     //  1. 从后往前找到某个数后面最小的比它大的数，交换

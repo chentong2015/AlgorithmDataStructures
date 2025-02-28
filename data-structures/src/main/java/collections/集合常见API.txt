@@ -3,8 +3,13 @@ Collections.swap();           交换Array中的两个值，或者泛型List中�
 Collections.reverse();        颠倒list中存储对象的地址的顺序 !
 Collections.shuffle();        随机洗牌，随机打乱list中元素
 
-TODO. 对集合元素进行二分法查找, 返回插入坐标
-Collections.binarySearch(, );
+TODO. 对集合元素进行二分法查找, 注意返回坐标位置
+List.of(0,1,1,1,5)
+Collections.binarySearch(list, 0); // 0
+Collections.binarySearch(list, 1); // 2 找到中间位置
+Collections.binarySearch(list, 2); // 4 在5的位置插入
+Collections.binarySearch(list, 5); // 4 找到的确定位置
+Collections.binarySearch(list, 8); // 5 追加扩容元素
 
 返回一个不可变的View视图(read-only只读形式)
 Collections.unmodifiable...()

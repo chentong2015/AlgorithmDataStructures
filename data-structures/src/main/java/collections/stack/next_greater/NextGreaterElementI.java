@@ -14,7 +14,7 @@ import java.util.Stack;
 //
 // All integers in nums1 and nums2 are unique.
 // All the integers of nums1 also appear in nums2.
-public class NextGreaterElement1 {
+public class NextGreaterElementI {
 
     // TODO. 由于值的唯一性，可以将其作为Key映射到Index坐标
     // Input: nums1 = [4,1,2], nums2 = [1,3,4,2]

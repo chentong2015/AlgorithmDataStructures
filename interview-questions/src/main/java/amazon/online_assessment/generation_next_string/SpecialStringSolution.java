@@ -25,26 +25,10 @@ public class SpecialStringSolution {
         }
 
         NextCharacter nextCharacter = findUpgradeNextCharacter(s, lastPosition);
-
-        // Can't find the position to get Next Char
         if (nextCharacter.position == -1) {
             return "-1";
         }
-
-        // 1. copy the beginning of source char
-        StringBuilder stringBuilder = new StringBuilder();
-        for(int index = 0; index < nextCharacter.position; index++) {
-            stringBuilder.append(s.charAt(index));
-        }
-
-        // 2. upgrade the char at position to next char
-        char oldChar = s.charAt(nextCharacter.position);
-        char newChar = (char) (oldChar + nextCharacter.offset);
-        stringBuilder.append(newChar);
-
-        // 3. add ending characters for making it smallest
-        appendEndingAB(stringBuilder, nextCharacter.position, s.length());
-        return stringBuilder.toString();
+        return buildResultString(s, nextCharacter);
     }
 
     // TODO. 从后往前迭代: 找到第一个能够升级的位置, 如果位置Char已经为‘z'则不能升级
@@ -77,6 +61,24 @@ public class SpecialStringSolution {
             return new NextCharacter(index, offset);
         }
         return new NextCharacter(-1, 0);
+    }
+
+    // TODO. Result = beginning + upgrade char + smallest ending
+    private static String buildResultString(String s, NextCharacter nextCharacter) {
+        // 1. copy the beginning of source char
+        StringBuilder stringBuilder = new StringBuilder();
+        for(int index = 0; index < nextCharacter.position; index++) {
+            stringBuilder.append(s.charAt(index));
+        }
+
+        // 2. upgrade the char at position to next char
+        char oldChar = s.charAt(nextCharacter.position);
+        char newChar = (char) (oldChar + nextCharacter.offset);
+        stringBuilder.append(newChar);
+
+        // 3. add ending characters for making it smallest
+        appendEndingAB(stringBuilder, nextCharacter.position, s.length());
+        return stringBuilder.toString();
     }
 
     private static void appendEndingAB(StringBuilder stringBuilder, int start, int end) {

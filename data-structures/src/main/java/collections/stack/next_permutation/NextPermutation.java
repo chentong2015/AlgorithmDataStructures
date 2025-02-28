@@ -1,7 +1,5 @@
 package collections.stack.next_permutation;
 
-import java.util.Arrays;
-
 // Next Permutation
 // The next permutation of an array of integers is
 // the next lexicographically greater permutation of its integer.
@@ -10,63 +8,59 @@ import java.util.Arrays;
 // 0 <= nums[i] <= 100
 public class NextPermutation {
 
-    public static void main(String[] args) {
-        int[] nums = {1,2,3};
-        NextPermutation instance = new NextPermutation();
-        instance.nextPermutation(nums);
+    // TODO. 两次循环：一次判断是否有升值空间，一次找到升值的下一个值
+    // [1,2,3] -> [1,3,2].
+    // [1,1,5] -> [1,5,1].
+    // [1,5,1] -> [5,1,1]
+    //
+    // 4 2 5 3 -> 4 3 2 5
+    // 4 3 2 1 -> 1 2 3 4
+    // 1 0 0 0 -> 0 0 0 1
+    //
+    // O(N + N + N)
+    // O(N)
+    public void nextPermutation(int[] nums) {
+        int ind1 = -1;
+        int ind2 = -1;
 
-        for (int num: nums) {
-            System.out.println(num);
+        // 找break point: 只要存在有数据下降点即可
+        for(int i = nums.length-2; i>=0; i--){
+            if(nums[i] < nums[i+1]){
+                ind1 = i;
+                break;
+            }
+        }
+
+        // 如果没有可以升值的数据，则倒叙整个数组(从头开始)
+        if(ind1 == -1){
+            reverse(nums,0);
+            return;
+        }
+
+        // 再循环后面的数据，找到Next Greater Element
+        for(int right = nums.length-1; right > ind1; right--){
+            if(nums[ind1] < nums[right] ){
+                ind2 = right;
+                break;
+            }
+        }
+        swap(nums, ind1, ind2);
+        reverse(nums,ind1+1);
+    }
+
+    private void reverse(int[] nums,int start){
+        int i = start;
+        int j = nums.length-1;
+        while(i < j){
+            swap(nums,i,j);
+            i++;
+            j--;
         }
     }
 
-    // TODO. 没有更大的值则从头开始, 等效于排序, 但首数字不能为0
-    // nums = [1,2,3] -> [1,3,2].
-    // nums = [1,1,5] -> [1,5,1].
-    // nums = [3,2,1] -> [1,2,3]
-    //
-    // 4 2 5 3 -> 4 3 2 5
-    //
-    // 3
-    // 3 5
-    // 2 5 使用二分查询找到后续第一比它大的数据，反之往后扩容
-    public void nextPermutation(int[] nums) {
-        int middle = -1;
-        int[] temp = new int[nums.length];
-        int length = 0;
-        for (int index = nums.length - 1; index >= 0; index--) {
-            if (length == 0) {
-                temp[length] = nums[index];
-                length++;
-                continue;
-            }
-
-            // TODO. 这里需要使用List<E>来做二分法查询
-            // 二分法查询后往后扩容
-            int findIndex = Arrays.binarySearch(temp, 0, length, nums[index]);
-            if (findIndex < 0) {
-                findIndex = -(findIndex + 1);
-            }
-            if (findIndex == length) {
-                temp[length] = nums[index];
-                length++;
-                continue;
-            }
-
-            // 找到后面最小的更大值值，交换位置
-            middle = index - 1;
-            int nextGreaterValue = temp[findIndex];
-            temp[findIndex] = nums[index];
-            nums[index] = nextGreaterValue;
-            break;
-        }
-
-        // 将剩余的后续数据进行排序，保证最小
-        Arrays.sort(temp);
-
-        // 将两部分的数据进行组合
-        for (int index = 0; index < length; index++) {
-            nums[middle + 1 + index] = temp[index];
-        }
+    private void swap(int[] nums, int i, int j){
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
     }
 }
