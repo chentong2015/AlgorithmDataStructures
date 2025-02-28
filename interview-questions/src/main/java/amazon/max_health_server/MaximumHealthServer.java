@@ -1,4 +1,4 @@
-package amazon.online_assessment.max_health_server;
+package amazon.max_health_server;
 
 import java.util.HashMap;
 import java.util.Map;

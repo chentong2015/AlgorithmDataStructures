@@ -1,4 +1,4 @@
-package amazon.online_assessment.generation_next_string;
+package arrays.next_values.next_generation_string;
 
 // 生成下一个特殊字符串
 // - 特殊字符串中不能包含两个连续的char是相同的

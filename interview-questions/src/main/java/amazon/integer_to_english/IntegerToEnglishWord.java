@@ -1,4 +1,4 @@
-package amazon.interview.integer_to_english;
+package amazon.integer_to_english;
 
 // TODO. Recursion递归算法, 取不同位置上的值来匹配映射
 // O(1) 递归会的时间复杂度是Linear线性的，只和数字的个数有关
