@@ -1,0 +1,9 @@
+找下一个更大值的算法:
+1. 找到最小的能够升级的位置
+2. 将其位置的值升级成下一个值
+3. 将后续的剩余值变成最小(反转/排序)
+
+通用模版:
+xxxxxxx y zzzzzzz
+xxxxxxx z yzzzzzz 升级
+xxxxxxx z yzzzzzz 排序升级位置后的数据
