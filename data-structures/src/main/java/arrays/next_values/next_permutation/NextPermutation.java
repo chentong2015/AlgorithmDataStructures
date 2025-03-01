@@ -8,7 +8,7 @@ package arrays.next_values.next_permutation;
 // 0 <= nums[i] <= 100
 public class NextPermutation {
 
-    // TODO. 两次循环：一次判断是否有升值空间，一次找到升值的下一个值
+    // TODO. 算法的本质是找到能够升值的下一个break point位置
     // [1,2,3] -> [1,3,2].
     // [1,1,5] -> [1,5,1].
     // [1,5,1] -> [5,1,1]
@@ -20,8 +20,6 @@ public class NextPermutation {
     // O(N + N + N)
     // O(N)
     public void nextPermutation(int[] nums) {
-        // 找break point: 只要存在有数据下降点即可
-        // 如果没有可以升值的数据，则倒叙整个数组(从头开始)
         int ind1 = -1;
         for(int i = nums.length - 2; i>=0; i--){
             if(nums[i] < nums[i+1]){
@@ -34,7 +32,7 @@ public class NextPermutation {
             return;
         }
 
-        // 再循环后面的数据，找到Next Greater Element
+        // 第二次再循环找到要升值到的目标值
         int ind2 = -1;
         for(int right = nums.length-1; right > ind1; right--){
             if(nums[ind1] < nums[right] ){
@@ -43,6 +41,8 @@ public class NextPermutation {
             }
         }
         swap(nums, ind1, ind2);
+
+        // 将后续剩余的数据排序最小化处理
         reverse(nums,ind1 + 1);
     }
 

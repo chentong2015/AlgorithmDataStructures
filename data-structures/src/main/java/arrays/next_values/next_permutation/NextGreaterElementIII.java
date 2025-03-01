@@ -11,7 +11,7 @@ package arrays.next_values.next_permutation;
 // 1 <= n <= 2^31 - 1
 public class NextGreaterElementIII {
 
-    // TODO. 将Digit转换成“字符比较”和直接“数字比较”是等效的
+    // TODO. 将Digit转换成“字符比较”, 本质上等效于直接“数字比较”
     // if current number is greatest number possible with given digits return -1
     // if next permutation exceeds Integer limit return -1
     //
