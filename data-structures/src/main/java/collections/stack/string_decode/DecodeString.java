@@ -34,7 +34,7 @@ public class DecodeString {
         Stack<StringBuilder> strStack = new Stack<>();
         Stack<Integer> intStack = new Stack<>();
 
-        // current即存储遍历过程中的片段字符串，表示最后结果字符串
+        // current表示遍历过程中片段字符串，也是最后拼接字符串
         StringBuilder current = new StringBuilder();
 
         int k = 0;
@@ -48,8 +48,9 @@ public class DecodeString {
                 intStack.push(k);       // 存储[前面用于计算的倍数
                 k = 0;                  // k倍数入栈后初始化
             } else if (ch == ']') {
-                StringBuilder tmp = current;  // cur字符串需要被重复
-                current = strStack.pop();     // 拿到前面入strStack中存储字符，进行拼接
+                StringBuilder tmp = current;  // cur字符串是需要被重复的字符
+
+                current = strStack.pop();     // cur是strStack栈中存储的字符，需要拼接tmp
                 k = intStack.pop();
                 while (k-- > 0) {
                     current.append(tmp);
