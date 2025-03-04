@@ -10,7 +10,8 @@ package leetcode2;
 // 1 <= values[i] <= 1000
 public class BestSightseeingPair {
 
-    // TODO. 只需存储最佳起始点，不断更新通项公式 (values[i] + i) + (values[j] - j)
+    // TODO. (values[i] + i) + (values[j] - j)
+    //  本质上结果=起点+终点，在遍历过程中不断选择更大的起点
     // [8,1,15,2,6]
     //  0 1 2 3 4
     // 8 + 5 + 0 - 2 = 11
@@ -22,7 +23,9 @@ public class BestSightseeingPair {
     // O(1)
     public int maxScoreSightseeingPair(int[] values) {
         int maxScore = Integer.MIN_VALUE;
-        int startSpot = values[0];
+
+        // 初始化起点的计算公式
+        int startSpot = values[0] + 0;
 
         for (int i = 1; i < values.length; i++) {
             // 从最佳的起始点计算adding累计效果
@@ -30,8 +33,8 @@ public class BestSightseeingPair {
                 maxScore = startSpot + values[i] - i;
             }
 
-            // TODO. 此时index位置所能得到的最大Score已经计算出来
-            //  如果有更大的起始位置，则从更大的起始位置往后计算才最有可能得出最大值
+            // TODO. 此时index位置所能得到的最大Score已经计算出来了
+            //  如果当前位置的起始点更大，则以当前更大的起始位置开始计算
             if (values[i] + i > startSpot) {
                 startSpot = values[i] + i;
             }
