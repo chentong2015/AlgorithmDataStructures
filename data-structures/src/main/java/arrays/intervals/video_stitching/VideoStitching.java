@@ -1,4 +1,4 @@
-package arrays.intervals;
+package arrays.intervals.video_stitching;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -46,22 +46,20 @@ public class VideoStitching {
     // O(1)
     public int videoStitching(int[][] clips, int time) {
         Arrays.sort(clips, Comparator.comparingInt(clip -> clip[0]));
-        if (clips[0][0] > 0) {
+
+        // 初始化第一段区间，从最小的起始点开始
+        int start = clips[0][0];
+        int end = clips[0][1];
+        if (start > 0) {
             return -1;
+        }
+        if (end >= time) {
+            return 1;
         }
 
         int result = 1;
-
-        int start = clips[0][0];
-        int end = clips[0][1];
         int index = 1;
         while (index < clips.length) {
-            // 如果目前的End已经满足，则直接返回
-            if (end >= time) {
-                return result;
-            }
-
-            // 排除掉不考虑的特殊情况
             if (end < clips[index][0]) {
                 return -1;
             }
@@ -77,7 +75,7 @@ public class VideoStitching {
                     index++;
                 }
             } else {
-                // 在后续可以扩充的区间中，选择最大的区间进行扩充，并统计一次
+                // 在后续可以扩充的区间中，选择最大的区间进行扩充，并更新起始和终点
                 int nextEnd = end;
                 while (index < clips.length && clips[index][0] <= end) {
                     if (nextEnd < clips[index][1]) {
@@ -86,7 +84,13 @@ public class VideoStitching {
                     }
                     index++;
                 }
+                // 更新到新终点，判断是否满足Times要求
                 end = nextEnd;
+                if (end >= time) {
+                    return result;
+                }
+
+                // 在更新区间后，才统计一次
                 result++;
             }
         }
