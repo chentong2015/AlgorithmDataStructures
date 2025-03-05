@@ -1,4 +1,4 @@
-package leetcode2.plates_between_candles;
+package prefix_sum;
 
 // 使用Prefix Sum算法结构来解决特定统计的问题
 public class PrefixSumTemplate {

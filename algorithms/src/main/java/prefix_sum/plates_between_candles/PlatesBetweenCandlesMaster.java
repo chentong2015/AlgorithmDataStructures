@@ -1,4 +1,4 @@
-package leetcode2.plates_between_candles;
+package prefix_sum.plates_between_candles;
 
 // TODO. 目标算法: Binary search | Prefix Sum
 public class PlatesBetweenCandlesMaster {

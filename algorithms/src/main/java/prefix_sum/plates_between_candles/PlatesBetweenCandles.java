@@ -1,4 +1,4 @@
-package leetcode2.plates_between_candles;
+package prefix_sum.plates_between_candles;
 
 // Plates Between Candles
 // You are given a 0-indexed string s consisting of characters '*' and '|' only,
