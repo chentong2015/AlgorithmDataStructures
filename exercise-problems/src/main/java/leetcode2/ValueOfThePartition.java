@@ -16,7 +16,7 @@ import java.util.Arrays;
 // Return the integer denoting the value of such partition.
 // 2 <= nums.length <= 10^5
 // 1 <= nums[i] <= 10^9
-public class FindValueOfPartition {
+public class ValueOfThePartition {
 
     // TODO. 算法本质上是找两个最接近的数字
     //  不需要考虑如何划分和结果数组是什么，只考虑返回值的特征

@@ -1,4 +1,4 @@
-package leetcode2;
+package leetcode2.car_pooling_booking;
 
 // Car Pooling
 // There is a car with capacity empty seats.
@@ -43,10 +43,10 @@ public class CarPooling {
         }
 
         // TODO. 判断location位置区间上的乘客数量，小于特定容量则继续售票并补全
-        int inCar = 0;
+        int countInCar = 0;
         for (int i = 0; i <= 1000; i++) {
-            inCar += locations[i];
-            if (inCar > capacity) {
+            countInCar += locations[i];
+            if (countInCar > capacity) {
                 return false;
             }
         }
