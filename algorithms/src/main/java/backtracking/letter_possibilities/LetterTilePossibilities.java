@@ -20,6 +20,8 @@ public class LetterTilePossibilities {
     // A A B
     // 0 1 2
     //
+    // O(26*25*24....2*1) -> O(7*6*5*4*3*2*1) 与不同字符的数量有关
+    // O(7*6*5*4*3*2*1) 递归造成的Stack栈开销
     public int numTilePossibilities(String tiles) {
         char[] arr = tiles.toCharArray();
         return permute(0, arr);
