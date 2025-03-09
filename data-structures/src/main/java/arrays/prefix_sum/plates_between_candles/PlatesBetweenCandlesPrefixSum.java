@@ -2,7 +2,7 @@ package arrays.prefix_sum.plates_between_candles;
 
 public class PlatesBetweenCandlesPrefixSum {
 
-    // TODO. 提前三次遍历数组并"预处理"之后被用于查询的数据
+    // TODO. Prefix Sum前缀和算法：典型"预处理"数据
     // "||**||**|*"
     //     *||**|, query[3, 8]
     //
