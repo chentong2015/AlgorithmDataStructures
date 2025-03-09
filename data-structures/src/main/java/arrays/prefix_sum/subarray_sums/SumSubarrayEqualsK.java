@@ -1,4 +1,4 @@
-package arrays.subarrays.sums;
+package arrays.prefix_sum.subarray_sums;
 
 import java.util.HashMap;
 

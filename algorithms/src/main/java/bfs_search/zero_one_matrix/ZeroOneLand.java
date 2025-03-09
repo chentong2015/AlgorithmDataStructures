@@ -18,9 +18,7 @@ import java.util.Queue;
 // grid[i][j] is 0 or 1
 public class ZeroOneLand {
 
-    // TODO. 从所有Land位置开始同时BFS,
-    //  Use BFS starting from all land cells in the same time.
-    //
+    // TODO. 从所有Land位置同时开始BFS广度优先遍历
     // [1,0,1], -> (1,1) -> 1+1=2
     // [0,0,0],
     // [1,0,1]
@@ -52,10 +50,8 @@ public class ZeroOneLand {
             return -1;
         }
 
-        // 从(row, col)位置移动的四个方向
-        int[][] directions = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
-
         int result = -1;
+        int[][] directions = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
         while (!queue.isEmpty()) {
             // 每从Queue中遍历一层数据，统计的距离则加1
             result++;
@@ -66,6 +62,7 @@ public class ZeroOneLand {
                 int[] cell = queue.poll();
                 int x = cell[0];
                 int y = cell[1];
+                // 从(row, col)位置移动的四个方向，移动位置后标记land
                 for (int[] direction : directions) {
                     int i = x + direction[0];
                     int j = y + direction[1];
