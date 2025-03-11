@@ -1,4 +1,4 @@
-package amazon.zero_one_ways;
+package leetcode3.zero_one_ways;
 
 public class WaysSelectZeroOne {
 

@@ -1,4 +1,4 @@
-package amazon.rotting_oranges;
+package leetcode3.rotting_oranges;
 
 import java.util.HashSet;
 import java.util.Set;

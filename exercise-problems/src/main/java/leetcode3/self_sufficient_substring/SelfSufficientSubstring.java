@@ -1,4 +1,4 @@
-package amazon.self_sufficient_substring;
+package leetcode3.self_sufficient_substring;
 
 import java.util.Arrays;
 

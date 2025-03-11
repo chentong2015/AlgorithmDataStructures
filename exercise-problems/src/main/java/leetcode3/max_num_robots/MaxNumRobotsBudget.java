@@ -1,4 +1,4 @@
-package amazon.max_num_robots;
+package leetcode3.max_num_robots;
 
 import java.util.LinkedList;
 

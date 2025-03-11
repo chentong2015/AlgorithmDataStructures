@@ -1,4 +1,4 @@
-package amazon.days_rob_bank;
+package leetcode3.days_rob_bank;
 
 import java.util.ArrayList;
 import java.util.List;

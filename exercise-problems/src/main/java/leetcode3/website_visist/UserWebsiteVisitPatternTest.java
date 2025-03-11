@@ -1,4 +1,4 @@
-package amazon.website_visist;
+package leetcode3.website_visist;
 
 public class UserWebsiteVisitPatternTest {
 

@@ -1,4 +1,4 @@
-package amazon;
+package leetcode3;
 
 // The kth Factor of n
 // You are given two positive integers n and k.

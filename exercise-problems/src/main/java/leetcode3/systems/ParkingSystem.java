@@ -1,4 +1,4 @@
-package amazon.systems;
+package leetcode3.systems;
 
 // Design Parking System
 // Design a parking system for a parking lot.

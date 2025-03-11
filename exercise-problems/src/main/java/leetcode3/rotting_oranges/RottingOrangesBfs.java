@@ -1,4 +1,4 @@
-package amazon.rotting_oranges;
+package leetcode3.rotting_oranges;
 
 import java.util.ArrayDeque;
 import java.util.Queue;

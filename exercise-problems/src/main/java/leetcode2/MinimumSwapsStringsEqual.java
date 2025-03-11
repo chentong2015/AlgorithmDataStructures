@@ -1,8 +1,5 @@
 package leetcode2;
 
-import java.util.ArrayList;
-import java.util.List;
-
 // Minimum Swaps to Make Strings Equal
 // You are given two strings s1 and s2 of equal length
 // consisting of letters "x" and "y" only.
@@ -19,8 +16,8 @@ import java.util.List;
 // s1, s2 only contain 'x' or 'y'.
 public class MinimumSwapsStringsEqual {
 
-    // TODO. 相等位置不考虑，只统计不同位置的特殊情况
-    // ("xx", "yy") => 1 swap  优先应用这个交换策略
+    // TODO. 消除算法: 组合相消的两个i和j位置是任意的 ！！
+    // ("xx", "yy") => 1 swap  优先使用这个交换策略
     // ("xy", "yx") => 2 swaps 再应用该策略
     //
     // s1 = "xx", s2 = "yy" -> 1
@@ -32,29 +29,36 @@ public class MinimumSwapsStringsEqual {
     //
     // s1 = "xx", s2 = "xy" -> -1
     //
+    // 只考虑两个字符组合的相消情况
+    // "xxyyxyxyxx"
+    // "xyyxyxxxyx"
+    //   x yxy yx  优先消除xx+yy的组合
+    //   y xyx xy  再考虑xy+yx的组合
+    //   +  +
     public int minimumSwap(String s1, String s2) {
-        List<Character> list1 = new ArrayList<>();
-        List<Character> list2 = new ArrayList<>();
-        for (int index = 0; index < s1.length(); index++) {
-            if (s1.charAt(index) != s2.charAt(index)) {
-                list1.add(s1.charAt(index));
-                list2.add(s2.charAt(index));
+        // 纵向判断index位置的xy或yx特征
+        int xyMismatch = 0;
+        int yxMismatch = 0;
+        for (int i = s1.length() - 1; i >= 0; i--) {
+            if (s1.charAt(i) == 'x' && s2.charAt(i) == 'y') {
+                xyMismatch++;
+            } else if (s1.charAt(i) == 'y' && s2.charAt(i) == 'x') {
+                yxMismatch++;
             }
         }
 
-        int result = 0;
-        for (int index = 0; index < list1.size() - 1; index++) {
-            if (list1.get(index) == 'X' && list1.get(index + 1) == 'X') {
-                if (list2.get(index) == 'Y' && list2.get(index + 1) == 'Y') {
-                    result++;
-                }
-            } else if (list1.get(index) == 'X' && list1.get(index + 1) == 'Y') {
-                if (list2.get(index) == 'Y' && list2.get(index + 1) == 'Y') {
-                    result++;
-                }
-            }
+        // TODO. 奇对组合的情况下无法消除最后的结果
+        if ((xyMismatch + yxMismatch) % 2 != 0) {
+            return -1;
         }
 
-        return -1;
+        // apply the first strategy (xx+yy)或者(yy+xx)成对相消
+        int ans = xyMismatch / 2 + yxMismatch / 2;
+
+        // we apply the second strategy 剩一个多余需要(xy+yx)消除
+        if (xyMismatch % 2 == 1) {
+            ans += 2;
+        }
+        return ans;
     }
 }

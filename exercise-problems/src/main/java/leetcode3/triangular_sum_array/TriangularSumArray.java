@@ -1,4 +1,4 @@
-package amazon.triangular_sum_array;
+package leetcode3.triangular_sum_array;
 
 public class TriangularSumArray {
 
