@@ -7,7 +7,7 @@ package dp_programming.subsequence;
 //
 // 1 <= str1.length, str2.length <= 1000
 // str1 and str2 consist of lowercase English letters.
-public class CommonShortestSuperSequence {
+public class ShortestCommonSuperSequence {
 
     // TODO: 和LCS同样的算法，拿到最短公共SuperSequence的长度，并非字符组合的结果
     // str1 = "aaaaaaaa", str2 = "aaaaaaaa" -> "aaaaaaaa"

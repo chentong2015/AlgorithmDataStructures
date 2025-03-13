@@ -1,10 +1,10 @@
 package dp_programming.palindromic;
 
-import dp_programming.subsequence.CommonLongestSubsequence;
+import dp_programming.subsequence.LongestCommonSubsequence;
 
 public class MinInsertionStringPalindrome {
 
-    private final CommonLongestSubsequence lcsObject = new CommonLongestSubsequence();
+    private final LongestCommonSubsequence lcsObject = new LongestCommonSubsequence();
 
     // TODO: 使用LCS比较原字符串和反转字符串有多少公共的char序列
     //  排除掉公共字符序列的数量，不同的字符数量则必须通过插入char来形成"回文效果"
