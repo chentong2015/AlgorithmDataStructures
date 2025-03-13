@@ -1,4 +1,4 @@
-package dp_programming.subsequence;
+package dp_programming.common_subsequence;
 
 // Longest Common Subsequence
 // Given two strings text1 and text2, return the length of their longest common subsequence.

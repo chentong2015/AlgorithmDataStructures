@@ -6,10 +6,28 @@ package astrings.common_substring;
 // return "" if there is no common substring
 public class LongestCommonSubString {
 
-    // "abractyeyt", "dgdsaeactyeyk" -> "actyey"
-    // "123456789", "4513456821" -> "3456"
-    public String longestCommonSubString(String str1, String str2) {
+    // TODO. 等效Longest Common Subsequence算法
+    // "dgdsaeactyeyk" -> "actyey"
+    // "abractyeyt"
+    //
+    // "123456789" -> "3456"
+    // "4513456821"
+    //
+    // O(N*M) 使用动态编程避免了循环判断子字符串的次数
+    // O(N*M)
+    public int longestCommonSubString(String str1, String str2) {
+        int maxLength = 0;
+        int[][] dp = new int[str1.length() + 1][str2.length() + 1];
 
-        return "";
+        for (int i = 1; i <= str1.length(); i++) {
+            for (int j = 1; j <= str2.length(); j++) {
+                if (str1.charAt(i - 1) == str2.charAt(j - 1)) {
+                    // 在前面的子字符串统计上累计结果
+                    dp[i][j] = dp[i - 1][j - 1] + 1;
+                    maxLength = Math.max(maxLength, dp[i][j]);
+                }
+            }
+        }
+        return maxLength;
     }
 }
