@@ -1,6 +1,6 @@
 package astrings;
 
-public class BaseString {
+public class BaseString2 {
 
     // 实现String.replace(subStr, targetStr)源码效果
     // 使用StringBuilder + Sliding Windows来实现全部替换子字符串成自定的字符串

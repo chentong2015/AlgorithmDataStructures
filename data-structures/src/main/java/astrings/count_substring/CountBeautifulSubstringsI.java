@@ -1,4 +1,4 @@
-package astrings.substrings;
+package astrings.count_substring;
 
 // Count Beautiful Substrings I
 // You are given a string s and a positive integer k.
@@ -12,12 +12,6 @@ package astrings.substrings;
 //
 // Return the number of non-empty beautiful substrings in the given string s.
 public class CountBeautifulSubstringsI {
-
-    public static void main(String[] args) {
-        String value = "eeebjoxxujuaeoqibd";
-        CountBeautifulSubstringsI instance = new CountBeautifulSubstringsI();
-        System.out.println(instance.beautifulSubstrings(value, 8));
-    }
 
     // TODO. 子字符串必须是连续, 原始字符的位置顺序不能打乱
     // b a e y h, k=2 -> 2

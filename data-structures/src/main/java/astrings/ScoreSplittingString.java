@@ -1,6 +1,6 @@
 package astrings;
 
-public class LearnString5 {
+public class ScoreSplittingString {
 
     // TODO. 考虑两次遍历数组，第二次时得出结果
     // Maximum Score After Splitting a String

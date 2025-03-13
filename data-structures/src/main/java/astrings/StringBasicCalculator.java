@@ -2,11 +2,13 @@ package astrings;
 
 import java.util.Stack;
 
-public class LearnString4 {
+public class StringBasicCalculator {
     
     // Basic Calculator II
-    // Given a string s which represents an expression, evaluate this expression and return its value
-    // s represents a valid expression: integers and operators('+','-','*','/') 都是正数，且保证值的范围不会溢出 !!
+    // Given a string s which represents an expression,
+    // evaluate this expression and return its value
+    // s represents a valid expression: integers and operators('+','-','*','/')
+    // 都是正数，且保证值的范围不会溢出 !!
     // Char和Integer之间的转换会根据unicode码值来对应
     // 运算currentChar-'0'或者char-'a'转成对应的整数位置int值
     public int calculate(String s) {

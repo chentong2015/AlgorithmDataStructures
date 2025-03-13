@@ -1,4 +1,4 @@
-package astrings.substrings;
+package astrings.count_substring;
 
 import java.util.HashMap;
 

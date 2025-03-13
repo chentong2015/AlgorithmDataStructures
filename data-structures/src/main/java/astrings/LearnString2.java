@@ -1,101 +1,53 @@
 package astrings;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 public class LearnString2 {
 
-    // Remove All Occurrences of a Substring
-    // Given two strings s and part, perform the following operation on s
-    // until all occurrences of the substring part are removed:
-    // Find the leftmost occurrence of the substring part and remove it from s
-    //
-    // Input: s = "daabcbaabcbc", part = "abc"
-    // Output: "dab"
-    // Explanation: The following operations are done:
-    // - s = "daabcbaabcbc", remove "abc" starting at index 2, so s = "dabaabcbc".
-    // - s = "dabaabcbc", remove "abc" starting at index 4, so s = "dababc".
-    // - s = "dababc", remove "abc" starting at index 3, so s = "dab".
-    // Now s has no occurrences of "abc".
-    //
-    // 代码层面的最简短写法 ~O(N)*O(N)
-    public String removeOccurrences(String str, String part) {
-        while (str.contains(part)) {
-            str = str.replaceFirst(part, "");
+    // First Unique Character in a String
+    // Return the first non-repeating character in it and return its index
+    // Input: "loveleetcode" 都是小写字符 ->  2 返回其中第一个非重复字符的位置
+    public static int firstUniqueChar(String s) {
+        // 正确理解: 1. 利用HashMap的put方法来统计指定的Key出现的次数               O(1)
+        //          2. 使用定长字符数组int[26], 计算s.charAt(i)-'a', 统计字符次数 O(1)
+        Map<Character, Integer> maps = new HashMap<>();
+        for (int i = 0; i < s.length(); i++) {
+            char keyChar = s.charAt(i);
+            int oldCount = maps.getOrDefault(keyChar, 0);
+            maps.put(keyChar, oldCount + 1);
         }
-        return str;
-    }
-
-    // TODO: 使用.subString5()方法提供更快的字符串处理
-    public String removeOccurrences2(String s, String part) {
-        while (s.contains(part)) {
-            int idx = s.indexOf(part);
-            s = s.substring(0, idx) + s.substring(idx + part.length());
-        }
-        return s;
-    }
-
-    // TODO: 使用StringBuilder类型(可变字符串)提供最快的字符串处理 !!
-    public String removeOccurrences3(String s, String part) {
-        int len = part.length();
-        StringBuilder sb = new StringBuilder(s);
-        do {
-            int i = sb.indexOf(part);
-            if (i == -1) break;
-            sb.replace(i, i + len, "");
-        } while (true);
-        return sb.toString();
-    }
-
-    // 自定义实现算法的逻辑
-    public static String removeOccurrences4(String str, String part) {
-        char[] charsStr = str.toCharArray();
-        char[] charsPart = part.toCharArray();
-        int index = 0;
-        int indexRight = charsStr.length;
-        while (index < indexRight) {
-            boolean isFound = false;
-            if (charsStr[index] == charsPart[0]) {
-                isFound = containsPartStr(charsStr, charsPart, index, indexRight);
-            }
-            if (isFound) {
-                replacePartStr(charsStr, charsPart, index);
-                indexRight -= charsPart.length;
-                index = 0;
-            } else {
-                index++;
+        for (int j = 0; j < s.length(); j++) {
+            // 找到第一个非重复字符，即统计数为1的第一个字符，直接返回
+            if (maps.get(s.charAt(j)) == 1) {
+                return j;
             }
         }
-        return generateResultString(charsStr, indexRight);
+        return -1;
     }
 
-    // 从指定位置开始逐个比较part字符串, 必须比较part字符串的每一个字符
-    // 注意主字符串数组移动的边界问题
-    private static boolean containsPartStr(char[] charsStr, char[] charsPart, int startIndex, int rightIndex) {
-        boolean isFound = true;
-        int indexOffset = 0;
-        while (startIndex + indexOffset < rightIndex && indexOffset < charsPart.length) {
-            if (charsStr[startIndex + indexOffset] != charsPart[indexOffset]) {
-                isFound = false;
-                break;
-            }
-            indexOffset++;
+    // TODO: 利用字符串中的字符来做运算 s.charAt(i) - 'a'，将字符转换成int有效数值 !!
+    // Valid Anagram 字符中包含同样多的字符
+    // Sorting both strings will result in two identical strings
+    public static boolean isAnagram(String s, String t) {
+        // 正确理解: 1. 使用定长字符数组int[26], 统计每个出现字符的数量
+        //             O(n)  O(1) 定长的数组，额外开辟出来的空间是一定的
+        int[] counter = new int[26];
+        for (int i = 0; i < s.length(); i++) {
+            counter[s.charAt(i) - 'a']++;
+            counter[t.charAt(i) - 'a']--;
         }
 
-        return isFound && indexOffset == charsPart.length;
-    }
-
-    // 移除指定位置找到的sub string字符串, 返回从后往前移动的字符的个数
-    private static void replacePartStr(char[] charsStr, char[] charsPart, int startIndex) {
-        int length = charsPart.length;
-        for (int i = startIndex + length; i < charsStr.length; i++) {
-            charsStr[i - length] = charsStr[i];
+        // 正确理解: 2. String -> CharArray 通过调用Array的静态方法来实现 !!
+        //             Time complexity: O(nlogn)  Space complexity: O(1)
+        if (s.length() != t.length()) {
+            return false;
         }
-    }
-
-    // Char Array -> StringBuilder -> String
-    private static String generateResultString(char[] charsStr, int indexRight) {
-        StringBuilder resultStr = new StringBuilder();
-        for (int index = 0; index < indexRight; index++) {
-            resultStr.append(charsStr[index]);
-        }
-        return resultStr.toString();
+        char[] sChars = s.toCharArray(); // 将string复制一份出来, 时间复制度O(n), 和语言的实现有关，可将提供的参数改成char[]取消复杂度
+        char[] tChars = t.toCharArray();
+        Arrays.sort(sChars);             // 排序方法的时间复杂度 O(nlog(n)) > O(n)
+        Arrays.sort(tChars);
+        return Arrays.equals(sChars, tChars);
     }
 }

@@ -1,66 +1,70 @@
 package astrings;
 
+// TODO: 一般不能直接使用基础类库的方法 .split() .trim() !!
 public class LearnString1 {
 
-    // TODO: 从int整数转成char，再使用StringBuilder来拼接字符串
-    //  1. 使用'A'+const int 必须使用具体的值作为偏移量
-    //  2. 使用(char)(65+value) 使用变量作为偏移，然后强制转换成char
-    public static String convertColNumber(int col) {
-        if (col < 0) {
-            return null;
-        }
+    // Reverse Words in a String
+    // Given an input string s, reverse the order of the words
+    // s may contain leading or trailing spaces or multiple spaces between two words 字符串的首尾和中间可能包含多个空格
+    // Return a string of the words in reverse order concatenated by a single space
+    // s = "the sky is blue" -> "blue is sky the"
+    // s = "  hello world  " -> "world hello"
+    public String reverseWords(String s) {
+        // 测试理解：1. 常规解法，从后往前取每个单词，然后依次通过StringBuilder来构造最后的结果  O(n) O(n)
+        if (!s.contains(" ")) return s;
+        String[] arr = s.split(" ");
         StringBuilder stringBuilder = new StringBuilder();
-        int remaining = col;
-        while (remaining > 0) {
-            int offset = (remaining - 1) % 26;
-            char c = (char) (65 + offset);
-            stringBuilder.append(c);
-            remaining = (remaining - offset) / 26;
-        }
-        return stringBuilder.reverse().toString();
-    }
-
-    // TODO：充分使用字符串中字符直接的运算 .charAt(index)-'0' 从char转换到int来计算 !!
-    // Add Binary
-    // Given two binary strings a and b, return their sum as a binary string
-    // a and b consist only of '0' or '1' characters.
-    // Each string does not contain leading zeros except for the zero itself.
-    // Input: a = "1010", b = "1011" -> "10101"
-    public String addBinary(String a, String b) {
-        // 正确理解：1. 需要从char转换成int来计算 O(max(m, n)) O(max(m+n))
-        StringBuilder sb = new StringBuilder();
-        int i = a.length() - 1;          // 从低位往高位读取，从后往前，必须考虑到数值的进位问题 !!
-        int j = b.length() - 1;
-        int carry = 0;
-        while (i >= 0 || j >= 0) {       // 不用比较那个字符串更长，统一读取，每次累加两个相同位置上面的值 !!
-            int sum = carry;
-            if (j >= 0) sum += b.charAt(j--) - '0';
-            if (i >= 0) sum += a.charAt(i--) - '0';
-            sb.append(sum % 2);          // 求余数作为基础值
-            carry = sum / 2;             // 求除数作为上升值
-        }
-        if (carry != 0) sb.append(carry);// 最后追加进位值
-        return sb.reverse().toString();  // 注意.reverse()复杂度
-    }
-
-    // Implement strStr() / Java indexOf()
-    // Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack
-    // haystack = "hello", needle = "ll" -> index = 2
-    public int strStr(String haystack, String needle) {
-        // 测试理解：1. 在没有别的解法时，直接使用常规解法 O(n*m) O(1) !!
-        if (needle == null || needle.isEmpty()) {
-            return 0;
-        }
-        if (haystack == null || haystack.length() < needle.length()) {
-            return -1;
-        }
-        for (int index = 0; index < haystack.length(); index++) {
-            for (int j = 0; j < needle.length(); j++) {
-                if (index + j == haystack.length()) return -1;
-                if (haystack.charAt(index + j) != needle.charAt(j)) break;  // 在内部判断3种可能的情况
-                if (j == needle.length() - 1) return index;
+        for (int index = arr.length - 1; index >= 0; index--) {
+            if (!arr[index].equals("")) {
+                stringBuilder.append(arr[index]).append(" ");
             }
         }
-        return -1;
+        return stringBuilder.toString().trim();
+    }
+
+    // TODO: 数组的操作划分到每一个小步，逐步实现
+    // 测试理解：1. 转变成字符数组进行处理，通过3个小步和小运算生成最后的结果，保持O(n)的时间复杂度
+    public String reverseWords2(String s) {
+        if (s == null) return null;
+        char[] chars = s.toCharArray();
+        int length = chars.length;
+        reverse(chars, 0, length - 1);
+        reverseWords(chars, length);
+        return cleanSpaces(chars, length);
+    }
+
+    // 先整个字符数组颠倒，使用双标识 O(n) O(1)
+    private void reverse(char[] a, int i, int j) {
+        while (i < j) {
+            char t = a[i];
+            a[i++] = a[j];
+            a[j--] = t;
+        }
+    }
+
+    // 在字符串内部的指定区间颠倒单词，遍历出来的时间复杂度不会超过O(n)
+    // 使用双指针定位单词的首尾位置，[i, j-1]单词的区间 O(n) O(1)
+    void reverseWords(char[] a, int length) {
+        int i = 0;
+        int j = 0;
+        while (i < length) {
+            while (i < j || i < length && a[i] == ' ') i++;  // 第一个非空的位置就是起使点
+            while (j < i || j < length && a[j] != ' ') j++;  // 单词结尾处后一个为空，或者是到了数组的最后
+            reverse(a, i, j - 1);
+        }
+    }
+
+    // 利用数组的前端存储空间，将后面的单词移位 !!
+    // 将每个单词转移到从起使点index=0开始的位置，依次往后填充每一个单词，最后再截取处理好的长度index O(n)+O(n) O(1)
+    String cleanSpaces(char[] a, int n) {
+        int index = 0;
+        int j = 0;
+        while (j < n) {
+            while (j < n && a[j] == ' ') j++;
+            while (j < n && a[j] != ' ') a[index++] = a[j++];
+            while (j < n && a[j] == ' ') j++;
+            if (j < n) a[index++] = ' ';
+        }
+        return new String(a).substring(0, index); // 这里需要花费时间复制度
     }
 }
