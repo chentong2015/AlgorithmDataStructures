@@ -1,4 +1,4 @@
-package collections.stack.str_calculator;
+package collections.stack.string_calculator;
 
 import java.util.Stack;
 
@@ -20,9 +20,8 @@ import java.util.Stack;
 // The answer is guaranteed to fit in a 32-bit integer.
 public class BasicCalculatorII {
 
-    // TODO. 典型Stack栈处理的数学表达式
-    //  乘法和除法直接pop后计算, 加法存储正数, 减法存储负数
-    //
+    // TODO. 典型Stack栈数学表达式: '+', '-', '*', '/' 四则运算
+    //  乘法和除法直接计算, 加法存储正数, 减法存储负数
     // s = "3+2*2+1" -> 8
     // s = " 3/2 " -> 1
     // s = " 3+5 / 2 " -> 5
