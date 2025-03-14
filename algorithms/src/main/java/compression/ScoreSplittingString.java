@@ -12,7 +12,7 @@ package compression;
 // The string s consists of characters '0' and '1' only.
 public class ScoreSplittingString {
 
-    // TODO.
+    // TODO. 两遍读取判断，找出最佳的划分地点
     // s = "011101" -> 5
     // left = "0" and right = "11101", score = 1 + 4 = 5
     //
@@ -32,87 +32,32 @@ public class ScoreSplittingString {
     // O(N)
     // O(1)
     public int maxScore(String s) {
-        // 保证左右两侧必须至少有一个字符
         int length = s.length();
-        int countLeft = s.charAt(0) == '0' ? 1: 0; // for zeros
-        int countRight = s.charAt(length - 1) == '1' ? 1: 0; // for ones
+        int[] counts = new int[length];
 
-        boolean isContinuousZero = s.charAt(0) == '0';
-        for (int index = 1; index < s.length() - 1; index++) {
-            if (isContinuousZero) {
-                if (s.charAt(index) == '0') {
-                    countLeft++;
-                } else {
-                    isContinuousZero = false;
-                    countRight++;
-                }
+        // Count left zeros
+        counts[0] = s.charAt(0) == '0' ? 1 : 0;
+        for (int index = 1; index < length - 1; index++) {
+            if (s.charAt(index) == '0') {
+                counts[index] = counts[index - 1] + 1;
             } else {
-                if (s.charAt(index) == '1') {
-                    countRight++;
-                }
-            }
-        }
-        return countLeft + countRight;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // TODO. 考虑两次遍历数组，第二次时得出结果
-    // Maximum Score After Splitting a String
-    // Given a string s of zeros and ones, return the maximum score after splitting
-    // the string into two non-empty substrings (i.e. left substring and right substring)
-    //
-    // The score is the number of zeros in left substring plus the number of ones in right substring.
-    // 0 1 1 1 0 1 = 5  注意左右两边划分出来的子字符串不能为空
-    // 1 0 1 0 0 0 = 3
-    // 0 0 0 1 1 1 1 = 7
-    //
-    // O(n) O(1)
-    public static void main(String[] args) {
-        System.out.println(maxScores("10"));
-        System.out.println(maxScores("01"));
-        System.out.println(maxScores("011101"));
-        System.out.println(maxScores("101000"));
-        System.out.println(maxScores("0001111"));
-    }
-
-    public static int maxScores(String str) {
-        if (str == null || str.length() < 2) {
-            return -1;
-        }
-        // 初始化左右两边结果的统计
-        char[] chars = str.toCharArray();
-        int leftZero = chars[0] == '0' ? 1: 0;
-        int rightOne = 0;
-        for (int index = 1; index < chars.length; index++) {
-            if (chars[index] == '1') {
-                rightOne++;
+                counts[index] = counts[index - 1];
             }
         }
 
-        // 只有当0被移动到左边时，才有可能增加最后的结果
-        int maxScore = leftZero + rightOne;
-        for (int index = 1; index < chars.length - 1; index++) {
-            if (chars[index] == '0') {
-                leftZero++;
-                maxScore = Math.max(maxScore, leftZero + rightOne);
-            } else {
-                rightOne--;
-                // 当1被移动到左侧时，和的结果值降低
+        // 在第二次遍历过程中直接得出结果
+        // Count right ones
+        int result = 0;
+        int countRightOnes = s.charAt(length - 1) == '1' ? 1 : 0;
+        for (int index = length - 2; index > 0; index--) {
+            result = Math.max(result, counts[index] + countRightOnes);
+            if (s.charAt(index) == '1') {
+                countRightOnes++;
             }
         }
-        return maxScore;
+
+        // 最后判断左子字符串只有一个字符的情况
+        result = Math.max(result, counts[0] + countRightOnes);
+        return result;
     }
 }
