@@ -1,6 +1,6 @@
 T9 Mode Typing Input
 input: sequence_of_digits, not empty
-output: list of astrings from dictionary (L : 2.10^5)
+output: list of strings from dictionary (L : 2.10^5)
 
 ---------------------
   1     2     3     -
