@@ -1,1 +1,5 @@
-需要思考和理解的Hard问题
+TODO. 需要思考和理解的Hard问题
+1. 高级特定算法逻辑的题目(BFS/DFS, Backtracking, DP)
+2. 复杂的数组类型题目(PrefixSum, SubArray)
+3. 复杂的非线形数据结构
+4. 其他高级难题
