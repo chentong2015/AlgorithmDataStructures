@@ -3,4 +3,4 @@
 - 规避复杂的逻辑推理，提供问题的巧妙解法
 
 Number Theory 数论题目
-https://leetcode.com/problem-list/number-theory/
+https://leetcode2.com/problem-list/number-theory/

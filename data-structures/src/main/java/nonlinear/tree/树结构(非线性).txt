@@ -26,4 +26,4 @@ TODO: BinaryTree 遍历方法
    从顶向下和从底向上同时遍历，如果在同一个Level层面有交集则是联通的
 4. Morris Traversal
    非递归, 非Stack, 最佳复杂度 O(n) O(1)
-   https://leetcode.com/problems/binary-tree-postorder-traversal/discuss/45648/three-ways-of-iterative-postorder-traversing-easy-explanation
+   https://leetcode2.com/problems/binary-tree-postorder-traversal/discuss/45648/three-ways-of-iterative-postorder-traversing-easy-explanation
