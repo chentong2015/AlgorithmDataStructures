@@ -13,7 +13,7 @@ public class LongestCommonPrefix {
     // strs = ["flower","flow","flight"] -> "fl"
     // strs = ["dog","racecar","car"] -> ""
     //
-    // O(N) N is the length of all characters
+    // O(N) 需要遍历数组中所有的字符
     // O(1) 最差情况下只需要存储对一个字符串的长度
     public String longestCommonPrefix(String[] strs) {
         char[] commons = strs[0].toCharArray();
@@ -30,6 +30,7 @@ public class LongestCommonPrefix {
             }
         }
 
+        // 从第一个字符串中取结果
         StringBuilder result = new StringBuilder();
         for (int index = 0; index < commonLength; index++) {
             result.append(commons[index]);

@@ -48,10 +48,10 @@ public class BasicCalculator {
                 sign = 1;          // Reset the sign and result for value in the parenthesis
                 total = 0;
             } else if (c == ')') {
-                total += sign * number;
-                number = 0;           // 累计()括号中的结果和前面保存到栈中的历史结果
-                total *= stack.pop(); // stack.pop() is the sign before the parenthesis
-                total += stack.pop(); // stack.pop() now is the result calculated before the parenthesis
+                total += sign * number;// 通过符号乘积来改变正负数的累加
+                number = 0;            // 累计()括号中的结果和前面保存到栈中的历史结果
+                total *= stack.pop();  // stack.pop() is the sign before the parenthesis
+                total += stack.pop();  // stack.pop() now is the result calculated before the parenthesis
             }
         }
         if (number != 0) {
