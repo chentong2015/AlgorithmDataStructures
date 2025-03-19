@@ -21,7 +21,7 @@ import java.util.Set;
 // 1 <= arr1[i], arr2[i] <= 10^8
 public class IntegerCommonPrefixLength {
 
-    // TODO. 避免多次比较相同的整数，从大数值往小数组开始比较
+    // TODO. 预处理数据，存储一个数组中包含的所有前缀
     // arr1 = [1,10,100], arr2 = [1000] -> 3
     // - The longest common prefix of (1, 1000) is 1.
     // - The longest common prefix of (10, 1000) is 10.
@@ -30,10 +30,10 @@ public class IntegerCommonPrefixLength {
     // arr1 = [1,2,3], arr2 = [4,4,4] -> 0
     // arr1 = [10], arr2 = [17,11] -> 1
     //
-    // O(N+M)
+    // O(N+M) 使用O(1)的复杂度判断公共前缀的存在
     // O(N+M)
     public int longestCommonPrefix(int[] arr1, int[] arr2) {
-        // HashSet存储所有可能的前缀情况
+        // HashSet存储所有可能的不重复的前缀
         Set<Integer> set1 = new HashSet<>();
         for (int int1: arr1) {
             while (int1 >= 10) {
