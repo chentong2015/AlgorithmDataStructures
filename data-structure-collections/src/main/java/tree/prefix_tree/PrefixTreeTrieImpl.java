@@ -1,6 +1,6 @@
 package tree.prefix_tree;
 
-import nonlinear.tree.prefix_tree.base.TrieNodeWithEnd;
+import tree.prefix_tree.base.TrieNodeWithEnd;
 
 // 如果在当前root的指定位置有找到对应的字符, 则取下一个node child, 最后表明key的结束
 // O(m) O(m) 最差情况下需要添加m个node(造成的空间)

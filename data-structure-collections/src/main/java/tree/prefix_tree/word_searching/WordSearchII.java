@@ -1,6 +1,6 @@
 package tree.prefix_tree.word_searching;
 
-import nonlinear.tree.prefix_tree.base.TrieNodeWithWord;
+import tree.prefix_tree.base.TrieNodeWithWord;
 
 import java.util.ArrayList;
 import java.util.List;
