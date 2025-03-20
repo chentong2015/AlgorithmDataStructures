@@ -1,4 +1,4 @@
-package leetcode3.car_pooling_booking;
+package leetcode4.ticket_system;
 
 // Corporate Flight Bookings
 // There are n flights that are labeled from 1 to n.

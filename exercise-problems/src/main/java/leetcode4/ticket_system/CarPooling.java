@@ -1,4 +1,4 @@
-package leetcode3.car_pooling_booking;
+package leetcode4.ticket_system;
 
 // Car Pooling
 // There is a car with capacity empty seats.
