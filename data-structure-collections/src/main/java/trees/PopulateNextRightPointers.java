@@ -1,4 +1,4 @@
-package tree_questions;
+package trees;
 
 import tree.bean.TreeLinkNode;
 

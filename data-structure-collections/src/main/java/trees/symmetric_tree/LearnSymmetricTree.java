@@ -1,4 +1,4 @@
-package tree_questions.symmetric_tree;
+package trees.symmetric_tree;
 
 // Symmetric Tree
 // Given the root of a binary tree, check whether it is a mirror of itself

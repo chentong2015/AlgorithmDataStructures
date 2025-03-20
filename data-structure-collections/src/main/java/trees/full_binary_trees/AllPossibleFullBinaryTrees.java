@@ -1,4 +1,4 @@
-package tree_questions.full_binary_trees;
+package trees.full_binary_trees;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package tree_questions.low_common_ancestor;
+package trees.low_common_ancestor;
 
 import tree.bean.TreeNode;
 

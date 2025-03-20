@@ -1,4 +1,4 @@
-package tree_questions.delete_leaf_node;
+package trees.delete_leaf_node;
 
 // Delete Leaves With a Given Value
 // Given a binary tree root and an integer target,
