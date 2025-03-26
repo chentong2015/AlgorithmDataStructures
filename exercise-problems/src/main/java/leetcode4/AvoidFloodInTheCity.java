@@ -50,9 +50,10 @@ public class AvoidFloodInTheCity {
     // O(N * N)
     // O(N + N)
     public int[] avoidFlood(int[] rains) {
-        // TODO. 使用LinkedList可以高效的删除使用过的"Dry坐标'
+        // TODO. 使用LinkedList可以高效删除使用过的"Dry坐标'
         List<Integer> dryIndexList = new ArrayList<>();
 
+        // rain -> index 存储降雨时的位置坐标
         Map<Integer, Integer> rainIndexMap = new HashMap<>();
         int[] result = new int[rains.length];
         for (int index = 0; index < rains.length; index++) {
@@ -61,7 +62,7 @@ public class AvoidFloodInTheCity {
                 dryIndexList.add(index);
             } else {
                 if (rainIndexMap.containsKey(rain)) {
-                    // TODO. 找前面最小的满足条件的"Dry坐标"进行处理
+                    // TODO. 找到前面最小的满足条件的"Dry坐标"进行处理
                     int indexBefore = rainIndexMap.get(rain);
                     boolean hasDry = false;
                     for (int i = 0; i < dryIndexList.size(); i++) {
@@ -72,6 +73,7 @@ public class AvoidFloodInTheCity {
                             break;
                         }
                     }
+                    // 如果前面没有找到dry坐标来阻止洪水，则失败
                     if (!hasDry) {
                         return new int[]{};
                     }
