@@ -35,6 +35,7 @@ public class ContinuousIncreasingNumbers {
             for (int num : set) {
                 int length = 1;
 
+                // 找左侧更小的连续值
                 int left = num - 1;
                 while (set.contains(left)) {
                     length++;
@@ -42,6 +43,7 @@ public class ContinuousIncreasingNumbers {
                     left--;
                 }
 
+                // 找右侧更大的连续值
                 int right = num + 1;
                 while (set.contains(right)) {
                     length++;

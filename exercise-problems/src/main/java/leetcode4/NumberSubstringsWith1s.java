@@ -31,12 +31,14 @@ public class NumberSubstringsWith1s {
         int index = 0;
         while (index < s.length()) {
             if (s.charAt(index) == '1') {
+                // 内部连续的while循环
                 int length = 1;
                 int right = index + 1;
                 while (right < s.length() && s.charAt(right) == '1') {
                     length++;
                     right++;
                 }
+
                 // 公式统计有多少种子字符串的可能
                 result += (long) length * (length + 1) / 2;
                 index = right;
