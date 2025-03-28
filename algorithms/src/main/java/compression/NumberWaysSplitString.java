@@ -50,7 +50,8 @@ public class NumberWaysSplitString {
         // 全部是0的情况: 直接计算间隔线所在位置
         if (countOnes == 0) {
             int length = s.length() - 2;
-            return length * (length + 1) / 2;
+            long result = (long) length * (length + 1) / 2;
+            return (int) (result % 1_000_000_007);
         }
 
         long countLefZero = 0;
@@ -81,8 +82,7 @@ public class NumberWaysSplitString {
         }
 
         // 计算间隔位置的组合可能情况
-        int module = 1_000_000_007;
         long result = (countLefZero + 1) * (countRightZero + 1);
-        return (int) (result % module);
+        return (int) (result % 1_000_000_007);
     }
 }
