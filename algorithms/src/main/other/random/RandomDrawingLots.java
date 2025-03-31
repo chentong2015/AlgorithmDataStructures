@@ -1,4 +1,4 @@
-package others.random;
+package random;
 
 import java.security.SecureRandom;
 import java.util.*;

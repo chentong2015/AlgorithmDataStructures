@@ -1,4 +1,4 @@
-package others.math_theory;
+package math_theory;
 
 public class BaseMath1 {
 
