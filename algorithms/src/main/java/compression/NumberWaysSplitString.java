@@ -12,7 +12,7 @@ package compression;
 // s[i] is either '0' or '1'.
 public class NumberWaysSplitString {
 
-    // TODO. 本质上是统计中间两段0数目的组合值
+    // TODO. 本质上是统计中间两段0数目的组合结果
     //  1/3  + 0? +  1/3  + 0? + 1/3 压缩三分之一数目
     //
     // "10101" -> 4
@@ -47,7 +47,7 @@ public class NumberWaysSplitString {
         if (countOnes % 3 != 0) {
             return 0;
         }
-        // 全部是0的情况: 直接计算间隔线所在位置
+        // 全部是0的情况: 直接计算两个间隔线位置的可能
         if (countOnes == 0) {
             int length = s.length() - 2;
             long result = (long) length * (length + 1) / 2;
