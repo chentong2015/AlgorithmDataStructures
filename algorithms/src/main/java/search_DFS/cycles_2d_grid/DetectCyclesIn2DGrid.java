@@ -1,4 +1,4 @@
-package search_DFS.cycles_2D_Grid;
+package search_DFS.cycles_2d_grid;
 
 // Detect Cycles in 2D Grid
 // Given a 2D array of characters grid of size m x n,
@@ -42,23 +42,27 @@ public class DetectCyclesIn2DGrid {
     // ["d","d","c"],
     // ["b","c","c"]
     //
+    // O(N*M) 逻辑层面每个位置只会被遍历一次
+    // O(N*M) 开辟空间标记是否被遍历过
 
-    public static final int[][] dirs = {{0,-1},{-1,0},{0,1},{1,0}};
-    private char[][] mat;
-    private boolean[][] visited;
     private int n;
     private int m;
+    private char[][] mat;
+    private boolean[][] visited;
+    public static final int[][] dirs = {{0,-1},{-1,0},{0,1},{1,0}};
 
     public boolean containsCycle(char[][] grid) {
         mat = grid;
         n = grid.length;
         m = grid[0].length;
         visited = new boolean[n][m];
+
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 if (visited[i][j]) {
                     continue;
                 }
+                // 如果从某个特定的点触发，能够DFS出环路则结束
                 if (dfs(i, j, -1, -1, mat[i][j])) {
                     return true;
                 }
@@ -67,24 +71,32 @@ public class DetectCyclesIn2DGrid {
         return false;
     }
 
-    private boolean dfs(int x, int y, int lastx, int lasty, char ch) {
+    // 从特定坐标位置出发，遍历递归特定的char字符
+    private boolean dfs(int x, int y, int lastX, int lastY, char ch) {
         visited[x][y] = true;
+        // 往(x,y)坐标的四个方向移动
         for (int[] dir : dirs) {
-            int nx = x + dir[0];
-            int ny = y + dir[1];
-            if (nx == lastx && ny == lasty) {
+            int nextX = x + dir[0];
+            int nextY = y + dir[1];
+
+            // 不能再回去移动到它的上一个坐标
+            if (nextX == lastX && nextY == lastY) {
                 continue;
             }
-            if (nx < 0 || nx >= n || ny < 0 || ny >= m) {
+            // 如果坐标越界则不考虑
+            if (nextX < 0 || nextX >= n || nextY < 0 || nextY >= m) {
                 continue;
             }
-            if (mat[nx][ny] != ch) {
+            // 如果下一步的字符不一致则不考虑
+            if (mat[nextX][nextY] != ch) {
                 continue;
             }
-            if (visited[nx][ny]) {
+            // TODO. 如果下一个坐标已经被标记遍历，则形成环路
+            if (visited[nextX][nextY]) {
                 return true;
             }
-            if (dfs(nx, ny, x, y, ch)) {
+            // 继续下一个位置的DFS深度遍历
+            if (dfs(nextX, nextY, x, y, ch)) {
                 return true;
             }
         }
