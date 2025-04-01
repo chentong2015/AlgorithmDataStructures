@@ -18,7 +18,6 @@ public class ArrayPairsDivisibleByK2 {
         if(remainings[0] % 2 != 0) {
             return false;
         }
-
         // 其余的余数数据两两组合
         for(int remain = 1 ; remain <= k / 2 ; remain++){
             if(remainings[remain] != remainings[k - remain]) {
