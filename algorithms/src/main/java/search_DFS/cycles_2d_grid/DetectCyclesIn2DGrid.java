@@ -71,7 +71,7 @@ public class DetectCyclesIn2DGrid {
         return false;
     }
 
-    // 从特定坐标位置出发，遍历递归特定的char字符
+    // TODO. 从特定坐标位置出发，深入递归遍历同一个字符
     private boolean dfs(int x, int y, int lastX, int lastY, char ch) {
         visited[x][y] = true;
         // 往(x,y)坐标的四个方向移动
