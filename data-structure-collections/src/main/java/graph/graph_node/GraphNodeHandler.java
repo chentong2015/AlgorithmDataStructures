@@ -1,4 +1,4 @@
-package amazon.graph_node;
+package graph.graph_node;
 
 import java.util.*;
 
