@@ -44,15 +44,9 @@ public class AverageWaitingTime {
         for (int[] customer: customers) {
             int comingTime = customer[0];
             int waitingTime = customer[1];
-
-            // TODO. 重新计算后面空闲时间，并累计等待时间
-            if (nextFreeTime <= comingTime) {
-                nextFreeTime = comingTime + waitingTime;
-                totalAwaitingTime += waitingTime;
-            } else {
-                nextFreeTime += waitingTime;
-                totalAwaitingTime += (nextFreeTime - comingTime);
-            }
+            // 计算最大的下一个空闲时间
+            nextFreeTime = Math.max(nextFreeTime, comingTime) + waitingTime;
+            totalAwaitingTime += (nextFreeTime - comingTime);
         }
 
         String average = String.format("%.5f", totalAwaitingTime / customers.length);

@@ -36,13 +36,13 @@ public class CountGoodMeals {
         long result = 0;
         Map<Integer, Integer> map = new HashMap<>();
 
-        // TODO. 在遍历每个新数时，循环特定次数的倍数
         for(int num: deliciousness){
-            int power = 1; // 2的零次方为1
+            // TODO. 遍历每个新数时循环特定次数，直接统计结果值
+            int power = 1;
             for(int i=0; i<22; i++){
                 if(map.containsKey(power-num)) {
                     result += map.get(power-num);
-                    result %= 1000000007; // 直接对溢出值求余数
+                    result %= 1000000007;
                 }
                 power *= 2;
             }
