@@ -34,20 +34,23 @@ public class RestoreArrayAdjacentPairs {
     // O(N + N + N) 使用三次N级别的循环
     // O(2N + N)    构建的图形结构 + 结果数组
     public int[] restoreArray(int[][] adjacentPairs) {
+        // 将唯一值映射到图结构中的Node节点
         HashMap<Integer, Node> graphMap = buildGraphMap(adjacentPairs);
+        // 找到出发节以开始遍历
         int nextValue = findStartValue(adjacentPairs);
+        int size = adjacentPairs.length + 1;
 
         int index = 0;
-        int[] result = new int[adjacentPairs.length + 1];
-        while (index < adjacentPairs.length + 1) {
+        int[] result = new int[size];
+        while (index < size) {
             result[index] = nextValue;
+
+            // TODO. 如果只有一个相邻节点，则一定是首尾。反之取它的新值节点继续
             Node node = graphMap.get(nextValue);
             if (node.right == null) {
-                // 只有一个left相邻节点，说明是开头或结尾
                 nextValue = node.left.value;
             } else {
-                // 找下一个新的value值，避开上一个已经填写的数字
-                if (result[index-1] == node.left.value) {
+                if (result[index - 1] == node.left.value) {
                     nextValue = node.right.value;
                 } else {
                     nextValue = node.left.value;
