@@ -80,6 +80,7 @@ public class MinAbsoluteSumDiff {
             foundIndex = -(foundIndex + 1);
         }
 
+        // 二分法差结果index坐标范围[0, length]闭合区间
         int minAbs = Integer.MAX_VALUE;
         if (foundIndex > 0) {
             int abs = Math.abs(nums1[foundIndex - 1] - targetNum);

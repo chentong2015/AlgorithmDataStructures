@@ -23,8 +23,10 @@ Arrays.sort(envelopes, (arr1, arr2) -> {
     }
 });
 
-TODO. 在限定的范围内二分搜索，找到则返回正数坐标，否则返回负数坐标(插入位置)
- Not found, return (-(insertion point) - 1)
+TODO. 二分搜索结果的index范围
+ if index >=0; [0, length - 1]
+ if index < 0; [0, length]
+    恢复(-(insertion point) - 1)插入位置, 得到闭合区间
 int[] nums = {1, 5, 6, 8};
 Arrays.binarySearch(nums, 0, nums.length, 1); -> 0
 Arrays.binarySearch(nums, 0, nums.length, 3); -> -2 恢复成中间的插入坐标 1
