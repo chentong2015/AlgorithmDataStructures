@@ -38,9 +38,9 @@ import java.util.Queue;
 // 1 <= servers[i], tasks[j] <= 2 * 10^5
 public class ProcessTasksUsingServers {
 
-    // TODO. 使用PriorityQueue优先队列来完成Server的排序，状态的交换
-    // servers = [3,3,2]
-    // tasks = [1,2,3,2,1,2]
+    // TODO. 使用PriorityQueue优先队列来完成Server的排序交换
+    // servers = [3,3,2]     server状态的排序直接通过heap来实现
+    // tasks = [1,2,3,2,1,2] task在对应的jth时刻才被加入考虑任务中
     // answer =[2,2,0,2,1,2]
     //
     // servers = [5,1,4,3,2]
@@ -70,6 +70,7 @@ public class ProcessTasksUsingServers {
             }
 
             // TODO. 批量分配同一个Time时间段能够执行任务的Server
+            //  只能分配task坐标在Time时间线前面的所有任务，无法考虑后面的task
             while(!free.isEmpty() && index <= curTime && index < tasks.length) {
                 int idServer = free.poll()[0];
                 busy.add(new int[]{idServer, curTime + tasks[index]});
