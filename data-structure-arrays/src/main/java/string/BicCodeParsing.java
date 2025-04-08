@@ -5,6 +5,7 @@ import java.util.List;
 
 public class BicCodeParsing {
 
+    // 字符的解析操作由业务逻辑所确定
     public static void main(String[] args) {
         String furtherInformation1 = "[IDENTIFICATION] SWIFT/BIC: HENBUS41. ";
         String furtherInformation2 = "[IDENTIFICATION] FDIC Certificate No: 5568. SWIFT/BIC: HENBUS41. [REPORTS]";
@@ -33,22 +34,18 @@ public class BicCodeParsing {
         int index = furtherInfo.indexOf(identificationKey) + identificationKey.length() + 1;
         while (index < furtherInfo.length()) {
             char current = furtherInfo.charAt(index);
-            if (current == '[') {
+            if (current == '[') { // 以后续的[字符作为遍历片段的结束
                 break;
             }
-
-            // 以.点字符作为划分字符
             StringBuilder stringBuilder = new StringBuilder();
             boolean isValidBicCode = false;
-            while (current != '.') {
+            while (current != '.') {   // 以.点字符作为划分字符
                 stringBuilder.append(current);
-                // 以:分号字符作为Key主键字符串
-                if (current == ':') {
+                if (current == ':') {  // 以:分号字符作为Key主键字符串
                     String key = stringBuilder.toString().toUpperCase();
                     if (isValidCode(key)) {
                         isValidBicCode = true;
-                        // 清空已经读取的字符Key, 以存储后续的有效值
-                        stringBuilder.setLength(0);
+                        stringBuilder.setLength(0); // 清空已经读取的字符Key,以存储有效值
                     }
                 }
                 index++;
