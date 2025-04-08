@@ -2,22 +2,35 @@ package string;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
-public class BicCodeParsing {
+public class ImplSplitStr {
 
     // 字符的解析操作由业务逻辑所确定
     public static void main(String[] args) {
+        Set<String> codesSet = Set.of("SWIFT/BIC", "SWIFT BIC");
         String furtherInformation1 = "[IDENTIFICATION] SWIFT/BIC: HENBUS41. ";
         String furtherInformation2 = "[IDENTIFICATION] FDIC Certificate No: 5568. SWIFT/BIC: HENBUS41. [REPORTS]";
 
-        BicCodeParsing instance = new BicCodeParsing();
-        List<String> bicCodeList = instance.extractBicCodes(furtherInformation1);
-        for (String code: bicCodeList) {
-            System.out.println(code);
+        // O(N) 遍历完所有的字符
+        String furtherInfo = furtherInformation2.split("IDENTIFICATION]")[1];
+        int nextIndex = furtherInfo.indexOf("[");
+        if (nextIndex != -1) {
+            furtherInfo = furtherInfo.substring(0, nextIndex);
+        }
+        System.out.println(furtherInfo);
+
+        // O(M + M) 对区间内的字符进行处理
+        String[] codes = furtherInfo.split("\\. ");
+        for (String code: codes) {
+            String[] items = code.trim().split(":");
+            if (codesSet.contains(items[0])) {
+                System.out.println(items[1]);
+            }
         }
     }
 
-    // TODO. 逐个遍历整个字符数组，更加特殊字符来解析有效数据
+    // TODO. 手写实现Split字符串切片遍历的效果
     // 算法复杂度分析
     // .contains() O(N) N是整个Info字符串长度
     // .indexOf()  O(N)
