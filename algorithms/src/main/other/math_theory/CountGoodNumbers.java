@@ -38,14 +38,14 @@ public class CountGoodNumbers {
         long odd = n/2;
         long even = (n+1)/2;
 
-        // Calculate the total number of good digit strings
+        // 对指定数做特定的次方运算
         // multiplying 5 by even because there could only be 5 even numbers between 0-9
         // multiplying 4 by odd because there could only be 4 prime numbers between 0-9
-        long result = pow(5, even) * pow(4,odd);
+        long result = pow(5, even) * pow(4, odd);
         return (int)(result % MOD);
     }
 
-    // TODO. 手写Pow指数级运算结果，次方级别
+    // TODO. 次方递归: 手写Pow指数级运算
     public long pow(long x, long n){
         if(n==0) {
             return 1;
