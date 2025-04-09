@@ -4,3 +4,6 @@
 
 Number Theory 数论题目
 https://leetcode2.com/problem-list/number-theory/
+
+Binary Exponentiation 二进制指数
+https://cp-algorithms.com/algebra/binary-exp.html
