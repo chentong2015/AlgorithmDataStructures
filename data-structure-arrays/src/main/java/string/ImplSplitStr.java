@@ -1,6 +1,7 @@
 package string;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
@@ -13,15 +14,19 @@ public class ImplSplitStr {
         String furtherInformation2 = "[IDENTIFICATION] FDIC Certificate No: 5568. SWIFT/BIC: HENBUS41. [REPORTS]";
 
         // O(N) 遍历完所有的字符
-        String furtherInfo = furtherInformation2.split("IDENTIFICATION]")[1];
-        int nextIndex = furtherInfo.indexOf("[");
-        if (nextIndex != -1) {
-            furtherInfo = furtherInfo.substring(0, nextIndex);
+        String[] furtherInfoArray = furtherInformation1.split("IDENTIFICATION]");
+        if (furtherInfoArray.length == 1) {
+            System.out.println("No extra data to process");
         }
-        System.out.println(furtherInfo);
+
+        String identification = furtherInfoArray[1];
+        int endingIndex = identification.indexOf("[");
+        if (endingIndex != -1) {
+            identification = identification.substring(0, endingIndex);
+        }
 
         // O(M + M) 对区间内的字符进行处理
-        String[] codes = furtherInfo.split("\\. ");
+        String[] codes = identification.split("\\. ");
         for (String code: codes) {
             String[] items = code.trim().split(":");
             if (codesSet.contains(items[0])) {
@@ -40,7 +45,7 @@ public class ImplSplitStr {
     public List<String> extractBicCodes(String furtherInfo) {
         String identificationKey = "[IDENTIFICATION]";
         if (furtherInfo == null || !furtherInfo.contains(identificationKey)) {
-            return new ArrayList<>();
+            return Collections.emptyList();
         }
 
         List<String> bicCodeList = new ArrayList<>();

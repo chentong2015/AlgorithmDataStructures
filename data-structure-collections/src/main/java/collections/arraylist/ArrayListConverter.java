@@ -3,7 +3,7 @@ package collections.arraylist;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BaseArrayListConvert {
+public class ArrayListConverter {
 
     // TODO. List列表转换成数组
     public static void main(String[] args) {

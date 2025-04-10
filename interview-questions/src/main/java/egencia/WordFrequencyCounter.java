@@ -14,7 +14,7 @@ public class WordFrequencyCounter {
     // O(n*log(n))  O(n) 利用了额外的存储空间
     public static List<Integer> count(String[] words) {
         if (words == null || words.length == 0) {
-            return Collections.EMPTY_LIST;
+            return Collections.emptyList();
         }
 
         Arrays.sort(words);
@@ -34,7 +34,7 @@ public class WordFrequencyCounter {
     // 2. 如果使用可变的数组ArrayList<>，则最后还需要将列表中的数据转换成数组 => 需要额外的空间复杂度 0(n)
     public static List<Integer> countWords(String[] words) {
         if (words == null || words.length == 0) {
-            return new ArrayList<>();
+            return Collections.emptyList();
         }
         Arrays.sort(words);
 

@@ -2,7 +2,7 @@ package collections.queue;
 
 import java.util.*;
 
-public class LearnQueue1 {
+public class OpenTheLock {
 
     // Open the Lock
     // 4 circular wheels. Each wheel has 10 slots (0-9)(9-0) 数字循环，在相邻的两个数字可以自由移动

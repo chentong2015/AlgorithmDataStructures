@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class BaseArrayList {
+public class ArrayListBase {
 
     public static void main(String[] args) {
         // TODO. List.of()构建列表不可再被修改

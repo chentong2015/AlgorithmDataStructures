@@ -1,6 +1,7 @@
 package tree.prefix_tree.word_autocomplete;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 // Search Suggestions System
@@ -56,7 +57,7 @@ public class PrefixTreeSearchComplete {
             if (pointer.containsChild(c)) {
                 pointer = pointer.getChild(c);
             } else {
-                return new ArrayList<>();
+                return Collections.emptyList();
             }
         }
 
