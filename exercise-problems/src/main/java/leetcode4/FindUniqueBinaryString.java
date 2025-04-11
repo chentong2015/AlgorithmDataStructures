@@ -27,12 +27,13 @@ public class FindUniqueBinaryString {
     public String findDifferentBinaryString(String[] nums) {
         Set<String> binaryStringSet = new HashSet<>(Arrays.asList(nums));
 
+        // 使用char字符数组构建字符串
         char[] chars = new char[nums.length];
         for (int index = 0; index < nums.length; index++) {
             chars[index] = '0';
         }
 
-        // 直接使用char字符数组来构建字符串
+        // 从低到高依次改变每个位置上的字符
         int index = 0;
         String uniqueString = new String(chars);
         while (binaryStringSet.contains(uniqueString)) {

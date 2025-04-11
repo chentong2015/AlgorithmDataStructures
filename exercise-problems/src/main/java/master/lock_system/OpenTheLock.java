@@ -1,4 +1,4 @@
-package leetcode4.lock_system;
+package master.lock_system;
 
 import java.util.*;
 
@@ -30,6 +30,7 @@ public class OpenTheLock {
     // deadends = ["8887","8889","8878","8898","8788","8988","7888","9888"], target = "8888"
     // -> -1 no way to reach target
     //
+    // TODO. 能够使用char上下滚动变化，逐步接近目标数字
     //  0  0  0  0
     //     ....
     //  0  2  1  2
@@ -37,7 +38,6 @@ public class OpenTheLock {
         if (target.equals("0000")) {
             return 0;
         }
-
         // 存储不能通过的Dead特征值
         boolean[] deadArray = new boolean[10000];
         for (String dead : deadends) {
