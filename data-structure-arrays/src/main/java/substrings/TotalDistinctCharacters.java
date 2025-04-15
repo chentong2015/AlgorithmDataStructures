@@ -13,7 +13,7 @@ import java.util.Map;
 //
 // 1 <= s.length <= 105
 // s consists of lowercase English letters.
-public class TotalAppealString {
+public class TotalDistinctCharacters {
 
     // TODO. 思考进一步的优化空间: 不要保留中途无用的计算结果
     // 1. 使用一个变量即可以存储index-1之前的统计结果
