@@ -14,13 +14,7 @@ package leetcode4;
 // 1 <= nums[i] <= 10^5
 public class SumOfBeautyArray {
 
-    public static void main(String[] args) {
-        int[] nums = {1,2,3};
-        SumOfBeautyArray instance = new SumOfBeautyArray();
-        System.out.println(instance.sumOfBeauties(nums));
-    }
-
-    // TODO. 利用辅助数组来判断前后的大小值
+    // TODO. 利用辅助数组提前统计前后的最值，在遍历时直接判断
     // nums = [1,2,3] -> 2 只有一个位置的值
     // 1 < 2 < 3
     //
@@ -48,9 +42,11 @@ public class SumOfBeautyArray {
 
         int sumBeauty = 0;
         for (int index = 1; index < nums.length - 1; index++) {
-            if (maxBefore[index] < nums[index] && nums[index] < minAfter[index]) {
+            // 判断index位置值是否符合前后大小约束
+            int num = nums[index];
+            if (maxBefore[index] < num && num < minAfter[index]) {
                 sumBeauty += 2;
-            } else if (nums[index - 1] < nums[index] && nums[index] < nums[index + 1]) {
+            } else if (nums[index - 1] < num && num < nums[index + 1]) {
                 sumBeauty += 1;
             }
         }
