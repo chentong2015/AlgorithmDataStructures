@@ -1,4 +1,4 @@
-package substrings.commom_KMP;
+package substrings.KMP_template;
 
 public class KmpPatternMatch {
 

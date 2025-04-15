@@ -1,4 +1,4 @@
-package substrings.count_substring;
+package substrings;
 
 import java.util.HashMap;
 
