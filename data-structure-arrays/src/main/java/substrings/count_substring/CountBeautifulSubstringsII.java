@@ -4,11 +4,6 @@ import java.util.HashMap;
 
 public class CountBeautifulSubstringsII {
 
-    public static void main(String[] args) {
-        CountBeautifulSubstringsII instance = new CountBeautifulSubstringsII();
-        System.out.println(instance.beautifulSubstrings("baeyh", 2));
-    }
-
     // TODO. 二维HashMap[l]数组来统计(V, C)字符出现频率
     // a b a b a b a b a b, k=2
     // 2*2 % 2 = 0

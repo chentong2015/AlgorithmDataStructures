@@ -1,4 +1,4 @@
-package arrays.array2.painted_row_column;
+package array2.painted_row_column;
 
 import java.util.HashMap;
 import java.util.Map;

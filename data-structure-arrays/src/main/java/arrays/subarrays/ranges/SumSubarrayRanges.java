@@ -1,7 +1,6 @@
 package arrays.subarrays.ranges;
 
-// TODO. 问题本质: 最大值子数组统计值 - 最小值子数组统计值 = Ranges子数组统计
-//  Sum SubArray Max - Sum SubArray Min = Sum SubArray Range
+
 // Sum of Subarray Ranges
 // You are given an integer array nums.
 // The range of a subarray of nums is the difference between largest and smallest element in subarray.
@@ -19,7 +18,10 @@ package arrays.subarrays.ranges;
 // nums = [4,-2,-3,4,1] -> sum = 59
 public class SumSubarrayRanges {
 
-    // TODO. 根据问题的约束条件，考虑暴力破解(执行常数次的循环)
+    // TODO. 问题本质: 最大值子数组统计值 - 最小值子数组统计值 = Ranges子数组统计
+    //  Sum SubArray Max - Sum SubArray Min = Sum SubArray Range
+    //
+    // 根据问题的约束条件，考虑暴力破解(执行常数次的循环)
     public static long subArrayRanges(int[] nums) {
         long sum = 0;
         int startIndex = 0;

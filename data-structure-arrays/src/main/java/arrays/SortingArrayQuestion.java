@@ -1,4 +1,4 @@
-package arrays.sorting_array;
+package arrays;
 
 import java.util.*;
 

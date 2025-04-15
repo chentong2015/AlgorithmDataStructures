@@ -6,19 +6,18 @@ package substrings.count_substring;
 // Vowel letters in English are 'a', 'e', 'i', 'o', and 'u'.
 // Consonant letters in English are every letter except vowels.
 //
-// TODO. 注意约束的条件是数量的乘积
 // A string is beautiful if:
-// vowels == consonants and (vowels * consonants) % k == 0
+// vowels == consonants
+// (vowels * consonants) % k == 0
 //
 // Return the number of non-empty beautiful substrings in the given string s.
 public class CountBeautifulSubstringsI {
 
-    // TODO. 子字符串必须是连续, 原始字符的位置顺序不能打乱
+    // TODO. 注意约束的条件是数量的乘积
     // b a e y h, k=2 -> 2
     // baey, aeyh
     //
-    // 最差的时间复杂度，V和C字符各自一半，且K=1
-    // O(n + n/2 * n)
+    // O(n + n/2 * n) 最差的时间复杂度，V和C字符各自一半，且K=1
     // O(n)
     public int beautifulSubstrings(String s, int k) {
         int countV = 0;
