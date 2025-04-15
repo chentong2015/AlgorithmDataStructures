@@ -1,4 +1,4 @@
-package array2;
+package array.array2;
 
 // Largest Rectangle
 // Given a row's x cols binary matrix filled with O's and 1's,

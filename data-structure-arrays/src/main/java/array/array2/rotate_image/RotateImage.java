@@ -1,4 +1,4 @@
-package array2.rotate_image;
+package array.array2.rotate_image;
 
 // Rotate Image
 // You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees

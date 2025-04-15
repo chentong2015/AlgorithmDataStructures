@@ -1,4 +1,4 @@
-package arrays.subarrays;
+package subarrays;
 
 // Sum of Subarray Maximum
 // Given an array of integers arr, find the sum of max(b),

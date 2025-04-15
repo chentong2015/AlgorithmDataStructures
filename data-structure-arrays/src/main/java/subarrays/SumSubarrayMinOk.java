@@ -1,4 +1,4 @@
-package arrays.subarrays;
+package subarrays;
 
 public class SumSubarrayMinOk {
 

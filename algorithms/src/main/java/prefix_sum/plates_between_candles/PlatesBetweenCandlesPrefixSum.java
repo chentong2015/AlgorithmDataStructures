@@ -1,4 +1,4 @@
-package arrays.prefix_sum.plates_between_candles;
+package prefix_sum.plates_between_candles;
 
 public class PlatesBetweenCandlesPrefixSum {
 

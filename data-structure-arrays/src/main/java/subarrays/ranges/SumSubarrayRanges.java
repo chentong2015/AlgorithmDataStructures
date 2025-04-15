@@ -1,4 +1,4 @@
-package arrays.subarrays.ranges;
+package subarrays.ranges;
 
 
 // Sum of Subarray Ranges
