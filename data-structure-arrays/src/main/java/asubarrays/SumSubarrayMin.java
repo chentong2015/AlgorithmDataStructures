@@ -1,4 +1,4 @@
-package subarrays;
+package asubarrays;
 
 // Sum of Subarray Minimums
 // Given an array of integers arr, find the sum of min(b),

@@ -11,7 +11,7 @@ package substrings.vowels_substrings;
 // word consists of lowercase English letters.
 public class VowelsAllSubstrings {
 
-    //
+    // TODO.
     // word = "aba"
     // "a", "ab", "aba", "b", "ba", and "a".
     // 1 + 1 + 2 + 0 + 1 + 1 = 6
@@ -22,8 +22,7 @@ public class VowelsAllSubstrings {
     //
     // word = "ltcd" -> 0
     //
-    //   a b a c
-    // 0 1 2 3
+    // a b a c
     // 1 0 1 0
     //
     // a a a a a e e e e
