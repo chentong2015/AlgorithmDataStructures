@@ -1,4 +1,4 @@
-package substrings.vowels_substrings;
+package prefix_sum;
 
 // Vowels of All Substrings
 // Given a string word, return the sum of the number of vowels
@@ -9,9 +9,9 @@ package substrings.vowels_substrings;
 //
 // 1 <= word.length <= 10^5
 // word consists of lowercase English letters.
-public class VowelsAllSubstrings {
+public class CountVowelsSubstrings {
 
-    // TODO.
+    // TODO. Prefix Sum 前缀和: 关于特定数据的统计
     // word = "aba"
     // "a", "ab", "aba", "b", "ba", and "a".
     // 1 + 1 + 2 + 0 + 1 + 1 = 6

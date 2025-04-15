@@ -46,12 +46,12 @@ public class SumSubarrayMin {
             for (int right = count - 1; right > 0; right--) {
                 int value = nums[stack[right]];
                 int indexGap = stack[right] - stack[right -1];
-                sum += value * indexGap;
+                sum += (long) value * indexGap;
             }
 
             // TODO. 最后统计Stack栈底元素的统计
             int value = nums[stack[0]];
-            sum += value * (stack[0] + 1);
+            sum += (long) value * (stack[0] + 1);
         }
         int mod = (int) 1e9 + 7;
         return (int) (sum % mod);

@@ -1,4 +1,4 @@
-package substrings;
+package substrings.commom_KMP;
 
 public class KmpModel {
 

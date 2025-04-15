@@ -1,4 +1,4 @@
-package leetcode1;
+package substrings;
 
 import java.util.Arrays;
 import java.util.HashMap;

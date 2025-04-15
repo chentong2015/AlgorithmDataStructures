@@ -1,6 +1,5 @@
 package asubarrays.ranges;
 
-
 // Sum of Subarray Ranges
 // You are given an integer array nums.
 // The range of a subarray of nums is the difference between largest and smallest element in subarray.
