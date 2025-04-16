@@ -12,7 +12,7 @@ package prefix_sum.interval_distance;
 // n == arr.length
 // 1 <= n <= 10^5
 // 1 <= arr[i] <= 10^5
-public class IntervalsDistanceElements {
+public class IntervalsBetweenElements {
 
     // TODO. 如何避免计算距离的总和
     // [2,1,3,1,2,3,3]
@@ -24,15 +24,6 @@ public class IntervalsDistanceElements {
     // 3 -> 2,5,6
     //      0 3 5
     //
-    // [10,5,10,10]
-    //  0  1  2  3
-    // [5,0,3,4]
-    //
-    // O(N + N*N)
-    // O(N)
-    //
-    // 1    5   8
-    //    4   3
     public long[] getDistances(int[] arr) {
         long[] distances = new long[arr.length];
 
