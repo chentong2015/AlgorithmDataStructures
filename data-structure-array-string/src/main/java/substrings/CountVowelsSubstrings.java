@@ -11,7 +11,7 @@ package substrings;
 // word consists of lowercase English letters.
 public class CountVowelsSubstrings {
 
-    // TODO. 结果的统计具有很明显的特征点：累计字符出现在所有子字符串中的次数
+    // TODO. 直接判断每个字符元素和计算结果之间的关系
     // word = "aba"
     // "a", "ab", "aba", "b", "ba", and "a".
     // 1 + 1 + 2 + 0 + 1 + 1 = 6
@@ -22,7 +22,7 @@ public class CountVowelsSubstrings {
     //
     // word = "ltcd" -> 0
     //
-    // 以字符作为分割线，组合左右子字符串的所有可能 ！
+    // TODO. 以字符作为分割线，组合左右子字符串的所有可能
     // b b b ‘a’ b b c c
     // b b b  a
     //        * b b c c
@@ -35,7 +35,6 @@ public class CountVowelsSubstrings {
         for (int i = 0; i < n; ++i) {
             char c = word.charAt(i);
             if ("aeiou".indexOf(c) >= 0) {
-                // 使用数学公式快速累加
                 res += (long) (i + 1) * (n - i);
             }
         }

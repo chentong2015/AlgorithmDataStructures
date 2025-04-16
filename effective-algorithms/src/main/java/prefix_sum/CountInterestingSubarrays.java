@@ -19,7 +19,13 @@ import java.util.List;
 // 0 <= k < modulo
 public class CountInterestingSubarrays {
 
-    // TODO. Prefix Sum 前缀和：金典差值统计
+    public static void main(String[] args) {
+        List<Integer> list = List.of(3,1,9,6);
+        CountInterestingSubarrays instance = new CountInterestingSubarrays();
+        System.out.println(instance.countInterestingSubarrays(list, 3, 0));
+    }
+
+    // TODO. Prefix Sum 前缀和变式计算
     // nums = [3,2,4], modulo = 2, k = 1 -> 3
     // [3]     -> 3%2=1, 1%2 == 1 -> cnt=1
     // [3,2]   -> 3%2=1, 1%2 == 1 -> cnt=1
@@ -41,20 +47,24 @@ public class CountInterestingSubarrays {
         map.put(0, 1);
 
         // Means the number of nums[i] % mod == k in i + 1 first elements.
-        int prefixSum = 0;
-
+        int acc = 0;
         long result = 0;
         for (int num : nums) {
-            // 只考虑计算cnt统计的余数
-            int additionCnt = num % modulo == k ? 1 : 0;
-            prefixSum = (prefixSum + additionCnt) % modulo;
+            int addCnt = num % modulo == k ? 1 : 0;
+            acc = (acc + addCnt) % modulo;
 
-            // TODO. 注意非0余数的计算
-            int key = (prefixSum - k + modulo) % modulo;
-            result += map.getOrDefault(key, 0);
+            // TODO. 注意非0余数Diff的计算
+            int diff = (acc - k + modulo) % modulo;
 
-            int baseCount = map.getOrDefault(prefixSum, 0);
-            map.put(prefixSum, baseCount + 1);
+            // TODO. 统计有多少个diff差值，也将能组成多少个和为k值的子数组
+            result += map.getOrDefault(diff, 0);
+
+            // Hashmap统计结果: diff=0时统计一次，diff=1时统计一次
+            // "0" -> 2
+            // "1" -> 1 用来计算差值子数组的统计
+            // "2" -> 1
+            int baseCount = map.getOrDefault(acc, 0);
+            map.put(acc, baseCount + 1);
         }
         return result;
     }

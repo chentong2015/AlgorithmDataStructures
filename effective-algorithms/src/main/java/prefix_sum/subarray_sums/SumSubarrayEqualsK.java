@@ -18,50 +18,22 @@ public class SumSubarrayEqualsK {
     // [-1,-1,1], k = 0 -> 1
     public int subarraySum(int[] nums, int k) {
         // PrefixSum -> Count 哈希映射值为前缀和的统计
-        HashMap<Integer, Integer> subNum = new HashMap<>();
-
+        HashMap<Integer, Integer> numSumMap = new HashMap<>();
         // 0 -> 1 初始化前缀和为0的统计为1
-        subNum.put(0, 1);
+        numSumMap.put(0, 1);
 
         int total = 0;
         int count = 0;
         for (int n : nums) {
             total += n;
-            if (subNum.containsKey(total - k)) {
-                count += subNum.get(total - k);
-            }
 
-            int baseCount = subNum.getOrDefault(total, 0);
-            subNum.put(total, baseCount + 1);
+            // TODO. 统计有多少个diff差值，也将能组成多少个和为k值的子数组
+            int diff = total - k;
+            count += numSumMap.getOrDefault(diff, 0);
+
+            int baseCount = numSumMap.getOrDefault(total, 0);
+            numSumMap.put(total, baseCount + 1);
         }
         return count;
-    }
-
-    // TODO. 数据全部为正数的情况: 利用位置滑动计算
-    // [1,1,1], k = 2 -> 2
-    // [1,2,3], k = 3 -> 2
-    public int subarraySum2(int[] nums, int k) {
-        int result = 0;
-        for (int index = 0; index < nums.length; index++) {
-            if (nums[index] == k) {
-                result++;
-            } else if (nums[index] < k) {
-                int value = nums[index];
-                int left = index - 1;
-                while (left >= 0) {
-                    value += nums[left];
-                    if (value < k) {
-                        left--;
-                        continue;
-                    }
-                    // 一旦和为k，则无需再往前移动，sum和会越来越大
-                    if (value == k) {
-                        result++;
-                    }
-                    break;
-                }
-            }
-        }
-        return result;
     }
 }

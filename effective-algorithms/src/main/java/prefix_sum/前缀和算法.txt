@@ -5,4 +5,5 @@ TODO. Prefix Sum 前缀和用于开始查询范围数据
 
 TODO. sum(0,j) - sum(0,i) = sum(i,j)
 通过Prefix Sum前缀和计算任意区间片段的值
-通过差值找出是否存在特定的SubArray子数组
+通过Diff差值找出是否存在特定SubArray子数组
+差值Diff的统计存储在Hashmap结构中
