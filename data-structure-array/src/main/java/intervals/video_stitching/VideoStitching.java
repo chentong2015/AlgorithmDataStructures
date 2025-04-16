@@ -1,4 +1,4 @@
-package arrays.intervals.video_stitching;
+package intervals.video_stitching;
 
 import java.util.Arrays;
 import java.util.Comparator;

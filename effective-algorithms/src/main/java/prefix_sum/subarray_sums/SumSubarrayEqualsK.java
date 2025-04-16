@@ -19,6 +19,7 @@ public class SumSubarrayEqualsK {
     public int subarraySum(int[] nums, int k) {
         // PrefixSum -> Count 哈希映射值为前缀和的统计
         HashMap<Integer, Integer> numSumMap = new HashMap<>();
+
         // 0 -> 1 初始化前缀和为0的统计为1
         numSumMap.put(0, 1);
 

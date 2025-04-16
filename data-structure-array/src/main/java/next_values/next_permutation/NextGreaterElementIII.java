@@ -1,4 +1,4 @@
-package arrays.next_values.next_permutation;
+package next_values.next_permutation;
 
 // Next Greater Element III
 // Given a positive integer n, find the smallest integer

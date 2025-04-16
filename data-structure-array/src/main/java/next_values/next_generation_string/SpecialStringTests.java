@@ -1,4 +1,4 @@
-package arrays.next_values.next_generation_string;
+package next_values.next_generation_string;
 
 public class SpecialStringTests {
 

@@ -1,4 +1,4 @@
-package arrays.next_values.next_permutation;
+package next_values.next_permutation;
 
 // Next Permutation
 // The next permutation of an array of integers is
