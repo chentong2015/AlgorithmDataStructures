@@ -10,11 +10,13 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>algorithms</module>
+        <module>effective-algorithms</module>
         <module>data-structure-collections</module>
-        <module>exercise-problems</module>
-        <module>interview-questions</module>
-        <module>data-structure-arrays</module>
+        <module>leetcode-problems</module>
+        <module>work-interviews</module>
+        <module>data-structure-array</module>
+        <module>data-structure-nonlinear</module>
+        <module>data-structure-array-string</module>
     </modules>
 
     <properties>
