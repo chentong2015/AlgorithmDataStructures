@@ -1,4 +1,4 @@
-package master;
+package hard;
 
 import java.util.*;
 

@@ -20,9 +20,9 @@ public class TotalDistinctCharacters {
     // and n - i possible end position,
     // So s[i] can contribute (i - last[s[i]]) * (n - i) points.
     //
-    // a  b  b   c   a  c  f  g
-    // 0  1  2   3   4  5  6  7
-    //    x  x   x   a  -  -  -
+    // a  b  b   c    a  c  f  g
+    // 0  1  2   3    4  5  6  7
+    //    x  x   x    a  -  -  -
     //    从非a的位置出发,结束在后面任意位置
     //
     // O(n)
@@ -39,7 +39,8 @@ public class TotalDistinctCharacters {
 
             // 统计char能够在子字符串中贡献多少次统计
             int startPositions = i - lastIndex[charId];
-            res += (long) startPositions * (n - i);
+            int endPositions = n - i;
+            res += (long) startPositions * endPositions;
 
             // 重新更新它的上一个index位置
             lastIndex[charId] = i;
