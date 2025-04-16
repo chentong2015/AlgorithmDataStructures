@@ -11,7 +11,7 @@ package substrings;
 // word consists of lowercase English letters.
 public class CountVowelsSubstrings {
 
-    // TODO. 直接判断每个字符元素和计算结果之间的关系
+    // TODO. 只考虑每个字符对形成的子字符串的“贡献”
     // word = "aba"
     // "a", "ab", "aba", "b", "ba", and "a".
     // 1 + 1 + 2 + 0 + 1 + 1 = 6

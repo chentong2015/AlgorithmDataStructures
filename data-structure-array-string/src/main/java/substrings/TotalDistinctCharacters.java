@@ -11,66 +11,36 @@ import java.util.Map;
 // Given a string s, return the total appeal of all of its substrings.
 // A substring is a contiguous sequence of characters within a string.
 //
-// 1 <= s.length <= 105
+// 1 <= s.length <= 10^5
 // s consists of lowercase English letters.
 public class TotalDistinctCharacters {
 
-    // TODO. 思考进一步的优化空间: 不要保留中途无用的计算结果
-    // 1. 使用一个变量即可以存储index-1之前的统计结果
-    // 2. 存储的mapping lastIndex可以使用26常量数组
+    // TODO. 只考虑每个元素对于子字符串统计的“贡献”
+    // There are i - last[s[i]] possible start position,
+    // and n - i possible end position,
+    // So s[i] can contribute (i - last[s[i]]) * (n - i) points.
     //
-    // O(n)   极限复杂度，只使用一次遍历计算出最后的结果
-    // O(n+n) 存储之前遍历过程中的关键信息(相同字符的位置 + 之前的统计Sum)
-    public static long appealSum(String s) {
-        long sum = 0;
-        long sumCurrent = 0;
-
-        long[] sumsBefore = new long[s.length()];
-        Map<Character, Integer> mapIndex = new HashMap<>();
-
-        for (int index=0; index < s.length(); index++) {
-            int lastIndex = mapIndex.getOrDefault(s.charAt(index), -1);
-            if (lastIndex == -1) {
-                if (index == 0) {
-                    sum += 1;
-                    sumsBefore[index] = 1;
-                } else {
-                    sumCurrent = sumsBefore[index - 1] + index + 1;
-                    sum += sumCurrent;
-                    sumsBefore[index] = sumCurrent;
-                }
-            } else {
-                sumCurrent = sumsBefore[index - 1] + index - lastIndex;
-                sum += sumCurrent;
-                sumsBefore[index] = sumCurrent;
-            }
-            mapIndex.put(s.charAt(index), index);
-        }
-        return sum;
-    }
-
-    // TODO. 最终结果的生成和Index坐标有关，缩小动态编程存储数据(26个字符)
-    // a  b  b   c   a
-    // 1
-    // 2  1
-    // 2  1  1
-    // 3  2  2   1
-    // 3  3  3   2   1
+    // a  b  b   c   a  c  f  g
+    // 0  1  2   3   4  5  6  7
+    //    x  x   x   a
+    //                  -  -  -
+    //    从前面非a的位置出发
+    //               结合后面的数目
+    //
     // O(n)
     // O(1) 不造成时间复杂度
-    public static long appealSumPlus(String s) {
-        long totalAppeal = 0;
-        long currentAppeal = 0;
-        long[] lastPosition = new long[26];
-        Arrays.fill(lastPosition, -1);
+    public static long appealSum(String s) {
+        // 记录char字符上一次出现的位置
+        int[] lastIndex = new int[26];
+        Arrays.fill(lastIndex, -1);
 
-        for (int i = 0; i < s.length(); ++i){
-            int charIndex = s.charAt(i) - 'a';
-            currentAppeal += i - lastPosition[charIndex]; // currentAppeal累计上一轮的结果并添加新增值
-
-            lastPosition[charIndex] = i; // 存储字符最新的index位置
-            totalAppeal += currentAppeal ; // currentAppeal一层统计结果，totalAppeal累计所有层结果
+        long res = 0, n = s.length();
+        for (int i = 0; i < s.length(); ++i) {
+            int charId = s.charAt(i) - 'a';
+            // 统计char能够在子字符串中贡献多少次统计
+            res += (i - lastIndex[charId]) * (n - i);
+            lastIndex[charId] = i;
         }
-        return totalAppeal;
+        return res;
     }
 }
