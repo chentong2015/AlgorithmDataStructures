@@ -3,20 +3,7 @@ package prefix_sum;
 import java.util.HashMap;
 import java.util.List;
 
-// Count of Interesting Subarrays
-// You are given a 0-indexed integer array nums, an integer modulo, and an integer k.
-// Find the count of subarrays that are interesting.
-//
-// 参数只是用于约束cnt的判断
-// Let cnt be the number of indices i in the range [l, r]
-// - nums[i] % modulo == k.
-// - cnt % modulo == k.
-// Return an integer denoting the count of interesting subarrays.
-//
-// 1 <= nums.length <= 10^5
-// 1 <= nums[i] <= 10^9
-// 1 <= modulo <= 10^9
-// 0 <= k < modulo
+
 public class CountInterestingSubarrays {
 
     public static void main(String[] args) {

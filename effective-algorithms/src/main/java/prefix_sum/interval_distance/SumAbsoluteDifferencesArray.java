@@ -15,7 +15,8 @@ package prefix_sum.interval_distance;
 // 1 <= nums[i] <= nums[i + 1] <= 10^4
 public class SumAbsoluteDifferencesArray {
 
-    // TODO. 每个数需要和其他任何数相互计算
+    // TODO. 同时结合前缀和+后缀和
+    //  Prefix sum / Suffix sum + Pattern Recognition.
     // nums = [2,3,5] -> [4,3,5]
     // result[0] = |2-2| + |2-3| + |2-5| = 0 + 1 + 3 = 4,
     // result[1] = |3-2| + |3-3| + |3-5| = 1 + 0 + 2 = 3,

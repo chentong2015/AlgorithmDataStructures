@@ -1,6 +1,22 @@
-package prefix_sum.plates_between_candles;
+package prefix_sum;
 
-public class PlatesBetweenCandlesPrefixSum {
+// Plates Between Candles
+// You are given a 0-indexed string s consisting of characters '*' and '|' only,
+// where a '*' represents a plate and a '|' represents a candle.
+// You are also given a 0-indexed 2D integer array queries
+// where queries[i] = [lefti, righti] denotes the substring s[lefti...righti] (inclusive).
+//
+// For each query, you need to find the number of plates between candles that are in the substring.
+// A plate is considered between candles if there is at least one candle to its left
+// and at least one candle to its right in the substring.
+//
+// Return an integer array answer where answer[i] is the answer to the ith query.
+// 3 <= s.length <= 10^5
+// s consists of '*' and '|' characters.
+// 1 <= queries.length <= 10^5
+// queries[i].length == 2
+// 0 <= lefti <= righti < s.length
+public class PlatesBetweenCandles {
 
     // TODO. Prefix Sum前缀和算法：典型"预处理"数据
     // "||**||**|*"
