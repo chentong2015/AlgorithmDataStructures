@@ -10,9 +10,8 @@ package greedy;
 // It is guaranteed such an s exists for the given a and b.
 public class StringWithoutAAA {
 
-    // TODO. Greedy Algo 每次选择字符时都保证是最优选择
+    // TODO. Greedy 每次选择字符时都保证是最优选择
     // 相差数值大于等于2，则选择大数值的字符两个
-    //
     // a = 1, b = 2
     // "abb", "bab" and "bba"
     //

@@ -1,0 +1,23 @@
+TODO. Heap堆的特征: 完全(平衡)二叉树
+Heap is a Complete Binary Tree
+- It is always balanced.
+- It has the minimum possible height O(log(n)) for the tree
+  - the children of a node at index i are nodes at indices 2*i+1 and 2*i+2.
+  - the heap is filled from todos to bottom, and from left to right at each layer.
+
+TODO. Heap堆的实现: PriorityQueue<E>优先级队列
+- 基于特定Comparator比较器来比较元素并构成堆结构
+- 基于堆结构存储计算(统计)TOP K特征的数据结果 !
+
+----------------------------------------------------------------------------------
+TODO. Heap堆特征 => 本质是用于存储
+1. Heap可以存储重复元素
+2. Heap不是Ordered顺序的，根据元素的大小定位插入位置
+=> Heap适用于不考虑“插入的顺序”
+=> Heap会保证插入和删除都是O(log(n))时间复杂度
+
+TODO. BST二叉搜索树特征 => 本质是用于搜索(重复元素没有意义)
+1. BST没有重复元素
+2. BST是Ordered顺序的，按照元素插入的顺序构成树结构
+=> BST适用于考虑“插入的顺序”(首个插入元素即为Root节点)
+=> BST可能造成O(n)时间复杂度(当所有插入的元素构成Chain时)

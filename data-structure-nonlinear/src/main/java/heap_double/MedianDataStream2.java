@@ -1,4 +1,4 @@
-package heap.min_max_heap;
+package heap_double;
 
 import java.util.Collections;
 import java.util.PriorityQueue;

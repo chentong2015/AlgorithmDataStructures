@@ -1,4 +1,4 @@
-package heap.min_max_heap;
+package heap_double;
 
 import java.util.Collections;
 import java.util.PriorityQueue;
@@ -14,7 +14,7 @@ import java.util.PriorityQueue;
 // -10^5 <= num <= 10^5
 // There will be at least one element in the data structure before calling findMedian.
 // At most 50000 calls will be made to addNum and findMedian
-public class MedianDataStream {
+public class MedianDataStream1 {
 
     private PriorityQueue<Integer> minHeap = new PriorityQueue<>();
     private PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());

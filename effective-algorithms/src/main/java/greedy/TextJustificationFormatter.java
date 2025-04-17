@@ -27,17 +27,6 @@ import java.util.List;
 // "an", 2 = 2
 public class TextJustificationFormatter {
 
-    public static void main(String[] args) {
-        TextJustificationFormatter formatter = new TextJustificationFormatter();
-        String[] words = {"This", "is", "an", "example", "of", "text", "justification."};
-        String[] words1 = {"What","must","be","acknowledgment","shall","be"};
-
-        List<String> result = formatter.fullJustify(words1, 16);
-        for (String item: result) {
-            System.out.println(item);
-        }
-    }
-
     // TODO. 算法使用的leftSpaces空间复杂度可以优化
     public List<String> fullJustify(String[] words, int maxWidth) {
         List<String> resultLines = new ArrayList<>();

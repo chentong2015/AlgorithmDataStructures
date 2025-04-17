@@ -12,5 +12,5 @@ TODO. Greedy Algorithm 贪婪算法
 
 TODO. Greedy算法与DP/backtracking算法的区别
 - Greedy对每个子问题的解决方案都做出选择，不能回退
-- dp动态规划则会保存以前的运算结果, 有回退功能 !!
-- backtracking回溯算法通过回溯来罗列所有匹配情况 !!
+- DP动态规划则会保存以前的运算结果, 有回退功能
+- Backtracking回溯算法通过回溯来罗列所有匹配情况
