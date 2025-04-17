@@ -1,0 +1,17 @@
+弹性消除算法模型: 使用基础值吸引比它小的值，直到吸收全部
+Destroying Asteroids question
+BaseAmount = 10
+Amounts = {1,5,9,12,15,20}
+
+TODO. 解法: 从小到大进行Greedy吸收 = 从最接近的更小值开始吸收
+public void canDestroy() {
+   Arrays.sort(amounts);
+   long currentAmount = baseAmount;
+   for (int amount : amounts) {
+       if (currentAmount < amount) {
+           return false;
+       }
+       currentAmount += amount;
+   }
+   return true;
+}
