@@ -3,7 +3,7 @@ Destroying Asteroids question
 BaseAmount = 10
 Amounts = {1,5,9,12,15,20}
 
-TODO. 解法: 从小到大进行Greedy吸收 = 从最接近的更小值开始吸收
+TODO. Greedy解法: 将更小的全部吸收，最大限度的吸收能够吸收的
 public void canDestroy() {
    Arrays.sort(amounts);
    long currentAmount = baseAmount;
