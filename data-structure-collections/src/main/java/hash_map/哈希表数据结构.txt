@@ -4,11 +4,11 @@ LinkedHashMap<,>  插入元素的顺序就是元素迭代访问的顺序
 SortedMap<,>      符合排序规则的Hash键值对
  - TreeMap<,>     根据比较器规则(基于Key或value)对存储的Entry进行排序
 
+TODO: Hash Table 运用场景: Key键值保证唯一性!!
+1. 构建<key,value>键值映射关系
+2. 基于key分组建立Group关系
+3. 统计特定数据的频率
 
-TODO: Hash Table 运用场景
-1. 用于<key,value>键值映射关系
-2. 用于分组，建立Group关系
-3. 用于数据的统计和频率的统计
 
 TODO. HashTable和HashMap区别
 1. HashMap中可存储null值，

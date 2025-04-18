@@ -1,9 +1,9 @@
-package backtracking.combination_permutations;
+package backtracking;
 
 import java.util.ArrayList;
 import java.util.List;
 
-// Full Combination and Permutation
+// Full Combination and Permutations
 // 返回数据的全排列，通过回溯算法DFS进行排序组合 !!
 public class AllCombinations {
 

@@ -1,17 +1,16 @@
 package recursion;
 
-public class LearnRecursion3 {
-
-    // TODO. 从基础到一般归纳问题的本质特征
-    // Stone Game
-    // There are an even number of piles arranged in a row,
-    // and each pile has a positive integer number of stones piles[i].
-    // A player takes the entire pile of stones either from the beginning or from the end of the row.
-    // piles = [5,3,4,5] -> true for the first player
-    // piles = [3,7,2,3] -> true
-    // piles = [3,7,2,3,5,5] -> true
-    //
-    // 从数组的头或尾取数，累计最后的值，判断是否先选的人会胜利
+// TODO. 从基础到一般归纳问题的本质特征
+// Stone Game
+// There are an even number of piles arranged in a row,
+// and each pile has a positive integer number of stones piles[i].
+// A player takes the entire pile of stones either from the beginning or from the end of the row.
+// piles = [5,3,4,5] -> true for the first player
+// piles = [3,7,2,3] -> true
+// piles = [3,7,2,3,5,5] -> true
+//
+// 从数组的头或尾取数，累计最后的值，判断是否先选的人会胜利
+public class StoneGame {
 
     private int countFirst = 0;
     private int countSecond = 0;

@@ -1,4 +1,4 @@
-package backtracking.combination_permutations;
+package recursion;
 
 public class TargetSum {
 

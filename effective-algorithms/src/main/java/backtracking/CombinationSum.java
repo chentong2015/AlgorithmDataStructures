@@ -1,4 +1,4 @@
-package backtracking.combination_permutations;
+package backtracking;
 
 import java.util.ArrayList;
 import java.util.Arrays;
