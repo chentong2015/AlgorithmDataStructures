@@ -1,4 +1,4 @@
-package iteration;
+package recursion;
 
 // Count and Say
 // The count-and-say sequence is a sequence of digit strings defined by the recursive formula:
@@ -18,26 +18,45 @@ package iteration;
 //
 // Given a positive integer n, return the nth element of the count-and-say sequence.
 // 1 <= n <= 30
-//
-// Follow up: Could you solve it iteratively?
 public class CountAndSay {
 
-    // TODO. 本质上使用迭代计算更优
+    // TODO. 优先考虑递归算法, 本质上使用迭代计算更优
     // n = 5
     // countAndSay(1) = "1"
     // countAndSay(2) = RLE of "1" = "11"
     // countAndSay(3) = RLE of "11" = "21"
     // countAndSay(4) = RLE of "21" = "1211"
-    // countAndSay(5) = RLE of "1211" = "11121111"
+    // countAndSay(5) = RLE of "1211" = "111221"
     //
     public String countAndSay(int n) {
-        int index = 1;
+        return helper(n);
+    }
 
+    // TODO. 利用递归返回的结果来计算当前N的字符串
+    private String helper(int n) {
         if (n == 1) {
             return "1";
-        } else {
-            // helper(n - 1);
         }
-        return null;
+        String str = helper(n - 1);
+        int count = 1;
+        char currentChar = str.charAt(0);
+
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int index = 1; index < str.length(); index++) {
+            if (currentChar != str.charAt(index)) {
+                stringBuilder.append(count);
+                stringBuilder.append(currentChar);
+                // Update current to next char
+                count = 1;
+                currentChar = str.charAt(index);
+            } else {
+                count++;
+            }
+        }
+
+        // Add the last count of char
+        stringBuilder.append(count);
+        stringBuilder.append(currentChar);
+        return stringBuilder.toString();
     }
 }
