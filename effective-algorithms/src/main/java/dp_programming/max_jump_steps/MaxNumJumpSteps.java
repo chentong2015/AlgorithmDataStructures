@@ -1,4 +1,4 @@
-package dp_programming.jump_game;
+package dp_programming.max_jump_steps;
 
 import java.util.Arrays;
 

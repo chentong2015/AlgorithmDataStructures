@@ -1,18 +1,31 @@
-package dp_programming.palindromic;
+package recursion;
 
-// TODO. 问题的本质: 如何利用之前已经判断过的回文子字符串来判断下一个 ?
-// 1. 使用暴力破解：Time很差，Space空间复杂度很好
-// 2. 使用DP二维数组：Time较好，Space较差
-public class LongestPalindromicSubstring {
+// Longest Palindromic Substring
+// Given a string s, return the longest palindromic substring in s.
+//
+// 1 <= s.length <= 1000
+// s consist of only digits and English letters.
+public class LongestPalindromic {
 
-    // Longest Palindromic Substring
-    // Given a string s, return the longest palindromic substring in s.
+    // TODO. 题目的本质: 通过递归来判断“回文”是否成立
+
+
+
+
+
+
+
+    // TODO. DP存储之前的判断结果，
+    //  问题的本质: 如何利用之前已经判断过的回文子字符串来判断下一个 ?
+    // 1. 使用暴力破解：Time很差，Space空间复杂度很好
+    // 2. 使用DP二维数组：Time较好，Space较差
     // s = "b a b a d" -> "bab"
     // s = "c b b d" -> "bb"
     public String longestPalindrome(String s) {
         int n = s.length();
         int max = 0;
         int start = -1;
+
         // DP数组存储判断的结果
         boolean[][] dp = new boolean[n][n];
         for(int i = n - 1; i >= 0; i--){

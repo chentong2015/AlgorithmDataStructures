@@ -1,21 +1,24 @@
-package dp_programming.common_subsequence;
+package dp_programming.subsequences;
 
-// Longest Common Subsequence
+// Longest Common Subsequence (LCP)
 // Given two strings text1 and text2, return the length of their longest common subsequence.
 // If there is no common subsequence, return 0.
 // A common subsequence of two strings is a subsequence that is common to both strings.
 public class LongestCommonSubsequence {
 
-    // TODO. 二维DP数组解决LCS的问题，不断迭代最优的值
+    // TODO. 金典Longest Common Subsequence问题: 二维DP数组
+    // https://en.m.wikipedia.org/wiki/Longest_common_subsequence_problem
+    //
     // text1 = "abcde", text2 = "ace" -> ace -> 3
     // text1 = "abc", text2 = "abc" -> abc -> 3
     // text1 = "abc", text2 = "def" -> 0
-    //
     // text1="agcat", text2="gac" -> (ac),(gc),and(ga) -> 2
+    //
+    // 每遍历一个新字符charAt(i), 都在之前的结果上累加
     //     A  G	 C	A  T   +
     // G   0  0	 0	0  0   0
-    // A   0  0  1  1  1   1
-    // C   0  1  1  1  2   2
+    // A   0  0  1  1’ 1   1
+    // C   0  1  1  1  2’  2
     // +   0  1  1  2  2   2
     //
     // O(n*m) 循环的次数

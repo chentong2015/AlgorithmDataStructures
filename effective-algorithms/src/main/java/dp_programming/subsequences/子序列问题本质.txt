@@ -1,11 +1,8 @@
-TODO. Subsequence 子序列是不连续字符
-子序列是按照顺序排序的一串子字符，通过删除某些字符形成
+TODO. Subsequence 二维层次的问题: 需要N*N平方的对比次数
+子序列不是连续的字符，是按照顺序排序的一串字符，通过删除某些字符形成
 A subsequence of a string is a new string generated from the original string
 with some characters (can be none) deleted
 without changing the relative order of the remaining characters.
-
-TODO. 金典Longest Common Subsequence (LCS)问题
-https://en.m.wikipedia.org/wiki/Longest_common_subsequence_problem
 
 TODO. Subsequence 应用场景
 - 数据比较与猜测(判断字符含义)

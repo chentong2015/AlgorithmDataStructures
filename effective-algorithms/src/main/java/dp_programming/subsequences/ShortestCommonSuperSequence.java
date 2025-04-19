@@ -1,4 +1,4 @@
-package dp_programming.common_subsequence;
+package dp_programming.subsequences;
 
 // Shortest Common SuperSequence
 // Given two strings str1 and str2, return the shortest string
