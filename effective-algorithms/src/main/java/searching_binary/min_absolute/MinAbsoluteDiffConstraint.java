@@ -19,12 +19,6 @@ import java.util.TreeSet;
 // 0 <= x < nums.length
 public class MinAbsoluteDiffConstraint {
 
-    public static void main(String[] args) {
-        List<Integer> nums = List.of(4,3,2,4);
-        MinAbsoluteDiffConstraint instance = new MinAbsoluteDiffConstraint();
-        System.out.println(instance.minAbsoluteDifference(nums, 2));
-    }
-
     // TODO. 在循环过程中实时排序 + 二分查找(调用Sorted数据结构API)
     // nums = [4,3,2,4], x = 2 -> 0
     // nums = [5,3,2,10,15], x = 1 -> 1
