@@ -1,4 +1,4 @@
-package searching.quick_select;
+package sorting.quick_select;
 
 import java.security.SecureRandom;
 import java.util.Arrays;

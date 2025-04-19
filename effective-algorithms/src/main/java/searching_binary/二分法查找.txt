@@ -1,0 +1,17 @@
+TODO. 二分法使用场景
+1. 从有序的数据中找到指定数据，不需遍历所有值，时间复杂度为O(log(n))
+2. 从无序的数据中找到指定数据，必须在二分位计算后能够判断前后移动方向
+3. 从拼接好的排序堆片段数据进行二分法查找 O(2log(n)) = O(log(n))
+
+TODO. 二分法进阶运用
+- 在二分的过程中可以实时计算"二分点两侧"的结果
+- 计算在元素位置上面，计算总值范围 & 距离差值(最终结果)
+- 找到某个median值后不一定返回，而是继续二分到最后，循环到底
+- 找到目标后继续查找最Left或最Right的坐标，确定最左值或最右值!
+
+TODO. 二分法实现API => 利用返回index来找最接近的值!!
+如果找到目标则返回index位置，反之返回负值(-(insertion point) - 1)
+获取插入的位置坐标 index = -(index + 1)
+  Arrays.binarySearch(array, target)
+  Arrays.binarySearch(array, fromIndex, toIndex, target)
+  Collections.binarySearch(list, item)

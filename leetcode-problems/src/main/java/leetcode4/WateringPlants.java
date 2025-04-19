@@ -1,4 +1,4 @@
-package leetcode5;
+package leetcode4;
 
 // Watering Plants
 // You want to water n plants in your garden with a watering can.

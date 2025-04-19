@@ -1,4 +1,4 @@
-package searching.bs_template;
+package searching_binary.bs_template;
 
 // TODO: Ternary Search 三元搜索, 三分法
 // 1. 将二分的区间进行三分，使用两个middle位置进行判断

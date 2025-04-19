@@ -1,4 +1,4 @@
-package hash_set.continuously_numbers;
+package hash_set.continue_nums;
 
 import java.util.HashSet;
 
@@ -7,11 +7,11 @@ import java.util.HashSet;
 // 无法根据数据的范围使用常量的数组进行存储
 // 0 < nums.length < 10^5
 // -10^9 < nums[i] < 10^9
-public class ContinuousIncreasingNumbers {
+public class ContinueIncreaseNumbers {
 
     public static void main(String[] args) {
         int[] nums = {4,2,7,8,1,5,6,0};
-        ContinuousIncreasingNumbers instance = new ContinuousIncreasingNumbers();
+        ContinueIncreaseNumbers instance = new ContinueIncreaseNumbers();
         System.out.println(instance.findContinuousIncreasingLength(nums));
     }
 

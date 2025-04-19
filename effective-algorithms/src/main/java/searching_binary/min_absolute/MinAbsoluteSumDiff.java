@@ -1,4 +1,4 @@
-package leetcode4;
+package searching_binary.min_absolute;
 
 import java.util.*;
 

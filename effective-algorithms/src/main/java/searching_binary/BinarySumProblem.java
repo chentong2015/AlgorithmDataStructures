@@ -1,4 +1,4 @@
-package searching;
+package searching_binary;
 
 public class BinarySumProblem {
 
