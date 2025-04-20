@@ -1,10 +1,10 @@
-package two_pointers;
+package arrays.sum_questions;
 
 // Two Sum II - Input array is sorted
 // Given an array of integers numbers that is already sorted in non-decreasing order
 // Find two numbers such that they add up to a specific target number
 // Return the indices of the two numbers (1-indexed) as an integer array answer of size 2
-public class TwoSumSorted {
+public class Two2SumSorted {
 
     // TODO: 经典双坐标移动算法
     // numbers = [2,7,11,15], target = 9 -> [1,2]
