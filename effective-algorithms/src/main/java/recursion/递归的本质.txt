@@ -1,6 +1,6 @@
 TODO. Recursion 递归算法
-- 算法广泛运用于层次问题的解决, 例如Tree树的递归
-- 算法可能导致调用层级过深(指数倍次数)，造成StackOverflow空间复杂度
+- 算法广泛运用于层次问题(Tree或Graph)!!
+- 算法可能导致调用层级过深造成StackOverflow
 
 TODO: Recursion递归模版方法
 1. 判断和排除特殊情况，以便直接返回

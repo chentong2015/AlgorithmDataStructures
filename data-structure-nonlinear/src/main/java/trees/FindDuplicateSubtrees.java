@@ -40,7 +40,7 @@ public class FindDuplicateSubtrees {
         if (currentRoot == null) {
             return "";
         }
-        // 构建Root根节点树的字符串
+        // TODO. 递归，构建Root根节点树的字符串
         int currentValue = currentRoot.val;
         String leftSubTreeStr = process(currentRoot.left, subTreeStrMap, result);
         String rightSubTreeStr = process(currentRoot.right, subTreeStrMap, result);
