@@ -28,31 +28,28 @@ public class MinAbsoluteDiffConstraint {
     // 1  3  4  5  6
     // [i    r]
     //
-    // O(N*logN) 增加二分查找的时间复杂度
-    // O(1)
+    // O(N*(logN + logN + logN)) 插入和查找都是logN时间复杂度
+    // O(N-K) 只需存储剩余数据量
     public int minAbsoluteDifference(List<Integer> nums, int x) {
         int minAbsolute = Integer.MAX_VALUE;
         TreeSet<Integer> sortedSet = new TreeSet<>();
-        for (int right = 0; right < nums.size(); right++) {
-            if (right - x >= 0) {
-                sortedSet.add(nums.get(right - x));
-            }
-            if (!sortedSet.isEmpty()) {
-                // 如果出现最小绝对值，无需再继续遍历
-                int value = nums.get(right);
-                if (sortedSet.contains(value)) {
-                    return 0;
-                }
+        for (int right = x; right < nums.size(); right++) {
+            sortedSet.add(nums.get(right - x));
 
-                // TODO. 必须判断查找出来的结果是否为null
-                Integer lower = sortedSet.lower(value);
-                if (lower != null) {
-                    minAbsolute = Math.min(minAbsolute, value - lower);
-                }
-                Integer higher = sortedSet.higher(value);
-                if (higher != null) {
-                    minAbsolute = Math.min(minAbsolute, higher - value);
-                }
+            // 如果出现最小绝对值，无需再继续遍历
+            int value = nums.get(right);
+            if (sortedSet.contains(value)) {
+                return 0;
+            }
+
+            // TODO. 必须判断查找出来的结果是否为null
+            Integer lower = sortedSet.lower(value);
+            if (lower != null) {
+                minAbsolute = Math.min(minAbsolute, value - lower);
+            }
+            Integer higher = sortedSet.higher(value);
+            if (higher != null) {
+                minAbsolute = Math.min(minAbsolute, higher - value);
             }
         }
         return minAbsolute;

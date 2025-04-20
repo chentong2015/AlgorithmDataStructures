@@ -53,9 +53,11 @@ public class MinAbsoluteSumDiff {
             return 0;
         }
 
+        // 对nums1排序后用于二分查找
+        Arrays.sort(nums1);
+
         // 根据ABS绝对值差值从小到大排序
         list.sort(Comparator.comparingInt(a -> a[0]));
-        Arrays.sort(nums1);
 
         // 统计可以节省的最大差值的大小
         int maxDiffAbs = 0;
@@ -74,17 +76,16 @@ public class MinAbsoluteSumDiff {
     }
 
     // TODO. 只取二分差值中最接近位置的三个差值坐标
+    // 二分法差结果index坐标范围[0, length]闭合区间
     private int findMinAbs(int[] nums1, int targetNum) {
         int foundIndex = Arrays.binarySearch(nums1, targetNum);
         if (foundIndex < 0) {
             foundIndex = -(foundIndex + 1);
         }
 
-        // 二分法差结果index坐标范围[0, length]闭合区间
         int minAbs = Integer.MAX_VALUE;
         if (foundIndex > 0) {
-            int abs = Math.abs(nums1[foundIndex - 1] - targetNum);
-            minAbs = Math.min(minAbs, abs);
+            minAbs = Math.abs(nums1[foundIndex - 1] - targetNum);
         }
         if (foundIndex < nums1.length - 1) {
             int abs = Math.abs(nums1[foundIndex + 1] - targetNum);

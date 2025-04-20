@@ -9,7 +9,7 @@ TODO. 二分法进阶运用
 - 找到某个median值后不一定返回，而是继续二分到最后，循环到底
 - 找到目标后继续查找最Left或最Right的坐标，确定最左值或最右值!
 
-TODO. 二分法实现API => 利用返回index来找最接近的值!!
+TODO. 利用结果坐标范围[0, length]来找最接近的值!!
 如果找到目标则返回index位置，反之返回负值(-(insertion point) - 1)
 获取插入的位置坐标 index = -(index + 1)
   Arrays.binarySearch(array, target)
