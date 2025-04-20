@@ -1,48 +1,70 @@
 package trees;
 
-import tree.bean.TreeNode;
-
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 
 // Find Duplicate Subtrees
 // Given the root of a binary tree, return all duplicate subtrees
 // For each kind of duplicate subtrees, you only need to return the root node of any one of them
 // Two trees are duplicate if they have the same structure with the same node values
+//
+// The number of the nodes in the tree will be in the range [1, 5000]
+// -200 <= Node.val <= 200
 public class FindDuplicateSubtrees {
 
+    // TODO. 将Sub子树的判断转换成String键值的判断, 递归查找
+    //  1(2(4),3(2(4),4))
     // root = [1,2,3,4,null,2,4,null,null,4] -> [[2,4],[4]]
-    //     1       本质上是要构建每个subtree的唯一key键值的表示，通过key确定子树是否已经存在 !!
-    //   2   3     计算子树"序列化"的值来作为key     1(2(4),3(2(4),4)) 3(2(4),4)
-    // 4    2  4   必须要考虑值在左边或右边的子树上面
-    //     4       首先确定以什么方式遍历完整个树 ??  只能使用前序和后序遍历 !!
-    private int curId = 1;
-
+    //     1
+    //   2   3
+    // 4    2  4
+    //     4
+    //
+    // root = [2,2,2,3,null,3,null] -> [[2,3],[3]]
+    //    2
+    //  2    2
+    // 3    3
+    //
+    // O(N) 递归遍历所有的Node节点
+    // O(N) 栈空间的开销
     public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
-        Map<String, Integer> serialToId = new HashMap<>();
-        Map<Integer, Integer> idToCount = new HashMap<>();
-        List<TreeNode> res = new LinkedList<>();
-        postorder(root, serialToId, idToCount, res);
-        return res;
+         HashMap<String, Integer> subTreeStrMap = new HashMap<>();
+         List<TreeNode> result = new LinkedList<>();
+         process(root, subTreeStrMap, result);
+         return result;
     }
 
-    // 用后续遍历构建出当前node的Serial序列, 满足重复序列的则提取到结果list中
-    private int postorder(TreeNode root, Map<String, Integer> serialToId,
-                          Map<Integer, Integer> idToCount, List<TreeNode> res) {
-        if (root == null) return 0;
-        int leftId = postorder(root.getLeft(), serialToId, idToCount, res);
-        int rightId = postorder(root.getRight(), serialToId, idToCount, res);
-        String curSerial = leftId + "," + root.getVal() + "," + rightId;
+    // TODO. 在递归过程中构建SubTree的字符串，判断是否存在
+    private String process(TreeNode currentRoot, HashMap<String, Integer> subTreeStrMap, List<TreeNode> result) {
+        if (currentRoot == null) {
+            return "";
+        }
+        // 构建Root根节点树的字符串
+        int currentValue = currentRoot.val;
+        String leftSubTreeStr = process(currentRoot.left, subTreeStrMap, result);
+        String rightSubTreeStr = process(currentRoot.right, subTreeStrMap, result);
+        String subTreeStr = currentValue + "(" + leftSubTreeStr + ")" + rightSubTreeStr;
 
-        int serialId = serialToId.getOrDefault(curSerial, curId);
-        if (serialId == curId) curId++;
-        serialToId.put(curSerial, serialId);
-
-        int serialIdCount = idToCount.getOrDefault(serialId, 0);
-        idToCount.put(serialId, serialIdCount + 1);
-        if (idToCount.get(serialId) == 2) res.add(root);
-        return serialId;
+        // 只会统计一次相同的SubTree更节点
+        int foundCount = subTreeStrMap.getOrDefault(subTreeStr, 0);
+        if (foundCount == 1) {
+            result.add(currentRoot);
+        }
+        subTreeStrMap.put(subTreeStr, foundCount+1);
+        return subTreeStr;
     }
+
+    public class TreeNode {
+       int val;
+       TreeNode left;
+       TreeNode right;
+       TreeNode() {}
+       TreeNode(int val) { this.val = val; }
+       TreeNode(int val, TreeNode left, TreeNode right) {
+           this.val = val;
+           this.left = left;
+           this.right = right;
+       }
+   }
 }

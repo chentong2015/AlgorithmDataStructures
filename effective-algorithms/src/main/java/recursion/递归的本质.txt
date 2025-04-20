@@ -1,26 +1,27 @@
-Recursion递归
-1. 使用递归在很多情况下能够轻松解决问题，例如Tree树的递归
-2. 递归可能导致方法的调用层级过深(可能指数倍的次数)，空间复杂度造成StackOverflow
+TODO. Recursion 递归算法
+- 算法广泛运用于层次问题的解决, 例如Tree树的递归
+- 算法可能导致调用层级过深(指数倍次数)，造成StackOverflow空间复杂度
 
-TODO: Recursion递归方法的典型运用，3步操作逻辑
+TODO: Recursion递归模版方法
 1. 判断和排除特殊情况，以便直接返回
 2. 正常执行一个(单元)逻辑的基本操作步骤
 3. 调用自身，剩下的交给该方法再做一次
-   public void others(int value) {
-       if (value == 0) {
-           return;
-       }
-       others(value - 1);
-   }
-   //
-   // others(5)
-   //   others(4)
-   //     others(3)
-   //       others(2)
-   //         others(1)
-   //           others(0) return; 递归到底则无法继续递归，开始返回
-   //         test1_todo        递归到底返回后继续后续执行
-   //       test2_todo
-   //     test3_todo
-   //   test4_todo
-   // test5_todo
+
+public void others(int value) {
+    if (value == 0) {
+        return;
+    }
+    others(value - 1);
+}
+//
+// others(5)
+//   others(4)
+//     others(3)
+//       others(2)
+//         others(1)
+//           others(0) return; 递归到底则无法继续递归，开始返回
+//         test1_todo        递归到底返回后继续后续执行
+//       test2_todo
+//     test3_todo
+//   test4_todo
+// test5_todo

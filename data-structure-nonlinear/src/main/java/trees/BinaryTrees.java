@@ -2,7 +2,7 @@ package trees;
 
 import tree.bean.TreeNode;
 
-public class BinaryTreeQuestion {
+public class BinaryTrees {
 
     // 1 + 2 + 4 + 8 ... n = a1(2^n -1) => 2^n
     // Maximum Depth of Binary Tree 2叉树的深度
