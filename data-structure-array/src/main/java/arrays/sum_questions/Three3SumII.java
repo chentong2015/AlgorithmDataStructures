@@ -13,7 +13,6 @@ public class Three3SumII {
 
     // TODO: 由于需要返回不同值的组合结果，必须排序
     //  然后固定一个值，将3Sum问题降维到2Sum问题
-    //
     // [-1,0,1,2,-1,-4] -> [[-1,-1,2],[-1,0,1]]
     // [0,1,1] -> []
     // [0,0,0] -> [0,0,0]
@@ -22,8 +21,8 @@ public class Three3SumII {
     // i  j         k
     //   i      j k
     //
-    // O(logN + N*N)
-    // O(N)
+    // O(logN + N*N)  降维后的复杂度
+    // O(N/2)         最多可能有n/2种不同的结果组合
     public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
         List<List<Integer>> res = new ArrayList<>();
