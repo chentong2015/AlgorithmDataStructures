@@ -1,5 +1,3 @@
-package hard;
-
 import java.util.*;
 
 // Smallest String With Swaps

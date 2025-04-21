@@ -1,4 +1,4 @@
-package subarrays;
+package subarrays.min_max;
 
 public class SumSubarrayMinOk {
 

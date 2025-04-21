@@ -16,7 +16,7 @@
         <module>data-structure-nonlinear</module>
         <module>effective-algorithms</module>
         <module>leetcode-problems</module>
-        <module>leetcode-problems-other</module>
+        <module>leetcode-problems-todo</module>
         <module>working-interviews</module>
     </modules>
 

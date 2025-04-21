@@ -1,4 +1,4 @@
-package hard.path_effort;
+package path_effort;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;

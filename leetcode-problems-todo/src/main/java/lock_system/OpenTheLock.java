@@ -1,4 +1,4 @@
-package hard.lock_system;
+package lock_system;
 
 import java.util.*;
 

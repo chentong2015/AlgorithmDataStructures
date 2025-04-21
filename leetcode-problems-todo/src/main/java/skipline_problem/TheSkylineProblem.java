@@ -1,4 +1,4 @@
-package hard.skipline_problem;
+package skipline_problem;
 
 import java.util.*;
 

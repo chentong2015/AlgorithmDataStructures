@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>leetcode-problems-other</artifactId>
+    <artifactId>leetcode-problems-todo</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
