@@ -31,16 +31,14 @@ public class LongestIncreasingSubsequence {
         int[] dp = new int[nums.length];
         int length = 0;
         for (int num : nums) {
-            // If not found, return (-(insertion point) - 1)
-            int index = Arrays.binarySearch(dp, 0, length, num);
-
             // 找到插入的位置进行替换，如果在末尾则扩容
+            int index = Arrays.binarySearch(dp, 0, length, num);
             if (index < 0) {
                 index = -(index + 1);
             }
             dp[index] = num;
 
-            // TODO. 如果是在最后坐标插入，自然往后延长一个坐标
+            // 如果在最后坐标插入，累加统计
             if (index == length) {
                 length++;
             }
