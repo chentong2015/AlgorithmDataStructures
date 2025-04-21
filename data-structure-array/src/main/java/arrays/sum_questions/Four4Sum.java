@@ -42,22 +42,22 @@ public class Four4Sum {
 
         List<List<Integer>> result = new ArrayList<>();
         for (int a = 0; a < nums.length; a++) {
-            // nums[a]移动到下一个新值
+            // nums[a]移动到下一个新值, 直接continue
             if (a > 0 && nums[a-1] == nums[a]) {
                continue;
             }
 
             int b = a + 1;
             while (b < nums.length) {
-                // 内层是一个双指针的查找算法
+                // TODO. 内层是一个双指针的查找算法
                 int c = b + 1;
                 int d = nums.length - 1;
                 while (c < d) {
-                    // TODO. 注意SUM和值可能越界而变成负数-294967296
+                    // 注意SUM和值可能越界而变成负数-294967296
                     long sum = (long) nums[a] + nums[b] + nums[c] + nums[d];
-                    if (sum < (long) target) {
+                    if (sum < target) {
                         c++;
-                    } else if (sum > (long) target) {
+                    } else if (sum > target) {
                         d--;
                     } else {
                         result.add(List.of(nums[a], nums[b], nums[c], nums[d]));

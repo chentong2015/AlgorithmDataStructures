@@ -29,24 +29,24 @@ public class FindDuplicateSubtrees {
     // O(N) 递归遍历所有的Node节点
     // O(N) 栈空间的开销
     public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
-         HashMap<String, Integer> subTreeStrMap = new HashMap<>();
-         List<TreeNode> result = new LinkedList<>();
-         process(root, subTreeStrMap, result);
-         return result;
+        HashMap<String, Integer> subTreeStrMap = new HashMap<>();
+        List<TreeNode> result = new LinkedList<>();
+        recursion(root, subTreeStrMap, result);
+        return result;
     }
 
     // TODO. 在递归过程中构建SubTree的字符串，判断是否存在
-    private String process(TreeNode currentRoot, HashMap<String, Integer> subTreeStrMap, List<TreeNode> result) {
+    private String recursion(TreeNode currentRoot, HashMap<String, Integer> subTreeStrMap, List<TreeNode> result) {
         if (currentRoot == null) {
             return "";
         }
         // TODO. 递归，构建Root根节点树的字符串
         int currentValue = currentRoot.val;
-        String leftSubTreeStr = process(currentRoot.left, subTreeStrMap, result);
-        String rightSubTreeStr = process(currentRoot.right, subTreeStrMap, result);
+        String leftSubTreeStr = recursion(currentRoot.left, subTreeStrMap, result);
+        String rightSubTreeStr = recursion(currentRoot.right, subTreeStrMap, result);
         String subTreeStr = currentValue + "(" + leftSubTreeStr + ")" + rightSubTreeStr;
 
-        // 只会统计一次相同的SubTree更节点
+        // 只会统计一次相同的SubTree, 本质上是字符串相等
         int foundCount = subTreeStrMap.getOrDefault(subTreeStr, 0);
         if (foundCount == 1) {
             result.add(currentRoot);

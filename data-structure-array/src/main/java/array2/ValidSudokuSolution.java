@@ -36,7 +36,7 @@ public class ValidSudokuSolution {
     //,[".",".",".","4","1","9",".",".","5"]
     //,[".",".",".",".","8",".",".","7","9"]]
     //
-    // O(1) 有限的时间和空间复杂度
+    // O(1) 直接使用index坐标定位速度最快
     // O(1)
     public boolean isValidSudoku(char[][] board) {
         int[][] blockNums = new int[27][9];

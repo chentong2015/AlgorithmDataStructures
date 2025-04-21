@@ -11,7 +11,7 @@ import java.util.*;
 // 2. The Graph is connected and all nodes can be visited starting from the given node
 public class CloneGraph {
 
-    // TODO. 本质上是在Copy节点和它的相邻关系，只需设置Node节点的引用即可
+    // TODO. 本质是在Copy节点和它的相邻关系，只需设置Node节点引用
     // Input: adjList = [[2,4],[1,3],[2,4],[1,3]]
     // Output: [[2,4],[1,3],[2,4],[1,3]]
     //
@@ -38,8 +38,8 @@ public class CloneGraph {
         return clone(node, cloneNodeMap);
     }
 
-    // 如果克隆的节点已经被创建，则之间引用新节点
     private Node clone(Node node, HashMap<Integer, Node> cloneNodeMap) {
+        // 如果克隆的节点已经被创建，则直接返回引用
         if (cloneNodeMap.containsKey(node.val)) {
             return cloneNodeMap.get(node.val);
         }
