@@ -31,19 +31,19 @@ public class MinAreaRectangle {
             pointSet.add(point[0] + "," + point[1]);
         }
 
+        // 遍历所有bottom-left和top-right坐标的组合
         int minArea = Integer.MAX_VALUE;
         for (int i = 0; i < points.length; i++) {
             for (int j = i + 1; j < points.length; j++) {
-                // 遍历所有bottom-left和top-right坐标的组合
                 int x1 = points[i][0];
                 int y1 = points[i][1];
                 int x2 = points[j][0];
                 int y2 = points[j][1];
 
-                // TODO. 根据两个坐标来验证Rectangle四个坐标
+                // TODO. 根据两个坐标判断是否存在Rectangle四个坐标
                 if (x1 != x2 && y1 != y2) {
                     if (pointSet.contains(x1 + "," + y2) && pointSet.contains(x2 + "," + y1)) {
-                        // 由于不确定大小，计算必须取绝对值
+                        // 由于不确定大小，计算面积必须取绝对值
                         int area = Math.abs(x2 - x1) * Math.abs(y2 - y1);
                         minArea = Math.min(minArea, area);
                     }

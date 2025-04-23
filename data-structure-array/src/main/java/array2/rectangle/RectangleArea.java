@@ -15,7 +15,7 @@ package array2.rectangle;
 // -10^4 <= by1 <= by2 <= 10^4
 public class RectangleArea {
 
-    // TODO. (X,Y)二维坐标的交集计算
+    // TODO. (X,Y)二维坐标的交集计算: 用小的右坐标 - 大的左坐标
     // (-3,0) - (3,4)
     //    (0,-1) - (9,2)
     //
@@ -25,7 +25,7 @@ public class RectangleArea {
         int area1 = (ax2 - ax1) * (ay2 - ay1);
         int area2 = (bx2 - bx1) * (by2 - by1);
 
-        // TODO. 通用交集计算公式: (MinX2 - MaxX1) * (MinY2 - MaxY1)
+        // TODO. 计算公式: (MinX2 - MaxX1) * (MinY2 - MaxY1)
         int cx1 = Math.max(ax1, bx1);
         int cx2 = Math.min(ax2, bx2);
         int cy1 = Math.max(ay1, by1);

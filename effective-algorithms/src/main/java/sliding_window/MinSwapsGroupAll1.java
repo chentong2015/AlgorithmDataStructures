@@ -12,7 +12,8 @@ package sliding_window;
 // nums[i] is either 0 or 1.
 public class MinSwapsGroupAll1 {
 
-    // TODO. 无需考虑移动过程，1的个数就是Sliding Window区间大小
+    // TODO. 最终的结果是将所有1全部移动到Sliding Window区间内
+    //  在Sliding Window区间内0的数目就是需要移动的次数
     // nums = [0,1,0,1,1,0,0]
     // [0,0,1,1,1,0,0] using 1 swap.
     // [0,1,1,1,0,0,0] using 1 swap.
