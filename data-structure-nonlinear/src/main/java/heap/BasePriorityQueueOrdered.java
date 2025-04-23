@@ -47,23 +47,33 @@ public class BasePriorityQueueOrdered {
         }
     }
 
-    // TODO. 根据Node节点类型, 自定义堆中元素的比较方式
     public static void testPriorityQueueOrdered() {
-        PriorityQueue<QueueNode> queue = new PriorityQueue<>(new Comparator<QueueNode>() {
+        // TODO. 自定义Node比较构建Min-Heap堆
+        PriorityQueue<HeapNode> minHeap = new PriorityQueue<>(new Comparator<HeapNode>() {
             @Override
-            public int compare(QueueNode o1, QueueNode o2) {
-                if (o1.units < o2.units) {
+            public int compare(HeapNode o1, HeapNode o2) {
+                if (o1.frequency < o2.frequency) {
                     return 1;
-                } else if (o1.units > o2.units) {
+                } else if (o1.frequency > o2.frequency) {
                     return -1;
+                } else {
+                    return 0;
                 }
-                return o1.name.compareTo(o2.name);
             }
         });
+
+        // TODO. 自定义Node比较构建Max-Heap堆
+        PriorityQueue<HeapNode> maxHeap = new PriorityQueue<>(
+                Comparator.comparingInt((HeapNode o) -> o.frequency).reversed());
     }
 
-    static class QueueNode {
-        int units;
-        String name;
+    class HeapNode {
+        String word;
+        int frequency;
+
+        public HeapNode(String word, int frequency) {
+            this.word = word;
+            this.frequency = frequency;
+        }
     }
 }
