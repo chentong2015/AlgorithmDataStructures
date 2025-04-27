@@ -1,6 +1,12 @@
 TODO. 一维数组自然排序
 int[] nums = {1,4,2,3,6};
 Arrays.sort(nums);
+ Arrays.sort(logs, startIndex, endIndex, new Comparator<String>() {
+    @Override
+    public int compare(String log1, String log2) {
+       // 定义比较器规则
+    }
+});
 
 TODO. 二维数组自然排序，比较特定位置的值或者同时比较
 int[][] nums = {{1,2,4}, {3,1,5}, {5,2,4}};

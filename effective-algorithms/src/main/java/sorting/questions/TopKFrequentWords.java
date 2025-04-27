@@ -38,16 +38,13 @@ public class TopKFrequentWords {
         }
 
         // TODO. 先根据频率，然后根据单词排序
-        Collections.sort(nodes, new Comparator<Node>() {
-            @Override
-            public int compare(Node node1, Node node2) {
-                if (node1.frequency > node2.frequency) {
-                    return -1;
-                } else if (node1.frequency < node2.frequency) {
-                    return 1;
-                } else {
-                    return node1.word.compareTo(node2.word);
-                }
+        Collections.sort(nodes, (node1, node2) -> {
+            if (node1.frequency > node2.frequency) {
+                return -1;
+            } else if (node1.frequency < node2.frequency) {
+                return 1;
+            } else {
+                return node1.word.compareTo(node2.word);
             }
         });
 
