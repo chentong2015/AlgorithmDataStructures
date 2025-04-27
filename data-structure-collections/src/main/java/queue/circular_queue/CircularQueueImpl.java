@@ -1,4 +1,4 @@
-package queue_circular;
+package queue.circular_queue;
 
 public class CircularQueueImpl {
 
