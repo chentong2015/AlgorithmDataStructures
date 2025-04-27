@@ -1,0 +1,13 @@
+Collections.binarySearch(list, item)
+如果找到目标则返回index位置，
+反之返回负值(-(insertion point) - 1)
+
+TODO. 利用结果坐标范围[0, length]来找最接近的值!!
+获取插入的位置坐标 index = -(index + 1)
+
+List.of(0,1,1,1,5)
+Collections.binarySearch(list, 0); // 0
+Collections.binarySearch(list, 1); // 2 找到中间位置
+Collections.binarySearch(list, 2); // 4 在5的位置插入
+Collections.binarySearch(list, 5); // 4 找到的确定位置
+Collections.binarySearch(list, 8); // 5 追加扩容元素

@@ -1,4 +1,4 @@
-package heap.k_top_questions;
+package sorting.questions;
 
 import java.util.*;
 

@@ -1,0 +1,17 @@
+TODO. 一维数组自然排序
+int[] nums = {1,4,2,3,6};
+Arrays.sort(nums);
+
+TODO. 二维数组自然排序，比较特定位置的值或者同时比较
+int[][] nums = {{1,2,4}, {3,1,5}, {5,2,4}};
+Arrays.sort(nums, Comparator.comparingInt(m -> m[0]));
+
+Arrays.sort(meetings, (a, b) -> a[0] - b[0]);
+
+Arrays.sort(envelopes, (arr1, arr2) -> {
+    if (arr1[0] == arr2[0]) {
+        return arr2[1] - arr1[1];
+    } else {
+        return arr1[0] - arr2[0];
+    }
+});

@@ -1,4 +1,4 @@
-package sorting.count_sorting;
+package sorting.algo.count_sort;
 
 // 查找h-index的分界位置标识
 // 使数组中有h个元素至少有h个papers，其余n-h个元素拥有不超过h个paper

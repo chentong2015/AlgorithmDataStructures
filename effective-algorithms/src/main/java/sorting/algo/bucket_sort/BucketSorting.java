@@ -1,4 +1,4 @@
-package sorting.bucket_sort;
+package sorting.algo.bucket_sort;
 
 import java.util.ArrayList;
 import java.util.List;

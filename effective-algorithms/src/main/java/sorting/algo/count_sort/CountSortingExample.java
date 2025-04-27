@@ -1,4 +1,4 @@
-package sorting.count_sorting;
+package sorting.algo.count_sort;
 
 public class CountSortingExample {
 

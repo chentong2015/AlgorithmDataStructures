@@ -1,0 +1,11 @@
+TODO. 二分搜索结果的index范围
+ if index >=0; [0, length - 1]
+ if index < 0; [0, length]
+    恢复(-(insertion point) - 1)插入位置, 得到闭合区间
+int[] nums = {1, 5, 6, 8};
+Arrays.binarySearch(nums, 0, nums.length, 1); -> 0
+Arrays.binarySearch(nums, 0, nums.length, 3); -> -2 恢复成中间的插入坐标 1
+Arrays.binarySearch(nums, 0, nums.length, 10); -> -5 插入的坐标位置在最后 4
+
+Arrays.binarySearch(array, target)
+Arrays.binarySearch(array, fromIndex, toIndex, target) 指定二分查询区间

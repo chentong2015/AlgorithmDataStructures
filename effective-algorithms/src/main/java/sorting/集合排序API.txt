@@ -1,0 +1,10 @@
+按照集合元素的默认比较规则进行排序
+Collections.sort(list);
+
+根据自定义的比较器排序集合元素
+Collections.sort(itemList, new itemComparator());
+
+颠倒集合中元素的顺序
+Collections.reverse();
+Collections.reverseOrder();
+Comparator.reverseOrder();

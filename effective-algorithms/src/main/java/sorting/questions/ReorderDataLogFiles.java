@@ -1,4 +1,4 @@
-package sorting.heap_sort;
+package sorting.questions;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
