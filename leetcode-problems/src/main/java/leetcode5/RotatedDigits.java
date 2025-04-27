@@ -20,8 +20,7 @@ public class RotatedDigits {
     // n = 10 -> 4
     // good numbers in [1, 10] : 2, 5, 6, 9.
     //
-    // O(N)
-    // O(1)
+    // O(N) O(1)
     public int rotatedDigits(int n) {
         int count = 0;
         for (int i = 1; i <= n; i++) {
@@ -32,7 +31,7 @@ public class RotatedDigits {
         return count;
     }
 
-    // TODO. 旋转规则的特点
+    // TODO. 旋转规则的算法逻辑
     // - 如果存在 3 4 7 则旋转无效
     // - 对于数字 0 1 8 旋转后有效且相等
     // - 对于数字 2 5 6 9 旋转后有效且不等
