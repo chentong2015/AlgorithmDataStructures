@@ -18,12 +18,10 @@ public class CollectionsComparison {
     // 1. compareTo()不能跨不同类型进行比较
     // 2. compareTo()必须满足自反性，对称性，传递性
     class ItemWithComparator implements Comparable<ItemWithComparator> {
-
         private String name;
 
         @Override
         public int compareTo(ItemWithComparator item) {
-
             return this.name.compareTo(item.name);
         }
     }
@@ -35,6 +33,7 @@ public class CollectionsComparison {
         @Override
         public int compare(Item item1, Item item2) {
             if (item1.number > item2.number) {
+                //
                 return 1;
             } else if (item1.number < item2.number) {
                 return -1;

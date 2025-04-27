@@ -16,24 +16,15 @@ import java.util.*;
 // Could you solve it in O(n log(k)) time and O(n) extra space ?
 public class TopKFrequentWords {
 
-    public static void main(String[] args) {
-        String[] words = {"the","day","is","sunny","the","the","the","sunny","is","is"};
-        TopKFrequentWords instance = new TopKFrequentWords();
-        System.out.println(instance.topKFrequent(words, 4));
-    }
-
-    // TODO. 根据统计的频率进行排序
+    // TODO. 自定义Comparator比较器进行排序
     // words = ["i","love","leetcode","i","love","coding"], k = 2
     // -> ["i","love"]
     //
     // words = ["the","day","is","sunny","the","the","the","sunny","is","is"], k = 4
     // -> ["the","is","sunny","day"]
     //
-    // word1: 10
-    // word2: 5
-    // word3: 2
-    // word4: 1
-    //
+    // O(N*logN)    Comparator排序造成的复杂度
+    // O(N + N + K) 需要三个存储空间
     public List<String> topKFrequent(String[] words, int k) {
         HashMap<String, Integer> map = new HashMap<>();
         for (String word : words) {
@@ -41,39 +32,37 @@ public class TopKFrequentWords {
             map.put(word, frequency + 1);
         }
 
-        // [Word, frequency] 排序单词和统计频率: 注意反转排序
-        PriorityQueue<HeapNode> heap = new PriorityQueue<>(
-                Comparator.comparingInt((HeapNode o) -> o.frequency).reversed());
-
-        for (Map.Entry<String, Integer> entry : map.entrySet()) {
-            heap.offer(new HeapNode(entry.getKey(), entry.getValue()));
-            if (heap.size() > k) {
-                heap.poll();
-            }
+        List<Node> nodes = new ArrayList<>();
+        for (String key : map.keySet()) {
+            nodes.add(new Node(key, map.get(key)));
         }
 
-        // 针对相同frequency频率的单词排序
-        List<String> result = new ArrayList<>();
-        while (!heap.isEmpty()) {
-            List<String> topWords = new ArrayList<>();
-            HeapNode node = heap.poll();
-            int frequency = node.frequency;
-            topWords.add(node.word);
-
-            while (!heap.isEmpty() && frequency == heap.peek().frequency) {
-                topWords.add(heap.poll().word);
+        // TODO. 先根据频率，然后根据单词排序
+        Collections.sort(nodes, new Comparator<Node>() {
+            @Override
+            public int compare(Node node1, Node node2) {
+                if (node1.frequency > node2.frequency) {
+                    return -1;
+                } else if (node1.frequency < node2.frequency) {
+                    return 1;
+                } else {
+                    return node1.word.compareTo(node2.word);
+                }
             }
-            Collections.sort(topWords);
-            result.addAll(topWords);
+        });
+
+        List<String> result = new ArrayList<>();
+        for (int index = 0; index < k; index++) {
+            result.add(nodes.get(index).word);
         }
         return result;
     }
 
-    class HeapNode {
+    class Node {
         String word;
         int frequency;
 
-        public HeapNode(String word, int frequency) {
+        public Node(String word, int frequency) {
             this.word = word;
             this.frequency = frequency;
         }

@@ -1,7 +1,7 @@
-Collections.sort(list);       对list元素排序，不适用于Map数据结构 !
-Collections.swap();           交换Array中的两个值，或者泛型List中的两个值 !
-Collections.reverse();        颠倒list中存储对象的地址的顺序 !
-Collections.shuffle();        随机洗牌，随机打乱list中元素
+Collections.sort(list); 对list元素排序，不适用于Map数据结构 !
+Collections.swap();     交换Array中的两个值，或者泛型List中的两个值 !
+Collections.reverse();  颠倒list中存储对象的地址的顺序 !
+Collections.shuffle();  随机洗牌，随机打乱list中元素
 
 TODO. 对集合元素进行二分法查找, 注意返回坐标位置
 List.of(0,1,1,1,5)
@@ -11,17 +11,17 @@ Collections.binarySearch(list, 2); // 4 在5的位置插入
 Collections.binarySearch(list, 5); // 4 找到的确定位置
 Collections.binarySearch(list, 8); // 5 追加扩容元素
 
-返回一个不可变的View视图(read-only只读形式)
+TODO. 返回不可变(read-only)View视图
 Collections.unmodifiable...()
-  Collections.unmodifiableList();
-  Collections.unmodifiableMap();
-  Collections.unmodifiableSortedMap();
-  Collections.unmodifiableSet();
-  Collections.unmodifiableSortedSet();
+Collections.unmodifiableList();
+Collections.unmodifiableMap();
+Collections.unmodifiableSortedMap();
+Collections.unmodifiableSet();
+Collections.unmodifiableSortedSet();
 
+由于存在限制的初始化要求，所以不推荐使用该方法
 Collections.copy(List<? super T> dest, List<? extends T> src) {}
-  由于存在限制的初始化要求，所以不推荐使用该方法
-  1. dest可以是T的父类以上类型，而src源list必须是一个具体的List
-  2. dest的集合可容纳的对象长度必须大于等于src提供的长度
-  3. 在copy时，当T类型为不可变类型，则表现为Deep Copy
-  4. 在copy时，当T类型为可变类型，则表现为Shadow Copy
+1. dest可以是T的父类以上类型，而src源list必须是一个具体的List
+2. dest的集合可容纳的对象长度必须大于等于src提供的长度
+3. 在copy时，当T类型为不可变类型，则表现为Deep Copy
+4. 在copy时，当T类型为可变类型，则表现为Shadow Copy
