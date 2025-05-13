@@ -21,9 +21,6 @@ public class MaxProduct3Numbers {
     // 0,-1,-2,-4 -> 0
     // -5,-3,-2,0,1,4,5 -> 75
     // -10,-8,-1,2,3,4 -> 320
-    //
-    // O(n)
-    // O(1)
     public int maximumProduct(int[] nums) {
         if (nums.length == 3) {
             return nums[0] * nums[1] * nums[2];
@@ -40,8 +37,9 @@ public class MaxProduct3Numbers {
         return result;
     }
 
-    // TODO.
+    // TODO. 遍历时只需要知道两个最小值 + 三个最大值
     public int maximumProductGood(int[] nums) {
+        // 初始化起始位置的最值情况
         int min1 = Integer.MAX_VALUE;
         int min2 = Integer.MAX_VALUE;
         int max1 = Integer.MIN_VALUE;
