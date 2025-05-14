@@ -7,7 +7,7 @@ package two_pointers;
 // 0 <= c <= 2^31 - 1
 public class SumSquareNumbers {
 
-    // TODO. 使用双指针在[0, sqrt(N)]区间查找
+    // TODO. 使用双指针在[0, sqrt(N)]区间查找组合
     // 5 = 1 * 1 + 2 * 2 -> true
     // 4 = 0 * 0 + 2 * 2 -> true
     // 1 = 0 * 0 + 1 * 1 -> true
