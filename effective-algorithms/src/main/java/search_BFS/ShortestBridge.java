@@ -95,6 +95,7 @@ public class ShortestBridge {
                     || (col < grid[0].length - 1 && grid[row][col + 1] == 1)) {
                     return numSteps + 1;
                 }
+                // 从当前位置找下一层的位置坐标
                 bfs(grid, position, nextPositions);
             }
             numSteps++;
