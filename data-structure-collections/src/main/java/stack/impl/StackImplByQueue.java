@@ -3,7 +3,7 @@ package stack.impl;
 import java.util.LinkedList;
 import java.util.Queue;
 
-// TODO. 使用两个Queue可实现Stack的效果: Temp队列用于颠倒数据
+// TODO. 使用两个Queue可实现Stack的效果
 public class StackImplByQueue {
 
     // 用于存储数据的队列

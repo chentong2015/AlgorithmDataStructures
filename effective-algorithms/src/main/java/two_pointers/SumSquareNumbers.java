@@ -7,13 +7,13 @@ package two_pointers;
 // 0 <= c <= 2^31 - 1
 public class SumSquareNumbers {
 
-    // TODO. 使用双指针在[0, sqrt(N)]区间查找组合
+    // TODO. 在[0, sqrt(N)]区间内查找存在的组合
     // 5 = 1 * 1 + 2 * 2 -> true
     // 4 = 0 * 0 + 2 * 2 -> true
     // 1 = 0 * 0 + 1 * 1 -> true
     // 3 -> false
     //
-    // O(sqrt(N))
+    // O(sqrt(N)) 只需要移动平方根的次数
     // O(1)
     public boolean judgeSquareSum(int c) {
         int a = 0;
