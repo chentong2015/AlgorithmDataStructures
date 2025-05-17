@@ -1,14 +1,13 @@
 package leetcode5;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 // Exam Room
 // There is an exam room with n seats in a single row labeled from 0 to n - 1.
-// When a student enters the room, they must sit in the seat
-// that maximizes the distance to the closest person.
-// If there are multiple such seats, they sit in the seat with the lowest number.
-// If no one is in the room, then the student sits at seat number 0.
+// When a student enters the room,
+// - they must sit in the seat that maximizes the distance to the closest person.
+// - If there are multiple such seats, they sit in the seat with the lowest number.
+// - If no one is in the room, then the student sits at seat number 0.
 //
 // Design a class that simulates the mentioned exam room.
 // Implement the ExamRoom class:
@@ -28,32 +27,54 @@ public class ExamRoom {
     // 0   2             9  出去4号位的人
     // 0   2     5       9  进入一个新的人
 
-    int[] seats;
-    List<Integer> seatsTaken;
+    private int n;
+    private ArrayList<Integer> list;
 
     public ExamRoom(int n) {
-        this.seats = new int[n];
-        this.seatsTaken = new ArrayList<>();
+        this.n = n;
+        this.list = new ArrayList<>();
     }
 
-    // O(n * log(n)) 时间复杂度
+    // O(P) P是当前存储的学生数目，基于当前数目来插入
     public int seat() {
-        List<Integer> nums = new ArrayList<>();
-        int maxGap = 0;
-        int start = 0;
-        for (int index = 0; index < nums.size() - 1; index++) {
-            int gap = nums.get(index + 1) - nums.get(index);
-            if (maxGap + 1 < gap) {
-                maxGap = gap;
-                start = nums.get(index);
+        if (list.isEmpty()){
+            list.add(0);
+            return 0;
+        }
+
+        int length = list.size();
+        int distLast = n - 1 - list.get(length - 1);
+        int distMax = Math.max(list.get(0), distLast);
+        for (int i = 0; i < length - 1; i++){
+            int distCurrent = (list.get(i + 1) - list.get(i)) / 2;
+            distMax = Math.max(distMax, distCurrent);
+        }
+        // 特殊情况，只能追加在开头
+        if (distMax == list.get(0)){
+            list.add(0, 0);
+            return 0;
+        }
+
+        // TODO. 找到最大Dist位置往后添加一个数据
+        for (int i = 0; i < length - 1; i++){
+            int distCurrent = (list.get(i + 1) - list.get(i)) / 2;
+            if (distMax == distCurrent){
+                list.add(i + 1, list.get(i) + distCurrent);
+                return list.get(i + 1);
             }
         }
-        return 0;
+
+        list.add(n - 1);
+        return n - 1;
     }
 
-    // O(n) 时间复杂度
+    // O(P)
     public void leave(int p) {
-        this.seats[p] = 0;
-        seatsTaken.remove(p);
+        for (int i = 0; i < list.size(); i++){
+            if (list.get(i) == p){
+                list.remove(i);
+                break;
+            }
+        }
     }
 }

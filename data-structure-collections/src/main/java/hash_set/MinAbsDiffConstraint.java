@@ -1,4 +1,4 @@
-package searching_binary.min_absolute;
+package hash_set;
 
 import java.util.List;
 import java.util.TreeSet;
@@ -17,7 +17,7 @@ import java.util.TreeSet;
 // 1 <= nums.length <= 10^5
 // 1 <= nums[i] <= 10^9
 // 0 <= x < nums.length
-public class MinAbsoluteDiffConstraint {
+public class MinAbsDiffConstraint {
 
     // TODO. 在循环过程中实时排序 + 二分查找(调用Sorted数据结构API)
     // nums = [4,3,2,4], x = 2 -> 0

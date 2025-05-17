@@ -3,11 +3,12 @@ package hash_set;
 import java.util.Comparator;
 import java.util.TreeSet;
 
-// TODO. TreeSet<>插入和查找都是logN时间复杂度
+// TODO. Ordered Set 有排序的Set集合
 public class BaseTreeSet {
 
+    // TreeSet<>插入和查找都是logN时间复杂度
     public static void main(String[] args) {
-        // TODO. 默认根据元素“自然大小”排序
+        // 默认根据元素“自然大小”排序
         TreeSet<Integer> treeSet = new TreeSet<>();
         treeSet.add(10);
         treeSet.add(6);
@@ -25,14 +26,13 @@ public class BaseTreeSet {
         System.out.println(treeSet.ceiling(5));// 5
         System.out.println(treeSet.floor(5));  // 5
 
-        // TODO. 自定义Comparator比较器规则(实现倒叙)
+        // 自定义Comparator比较器规则(实现倒叙)
         TreeSet<String> treeSetReverse = new TreeSet<>(new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
                 return o2.compareTo(o1);
             }
         });
-
         treeSetReverse.add("item1");
         treeSetReverse.add("item4");
         treeSetReverse.add("item3");
