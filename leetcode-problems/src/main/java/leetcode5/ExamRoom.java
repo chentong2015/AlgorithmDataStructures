@@ -46,9 +46,11 @@ public class ExamRoom {
         int distLast = n - 1 - list.get(length - 1);
         int distMax = Math.max(list.get(0), distLast);
         for (int i = 0; i < length - 1; i++){
+            // 求距离需要除以2进行比较
             int distCurrent = (list.get(i + 1) - list.get(i)) / 2;
             distMax = Math.max(distMax, distCurrent);
         }
+
         // 特殊情况，只能追加在开头
         if (distMax == list.get(0)){
             list.add(0, 0);
@@ -64,6 +66,7 @@ public class ExamRoom {
             }
         }
 
+        // list中只有一个数据，选择最大坐标进行插入
         list.add(n - 1);
         return n - 1;
     }
