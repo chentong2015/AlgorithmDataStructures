@@ -35,18 +35,17 @@ public class ExamRoom {
         this.list = new ArrayList<>();
     }
 
-    // O(P) P是当前存储的学生数目，基于当前数目来插入
+    // O(P) P是当前存储的学生数目
     public int seat() {
         if (list.isEmpty()){
             list.add(0);
             return 0;
         }
 
-        int length = list.size();
-        int distLast = n - 1 - list.get(length - 1);
+        // 计算距离除以2进行比较
+        int distLast = (n - 1) - list.get(list.size() - 1);
         int distMax = Math.max(list.get(0), distLast);
-        for (int i = 0; i < length - 1; i++){
-            // 求距离需要除以2进行比较
+        for (int i = 0; i < list.size() - 1; i++){
             int distCurrent = (list.get(i + 1) - list.get(i)) / 2;
             distMax = Math.max(distMax, distCurrent);
         }
@@ -58,7 +57,7 @@ public class ExamRoom {
         }
 
         // TODO. 找到最大Dist位置往后添加一个数据
-        for (int i = 0; i < length - 1; i++){
+        for (int i = 0; i < list.size() - 1; i++){
             int distCurrent = (list.get(i + 1) - list.get(i)) / 2;
             if (distMax == distCurrent){
                 list.add(i + 1, list.get(i) + distCurrent);
@@ -66,12 +65,12 @@ public class ExamRoom {
             }
         }
 
-        // list中只有一个数据，选择最大坐标进行插入
+        // list中只有一个数据时返回最大坐标
         list.add(n - 1);
         return n - 1;
     }
 
-    // O(P)
+    // O(P) 最差情况需要遍历当前所有分配的序号
     public void leave(int p) {
         for (int i = 0; i < list.size(); i++){
             if (list.get(i) == p){

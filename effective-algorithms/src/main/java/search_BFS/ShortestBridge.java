@@ -62,6 +62,7 @@ public class ShortestBridge {
         return islandPositions;
     }
 
+    // -1 DFS之后的标记值
     private void dfs(int[][] grid, int row, int col, ArrayList<int[]> islandPositions) {
         islandPositions.add(new int[] {row, col});
         grid[row][col] = -1;
@@ -103,6 +104,7 @@ public class ShortestBridge {
         return numSteps;
     }
 
+    // 2 BFS后的标记值
     private void bfs(int[][] grid, int[] startPosition, Queue<int[]> nextPositions) {
         int row = startPosition[0];
         int col = startPosition[1];
