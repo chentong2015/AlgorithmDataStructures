@@ -24,7 +24,7 @@ public class TargetSum {
     }
 
     private void backtracking(int[] nums, int index, int target, int tempSum) {
-        // 终止条件: 对于最后一个位置两种情况均需要统计
+        // 终止条件: 统计最后位置两种情况的加减
         if (index == nums.length - 1) {
             if (tempSum + nums[index] == target) {
                 targetSum++;

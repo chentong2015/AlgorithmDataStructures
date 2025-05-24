@@ -4,8 +4,8 @@ import java.util.HashMap;
 
 public class RomanToInteger {
 
-    // TODO. 直接遍历, 并优先判断两个字符的值
-    // 罗马数组的特点: 大的字符一定在坐标，小的字符在右侧
+    // TODO. 直接遍历并优先判断两个字符的值
+    // 不需要使用回溯递归判断，因为只有一层有效的字符组合
     //
     // Input: MCMCDXLI
     // Output: 1000 + 900 + 400 + 40 + 1 = 2341
@@ -46,6 +46,7 @@ public class RomanToInteger {
     }
 
     // TODO. 基于罗马数字的生成逻辑进行推理(构成)
+    // 罗马数字特点: 大的字符一定在⬅左侧，小的字符一定在右侧
     public int romanToInt(String s) {
         int total = 0;
         char[] chars = s.toCharArray();
