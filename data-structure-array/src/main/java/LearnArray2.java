@@ -1,5 +1,3 @@
-package array;
-
 public class LearnArray2 {
 
     // TODO. 使用变量保留index右侧的最大值信息(变量的历史信息)

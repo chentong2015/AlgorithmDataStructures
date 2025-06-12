@@ -1,5 +1,3 @@
-package array;
-
 public class LearnArray3 {
 
     // TODO: 左边总值 + 中间值 + 右边总值 = 数组和总值

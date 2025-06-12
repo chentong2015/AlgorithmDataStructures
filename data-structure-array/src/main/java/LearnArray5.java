@@ -1,5 +1,3 @@
-package array;
-
 public class LearnArray5 {
 
     // 找出int类型的数组中最接近0的值，如果有两个同距离的值，则返回正数

@@ -1,5 +1,3 @@
-package array;
-
 import java.util.HashSet;
 
 public class LearnArray1 {
@@ -75,36 +73,6 @@ public class LearnArray1 {
         }
         result[0] = nums[left] * nums[left]; // 最后补充相同位置的中间最小值 !!
         return result;
-    }
-
-    // TODO: Duplicate Zeros 两遍遍历(每次的操作和意义都不同)，根据统计数目确定元素移动的步数(index位置) !!
-    // Given a fixed length array arr of integers, duplicate each occurrence of zero, shifting the remaining elements to the right
-    // Note that elements beyond the length of the original array are not written
-    // arr = [1,0,2,3,0,4,5,0] -> [1,0,0,2,3,0,0,4] 只能在数组内操作，舍弃超过数组长度的数据
-    //       [1,0,2,3,0,4,0,0] 中间过渡的数组，前面有多少个0，则尾部位置上面就补充多少个0，因为对应位置上的值会被移出数组之外 !!
-    public void duplicateZeros(int[] arr) {
-        // 正确理解：1. 第一遍统计出来0，最后再将元素对应到到指定的位置，从尾部开始填写并将0进行展开 O(n) O(1)
-        int countZero = 0;
-        int length = arr.length - 1;
-        for (int left = 0; left <= length - countZero; left++) {
-            if (arr[left] == 0) {
-                if (left == length - countZero) {   // 边界条件: [1,2,3,0,0?,0] ?位置的0没有办法被扩展2次，则直接保留一次即可
-                    arr[length--] = 0;              // 将数组的最后一个位置确定为0，然后下降一位 !!
-                    break;                          // break退出，不考虑对该0的统计
-                }
-                countZero++;
-            }
-        }
-        int last = length - countZero;               // 取第一个有效的元素，该元素的右侧全部为0  ===>
-        for (int index = last; index >= 0; index--) {
-            if (arr[index] == 0) {
-                arr[index + countZero] = 0;          // 0的移动可以看成是包含自身作用的移动位置，和它前面的0的数目的移动位置
-                countZero--;                         // 碰到一个0之后，降低一个0的作用
-                arr[index + countZero] = 0;
-            } else {
-                arr[index + countZero] = arr[index]; // 普通index的位置，前面多少个0，就应该往后移动多少个位置 ===> 问题的核心
-            }
-        }
     }
 
     // TODO: 数组HashSet数据结构的金典使用，边读取边判断指定的条件 !!
