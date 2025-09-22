@@ -8,9 +8,6 @@ import java.util.List;
 public class ArrayListBase {
 
     public static void main(String[] args) {
-        // TODO. List.of()构建列表不可再被修改
-        List<Integer> needs = List.of(2,3);
-
         // TODO. List列表创建时直接初始化数据
         Integer[] nums = {1, 2, 3};
         List<Integer> list = new ArrayList<>(Arrays.asList(nums));
