@@ -1,4 +1,4 @@
-package rectangle_questions;
+package todo.rectangle_questions;
 
 // Maximal Rectangle
 // Given a rows x cols binary matrix filled with 0's and 1's,
