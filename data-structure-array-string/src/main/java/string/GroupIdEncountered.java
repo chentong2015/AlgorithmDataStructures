@@ -47,7 +47,7 @@ public class GroupIdEncountered {
         Map<String, Integer> map = new HashMap<>();
         for (String value : values) {
             if (map.containsKey(value)) {
-               char charInserted = (char) ('A' + map.get(value) - 1);
+                char charInserted = (char) ('A' + map.get(value) - 1);
                 result.add(prefix + charInserted + "00" + value);
                 map.put(value, map.get(value) + 1);
             } else {
