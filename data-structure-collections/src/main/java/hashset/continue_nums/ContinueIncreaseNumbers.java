@@ -1,4 +1,4 @@
-package hash_set.continue_nums;
+package hashset.continue_nums;
 
 import java.util.HashSet;
 

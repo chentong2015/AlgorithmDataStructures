@@ -1,8 +1,8 @@
-package hash_map;
+package hashmap;
 
 import java.util.HashMap;
 
-// Isomorphic Strings
+// Isomorphic Strings 同构字符串
 // All occurrences of a character must be replaced with another character
 // while preserving the order of characters
 // No two characters may map to the same character, but a character may map to itself

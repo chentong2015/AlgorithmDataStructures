@@ -1,4 +1,4 @@
-package skip_list;
+package skiplist;
 
 import java.util.concurrent.ConcurrentSkipListSet;
 
