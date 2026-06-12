@@ -1,4 +1,4 @@
-package array2.rectangle;
+package array2d.rectangle;
 
 import java.util.HashSet;
 import java.util.Set;

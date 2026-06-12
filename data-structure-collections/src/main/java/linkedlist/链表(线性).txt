@@ -1,7 +1,8 @@
 TODO. LinkedList<E>链表的特点
 1. 数据查询比较慢  LinkedList.get(1);使用index坐标移动
 2. 增删中间节点的速度很快，通过节点指向快速找到下一个存储地址
-3. 非线程安全的，多线程需要设置同步锁  Collections.synchronizedList(new LinkedList(...));
+3. 非线程安全的，多线程需要设置同步锁
+   Collections.synchronizedList(new LinkedList(...));
 
 TODO. LinkedList链表的三种类型
 单向链表(Single Linked List)

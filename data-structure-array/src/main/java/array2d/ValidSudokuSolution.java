@@ -1,4 +1,4 @@
-package array2;
+package array2d;
 
 // Valid Sudoku
 // Determine if a 9 x 9 Sudoku board is valid.

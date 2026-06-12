@@ -1,4 +1,4 @@
-package array2;
+package array2d;
 
 public class DiagonalTraverse {
 

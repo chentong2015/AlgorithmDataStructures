@@ -1,4 +1,4 @@
-package array2.row_column;
+package array2d.row_column;
 
 import java.util.HashMap;
 import java.util.Map;

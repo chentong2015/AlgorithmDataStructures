@@ -8,7 +8,7 @@ import java.util.LinkedList;
 // Given an array of intervals where intervals[i] = [start, end], start <= end
 public class MergeIntervals {
 
-    // TODO. 一定需要排序再考虑合并共同区间
+    // TODO. 必须先排序再合并共同区间, 并考虑后续期间的起始位置
     // [[1,3],[2,6],[8,10],[15,18]]
     // [[1,6],[8,10],[15,18]]
     //
@@ -24,7 +24,7 @@ public class MergeIntervals {
             int startI = intervals[i][0];
             int endI = intervals[i][1];
 
-            // while循环时考虑后续区间的包容
+            // 循环时考虑后续区间的包容
             int nextI = i + 1;
             while (nextI < intervals.length && endI >= intervals[nextI][0]) {
                 if (endI < intervals[nextI][1]) {
