@@ -14,5 +14,6 @@ TODO. LinkedList链表的三种类型
 
 TODO: LinkedList方法论
 1. 两种常规解法：迭代法 & 递归法(简单直接)
-2. 直接判断当前node结点是否为null，而非node.next !!
-3. 构建dummyHead作用head的前面结点，作为保留
+2. 直接判断当前node结点是否为null, 而非node.next
+3. 构建dummyHead作用head前面结点, 作为保留
+4. 双指针遍历节点(Fast and Slow Pointer), 快指针移动到最后, 慢指针移动到中间
