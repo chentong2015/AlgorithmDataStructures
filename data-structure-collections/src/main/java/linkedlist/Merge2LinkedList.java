@@ -7,7 +7,7 @@ import linkedlist.node.ListNode;
 // Both l1 and l2 are sorted in non-decreasing order
 // 1 -> 4 -> 8 -> 9
 // 2 -> 5 -> 20
-public class LinkedListMergeTwo {
+public class Merge2LinkedList {
 
     // TODO. 哪个链表的值小便移动哪个链表，直到遍历完其中一个链表
     //
