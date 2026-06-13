@@ -17,11 +17,13 @@ public class BaseQueue {
         queue.offer(5);
         queue.offer(15);
 
+        queue.remove();    // 从头部开始移除
+        queue.remove(5); // 移除队列中特定的元素
+
         // 可以存储Null空值，但可能造成出队列时的异常
         // queue.offer(null);
 
-        int size = queue.size();
-        System.out.println(size);
+        System.out.println(queue.size());
 
         // 查看出队列元素但不移除，可能返回null，不能赋值给值类型
         Integer peekValue = queue.peek();

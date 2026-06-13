@@ -32,7 +32,7 @@ public class LinkedListDeleteMiddle {
             fast = fast.next.next;
         }
 
-        // 位置slow的节点就是middle节点
+        // 直接删除prev后面的slow节点(middle节点)
         prev.next = prev.next.next;
         return head;
     }

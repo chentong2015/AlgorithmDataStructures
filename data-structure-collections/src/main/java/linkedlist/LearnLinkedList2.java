@@ -118,11 +118,12 @@ public class LearnLinkedList2 {
         return null;
     }
 
-    // 正确理解：1. Two Pointers 从比较的角度出发，如果出现公用节点，一定在右侧靠结尾的地方
-    //            此时从"同一位置"往后判断到最后，则是用最少的步数找到第一个共用的节点
-    //            为了找到"同一位置", 可以先将双链表拉升一遍，从头排
-    //                5i 1 6 8 9
-    //            3 2 5j 1 6 8 9
+    // Two Pointers
+    // 从比较的角度出发，如果出现公用节点，一定在右侧靠结尾的地方
+    // 此时从"同一位置"往后判断到最后，则是用最少的步数找到第一个共用的节点
+    // 为了找到"同一位置", 可以先将双链表拉升一遍，从头排
+    //     5i 1 6 8 9
+    // 3 2 5j 1 6 8 9
     public ListNode getIntersectionNode2(ListNode headA, ListNode headB) {
         ListNode pA = headA;
         ListNode pB = headB;

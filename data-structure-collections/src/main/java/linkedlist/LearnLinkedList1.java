@@ -68,27 +68,4 @@ public class LearnLinkedList1 {
         node.next = node.next.next;
         return dummy.next;
     }
-
-    // TODO. "龟兔赛跑原理"
-    // 如果链表中出现循环，则必然跑得快的，会追上跑得慢的，完成套圈 !!
-    //
-    // Linked List Cycle
-    // Given the head of a linked list, determine if the linked list has a cycle in it
-    // pos is -1 or a valid index in the linked-list
-    // head = [3,2,0,-4], pos = 1 -> true
-    //
-    // 使用pos表示链表尾部节点的下一个节点指向的位置(0-indexed) !!
-    //
-    // O(n) O(1)
-    public boolean hasCycle(ListNode head) {
-        ListNode node = head;
-        while (head != null && head.next != null) {
-            node = node.next;
-            head = head.next.next;
-            if (head != null && head.equals(node)) {
-                return true;
-            }
-        }
-        return false;
-    }
 }

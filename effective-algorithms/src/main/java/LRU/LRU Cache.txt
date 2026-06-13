@@ -1,3 +1,0 @@
-https://leetcode.com/problems/lru-cache/description/
-
-https://www.baeldung.com/java-lru-cache

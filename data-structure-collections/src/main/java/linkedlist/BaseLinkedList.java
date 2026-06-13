@@ -14,6 +14,7 @@ public class BaseLinkedList {
         myLinkedList.add("item 03");
         myLinkedList.add(1, "add item"); // 在指定的位置添加节点数据 !!
         printLinkedList(myLinkedList);
+
         myLinkedList.remove(1);       // 移动指定位置的值
         String value = myLinkedList.get(1); // 取指定位置的值
 
