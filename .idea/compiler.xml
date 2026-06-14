@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="data-structure-array" />
+        <module name="data-structure-collections" />
+        <module name="effective-other-algorithms" />
+        <module name="data-structure-nonlinear" />
+        <module name="leetcode-problems" />
+        <module name="effective-algorithms" />
+        <module name="data-structure-array-string" />
+        <module name="working-interviews" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="exercise-amazon" target="17" />
+      <module name="exercise-arrays" target="17" />
+      <module name="interview-amazon" target="17" />
+      <module name="leetcode-problems-todo" target="17" />
+      <module name="other-problems" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

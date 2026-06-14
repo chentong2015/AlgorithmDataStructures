@@ -14,9 +14,11 @@
         <module>data-structure-array-string</module>
         <module>data-structure-collections</module>
         <module>data-structure-nonlinear</module>
+
         <module>effective-algorithms</module>
+        <module>effective-other-algorithms</module>
+
         <module>leetcode-problems</module>
-        <module>leetcode-problems-todo</module>
         <module>working-interviews</module>
     </modules>
 

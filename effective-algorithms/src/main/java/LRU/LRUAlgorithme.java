@@ -47,6 +47,7 @@ public class LRUAlgorithme {
             insertAtFront(node);
         } else {
             if (map.size() == capacity) {
+                // 删除最末尾的最近最少使用的节点
                 Node lru = tail.prev;
                 remove(lru);
                 map.remove(lru.key);
@@ -58,7 +59,8 @@ public class LRUAlgorithme {
         }
     }
 
-    // 将Node从链条结构中扣除
+    // TODO. Node被包含在首尾节点之中, 直接修改前后继的指向
+    // Head <-> Node <-> Tail
     private void remove(Node node) {
         node.prev.next = node.next;
         node.next.prev = node.prev;

@@ -1,0 +1,11 @@
+TODO. Queue队列: Add/Offer-Poll 添加和轮询出队
+顺序进入，层层处理
+1. FIFO 保证元素先进先出的原则
+2. 通常运用BFS广度优先遍历场景
+
+Interface Queue<E>
+  Interface Deque<E>            双端队列
+    class LinkedList<E>         实现了Queue接口的链表
+    class ArrayDeque<E>         默认初始状态下存16个元素
+    class PriorityQueue<E>      基于优先级排序的Heap堆结构
+    class ArrayBlockingQueue<E> 有界(capacity容量固定)阻塞队列

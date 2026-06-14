@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="AdditionalModuleElements">
+    <content url="file://$MODULE_DIR$/effective-algorithms" dumb="true">
+      <sourceFolder url="file://$MODULE_DIR$/effective-algorithms/src/main/other" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/effective-algorithms/src/main/others" isTestSource="false" />
+    </content>
+  </component>
+</module>

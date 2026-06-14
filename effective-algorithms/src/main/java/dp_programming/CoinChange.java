@@ -2,9 +2,10 @@ package dp_programming;
 
 import java.util.Arrays;
 
+// 只用最少的零钱数目来凑出指定的值, 假设每种零钱的数目是足够的
 public class CoinChange {
 
-    // Coin Change 只用最少的零钱数目来凑出指定的值, 假设每种零钱的数目是足够的
+    // Coin Change
     // An integer array coins representing coins
     // An integer amount representing a total amount of money
     // Return the fewest number of coins that you need to make up that amount
