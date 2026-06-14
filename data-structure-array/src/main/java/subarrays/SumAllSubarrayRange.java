@@ -1,4 +1,4 @@
-package arrays.subarrays;
+package subarrays;
 
 // Sum of Subarray Ranges
 // You are given an integer array nums.

@@ -1,4 +1,4 @@
-package arrays.subarrays;
+package subarrays;
 
 // Maximum Absolute Sum of Any Subarray
 // You are given an integer array nums.
