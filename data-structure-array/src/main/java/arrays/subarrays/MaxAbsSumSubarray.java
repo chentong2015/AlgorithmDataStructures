@@ -26,12 +26,11 @@ public class MaxAbsSumSubarray {
         if (nums.length == 1) {
             return Math.abs(nums[0]);
         }
-
-        int[] sumBefore = new int[nums.length];
-        sumBefore[0] = nums[0];
+        int maxAbsSum = nums[0];
 
         // 只保留正数往上累加 => Maximum Subarray
-        int maxAbsSum = sumBefore[0];
+        int[] sumBefore = new int[nums.length];
+        sumBefore[0] = nums[0];
         for (int index = 1; index < nums.length; index++) {
             sumBefore[index] = nums[index];
             if (sumBefore[index - 1] > 0) {
@@ -47,6 +46,8 @@ public class MaxAbsSumSubarray {
             if (sumBefore[index - 1] <= 0) {
                 sumBefore[index] += sumBefore[index - 1];
             }
+
+            // 取绝对值判读最值
             int absSum = Math.abs(sumBefore[index]);
             maxAbsSum = Math.max(maxAbsSum, absSum);
         }

@@ -13,10 +13,9 @@ package leetcode5;
 //
 // Given an integer n, return the number of good integers in the range [1, n]
 // 1 <= n <= 10^4
-//
 public class RotatedDigits {
 
-    // TODO. 无效实现O(1)复杂度，只能做O(N)
+    // TODO. 只能逐步循环判读每一个数字
     // n = 10 -> 4
     // good numbers in [1, 10] : 2, 5, 6, 9.
     //

@@ -30,6 +30,7 @@ public class FloodFillDFS {
         if (image[row][col] != sourceColor || image[row][col] == newColor) {
             return;
         }
+
         image[row][col] = newColor;
         resetColor(image, row - 1, col, sourceColor, newColor);
         resetColor(image, row, col - 1, sourceColor, newColor);

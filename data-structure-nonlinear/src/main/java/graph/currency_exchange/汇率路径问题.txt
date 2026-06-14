@@ -1,4 +1,4 @@
-TODO. 路径映射传递问题的本质: Graph图
+TODO. 路径映射问题本质: Graph图 => 没考虑循环节点问题
 构建Graph图形结构，方便快速的找到两点之间的路径(长度)
 创建的Graph图形结构必须保留，以便使用Graph结构随机查找两个节点之间的距离
 
@@ -10,3 +10,7 @@ Input data format
 
 Input: Currency A and B
 Output: A -> B paths
+
+TODO. 将Name名称映射到构建出来的Graph图中节点
+Time: O(n)    时间复杂度可能遍历图形中所有Node节点
+Space: O(n+n) 空间复杂度存储所有的Key和Node节点(包括Key名称)

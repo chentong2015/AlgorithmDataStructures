@@ -7,8 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="data-structure-array" />
+        <module name="effective-other-algo" />
         <module name="data-structure-collections" />
-        <module name="effective-other-algorithms" />
         <module name="data-structure-nonlinear" />
         <module name="leetcode-problems" />
         <module name="effective-algorithms" />

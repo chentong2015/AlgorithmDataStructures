@@ -2,58 +2,58 @@ package graph.currency_exchange;
 
 import java.util.*;
 
-// TODO. 将Name名称映射到构建出来的Graph图中节点
-// Time: O(n)    时间复杂度可能遍历图形中所有Node节点
-// Space: O(n+n) 空间复杂度存储所有的Key和Node节点(包括Key名称)
 public class GraphNodeHandler {
 
-    private float result;
-    Map<String, GraphNode> nameNodeMap = new HashMap<>();
+    // 该属性用于目标查找累计
+    private float exchangeRate;
 
-    public static void main(String[] args) {
-        GraphNodeHandler handler = new GraphNodeHandler();
-        handler.buildGraph("EUR", "USD", 1.2f);
-        handler.buildGraph("CHS", "RMB", 1.4f);
-        handler.buildGraph("USD", "RMB", 2.0f);
+    // 使用HashMap是为了快速定位图形中Node节点
+    private Map<String, GraphNode> nodesMap = new HashMap<>();
 
-        System.out.println(handler.getCurrencyValue("EUR", "RMB"));
-    }
-
-    // Build Graph based on the line {"EUR", "CHS", 1.2}
-    public void buildGraph(String source, String target, float value) {
-        GraphNode targetNode = new GraphNode(target, value, new ArrayList<>());
-        if (nameNodeMap.containsKey(source)) {
-            GraphNode node = nameNodeMap.get(source);
-            node.getChildren().add(targetNode);
-        } else {
-            GraphNode sourceNode = new GraphNode(source, 0, null);
-            sourceNode.setChildren(List.of(targetNode));
-            nameNodeMap.put(source, sourceNode);
+    public void addExchange(String source, String target, float rate) {
+        if (!nodesMap.containsKey(source)) {
+            GraphNode node = new GraphNode(source);
+            nodesMap.put(source, node);
         }
-        nameNodeMap.put(target, targetNode);
-    }
 
-    public float getCurrencyValue(String source, String target) {
-        if (!nameNodeMap.containsKey(source)) {
-            return 0;
+        HashMap<String, GraphNode> exchangeNodeMap = nodesMap.get(source).getExchangeNodeMap();
+        HashMap<String, Float> exchangeRateMap = nodesMap.get(source).getExchangeRateMap();
+        if (!exchangeRateMap.containsKey(target)) {
+            GraphNode node = new GraphNode(target);
+            exchangeNodeMap.put(target, node);
+            nodesMap.put(target, node);
         }
-        dfs(nameNodeMap.get(source), target, 0);
-        return this.result;
+        exchangeRateMap.put(target, rate); // add new rate or update old rate
     }
 
-    // TODO. DFS从根节点递归查找Graph中节点: 同步统计路径的长度
-    // EUR -> USD -> RMB
-    // 0    1.2     2.0
-    private void dfs(GraphNode node, String target, float count) {
-        count += node.getValue();
-        if (node.getName() == target) {
-            this.result = count;
+    public float getExchangeRate(String source, String target) {
+        if (!nodesMap.containsKey(source) || !nodesMap.containsKey(target)) {
+            return 0; // not possible to get exchange rate
+        }
+
+        this.exchangeRate = -1;
+        findTargetDFS(source, target, 1);
+        return this.exchangeRate;
+    }
+
+
+    // 在图形中DFS深度优先查询，直到找到目标节点(才设置属性)
+    private void findTargetDFS(String current, String target, float currentRate) {
+        GraphNode currentNode = nodesMap.get(current);
+        if (currentNode.getName().equals(target)) {
+            this.exchangeRate = currentRate;
             return;
         }
 
-        for (GraphNode child: node.getChildren()) {
-            dfs(child, target, count);
+        // TODO. 避免DFS遍历时出现无限循环
+        if (this.exchangeRate != -1) {
+            return; // Has already found target node
         }
-        count -= node.getValue();
+
+        for (GraphNode graphNode : currentNode.getExchangeNodeMap().values()) {
+            String nextName = graphNode.getName();
+            float nextRate = currentNode.getExchangeRateMap().get(nextName) * currentRate;
+            findTargetDFS(nextName, target, nextRate);
+        }
     }
 }
