@@ -28,7 +28,7 @@ public class ThirdMaxNumber {
             } else if (num > thirdMax && num < secondMax){
                 thirdMax = num;
             }
-            // 忽略相等情况的值
+            // 忽略三个最值的相等值, 不做数值变动
         }
 
         // 判读第三个数据是否被赋值过
