@@ -28,7 +28,7 @@ public class SnapshotArray {
         }
     }
 
-    // TODO. 设置时同一个SnapID状态的值只会被记录一次
+    // 设置时同一个SnapID状态的值只会被记录一次
     public void set(int index, int val) {
         historyRecords[index].put(snapId, val);
     }
@@ -37,8 +37,9 @@ public class SnapshotArray {
         return snapId++;
     }
 
-    //
-    // Returns a key-value mapping associated with the greatest key less than or equal to the given key
+    // 直接利用API进行二分法查找
+    // Returns a key-value mapping
+    // associated with the greatest key less than or equal to the given key
     public int get(int index, int snapId) {
         return historyRecords[index].floorEntry(snapId).getValue();
     }
