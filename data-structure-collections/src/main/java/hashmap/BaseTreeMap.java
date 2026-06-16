@@ -31,6 +31,7 @@ public class BaseTreeMap {
         treeMap.put(7, "item 7");
     }
 
+    // TODO. TreeMa<>数据结构提供二分搜索算法API
     private void testTreeMapAPI() {
         TreeMap<Integer, Integer> treeMap = new TreeMap<>();
 
@@ -38,7 +39,7 @@ public class BaseTreeMap {
         System.out.println(treeMap.firstKey());
         System.out.println(treeMap.firstEntry().getValue());
 
-        // TODO: 返回大于等于某key值的子树结构(排序好序子树)
+        // 返回大于等于某key值的子树结构(排序好序子树)
         SortedMap<Integer, Integer> sortedMap = treeMap.tailMap(4);
         System.out.println(sortedMap.firstKey());
         System.out.println(sortedMap.size());

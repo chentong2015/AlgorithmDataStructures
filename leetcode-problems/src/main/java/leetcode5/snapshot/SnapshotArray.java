@@ -14,8 +14,9 @@ public class SnapshotArray {
 
     // TODO. TreeMap存储历史结构, 优化存储空间且能够使用二分法查找
     //
-    // O(N+KlogK) N是长度, K是Pair对数量
-    // O(N+K)     需要空间存储[SnapID, ID]数据
+    // N是长度, K是Pair对数量
+    // O(N+KlogK) 整个数据结构构建的复杂度
+    // O(N+K)     空间存储数据[SnapID, ID]
 
     int snapId = 0;
     TreeMap<Integer, Integer>[] historyRecords;
