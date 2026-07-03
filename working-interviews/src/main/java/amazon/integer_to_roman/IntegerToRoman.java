@@ -1,4 +1,4 @@
-package amazon.integer_to_roman;
+package live_coding.amazon.integer_to_roman;
 
 // Integer to Roman
 // Given an integer, convert it to a Roman numeral.

@@ -1,4 +1,4 @@
-package amazon.min_passed_time;
+package live_coding.amazon.min_passed_time;
 
 import java.util.Collections;
 import java.util.List;

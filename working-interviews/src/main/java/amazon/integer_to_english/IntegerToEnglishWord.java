@@ -1,6 +1,6 @@
-package amazon.integer_to_english;
+package live_coding.amazon.integer_to_english;
 
-// TODO. Recursion递归算法, 取不同位置上的值来匹配映射
+// TODO. 本质上是Recursion递归算法, 映射不同位置上的值
 // O(1) 递归会的时间复杂度是Linear线性的，只和数字的个数有关
 // O(1) 空间复杂度也是线性的，使用常量的内存空间
 public class IntegerToEnglishWord {

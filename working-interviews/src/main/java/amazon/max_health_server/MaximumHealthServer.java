@@ -1,4 +1,4 @@
-package amazon.max_health_server;
+package live_coding.amazon.max_health_server;
 
 import java.util.HashMap;
 import java.util.Map;
