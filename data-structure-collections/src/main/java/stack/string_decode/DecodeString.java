@@ -8,8 +8,7 @@ import java.util.Stack;
 // is being repeated exactly k times. Note that k is guaranteed to be a positive integer.
 //
 // You may assume that the input string is always valid;
-// there are no extra white spaces,
-// square brackets are well-formed, etc
+// there are no extra white spaces, square brackets are well-formed, etc
 //
 // you may assume that the original data does not contain any digits
 // and that digits are only for those repeat numbers,
@@ -20,7 +19,7 @@ import java.util.Stack;
 // All the integers in s are in the range [1, 300]
 public class DecodeString {
 
-    // TODO: 典型双Stack栈结构: 交替存储并迭代计算
+    // TODO: 典型双Stack栈结构: 遇到左方括号存, 遇到右方括号算(从内往外)
     // "3[a]2[bc]" -> "aaabcbc"
     // "3[a2[c]]" -> "accaccacc"
     // "2[abc]3[cd]ef" -> "abcabccdcdcdef"
@@ -28,37 +27,36 @@ public class DecodeString {
     //
     // 从strStack栈中取字符串来重复intStack中的次数
     //  intStack  strStack
-    //   2         c
+    //   2         bc
     //   3         a
     public String decodeString(String s) {
-        Stack<StringBuilder> strStack = new Stack<>();
         Stack<Integer> intStack = new Stack<>();
+        Stack<StringBuilder> strStack = new Stack<>();
 
-        // current表示遍历过程中片段字符串，也是最后拼接字符串
-        StringBuilder current = new StringBuilder();
+        // finalStrB 遍历过程中片段字符串，也是最后字符串
+        StringBuilder finalStrB = new StringBuilder();
 
-        int k = 0;
+        int num = 0;
         for (char ch : s.toCharArray()) {
             if (Character.isDigit(ch)) {
-                k = k * 10 + ch - '0';  // k倍数需要考虑十位百位
+                num = num * 10 + ch - '0';  // 倍数需要考虑十位百位
             } else if (ch == '[') {
-                strStack.push(current); // 存储之前的片段字符
-                current = new StringBuilder();// 用于重新累计字符
+                strStack.push(finalStrB);   // 存储之前的片段字符, 重新累计
+                finalStrB = new StringBuilder();
 
-                intStack.push(k);       // 存储[前面用于计算的倍数
-                k = 0;                  // k倍数入栈后初始化
-            } else if (ch == ']') {
-                StringBuilder tmp = current;  // cur字符串是需要被重复的字符
-
-                current = strStack.pop();     // cur是strStack栈中存储的字符，需要拼接tmp
-                k = intStack.pop();
-                while (k-- > 0) {
-                    current.append(tmp);
+                intStack.push(num);         // 存储[前面用于计算的倍数
+                num = 0;
+            } else if (ch == ']') {          // TODO. 遇到]则一定可以计算
+                StringBuilder repeatStr = finalStrB;
+                finalStrB = strStack.pop();  // 取出strStack栈中存储的原来字符
+                num = intStack.pop();
+                while (num-- > 0) {
+                    finalStrB.append(repeatStr);
                 }
             } else {
-                current.append(ch);
+                finalStrB.append(ch); // TODO. 没有数字则直接拼接字符
             }
         }
-        return current.toString();
+        return finalStrB.toString();
     }
 }

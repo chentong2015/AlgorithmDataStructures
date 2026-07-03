@@ -1,4 +1,4 @@
-package hard_questions.lock_system;
+package todo.lock_system;
 
 import java.util.*;
 

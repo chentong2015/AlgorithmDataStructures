@@ -1,4 +1,4 @@
-package hard_questions.skipline_problem;
+package todo.skipline_problem;
 
 import java.util.*;
 

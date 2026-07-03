@@ -1,4 +1,4 @@
-package hard_questions.path_effort;
+package todo.path_effort;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;

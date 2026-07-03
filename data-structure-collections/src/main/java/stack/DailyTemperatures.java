@@ -12,12 +12,9 @@ import java.util.Stack;
 // 30 <= temperatures[i] <= 100
 public class DailyTemperatures {
 
-    // TODO. 典型Stack栈场景: 存储后续更大值的坐标位置，计算差值
-    // [73,74,75,71,69,72,76,73]
-    // [1,1,4,2,1,1,0,0]
-    //
-    // [30,40,50,60]
-    // [1,1,1,0]
+    // TODO. 典型Stack栈场景: 存储后续更大值的坐标位置
+    // [73,74,75,71,69,72,76,73] -> [1,1,4,2,1,1,0,0]
+    // [30,40,50,60] -> [1,1,1,0]
     //
     // O(N)
     // O(N + N) 原始参数数组需要用于判断，不能修改
@@ -25,15 +22,15 @@ public class DailyTemperatures {
         int length = temperatures.length;
         int[] result = new int[length];
         Stack<Integer> stack = new Stack<>();
-
         for (int index = length - 1; index >= 0; index--) {
+            // 排除后面存储的更小值, 对结果的计算无意义
             while (!stack.isEmpty() && temperatures[stack.peek()] <= temperatures[index]) {
                 stack.pop();
             }
             if (stack.isEmpty()) {
                 result[index] = 0;
             } else {
-                result[index] = stack.peek() - index;
+                result[index] = stack.peek() - index; // 计算更大值的index差值
             }
             stack.push(index);
         }
