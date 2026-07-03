@@ -11,6 +11,7 @@ import java.util.*;
 //   (or the reserve price if none applies)
 public class VeepeeQuestion {
 
+    // TODO. 考虑使用Stream来操作Map排序简化
     // Example
     // Consider 5 potential buyers (A, B, C, D, E) who compete to acquire an object
     // with a reserve price set at 100 euros, bidding as follows:
@@ -24,7 +25,6 @@ public class VeepeeQuestion {
     // The buyer E wins the auction at the price of 130 euros.
     // The goal is to implement an algorithm for finding the winner and the winning price.
 
-    // TODO. 使用Stream来操作hashmap的排序，简化for循环
     public Result findWinnerAndWinningPrice(int reservedPrice, Map<String, List<Integer>> playersMap) {
         // throw new IllegalArgumentException for special cases
         if (reservedPrice <= 0 || playersMap.keySet().isEmpty()) {
@@ -62,17 +62,6 @@ public class VeepeeQuestion {
             }
         }
         return new Result(winner, winningPrice);
-    }
-
-    // @Test
-    public void testReservedPriceLessOrEqualThanZero() {
-        VeepeeQuestion playerClass = new VeepeeQuestion();
-        Map<String, List<Integer>> playersMap = new HashMap<>();
-        playersMap.put("A", Collections.emptyList());
-        playersMap.put("B", Collections.emptyList());
-
-        Result result = playerClass.findWinnerAndWinningPrice(0, playersMap);
-        // Assertions.assertEquals(result, new Result());
     }
 
     static class Result {
