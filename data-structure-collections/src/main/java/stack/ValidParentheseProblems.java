@@ -1,9 +1,9 @@
-package stack.parentheses;
+package stack;
 
 import java.util.Stack;
 
 // TODO. 典型的Stack应用场景："Open Close平衡逻辑"的判断
-public class ParenthesesProblems {
+public class ValidParentheseProblems {
 
     // Valid Parentheses
     // ((()())()) -> true
@@ -42,7 +42,9 @@ public class ParenthesesProblems {
                 stack.push(c);
             } else {
                 char temp = stack.peek();
-                if ((temp == '{' && c == '}') || (temp == '[' && c == ']') || (temp == '(' && c == ')')) {
+                if ((temp == '{' && c == '}')
+                    || (temp == '[' && c == ']')
+                    || (temp == '(' && c == ')')) {
                     stack.pop();  // 判断出栈相消的三种条件
                 } else {
                     stack.push(c);
