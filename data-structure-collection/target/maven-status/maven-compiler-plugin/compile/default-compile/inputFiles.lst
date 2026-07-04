@@ -1,144 +1,53 @@
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/intersection/MaxSetSizeAfterRemoval.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/hash_set/BaseHashSet.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/astrings/diff_string/DiffStringByChars.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/linkedlist/BaseLinkedList.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/prefix_tree/word_searching/WordSearchII.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/hash_map/BaseHashMap.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/astrings/LearnString1.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/buy_sell_stock/BuyStockWithCooldown.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/hash_map/impl/MyMultiValueMap.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/queue/LearnQueue1.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/queue/impl/QueueImplByStack.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/item_duplicate/ContainDuplicateItem.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/astrings/reversed/JavaStringReversed.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/subarrays/SumSubarrayMax.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/astrings/substrings/CountBeautifulSubstringsI.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/astrings/anagrams/AnagramsGroup.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/stack/impl/StackImplByQueue.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/stack/remove_Kdigits/RemoveKDigits.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/BaseTreeTraverseMorris.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array2/Dimension3Target.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/heap/k_top_questions/KthPairsSmallestDistance.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/min_rounds/MinimumRoundCounter.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/segment_tree/LearnSegmentTree.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/subarrays/SumSubarrayMin.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/astrings/LearnString2.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/intersection/IntersectionArrays.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/stack/parentheses/ParenthesesProblems.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/linkedlist/node/ListNode.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/item_duplicate/OtherQuestions.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/subarrays/SumSubarrayMinOk.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/heap/k_top_questions/TopKFrequentElements.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/LearnArray1.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/stack/impl/MinStackImpl.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/tree_questions/symmetric_tree/LearnSymmetricTree.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/LearnArray2.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/astrings/LearnString4.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/linkedlist/LearnLinkedList2.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/red_back_tree/TreeNode.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/binary_search_tree/BinarySearchTree.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/arraylist/impl/ArrayListImpl.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/stack/impl/MinStackNode.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/subarrays/CountInterestingSubarrays.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/arraylist/LearnArrayList1.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/queue/impl/QueueImplementation.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/stack/next_greater/NextGreaterElement3.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/astrings/anagrams/AnagramsSubString.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/arraylist/BaseArrayListConvert.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/prefix_tree/PrefixTreeTrieImpl.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/stack/LearnStack1.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/skip_list/BaseSkipList.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/intervals/MergeIntervals.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/tree_questions/LearnTrees2.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/bean/TreeLinkNode.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array2/rotate_image/RotateImage.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/hash_map/BaseTreeMap.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/prefix_tree/word_autocomplete/PrefixTreeSearchComplete.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/hash_set/BaseTreeSet.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/heap/BasePriorityQueueOrdered.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array2/LargestRectangle.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/heap/k_top_questions/KthLargestElement.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/queue/BaseQueue.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/form_team/CountTeamNumber.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/arraylist/BaseArrayList.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/prefix_tree/base/TrieNodeWithEnd.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/queue_circular/CircularQueueImpl.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/BaseTreeTraverseBfs.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/astrings/LearnString7.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/sorting_array/SortingArrayQuestion.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/heap/k_task_completion/KTaskCompletion.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array2/DiagonalTraverse.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/stack/next_greater/NextGreaterElement1.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/linkedlist/impl/model/ILinkedList.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/red_back_tree/BaseRedBackTree.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/BaseArray1.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/min_rounds/MinimumRoundCounterMaster.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/astrings/reversed/ConvertToReversedString.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/LearnArray5.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/linkedlist/impl/model/BaseListNode.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/graph/course_schedule/CourseSchedule.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/intervals/RussianDollEnvelopes.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/stack/impl/StackImplementation.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/merge_array/MergeSortedArray.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/astrings/LearnString6.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/LearnArray6.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/astrings/substrings/CountBeautifulSubstringsII.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/hash_map/LearnHashTable3.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/heap/min_max_heap/MedianDataStream2.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/hash_map/BaseSortedMap.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/heap/min_max_heap/MedianDataStreamPlus.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/graph/conversion_string/MinCostConvertString.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/heap/k_item_discount/KItemDiscount.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/linkedlist/impl/model/ListNode.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array2/Dimension3Sum.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/tree_questions/LearnTrees1.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/linkedlist/impl/BinarySearchTree.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/binary_indexed_tree/SmallerNumbersAfterSelf.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/intervals/FindRightIntervals.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/hash_map/LearnHashTable2.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/linkedlist/LearnLinkedList3.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/prefix_tree/word_concatenated/ConcatenatedWords.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/prefix_tree/replace_words/ReplaceWords.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/increments/SortingThreeGroups.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/bean/NodeWithPointer.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/peak_mountain/Pattern132Subsequence.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/prefix_tree/base/TrieNodeWithWord.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/min_rounds/MinimumRoundCounter2.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/stack/next_smaller/NextSmallerDiscount.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/linkedlist/impl/DoublyLinkedList.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/LearnArray4.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/astrings/LearnString5.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/subarrays/ranges/SumSubarrayRanges.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/subarrays/sums/SumSubarrayEqualsK.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array2/painted_row_column/FirstPaintedRowColumn.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/increments/LongestIncreasingSubsequence.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/buy_sell_stock/BestTimeBuySellStock2.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/BaseArray3.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/graph/course_schedule/CourseScheduleII.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/heap/k_top_questions/KthSmallestPairDistance.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/prefix_tree/PrefixHashmap.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/subarrays/mixing/SumSubarrayMultiMin.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/item_duplicate/FoundDuplicateItem.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/BaseArray4.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/peak_mountain/FoundMountainArray.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/bean/TreeNode.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/form_team/DivideTeamPlayers.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/astrings/LearnString3.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/peak_mountain/FoundPeakMountain.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/tree_questions/low_common_ancestor/LowestCommonAncestor.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/stack/next_greater/NextGreaterElement2.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/astrings/diff_string/DiffStringGenerator.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array2/SpiralMatrix.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/LearnArray3.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/linkedlist/LearnLinkedList1.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/hash_set/impl/RandomizedSetImpl.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/astrings/BaseString.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/heap/k_top_questions/TopKPairsSmallestSums.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array/buy_sell_stock/BestTimeBuySellStock.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/heap/min_max_heap/MedianDataStream.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/binary_search_tree/BinarySearchTreeValid.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/arrays/array2/Search2DMatrix.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/CollectionsComparison.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/heap/BasePriorityQueue.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/collections/hash_map/LearnHashTable1.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/data-structures/src/main/java/nonlinear/tree/BaseTreeTraverseDfs.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/linkedlist/BaseLinkedList.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/stack/ValidParentheseProblems.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/linkedlist/LearnLinkedList1.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/queue/impl/QueueImplementation.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/linkedlist/node/ListNode.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/queue/queue_circular/CircularQueueImpl.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/stack/impl/StackImplByQueue.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/linkedlist/LinkedListReverse.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/hashset/BaseTreeSet.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/stack/remove_Kdigits/RemoveKDigits.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/hashset/continue_nums/ContinueIncreaseNumbers.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/hashmap/MinIndexSumTwoLists.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/stack/BaseStack.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/stack/next_element/NextGreaterElementII.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/arraylist/BuildIntervalSections.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/hashset/BaseHashSet.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/linkedlist/LinkedListCycle.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/stack/impl/StackImplementation.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/stack/DailyTemperatures.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/arraylist/ArrayListBase.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/queue/BaseQueue.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/stack/impl/MinStackImpl.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/stack/string_calculator/BasicCalculator.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/hashset/impl/RandomizedSetImpl.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/linkedlist/LearnLinkedList2.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/stack/ExpressionArithmetic.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/arraylist/PascalsTriangle.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/arraylist/ArrayListImmutable.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/hashmap/BaseTreeMap.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/arraylist/ArrayListConverter.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/linkedlist/Merge2LinkedList.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/hashmap/IsomorphicStrings.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/hashmap/BaseSortedMap.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/stack/next_element/NextGreaterElementI.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/linkedlist/impl/model/ListNode.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/stack/string_decode/DecodeString.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/stack/ValidWordAfterSubstitutions.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/stack/simplify_path/SimplifyPath.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/linkedlist/impl/BinarySearchTree.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/linkedlist/LinkedListDeleteMiddle.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/linkedlist/impl/DoublyLinkedList.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/queue/impl/QueueImplByStack.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/linkedlist/impl/model/ILinkedList.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/stack/string_calculator/BasicCalculatorII.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/hashmap/impl/MyMultiValueMap.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/linkedlist/impl/model/BaseListNode.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/linkedlist/MergeKSortedList.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/stack/impl/MinStackNode.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/arraylist/impl/ArrayListImpl.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/linkedlist/LinkedListSort.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/hashmap/BaseHashMap.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/stack/next_element/NextSmallerDiscount.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/data-structure-collection/src/main/java/hashset/MinAbsDiffConstraint.java

@@ -1,33 +1,31 @@
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/amazon/online_assessment/generation_next_string/SpecialStringDemo.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/amazon/interview/number_to_english/NumWordsConversion.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/murex/MurexQuestion3.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/edf/Yatzy.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/adobe/MRUQueue.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/adobe/AdobeQuestion.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/amazon/interview/graph_node/GraphNodeHandler.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/murex/MurexQuestion2.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/criteo/t9_model/T9ModelMapping.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/sg/LiveCoding.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/veepee/VeepeeQuestion.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/doctolib/BookingSlotsQuestionOK.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/murex/BfsDfsQuestion1.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/amazon/online_assessment/generation_next_string/TestCases.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/sg/CodingQuestion.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/alibaba/MajorityVotingAlgorithm.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/doctolib/BookingEvent.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/egencia/ProductDiscounter.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/amazon/online_assessment/generation_next_string/SpecialStringSolution.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/datadog/SubstringCounterOK.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/adobe/FibonacciQuestion.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/microsoft/CircularDependencyTest.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/doctolib/BookingSlotsQuestion.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/murex/BfsDfsQuestion2.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/veepee/Result.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/amazon/interview/graph_node/GraphNode.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/murex/MurexQuestion1.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/natixis/NatixisQuestion.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/amazon/online_assessment/min_passed_time/MinServerPassedTime.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/egencia/WordFrequencyCounter.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/byte_dance/ByteQuestion.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/amazon/online_assessment/max_health_server/MaximumHealthServer.java
-/Users/tongchen/Documents/Work My Projects/Data Structure/AlgorithmDataStructures/interview-questions/src/main/java/microsoft/CircularDependency.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/assessment_online/murex/FindRepeatedWord.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/live_coding/microsoft/CircularDependencyTest.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/assessment_online/societe_generale/CodingQuestion.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/amazon/min_passed_time/MinServerPassedTime.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/business_feature/doctolib/BookingSlotsQuestionOK.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/live_coding/murex/BfsDfsQuestion1.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/business_feature/adobe/AdobeQuestion.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/live_coding/byte_dance/ByteQuestion.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/live_coding/murex/LiveCodingQuestion.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/live_coding/alibaba/MajorityVotingAlgorithm.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/live_coding/microsoft/CircularDependency.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/live_coding/criteo/T9ModelMapping.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/business_feature/veepee/VeepeeQuestion.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/business_feature/veepee/VeepeeTestTDD.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/live_coding/entrust/RomanToInteger.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/live_coding/tencent/PermutationInString.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/amazon/integer_to_roman/IntegerToRoman.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/assessment_online/murex/ToMurexLatin.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/assessment_online/murex/FindSuspectFunction.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/business_feature/doctolib/BookingEvent.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/assessment_online/murex/CheckNeighboring.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/assessment_online/adobe/FibonacciQuestion.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/assessment_online/adobe/MRUQueue.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/amazon/integer_to_english/IntegerToEnglishWord.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/assessment_online/egencia/WordFrequencyCounter.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/assessment_online/egencia/ProductDiscounter.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/assessment_online/natixis/NatixisQuestion.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/business_feature/doctolib/BookingSlotsQuestion.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/amazon/max_health_server/MaximumHealthServer.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/live_coding/datadog/SubstringCounterOK.java
+/Users/tongchen/Documents/Work My Projects/Algo Data Structure/AlgorithmDataStructures/working-interviews/src/main/java/live_coding/murex/BfsDfsQuestion2.java

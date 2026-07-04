@@ -1,2 +1,0 @@
-Binary Indexed Tree:
-https://leetcode2.com/tag/binary-indexed-tree/
