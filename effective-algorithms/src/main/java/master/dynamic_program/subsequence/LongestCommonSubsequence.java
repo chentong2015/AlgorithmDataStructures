@@ -1,4 +1,4 @@
-package master.dynamic_program.subsequences;
+package master.dynamic_program.subsequence;
 
 // Longest Common Subsequence (LCP)
 // Given two strings text1 and text2, return the length of their longest common subsequence.

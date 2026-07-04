@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 // TODO. HashMap<Key,Value> 金典场景: 对数据进行分组，处理单位是一个完整字符串
-public class AnagramsGroup {
+public class AnagramsKey {
 
     // TODO. Value值和Result结果共用同一个对象引用，避免重复开辟内层空间 !!
     // - 每个str的key值需要计算一次

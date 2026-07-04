@@ -1,4 +1,4 @@
-package master.dynamic_program.subsequences;
+package master.dynamic_program.subsequence;
 
 // Shortest Common SuperSequence
 // Given two strings str1 and str2, return the shortest string

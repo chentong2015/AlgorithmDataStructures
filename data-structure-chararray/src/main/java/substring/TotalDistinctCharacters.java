@@ -1,8 +1,6 @@
-package substrings;
+package substring;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 // Total Appeal of A String
 // The appeal of a string is the number of distinct characters found in the string.

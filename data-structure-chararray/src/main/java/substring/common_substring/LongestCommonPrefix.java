@@ -1,4 +1,4 @@
-package substrings.common_substring;
+package substring.common_substring;
 
 // Longest Common Prefix
 // Write a function to find the longest common prefix string amongst an array of strings.

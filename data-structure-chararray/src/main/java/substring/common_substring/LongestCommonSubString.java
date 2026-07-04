@@ -1,4 +1,4 @@
-package substrings.common_substring;
+package substring.common_substring;
 
 // Longest Common Substring
 // Given two strings str1 and str2,

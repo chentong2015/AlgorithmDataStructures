@@ -1,4 +1,4 @@
-package substrings;
+package substring;
 
 // Vowels of All Substrings
 // Given a string word, return the sum of the number of vowels

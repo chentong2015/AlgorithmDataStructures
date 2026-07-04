@@ -1,4 +1,4 @@
-package substrings;
+package substring;
 
 import java.util.HashMap;
 

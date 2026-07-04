@@ -3,19 +3,23 @@ package strings.anagram;
 import java.util.ArrayList;
 import java.util.List;
 
-// TODO. 判断是否一个字符串的子字符串包含另一个字符串的全部字符
-//  本质上是在处理String的一个片段Windows SubString
-public class AnagramsSubString {
+// TODO. 判断一个字符串的字符能否由另一个小字符串的字符生成
+public class AnagramsSubstring {
 
+    // 在数组中找出包含字符串排序的所有位置
+    //
     // Find All Anagrams in a String
     // Given two strings s and p, return an array of all the start indices of p's anagrams in s.
     // You may return the answer in any order.
+    //
     // 1 <= s.length, p.length <= 3 * 104
     // str1 and p consist of lowercase English letters.
-    // str1 = "cbaebabacd", str2 = "abc" -> [0,6] 在数组中找出包含字符串排序的所有位置
+    // str1 = "cbaebabacd", str2 = "abc" -> [0,6]
     //
-    // O(N + M) N is num of Str chars, M is num of subStr chars
-    // O(N)     最糟糕的情况是会产生N个长度的结果，但是int[26]数组不会造成空间复杂度 ！！
+    // 最糟糕的情况是会产生N个长度的结果，但是int[26]数组不会造成空间复杂度
+    // N is num of Str chars, M is num of subStr chars
+    // O(N + M)
+    // O(N)
     public List<Integer> findAnagrams(String str, String subStr) {
         List<Integer> result = new ArrayList<>();
 
@@ -31,7 +35,6 @@ public class AnagramsSubString {
         for (int index = 0; index < subStr.length(); index++) {
             strCounts[chars[index] - 'a']++;
         }
-
         // 比较字符串开头的结果
         if (compareCharArray(strCounts, subStrCounts)) {
             result.add(0);

@@ -5,7 +5,7 @@ import java.util.List;
 
 // Full Combination and Permutations
 // 返回数据的全排列，通过回溯算法DFS进行排序组合 !!
-public class AllCombinations {
+public class CombinationPermutations {
 
     public static List<String> findFullPermutation(String value) {
         List<String> result = new ArrayList<>();
@@ -22,7 +22,7 @@ public class AllCombinations {
             result.add(stringBuilder.toString());
         }
 
-        for (int index=start; index < chars.length; index++) {
+        for (int index = start; index < chars.length; index++) {
             stringBuilder.append(chars[index]);
 
             backtracking(result, stringBuilder, chars, index+1);

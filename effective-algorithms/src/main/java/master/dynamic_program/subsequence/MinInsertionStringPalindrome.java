@@ -1,11 +1,11 @@
-package master.dynamic_program.subsequences;
+package master.dynamic_program.subsequence;
 
 // Minimum Insertion Steps to Make a String Palindrome
 // In one step you can insert any character at any index of the string
 // Return the minimum number of steps to make s palindrome
 //
 // 1 <= s.length <= 500
-//s consists of lowercase English letters.
+// s consists of lowercase English letters.
 public class MinInsertionStringPalindrome {
 
     // TODO: 利用LCS和自身的反转字符串进行比较

@@ -1,4 +1,4 @@
-package template_KMP;
+package substring.search_kmp;
 
 public class KmpModel {
 

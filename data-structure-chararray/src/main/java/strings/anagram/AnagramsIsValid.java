@@ -6,7 +6,7 @@ package strings.anagram;
 //
 // 1 <= s.length, t.length <= 5 * 10^4
 // s and t consist of lowercase English letters.
-public class AnagramValid {
+public class AnagramsIsValid {
 
     // TODO. 直接使用字符统计相互消除
     // s = "anagram", t = "nagaram" -> true

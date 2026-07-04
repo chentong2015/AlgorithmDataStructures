@@ -1,4 +1,4 @@
-package template_KMP;
+package substring.search_kmp;
 
 public class KmpPatternMatch {
 
@@ -26,6 +26,7 @@ public class KmpPatternMatch {
             }
             right++;
         }
+
         left = 0;
         int index = 0;
         while (index < str.length()) {

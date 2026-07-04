@@ -1,4 +1,4 @@
-package substrings.common_substring;
+package substring.common_substring;
 
 import java.util.HashSet;
 import java.util.Set;
