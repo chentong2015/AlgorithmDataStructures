@@ -15,7 +15,7 @@ import java.util.Stack;
 // path is a valid absolute Unix path.
 public class SimplifyPath {
 
-    // TODO. 用Stack存储每一层有效目录, 用于记录并回溯
+    // TODO. 本质上是基于"目录字符串"为元素来处理 => Split字符串
     // "/../"        -> "/"
     // "/home/"      -> "/home"
     // "/home//foo/" -> "/home/foo"
@@ -28,11 +28,34 @@ public class SimplifyPath {
     // O(N)     栈中可能存储大量字符
     public String simplifyPath(String path) {
         Stack<String> stack = new Stack<>();
+        for (String dir : path.split("/")) {
+            if (dir.isEmpty() || dir.equals(".")) {
+                continue;
+            }
+            if (dir.equals("..")) {
+                if (!stack.isEmpty()) {
+                    stack.pop();
+                }
+            } else {
+                stack.push(dir);
+            }
+        }
+
+        StringBuilder sb = new StringBuilder();
+        for (String dir : stack) {
+            sb.append("/").append(dir);
+        }
+        return sb.isEmpty() ? "/" : sb.toString();
+    }
+
+    // TODO. 基于'每个字符'为元素来逐一处理 => 增加复杂度
+    public String simplifyPathByChars(String path) {
+        Stack<String> stack = new Stack<>();
         StringBuilder strBuilder = new StringBuilder();
         int index = 0;
         while (index < path.length()) {
             if (path.charAt(index) == '/') {
-                // TODO. 每次遇到/就处理前面的字符串
+                // 遇到/就处理前面读取的字符串
                 writeToStack(stack, strBuilder);
 
                 // 过滤掉后面连续的'/'
@@ -46,6 +69,7 @@ public class SimplifyPath {
                 index++;
             }
         }
+        // 写入最后读取的字符串
         writeToStack(stack, strBuilder);
 
         while (!stack.isEmpty()) {
@@ -54,7 +78,6 @@ public class SimplifyPath {
         return strBuilder.toString().isEmpty() ? "/" : strBuilder.toString();
     }
 
-    // 忽略记录的特殊字符串, 不存储到Stack栈中
     private void writeToStack(Stack<String> stack, StringBuilder strBuilder) {
         if (strBuilder.isEmpty()) {
             return;

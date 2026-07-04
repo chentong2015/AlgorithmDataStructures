@@ -33,7 +33,7 @@ public class DecodeString {
         Stack<Integer> intStack = new Stack<>();
         Stack<StringBuilder> strStack = new Stack<>();
 
-        // finalStrB 遍历过程中片段字符串，也是最后字符串
+        // 即是遍历过程中片段字符串，也是结果字符串
         StringBuilder finalStrB = new StringBuilder();
 
         int num = 0;
@@ -43,7 +43,6 @@ public class DecodeString {
             } else if (ch == '[') {
                 strStack.push(finalStrB);   // 存储之前的片段字符, 重新累计
                 finalStrB = new StringBuilder();
-
                 intStack.push(num);         // 存储[前面用于计算的倍数
                 num = 0;
             } else if (ch == ']') {          // TODO. 遇到]则一定可以计算

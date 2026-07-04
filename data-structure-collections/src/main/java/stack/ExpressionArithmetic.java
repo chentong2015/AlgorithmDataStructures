@@ -6,7 +6,7 @@ import java.util.Stack;
 // Evaluate the value of an arithmetic expression in Reverse Polish Notation
 // Valid operators are +, -, *, and /. Each operand may be an integer or another expression
 // It is guaranteed that the given RPN expression is always valid, always evaluate to result
-public class ArithmeticExpression {
+public class ExpressionArithmetic {
 
     // TODO. 典型Stack栈场景: 算术表达式, 利用栈的存取进行计算
     // tokens = ["2","1","+","3","*"]

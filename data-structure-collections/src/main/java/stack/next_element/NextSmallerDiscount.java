@@ -1,10 +1,10 @@
-package stack.next_smaller;
+package stack.next_element;
 
 import java.util.Stack;
 
-// TODO. 借助Stack来暂存Index位置后面第一个比它小的数据来计算
 public class NextSmallerDiscount {
 
+    // TODO. 借助Stack来暂存Index位置后面第一个比它小的数据来计算
     // Final Prices With a Special Discount in a Shop
     // You are given an integer array prices where prices[i] is the price of the i^th item in a shop.
     //
@@ -27,6 +27,7 @@ public class NextSmallerDiscount {
             while (!stack.empty() && stack.peek() > prices[index]) {
                 stack.pop();
             }
+
             int oldValue = prices[index];
             if (!stack.empty()) {
                 // If there is a small price after index, then calculate discount

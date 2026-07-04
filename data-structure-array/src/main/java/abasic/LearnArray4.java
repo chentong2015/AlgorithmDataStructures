@@ -1,3 +1,5 @@
+package abasic;
+
 import java.util.*;
 
 public class LearnArray4 {

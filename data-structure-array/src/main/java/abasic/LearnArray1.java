@@ -1,3 +1,5 @@
+package abasic;
+
 import java.util.HashSet;
 
 public class LearnArray1 {
