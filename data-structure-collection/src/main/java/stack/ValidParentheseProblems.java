@@ -41,10 +41,8 @@ public class ValidParentheseProblems {
             if (stack.isEmpty()) {
                 stack.push(c);
             } else {
-                char temp = stack.peek();
-                if ((temp == '{' && c == '}')
-                    || (temp == '[' && c == ']')
-                    || (temp == '(' && c == ')')) {
+                char charBefore = stack.peek();
+                if ((charBefore == '{' && c == '}') || (charBefore == '[' && c == ']') || (charBefore == '(' && c == ')')) {
                     stack.pop();  // 判断出栈相消的三种条件
                 } else {
                     stack.push(c);

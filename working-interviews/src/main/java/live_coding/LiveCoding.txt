@@ -7,7 +7,3 @@ TODO. 面试经验 Pseudo-algorithm伪算法
 
 https://coderpad.io/
 提供语言原生API提示，不支持PSVM和SOUT等缩写
-
-https://www.hackerrank.com/
-chen2015*/TCHong123&
-使用SOUT来检测方法的Input输入并Debug异常Case
