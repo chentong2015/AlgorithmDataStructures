@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/data-structure-array-string/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/data-structure-array-string/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/data-structure-array/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/data-structure-array/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/data-structure-collections/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/data-structure-collections/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-structure-chararray/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-structure-chararray/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-structure-collection/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-structure-collection/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/data-structure-nonlinear/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/data-structure-nonlinear/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/effective-algorithms/src/main/java" charset="UTF-8" />
