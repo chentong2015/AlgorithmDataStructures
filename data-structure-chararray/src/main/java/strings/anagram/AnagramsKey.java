@@ -8,11 +8,8 @@ import java.util.List;
 public class AnagramsKey {
 
     // TODO. Value值和Result结果共用同一个对象引用，避免重复开辟内层空间 !!
-    // - 每个str的key值需要计算一次
-    // - 每个str key的分组能够在O(1)时间内找到
-    // HashMap: Key->List<String> group
-    // return map.values().stream().toList();
-    // return new ArrayList(map.values());
+    // 每个str的key值需要计算一次
+    // 每个str key的分组能够在O(1)时间内找到
     //
     // O(N)      N is total number of letters
     // O(26 * n) n is number of strings 每个key都是由26个字符组成

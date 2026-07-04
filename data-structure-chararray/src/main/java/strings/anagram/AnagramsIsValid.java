@@ -24,6 +24,7 @@ public class AnagramsIsValid {
             counter[s.charAt(i) - 'a']++;
             counter[t.charAt(i) - 'a']--;
         }
+
         for (int i=0; i < 26; i++) {
             if (counter[i] != 0) {
                 return false;

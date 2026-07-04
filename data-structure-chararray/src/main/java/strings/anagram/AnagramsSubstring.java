@@ -55,7 +55,7 @@ public class AnagramsSubstring {
         return result;
     }
 
-    // TODO. 每次比较Anagrams时只需要循环26个有限次数, 不造成时间复杂度
+    // TODO. 比较Anagrams只需循环26个有限次数
     private static boolean compareCharArray(int[] strCounts, int[] subStrCounts) {
         for (int index = 0; index < 26; index++) {
             if (strCounts[index] != subStrCounts[index]) {
