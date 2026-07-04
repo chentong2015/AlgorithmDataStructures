@@ -11,12 +11,10 @@
 
     <modules>
         <module>data-structure-array</module>
-        <module>data-structure-array-string</module>
-        <module>data-structure-collections</module>
+        <module>data-structure-chararray</module>
+        <module>data-structure-collection</module>
         <module>data-structure-nonlinear</module>
-
         <module>effective-algorithms</module>
-        <module>effective-other-algo</module>
 
         <module>leetcode-problems</module>
         <module>working-interviews</module>

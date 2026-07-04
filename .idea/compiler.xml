@@ -7,16 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="data-structure-array" />
-        <module name="effective-other-algo" />
-        <module name="data-structure-collections" />
+        <module name="data-structure-chararray" />
+        <module name="data-structure-collection" />
         <module name="data-structure-nonlinear" />
         <module name="leetcode-problems" />
         <module name="effective-algorithms" />
-        <module name="data-structure-array-string" />
         <module name="working-interviews" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="effective-other-algo" target="17" />
       <module name="exercise-amazon" target="17" />
       <module name="exercise-arrays" target="17" />
       <module name="interview-amazon" target="17" />

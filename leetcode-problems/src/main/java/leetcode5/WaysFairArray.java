@@ -12,8 +12,7 @@ package leetcode5;
 // 1 <= nums[i] <= 10^4
 public class WaysFairArray {
 
-    // TODO. 必须对数据预处理:
-    //  存储index位置前后的偶数和/奇数和, 反转后面奇偶和
+    // TODO. 对数据预处理: 存储index位置前后的偶数和/奇数和, 反转后面奇偶和
     //
     // 2 1 6 4 -> 1
     //
