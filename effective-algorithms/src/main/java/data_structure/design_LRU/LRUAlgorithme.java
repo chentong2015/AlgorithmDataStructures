@@ -1,4 +1,4 @@
-package data_structure.LRU;
+package data_structure.design_LRU;
 
 import java.util.HashMap;
 import java.util.Map;

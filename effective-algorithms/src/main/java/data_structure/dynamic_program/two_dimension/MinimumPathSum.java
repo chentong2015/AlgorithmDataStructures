@@ -1,4 +1,4 @@
-package master.dynamic_program;
+package data_structure.dynamic_program.two_dimension;
 
 public class MinimumPathSum {
 

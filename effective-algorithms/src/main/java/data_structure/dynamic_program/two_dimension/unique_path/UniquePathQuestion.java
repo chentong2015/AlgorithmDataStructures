@@ -1,4 +1,4 @@
-package master.dynamic_program.unique_path;
+package data_structure.dynamic_program.two_dimension.unique_path;
 
 public class UniquePathQuestion {
 

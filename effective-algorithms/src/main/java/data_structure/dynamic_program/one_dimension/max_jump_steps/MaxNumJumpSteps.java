@@ -1,4 +1,4 @@
-package master.dynamic_program.max_jump_steps;
+package data_structure.dynamic_program.one_dimension.max_jump_steps;
 
 import java.util.Arrays;
 
@@ -44,7 +44,6 @@ public class MaxNumJumpSteps {
         dp[0] = 0;
         for (int index = 1; index < nums.length; index++) {
             for (int left = 0; left < index; left++) {
-
                 // 判断能否从index前面的位置跳到index位置
                 if(Math.abs(nums[left] - nums[index]) <= target) {
                     if (dp[left] != -1) {

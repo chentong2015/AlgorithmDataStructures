@@ -1,4 +1,4 @@
-package master.dynamic_program.subsequence;
+package data_structure.dynamic_program.two_dimension.subsequence;
 
 // Longest Palindromic Subsequence (LPS)
 // Given a string s, find the longest palindromic subsequence's length in s

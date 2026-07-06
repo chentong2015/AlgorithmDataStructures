@@ -1,4 +1,4 @@
-package master.dynamic_program;
+package data_structure.dynamic_program.one_dimension;
 
 // Partition Array for Maximum Sum
 // Given an integer array arr, partition the array into (contiguous) subArrays of length at most k.
