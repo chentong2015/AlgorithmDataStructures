@@ -2,6 +2,7 @@ package base_template.iteration.impl;
 
 import java.util.Iterator;
 
+// Peeking Iterator
 // Design an iterator that supports the peek operation on an existing iterator
 // in addition to the hasNext and the next operations.
 //
