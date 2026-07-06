@@ -35,7 +35,8 @@ public class MaximalSquare {
                         dp[i][j] = 1;
                     } else {
                         // TODO. 取相邻三个位置的最小值
-                        dp[i][j] = 1 + Math.min(dp[i - 1][j], Math.min(dp[i][j - 1], dp[i - 1][j - 1]));
+                        dp[i][j] = 1 + Math.min(dp[i - 1][j],
+                                Math.min(dp[i][j - 1], dp[i - 1][j - 1]));
                     }
                     maxLength = Math.max(maxLength, dp[i][j]);
                 }
