@@ -51,7 +51,9 @@ public class InsertInterval {
         return MergeIntervals.merge(tempIntervals);
     }
 
-    // TODO. 2. 直接遍历每一个区间, 动态扩展区间范围 !!
+    // TODO. 2. 直接遍历每一个区间, 动态扩展区间范围
+    // O(N)
+    // O(N)
     public int[][] insertPlus(int[][] intervals, int[] newInterval) {
         boolean inserted = false;
         List<int[]> newIntervals = new ArrayList<>();
