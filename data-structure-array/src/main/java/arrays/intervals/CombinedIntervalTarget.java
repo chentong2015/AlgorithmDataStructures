@@ -1,7 +1,4 @@
-package master.greedy;
-
-import java.util.Arrays;
-import java.util.Comparator;
+package arrays.intervals;
 
 // Video Stitching
 // You are given a series of video clips from a sporting event that lasted time seconds.
@@ -19,7 +16,7 @@ import java.util.Comparator;
 // 1 <= clips.length <= 100
 // 0 <= starti <= endi <= 100
 // 1 <= time <= 100
-public class VideoStitching {
+public class CombinedIntervalTarget {
 
     // TODO. Greedy贪心算法: 每次循环都从区间中取最大扩充的区间
     // clips = [[0,2],[4,6],[8,10],[1,9],[1,5],[5,9]], time = 10

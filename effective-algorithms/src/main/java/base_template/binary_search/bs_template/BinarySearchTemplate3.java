@@ -1,4 +1,4 @@
-package base_template.searching_binary.bs_template;
+package base_template.binary_search.bs_template;
 
 import java.util.ArrayList;
 import java.util.List;

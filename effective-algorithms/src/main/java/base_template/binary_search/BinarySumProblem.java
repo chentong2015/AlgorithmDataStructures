@@ -1,4 +1,4 @@
-package base_template.searching_binary;
+package base_template.binary_search;
 
 public class BinarySumProblem {
 

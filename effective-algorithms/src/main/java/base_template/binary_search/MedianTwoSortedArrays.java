@@ -1,4 +1,4 @@
-package base_template.searching_binary;
+package base_template.binary_search;
 
 // Median of Two Sorted Arrays
 // Given two sorted arrays nums1 and nums2, return the median of the two sorted arrays

@@ -1,4 +1,4 @@
-package base_template.searching_binary.bs_template;
+package base_template.binary_search.bs_template;
 
 // Search for an element or condition which requires accessing the current index and
 // its immediate right neighbor's index in the array

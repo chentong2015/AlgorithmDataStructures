@@ -1,4 +1,4 @@
-package base_template.searching_binary.left_right;
+package base_template.binary_search.left_right;
 
 // Find First and Last Position of Element in Sorted Array
 // Given an array of integers nums sorted in non-decreasing order

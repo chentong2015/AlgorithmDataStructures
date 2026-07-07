@@ -1,4 +1,4 @@
-package base_template.searching_binary.min_absolute;
+package base_template.binary_search.min_absolute;
 
 import java.util.*;
 

@@ -1,0 +1,10 @@
+优先对区间片段进行排序
+Arrays.sort(intervals, Comparator.comparingInt(interval -> interval[0]));
+
+有区间重叠则往两侧扩展，则扩充新区间范围
+newInterval[0] = Math.min(newInterval[0], interval[0]);
+newInterval[1] = Math.max(newInterval[1], interval[1]);
+
+List<int[]>list.toArray(new int[newIntervals.size()][]);
+
+区间问题的现实意义: Availability Time Slots 时间段合并

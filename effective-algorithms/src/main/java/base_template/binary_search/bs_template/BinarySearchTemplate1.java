@@ -1,4 +1,4 @@
-package base_template.searching_binary.bs_template;
+package base_template.binary_search.bs_template;
 
 // Search for an element or condition which can be determined by accessing a single index
 // 标准二分法, 只需要访问单一的index就能确定, 不需要考虑相邻或者相关的index
