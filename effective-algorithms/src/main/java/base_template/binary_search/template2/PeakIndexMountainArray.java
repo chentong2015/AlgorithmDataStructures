@@ -1,4 +1,4 @@
-package base_template.binary_search;
+package base_template.binary_search.template2;
 
 public class PeakIndexMountainArray {
 

@@ -51,7 +51,7 @@ public class InsertInterval {
         return MergeIntervals.merge(tempIntervals);
     }
 
-    // TODO. 2. 直接遍历每一个区间, 动态扩展区间范围
+    // TODO. 2. 遍历每一个区间的同时动态扩展区间范围
     // O(N)
     // O(N)
     public int[][] insertPlus(int[][] intervals, int[] newInterval) {
@@ -67,7 +67,7 @@ public class InsertInterval {
                 }
                 newIntervals.add(interval);
             } else {
-                // TODO. 有区间重叠则往两侧扩展，则扩充新区间范围
+                // TODO. 当有区间重叠时, 往两侧充新区间范围
                 newInterval[0] = Math.min(newInterval[0], interval[0]);
                 newInterval[1] = Math.max(newInterval[1], interval[1]);
             }

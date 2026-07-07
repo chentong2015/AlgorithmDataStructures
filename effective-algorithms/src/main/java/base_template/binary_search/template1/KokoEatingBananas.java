@@ -1,4 +1,4 @@
-package base_template.binary_search;
+package base_template.binary_search.template1;
 
 // Koko Eating Bananas
 // Koko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas.
@@ -12,19 +12,6 @@ package base_template.binary_search;
 // Koko likes to eat slowly but still wants to finish eating all the bananas before the guards return.
 // Return the minimum integer k such that she can eat all the bananas within h hours.
 public class KokoEatingBananas {
-
-    public static void main(String[] args) {
-        int[] piles = {312884470};
-        System.out.println(minEatingSpeed(piles, 312884469));
-
-        int[] piles1 = {30,11,23,4,20};
-        System.out.println(minEatingSpeed(piles1, 5));
-        System.out.println(minEatingSpeed(piles1, 6));
-
-        int[] piles2 = {3,6,7,11}; // 1 + 2 + 2 + 3
-        System.out.println(minEatingSpeed(piles2, 8));
-        System.out.println(minEatingSpeed(piles2, 5));
-    }
 
     // TODO. 二分法的衍生版本: 找到的median并不是最后结果，而是在二分过程中找边界值
     // piles = [30,11,23,4,20], h = 5 Output: 30 (1~30) 可选择值的范围

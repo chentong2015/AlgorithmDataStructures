@@ -10,7 +10,7 @@ import java.util.Map;
 // where intervals[i] = [starti, endi] and each starti is unique.  -> 作为健值
 // The right interval for an interval i is an interval j such that -> 符合二分查找
 // - startj >= endi
-// - startj is minimized
+// - startj is minimized 找下一个最大的startj的坐标
 // - i may equal j
 //
 // Return an array of right interval indices for each interval i.
@@ -22,7 +22,7 @@ import java.util.Map;
 // The start point of each interval is unique.
 public class FindRightIntervals {
 
-    // TODO: 利用HashMap<>存储排序之前的映射Index坐标, 确定结果
+    // TODO: 利用HashMap存储排序startI映射旧Index坐标
     // [3,4],[2,3],[1,2] intervals
     //  0     1     2
     //

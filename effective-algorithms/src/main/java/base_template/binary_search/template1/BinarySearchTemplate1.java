@@ -1,12 +1,13 @@
-package base_template.binary_search.bs_template;
+package base_template.binary_search.template1;
 
-// Search for an element or condition which can be determined by accessing a single index
-// 标准二分法, 只需要访问单一的index就能确定, 不需要考虑相邻或者相关的index
+import base_template.binary_search.template2.BinarySearchTemplate2;
+
+// Search for an element or condition which can be determined
+// by accessing a single index
 public class BinarySearchTemplate1 {
 
-    // 1. 注意起使位置的设置，确定范围   ==> 根据数组或者数字范围确定
-    // 2. 注意while循环的结束条件      ==> 判断是否能相等，是否需要间隔，结束的条件是什么
-    // 3. 注意左右index位置的更新 !!   ==> 在left < right循环中必须更新
+    // 标准二分法, 只需要访问单一的index就能确定, 不考虑相邻或者相关index
+    // 使用(left <= right)循环条件
     public int binarySearch1(int[] nums, int target) {
         if (nums == null || nums.length == 0) {
             return -1;
@@ -14,22 +15,21 @@ public class BinarySearchTemplate1 {
         int left = 0;
         int right = nums.length - 1;
 
-        // 注意这里的相等条件:
-        // 能确定到搜索同一个位置, 后面的left，right其中之一必须移动
+        // 相等条件: 确定到搜索同一个位置, 后面的left，right其中之一必须移动
         while (left <= right) {
-            // TODO: 计算中间位置时，注意避免值的溢出overflow  ==> 固定写法
+            // TODO: 固定写法: 计算中间位置时，注意避免值的溢出
             int mid = left + (right - left) / 2;
-
             if (nums[mid] == target) {
                 return mid;
             }
             if (nums[mid] < target) {
-                left = mid + 1;  // 因为mid位置不是，所以可以上移一个位置往后
+                left = mid + 1; // 允许+1移动
             } else {
-                right = mid - 1;
+                right = mid - 1; // 移动-1移动
             }
         }
-        return -1; // End Condition: left > right
+        // End Condition: left > right
+        return -1;
     }
 
     // Guess Number Higher or Lower

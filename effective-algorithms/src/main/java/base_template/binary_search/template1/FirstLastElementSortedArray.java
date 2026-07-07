@@ -1,4 +1,4 @@
-package base_template.binary_search.left_right;
+package base_template.binary_search.template1;
 
 // Find First and Last Position of Element in Sorted Array
 // Given an array of integers nums sorted in non-decreasing order
@@ -12,7 +12,8 @@ package base_template.binary_search.left_right;
 // -10^9 <= target <= 10^9
 public class FirstLastElementSortedArray {
 
-    // TODO. 使用两次二分查找，找到某个值的位置区间，二分循环到底
+    // TODO. 左右偏向二分查找, 二分查询两次并继续偏向移动位置
+    //  使用两次二分查找，找到某个值的位置区间，二分循环到底
     // nums = [5,7,7,8,8,10], target = 8
     // [3,4]
     //
@@ -31,8 +32,7 @@ public class FirstLastElementSortedArray {
     private int binarySearch(int[] nums, int target, boolean isSearchingLeft) {
         int left = 0;
         int right = nums.length - 1;
-        int idx = -1;
-
+        int indexFound = -1;
         while (left <= right) {
             int mid = left + (right - left) / 2;
             if (nums[mid] > target) {
@@ -41,15 +41,14 @@ public class FirstLastElementSortedArray {
                 left = mid + 1;
             } else {
                 // 继续二分法查找
-                // 如果找起始位置则往左侧移动，如果找结束位置则往右侧移动
-                idx = mid;
+                indexFound = mid;
                 if (isSearchingLeft) {
-                    right = mid - 1;
+                    right = mid - 1; // 找起始位置则往左侧移动
                 } else {
-                    left = mid + 1;
+                    left = mid + 1; // 找结束位置则往右侧移动
                 }
             }
         }
-        return idx;
+        return indexFound;
     }
 }

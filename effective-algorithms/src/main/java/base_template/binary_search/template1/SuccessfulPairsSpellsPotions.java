@@ -1,4 +1,4 @@
-package base_template.binary_search.left_right;
+package base_template.binary_search.template1;
 
 import java.util.Arrays;
 

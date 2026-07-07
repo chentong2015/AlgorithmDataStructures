@@ -15,7 +15,9 @@ public class LearnArray3 {
         // 使用两遍循环，先计算出总值，右边的总和通过总值来计算
         int sum = 0;
         int leftSum = 0;
-        for (int x : nums) sum += x;
+        for (int x : nums) {
+            sum += x;
+        }
         for (int i = 0; i < nums.length; ++i) {
             int rightSum = sum - leftSum - nums[i];
             if (leftSum == rightSum) {

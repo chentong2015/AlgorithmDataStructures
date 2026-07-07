@@ -7,7 +7,7 @@ import java.util.Comparator;
 // Given an array of intervals where intervals[i] = [start, end], start <= end
 public class MergeIntervals {
 
-    // TODO. 必须先排序再合并共同区间, 并循环后续期间的起始位置
+    // TODO. 先排序再合并共同区间, 更新EndI位置
     // [[1,3],[2,6],[8,10],[15,18]]
     // [[1,6],[8,10],[15,18]]
     //

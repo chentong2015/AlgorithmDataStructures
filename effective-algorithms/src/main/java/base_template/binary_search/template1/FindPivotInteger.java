@@ -1,6 +1,6 @@
-package base_template.binary_search;
+package base_template.binary_search.template1;
 
-public class BinarySumProblem {
+public class FindPivotInteger {
 
     // TODO. 二分位Index两侧可以直接求和，通过sum来判断二分法的移动方向
     // Given an integer N
@@ -14,21 +14,25 @@ public class BinarySumProblem {
     // RIGHT = SUM(K+1,N) = 7 + 8 = 15
     //
     // O(log(n)) O(1)
-    public static int findKValue(int n) {
+    public int pivotInteger(int n) {
+        if (n == 1) {
+            return 1;
+        }
+
         int left = 1;
         int right = n;
         int total = (n * (n + 1)) / 2;
         while (left < right) {
             int mid = left + (right - left)/2;
-            int sumLeft = (mid * (mid - 1))/2; // 等差数列请和公式 N*(N+1)/2
+            int sumLeft = (mid * (mid - 1))/2;
             int sumRight = total - mid - sumLeft;
 
             if (sumLeft == sumRight) {
                 return mid;
             } else if (sumLeft < sumRight) {
-                left = mid+1;
+                left = mid + 1;
             } else {
-                right = mid-1;
+                right = mid - 1;
             }
         }
         return -1;
