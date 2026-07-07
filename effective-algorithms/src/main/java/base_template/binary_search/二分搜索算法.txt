@@ -1,0 +1,36 @@
+TODO. 使用场景: 是否需要查找或定位
+1. 从有序的数据中找到指定数据，不需遍历所有值，时间复杂度为O(log(n))
+2. 从无序的数据中找到指定数据，必须在二分位计算后能够判断前后移动方向
+3. 从拼接好的排序堆片段数据进行二分法查找 O(2log(n)) = O(log(n))
+
+TODO. 进阶运用
+- 在二分的过程中可以实时计算"二分点两侧"的结果
+- 计算在元素位置上面，计算总值范围 & 距离差值(最终结果)
+- 找到某个median值后不一定返回，而是继续二分到最后，循环到底
+- 找到目标后继续查找最Left或最Right的坐标，确定最左值或最右值!
+
+
+TODO. Array数组二分搜索API
+ if index >=0; [0, length - 1]
+ if index < 0; [0, length]
+    恢复(-(insertion point) - 1)插入位置, 得到闭合区间
+int[] nums = {1, 5, 6, 8};
+Arrays.binarySearch(nums, 0, nums.length, 1); -> 0
+Arrays.binarySearch(nums, 0, nums.length, 3); -> -2 恢复成中间的插入坐标 1
+Arrays.binarySearch(nums, 0, nums.length, 10); -> -5 插入的坐标位置在最后 4
+Arrays.binarySearch(array, target)
+Arrays.binarySearch(array, fromIndex, toIndex, target) 指定二分查询区间
+
+
+TODO. Collection集合二分搜索API
+Collections.binarySearch(list, item)
+如果找到目标则返回index位置，反之返回负值(-(insertion point) - 1)
+利用结果坐标范围[0, length]来找最接近的值
+获取插入的位置坐标 index = -(index + 1)
+
+List.of(0,1,1,1,5)
+Collections.binarySearch(list, 0); // 0
+Collections.binarySearch(list, 1); // 2 找到中间位置
+Collections.binarySearch(list, 2); // 4 在5的位置插入
+Collections.binarySearch(list, 5); // 4 找到的确定位置
+Collections.binarySearch(list, 8); // 5 追加扩容元素
