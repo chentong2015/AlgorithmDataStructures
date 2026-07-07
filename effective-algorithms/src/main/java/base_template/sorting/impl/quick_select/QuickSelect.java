@@ -1,4 +1,4 @@
-package base_template.sorting.algo.quick_select;
+package base_template.sorting.impl.quick_select;
 
 import java.security.SecureRandom;
 import java.util.Arrays;

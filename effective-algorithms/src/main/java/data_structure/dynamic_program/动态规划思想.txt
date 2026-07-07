@@ -3,6 +3,7 @@ TODO. 动态编程: 通过历史记录信息来推倒最后结果
 - 本质是推导"Index位置值如何从Index-1位置(或跳跃位置)得到”
 
 数据记录的两种维度
+dp[i] = minBefore + Math.max(0, k-nums[i]);
 dp[i] = Math.min(dp[indexBefore] + 1, dp[i]);
 dp[i+1][j+1] = Math.max(dp[i][j + 1], dp[i + 1][j]);
 dp[i][j] = 1 + Math.min(dp[i - 1][j], Math.min(dp[i][j - 1], dp[i - 1][j - 1]));

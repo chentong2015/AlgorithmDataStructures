@@ -1,4 +1,4 @@
-package base_template.sorting.algo.count_sort;
+package base_template.sorting.impl.count_sort;
 
 // TODO. Counting Sort 计数排序：稳定的线性时间排序算法
 // O(n+k) 当输入的元素是n个0到k之间的整数时

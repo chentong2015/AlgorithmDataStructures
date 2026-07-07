@@ -1,4 +1,4 @@
-package master.greedy;
+package leetcode5;
 
 // Cut Rope
 // Given a rope with positive integer-length n,

@@ -1,4 +1,4 @@
-package base_template.sorting.algo.merge_sort;
+package base_template.sorting.impl.merge_sort;
 
 import java.util.Arrays;
 

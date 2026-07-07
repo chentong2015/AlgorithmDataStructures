@@ -1,4 +1,4 @@
-package base_template.sorting.algo.quick_sort;
+package base_template.sorting.impl.quick_sort;
 
 // 快速排序步骤:
 // 1. 从数列中挑出一个元素称为pivot基准

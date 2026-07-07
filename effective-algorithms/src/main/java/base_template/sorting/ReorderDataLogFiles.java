@@ -1,4 +1,4 @@
-package base_template.sorting.questions;
+package base_template.sorting;
 
 import java.util.Arrays;
 
@@ -39,6 +39,7 @@ public class ReorderDataLogFiles {
                 right--;
             }
         }
+
         Arrays.sort(logs, 0, right + 1, (log1, log2) -> {
             // 直接截取Content内容数据
             String content1 = log1.substring(log1.indexOf(" "));

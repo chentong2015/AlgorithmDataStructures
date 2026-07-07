@@ -10,10 +10,9 @@ package master.greedy;
 // It is guaranteed such an s exists for the given a and b.
 public class StringWithoutAAA {
 
-    // TODO. Greedy 每次选择字符时都保证是最优选择
-    // 相差数值大于等于2，则选择大数值的字符两个
+    // TODO. Greedy贪心算法: 每一步循环的字符安排都是最优, 没有冲突
     // a = 1, b = 2
-    // "abb", "bab" and "bba"
+    // "abb", "bab", "bba"
     //
     // a = 1, b = 3
     // "bbab"
@@ -22,7 +21,7 @@ public class StringWithoutAAA {
     // "aabaa"
     //
     // a = 3, b = 8
-    // bb a bb a bb a bb
+    // bbabbabbabb
     //
     // a = 4, b = 4
     // aa bb aa bb
@@ -30,7 +29,7 @@ public class StringWithoutAAA {
     public String strWithout3a3b(int a, int b) {
         StringBuilder stringBuilder = new StringBuilder();
 
-        // 每一步都保证是最优选择
+        // 相差数值大于等于2时，优先安排两个字符
         while (a > 0 && b > 0) {
             if (a - b >= 2) {
                 stringBuilder.append("aa");
@@ -50,13 +49,12 @@ public class StringWithoutAAA {
             }
         }
 
-        // 因为一定有解，所以剩余的数目一定小于3个
+        // 题目保证有解, 所以剩余数目一定小于3个
         if (a == 1) {
             stringBuilder.append("a");
         } else if (a == 2) {
             stringBuilder.append("aa");
         }
-
         if (b == 1) {
             stringBuilder.append("b");
         } else if (b == 2) {

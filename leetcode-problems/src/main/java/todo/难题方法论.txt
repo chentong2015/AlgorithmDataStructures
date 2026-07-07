@@ -1,8 +1,8 @@
 Hard题目思路分析
 1. 分析问题核心数据结构(PrefixSum, SubArray)?
 2. 分析问题高阶数据结构(Graph, Trees)?
-3. 定位问题特点算法逻辑(BFS/DFS, DP, Backtracking)?
+3. 定位问题特点算法逻辑(DP, Greedy, Backtracking)?
 4. 抽象技巧 + 数学逻辑
 
-LeetCode参考解析
+Leetcode参考解析
 https://github.com/doocs/leetcode/tree/main/solution

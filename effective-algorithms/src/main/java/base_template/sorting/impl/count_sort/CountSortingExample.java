@@ -1,4 +1,4 @@
-package base_template.sorting.algo.count_sort;
+package base_template.sorting.impl.count_sort;
 
 public class CountSortingExample {
 

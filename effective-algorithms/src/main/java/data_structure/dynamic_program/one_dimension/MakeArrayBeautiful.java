@@ -1,4 +1,4 @@
-package master.greedy;
+package data_structure.dynamic_program.one_dimension;
 
 // Minimum Increment Operations to Make Array Beautiful
 // You are given a 0-indexed integer array nums having length n, and an integer k.
@@ -12,9 +12,9 @@ package master.greedy;
 // 3 <= n == nums.length <= 10^5
 // 0 <= nums[i] <= 10^9
 // 0 <= k <= 10^9
-public class MinOperationsArrayBeautiful {
+public class MakeArrayBeautiful {
 
-    // TODO. Greedy贪心算法: 每读取一个新数据时，累计前面三个差值中最小的一个(最优解)
+    // TODO. DP算法: 每次新增一个值时, 从前面记录中取最小差值, 继续推导
     // [2,3,0,0,2], k = 4
     // [2,4,0,0,2]
     // [2,4,0,0,3]
@@ -29,13 +29,8 @@ public class MinOperationsArrayBeautiful {
     //  5 4 2
     //        2+2
     //
-    // [7,7,2,7], k = 9
-    // [7,9,2,7]
-    //  2 2 7
-    //       2+2
-    //
-    // [43,31,14,4], k = 73
-    // [43,73,14,4]
+    // O(N)
+    // O(N)
     public long minIncrementOperations(int[] nums, int k) {
         int length = nums.length;
         long[] dp = new long[length];
@@ -43,15 +38,13 @@ public class MinOperationsArrayBeautiful {
         dp[1] = Math.max(0, k - nums[1]);
         dp[2] = Math.max(0, k - nums[2]);
 
-        // TODO. DP不断地累加前面历史最优的结果
         for(int i = 3; i < length; i++) {
-            long minBefore = Math.min(dp[i-1], dp[i-2]);
-            minBefore = Math.min(minBefore, dp[i-3]);
+            // 在前面最小差值的基础上，再记录index位置需要的差值
+            long minBefore = Math.min(Math.min(dp[i-1], dp[i-2]), dp[i-3]);
             dp[i] = minBefore + Math.max(0, k-nums[i]);
         }
 
-        // 最后选择三个累计结果最小值
-        long result = Math.min(dp[length-1], dp[length-2]);
-        return Math.min(result, dp[length-3]);
+        // 从DP累计统计中找结果: 满足其中最小的一种
+        return Math.min(Math.min(dp[length-1], dp[length-2]), dp[length-3]);
     }
 }

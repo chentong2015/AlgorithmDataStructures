@@ -15,9 +15,9 @@ import java.util.Iterator;
 // 1 <= nums[i] <= 1000
 // All the calls to next and peek are valid.
 // At most 1000 calls will be made to next, hasNext, and peek.
-//
-// TODO. 不能再存储一遍数据(使用其他数据结构), 判断和取值都必须O(1)
 public class PeekingIterator implements Iterator<Integer>  {
+
+    // TODO. 不能再存储一遍数据(直接使用迭代器), 判断和取值都必须O(1)
 
     private boolean hasNext;
     private int nextElement;

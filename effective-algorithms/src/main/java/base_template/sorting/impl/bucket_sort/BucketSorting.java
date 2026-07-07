@@ -1,4 +1,4 @@
-package base_template.sorting.algo.bucket_sort;
+package base_template.sorting.impl.bucket_sort;
 
 import java.util.ArrayList;
 import java.util.List;

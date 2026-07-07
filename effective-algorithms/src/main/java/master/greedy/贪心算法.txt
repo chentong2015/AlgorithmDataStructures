@@ -1,9 +1,15 @@
+TODO. Greedy Algorithm 贪婪算法思想
+贪心算法是一种每一步都选择"当前状态下"最优方案的思想，从而保证结果最优
+- 子问题(局部问题)的最优解往往是最终问题的最优解
+- 贪心算法能解决的问题一般是最优解/但也有可能过早决定
+
+
+TODO. Greedy解法: 将更小的全部吸收，最大限度吸收能够吸收的
 弹性消除算法模型: 使用基础值吸引比它小的值，直到吸收全部
 Destroying Asteroids question
 BaseAmount = 10
 Amounts = {1,5,9,12,15,20}
 
-TODO. Greedy解法: 将更小的全部吸收，最大限度的吸收能够吸收的
 public void canDestroy() {
    Arrays.sort(amounts);
    long currentAmount = baseAmount;

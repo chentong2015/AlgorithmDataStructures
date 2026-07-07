@@ -1,4 +1,4 @@
-package arrays.intervals;
+package data_structure.dynamic_program.one_dimension;
 
 import java.util.Arrays;
 
@@ -15,7 +15,7 @@ import java.util.Arrays;
 // 1 <= wi, hi <= 10^5
 public class RussianDollEnvelopes {
 
-    // TODO. 以height高度数据构成“最长连续增长的Subsequence"长度即为结果
+    // TODO. DP算法: DP数组在循环过程中记录二分查找序列，仅维持结果长度的数组
     // [5,4],[6,4],[6,7],[2,3] -> 3
     // [2,3],[5,4],[6,4],[6,7]
     //
@@ -26,7 +26,7 @@ public class RussianDollEnvelopes {
     // [2,100],[3,200],[4,300],[6,370],[7,380] -> 5
     //    100 -> 200 -> 300 -> 370 -> 380
     //
-    // O(n*n) -> O(n*logn)
+    // O(N*logN)
     // O(1)
     public int maxEnvelopes(int[][] envelopes) {
         Arrays.sort(envelopes, (arr1, arr2) -> {
@@ -46,7 +46,7 @@ public class RussianDollEnvelopes {
             }
             dp[index] = envelope[1];
 
-            // 只有在最后追加才会有累加的效果
+            // 当追加的位置在扩容位置则累加长度
             if (index == maxLength) {
                 maxLength++;
             }

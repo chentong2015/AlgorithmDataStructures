@@ -1,4 +1,4 @@
-package base_template.sorting.questions;
+package base_template.sorting;
 
 import java.util.*;
 
