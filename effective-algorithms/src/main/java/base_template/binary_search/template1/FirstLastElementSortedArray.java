@@ -12,7 +12,7 @@ package base_template.binary_search.template1;
 // -10^9 <= target <= 10^9
 public class FirstLastElementSortedArray {
 
-    // TODO. 左右偏向二分查找, 二分查询两次并继续偏向移动位置
+    // TODO. 偏向二分查找: 二分查询两次并继续偏向移动位置
     //  使用两次二分查找，找到某个值的位置区间，二分循环到底
     // nums = [5,7,7,8,8,10], target = 8
     // [3,4]

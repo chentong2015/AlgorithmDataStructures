@@ -16,6 +16,7 @@ public class MinimumRoundCounter {
                 mapTasks.put(task, 1);
             }
         }
+
         int minTotalRounds = 0;
         for (int number: mapTasks.values()) {
             int minRounds = countMinRoundsForSameLevel(number);

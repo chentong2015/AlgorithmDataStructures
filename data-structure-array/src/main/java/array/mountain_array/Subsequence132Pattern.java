@@ -1,12 +1,12 @@
-package array.peak_mountain;
+package array.mountain_array;
 
-public class Pattern132Subsequence {
+// 132 Pattern
+// 132 pattern is a subsequence of three integers nums[i], nums[j] and nums[k]
+// i < j < k and nums[i] < nums[k] < nums[j]
+// Return true if there is a 132 pattern in nums, otherwise return false
+public class Subsequence132Pattern {
 
     // TODO. 动态编程：在遍历过程中存储两个重要的历史记录
-    // 132 Pattern
-    // 132 pattern is a subsequence of three integers nums[i], nums[j] and nums[k]
-    // i < j < k and nums[i] < nums[k] < nums[j]
-    // Return true if there is a 132 pattern in nums, otherwise return false
     // nums = [1,2,3,4]  -> false
     // nums = [3,1,4,2]  -> true
     // nums = [-1,3,2,0] -> true
