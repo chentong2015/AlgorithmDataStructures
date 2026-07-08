@@ -16,23 +16,23 @@ public class DailyTemperatures {
     // [73,74,75,71,69,72,76,73] -> [1,1,4,2,1,1,0,0]
     // [30,40,50,60] -> [1,1,1,0]
     //
-    // O(N)
-    // O(N + N) 原始参数数组需要用于判断，不能修改
+    // O(N + N) 中间入栈出栈的最大次数为N
+    // O(N + N) 原始参数数组不能修改
     public int[] dailyTemperatures(int[] temperatures) {
-        int length = temperatures.length;
-        int[] result = new int[length];
+        int[] result = new int[temperatures.length];
         Stack<Integer> stack = new Stack<>();
 
-        for (int index = length - 1; index >= 0; index--) {
-            // 排除后面存储的更小值, 对结果的计算无意义
+        for (int index = temperatures.length - 1; index >= 0; index--) {
+            // 移除存储的后续的更小值, 对结果没有意义
             while (!stack.isEmpty() && temperatures[stack.peek()] <= temperatures[index]) {
                 stack.pop();
             }
 
+            // 栈中剩下的一定是比当前更热的温度, 计算坐标差值
             if (stack.isEmpty()) {
                 result[index] = 0;
             } else {
-                result[index] = stack.peek() - index; // 计算更大值的index差值
+                result[index] = stack.peek() - index;
             }
             stack.push(index);
         }
