@@ -1,0 +1,8 @@
+package live_coding.criteo;
+
+public class SlidingWindowQuestion {
+
+    // 1. Sliding Window Average 要求写出算法并通过测试
+
+    // 2. Sliding Window Maximum 要求解释算法思路
+}

@@ -1,4 +1,4 @@
-package master.zip_data.sliding_window_max;
+package master.sliding_window.sliding_window_max;
 
 import java.util.LinkedList;
 

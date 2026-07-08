@@ -20,6 +20,7 @@ public class SlidingWindowAverage {
         if (nums == null || nums.length < k) {
             return averageList;
         }
+
         if (k == 1) {
             for (int num: nums) {
                 averageList.add(num);
