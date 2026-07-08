@@ -1,4 +1,4 @@
-package stack;
+package stack_monotonic;
 
 import java.util.Stack;
 
@@ -22,11 +22,13 @@ public class DailyTemperatures {
         int length = temperatures.length;
         int[] result = new int[length];
         Stack<Integer> stack = new Stack<>();
+
         for (int index = length - 1; index >= 0; index--) {
             // 排除后面存储的更小值, 对结果的计算无意义
             while (!stack.isEmpty() && temperatures[stack.peek()] <= temperatures[index]) {
                 stack.pop();
             }
+
             if (stack.isEmpty()) {
                 result[index] = 0;
             } else {
