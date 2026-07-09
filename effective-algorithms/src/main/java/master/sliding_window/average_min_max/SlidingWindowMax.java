@@ -1,13 +1,13 @@
-package master.sliding_window.sliding_window_max;
+package master.sliding_window.average_min_max;
 
 import java.util.LinkedList;
 
-// Sliding Window Maximum
+// Sliding Window Maximum / Minimum 等效算法
 public class SlidingWindowMax {
 
-    // TODO. LinkedList链表存储窗口中"从左往右"递减数据(参考单调栈)
-    // - 链表支持从最左侧头部移除数据 !!
-    // - 链表支持peek查看右侧尾部数据
+    // TODO. LinkedList链表存储"滑动窗口内递减数据"的坐标
+    // - 对于Index位置值，只有它前面更大值对于后面找Max才有意义 !!
+    // - 链表支持从最左侧头部移除和peek查看右侧尾部数据(不移除)
     //
     // O(N + N) 临时链表最多操作数据N次
     // O(K + K) 结果数组和临时链表存储空间
@@ -35,7 +35,7 @@ public class SlidingWindowMax {
             linkedList.offer(i);
 
             if (resultIndex >= 0) {
-                int headIndex = linkedList.peek();     // 因为前面有添加坐标, 因此peek一定有值
+                int headIndex = linkedList.peek();
                 result[resultIndex] = nums[headIndex]; // 头部位置的值一定是K区间中最大值
             }
         }

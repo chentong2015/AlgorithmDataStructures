@@ -1,4 +1,4 @@
-package master.sliding_window.sliding_window_average;
+package master.sliding_window.average_min_max;
 
 import java.util.ArrayList;
 import java.util.List;

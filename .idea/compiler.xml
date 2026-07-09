@@ -16,6 +16,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="data-structure-array-string" target="17" />
+      <module name="data-structure-collections" target="17" />
       <module name="effective-other-algo" target="17" />
       <module name="exercise-amazon" target="17" />
       <module name="exercise-arrays" target="17" />

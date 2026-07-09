@@ -4,12 +4,6 @@ import java.util.Arrays;
 
 public class PairDistanceCounterWindow {
 
-    public static void main(String[] args) {
-        int[] nums = {1,3,5,6,9,10};
-        System.out.println(countDistanceLessThanMid(nums, 5));
-        System.out.println(countDistanceLessThanMid(nums, 6));
-    }
-
     // TODO. 数组必须先排序好才能运用该滑动窗口
     // Count Pair Distance less than target
     // 滑动时每增加一个数则距离的最大值增减，从左侧划掉一个则首尾的距离降低

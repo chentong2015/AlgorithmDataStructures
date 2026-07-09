@@ -1,18 +1,16 @@
-TODO: Sliding windows 滑动窗口算法
-1. 所选的区间内的数据必须是连续Consecutive/Contiguous
-2. 所选的"框选"区间必须是闭合区间[i, j]
-3. 每读取一个新位置的值必须能够确定指针移动
-
+TODO: Sliding Windows 滑动窗口算法
+1. 所选的区间必须是一定范围内的连续区间，不能跳跃Index
+2. 所选的区间必须能够滑动，按条件往后移动
+3. 常见for+while算法逻辑
 for(item: items) {
     // update value
     while(condition) { // 特定的判断条件
-         // 滑动坐标或者重新计算
+        // 滑动坐标或者重新计算
     }
     // refresh result
 }
 
-TODO. Sliding windows 滑动窗口算法不适用于负数
-带有负数值的情况下，滑动窗口会错过某些区间
+TODO. Sliding windows 滑动窗口算法不适用于负数, 无法判断滑动
 nums = 1 2 5 -1 -1 -2, sum = 4
 here sliding window will fail, as moment we wish we found sum is > 4, i.e 1+2 +4 ,
 it will push i to next position, and will one case that is 1 2 5 -1 -1 -2 that sum to 4,

@@ -3,14 +3,12 @@ package strings.anagram;
 import java.util.ArrayList;
 import java.util.List;
 
-// TODO. 判断一个字符串的字符能否由另一个小字符串的字符生成
+// Find All Anagrams in a String
+// Given two strings s and p, return an array of all the start indices of p's anagrams in s.
+// You may return the answer in any order.
 public class AnagramsSubstring {
 
-    // 在数组中找出包含字符串排序的所有位置
-    //
-    // Find All Anagrams in a String
-    // Given two strings s and p, return an array of all the start indices of p's anagrams in s.
-    // You may return the answer in any order.
+    // TODO. 判断一个字符串的字符能否由另一个小字符串的字符生成
     //
     // 1 <= s.length, p.length <= 3 * 104
     // str1 and p consist of lowercase English letters.
