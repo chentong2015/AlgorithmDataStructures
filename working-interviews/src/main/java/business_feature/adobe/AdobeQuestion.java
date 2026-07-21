@@ -1,11 +1,12 @@
 package business_feature.adobe;
 
+// TODO. 考察对问题的理解以及编程经验
+// Scan/Filter objects and detect mismatch
+// Journey Stack: contains Action which maybe MessageAction
+// Message Stack: list of Message (journeyId, messageId)
 public class AdobeQuestion {
 
-    // TODO. 考察对问题的理解，以及编程背后的一些经验
-    // Scan/Filter objects and detect mismatch
-    // Journey Stack: contains Action which maybe MessageAction
-    // Message Stack: list of Message (journeyId, messageId)
+    // 使用Google Doc进行编程
     // 判断Journey列表中是否有不不符合条件的MessageAction
     //
     // public boolean detectMismatch(List<Journey> listJourney, List<Message> listMessage) {

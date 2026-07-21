@@ -20,18 +20,18 @@ public class KthLargestElement {
     // O(k)                额外存储了k个结果数据
     public int findKthLargest(int[] nums, int k) {
         PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
-        for (int index=0; index < k; index++) {
+        for (int index = 0; index < k; index++) {
             priorityQueue.add(nums[index]);
         }
 
-        for (int index=k; index< nums.length; index++) {
-            if (nums[index] > priorityQueue.peek()) {
+        for (int index = k; index < nums.length; index++) {
+            if (!priorityQueue.isEmpty() && nums[index] > priorityQueue.peek()) {
                 priorityQueue.poll();
                 priorityQueue.add(nums[index]);
             }
         }
 
         // 优先级队列的Root节点就是结果(TopK中的最小值)
-        return priorityQueue.poll();
+        return priorityQueue.isEmpty() ? 0 : priorityQueue.poll();
     }
 }

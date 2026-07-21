@@ -1,4 +1,4 @@
-package tree.binary_search_tree;
+package tree_binary.binary_search_tree;
 
 import tree.bean.TreeNode;
 
