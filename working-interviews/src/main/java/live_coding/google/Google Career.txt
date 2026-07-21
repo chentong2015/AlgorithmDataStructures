@@ -5,6 +5,8 @@ Technical Interview:
 
 interview accommodation 面试便利
 relative merits 相关优点
+pros and cons 优缺点
 corner and edge cases 边界场景
+engage the problem 着手解决问题
 
 https://www.google.com/about/careers/applications/buildyourfuture/resources/
