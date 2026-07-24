@@ -1,4 +1,4 @@
-package leetcode3;
+package live_coding.google.top50.combine_pair;
 
 // Best Sightseeing Pair
 // You are given an integer array values where values[i] represents the value of the ith sightseeing spot.
@@ -10,14 +10,13 @@ package leetcode3;
 // 1 <= values[i] <= 1000
 public class BestSightseeingPair {
 
-    // TODO. (values[i] + i) + (values[j] - j)
-    //  本质上结果 = 起点 + 终点，遍历过程中不断选择更大的起点
-    // [8,1,15,2,6]
-    //  0 1 2 3 4
-    // 8 + 5 + 0 - 2 = 11
+    // TODO. 变换计算公式: 一维空间(left, right)挑选两个位置的值
+    //  values[i] + values[j] + i - j = (values[i] + i) + (values[j] - j)
     //
-    // [1,2]
-    // 1 + 2 + 0 - 1 = 2
+    // [8,1,5,2,6]
+    //  0 1 2 3 4
+    //
+    // 8+5+0-2 = (8+0)+(5-2) = 11
     //
     // O(N)
     // O(1)
@@ -27,12 +26,12 @@ public class BestSightseeingPair {
         int maxScore = Integer.MIN_VALUE;
 
         for (int i = 1; i < values.length; i++) {
-            // TODO. 计算index位置所能得到的最大Score值
-            if (startSpot + values[i] - i > maxScore) {
-                maxScore = startSpot + values[i] - i;
+            // TODO. 计算index作为右侧点能得到的值
+            if (startSpot + (values[i] - i) > maxScore) {
+                maxScore = startSpot + (values[i] - i);
             }
 
-            // TODO. 更新起始点以获取后面计算的更大值
+            // TODO. 判断index位置能够作为左侧起始点
             if (values[i] + i > startSpot) {
                 startSpot = values[i] + i;
             }
