@@ -4,5 +4,5 @@ Hard题目思路分析
 3. 定位问题特点算法逻辑(DP, Greedy, Backtracking)
 4. 抽象技巧 + 数学逻辑
 
-Leetcode参考解析
+https://leetcode.com/problem-list/79h8rn6/
 https://github.com/doocs/leetcode/tree/main/solution

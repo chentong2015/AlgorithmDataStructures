@@ -1,4 +1,4 @@
-Hire Process:
+Hiring Process:
 1. Online Assessment 两道Algo+工作决策
 2. Phone Screen 1h   一轮全面且基础的面试
 3. Interview loop    四轮深度且技术性面试

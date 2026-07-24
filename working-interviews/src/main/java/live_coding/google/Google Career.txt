@@ -1,7 +1,8 @@
-Technical Interview:
-- Ask clarification
-- Talk thought
-- Code in Google Doc
+Hiring Process:
+1. HR Phone call
+2. Coding
+3. On-site loop (4 steps)
+4. Reference Check
 
 https://leetcode.com/problem-list/7p55wqm/
 
@@ -11,4 +12,5 @@ pros and cons 优缺点
 corner and edge cases 边界场景
 engage the problem 着手解决问题
 
+https://www.google.com/about/careers/applications/how-we-hire
 https://www.google.com/about/careers/applications/buildyourfuture/resources/
