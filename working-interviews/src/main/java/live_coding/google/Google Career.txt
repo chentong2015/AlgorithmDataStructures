@@ -1,10 +1,9 @@
 Hiring Process:
 1. HR Phone call
-2. Coding
+2. Tech Phone Screen
 3. On-site loop (4 steps)
-4. Reference Check
-
-https://leetcode.com/problem-list/7p55wqm/
+4. Behavioral Questions
+5. Hiring Committee
 
 interview accommodation 面试便利
 relative merits 相关优点
@@ -12,5 +11,8 @@ pros and cons 优缺点
 corner and edge cases 边界场景
 engage the problem 着手解决问题
 
-https://www.google.com/about/careers/applications/how-we-hire
+
+重点研究Graph和Tree相关算法
+https://leetcode.com/problem-list/7p55wqm/
+
 https://www.google.com/about/careers/applications/buildyourfuture/resources/
