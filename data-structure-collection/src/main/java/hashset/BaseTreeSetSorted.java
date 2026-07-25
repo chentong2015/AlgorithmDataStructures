@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.TreeSet;
 
 // TODO. Ordered Set 有排序的Set集合
-public class BaseTreeSet {
+public class BaseTreeSetSorted {
 
     // TreeSet<>插入和查找都是logN时间复杂度
     public static void main(String[] args) {

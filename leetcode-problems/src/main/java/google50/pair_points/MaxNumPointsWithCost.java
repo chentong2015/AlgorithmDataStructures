@@ -33,21 +33,20 @@ public class MaxNumPointsWithCost {
             // Calculate left-to-right maximum 两点Pair问题/左侧
             leftMax[0] = previousRow[0];
             for (int col = 1; col < cols; ++col) {
-                leftMax[col] = Math.max(leftMax[col - 1] - 1, previousRow[col]);
+                leftMax[col] = Math.max(leftMax[col-1] - 1, previousRow[col]);
             }
 
             // Calculate right-to-left maximum 两点Pair问题/右侧
             rightMax[cols - 1] = previousRow[cols - 1];
             for (int col = cols - 2; col >= 0; --col) {
-                rightMax[col] = Math.max(rightMax[col + 1] - 1, previousRow[col]);
+                rightMax[col] = Math.max(previousRow[col], rightMax[col+1] - 1);
             }
 
             // Calculate the current row's maximum points 往下一行推导累计值
             for (int col = 0; col < cols; ++col) {
-                currentRow[col] = points[row + 1][col] + Math.max(leftMax[col], rightMax[col]);
+                long maxPointsBefore = Math.max(leftMax[col], rightMax[col]);
+                currentRow[col] = maxPointsBefore + points[row+1][col];
             }
-
-            // Update previousRow for the next iteration
             previousRow = currentRow;
         }
 

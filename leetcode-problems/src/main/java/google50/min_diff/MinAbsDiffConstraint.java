@@ -1,4 +1,4 @@
-package hashset;
+package google50.min_diff;
 
 import java.util.List;
 import java.util.TreeSet;
@@ -19,7 +19,7 @@ import java.util.TreeSet;
 // 0 <= x < nums.length
 public class MinAbsDiffConstraint {
 
-    // TODO. 在循环过程中实时排序 + 二分查找(调用Sorted数据结构API)
+    // TODO. 循环过程中实时排序和二分查找(调用Sorted数据结构API)
     // nums = [4,3,2,4], x = 2 -> 0
     // nums = [5,3,2,10,15], x = 1 -> 1
     // nums = [1,2,3,4], x = 3 -> 3
