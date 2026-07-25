@@ -1,4 +1,4 @@
-package graph.currency_exchange;
+package live_coding.amazon.currency_exchange;
 
 import java.util.HashMap;
 

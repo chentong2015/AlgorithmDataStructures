@@ -8,16 +8,15 @@ K ->
           -> W
 -------------------------------------------------
 
-TODO: 图问题的解决算法
+TODO: 图形算法
 1. Breadth First Search 遍历完图形中的节点，不方便统计路径长度
 2. Depth First Search   找到图形中的目标节点，方便统计路径长度 !!
 3. Node InDegree        根据到结点的指向数目，依次从低到高，遍历节点之后更新相关节点计数
-
 4. Kahn's Algorithm / Topological Sorting 拓扑排序算法
 5. Dijkstra's Algorithm
 6. Floyd-Warshall Algorithm
 
-TODO. 图结构使用场景: 如果要保留图形节点关系，则必须存储Graph结构
+TODO. 使用场景: 如果要保留图形节点关系，则必须存储Graph结构
 1. 图结构解决最短路径问题(必须存在联通路径)
 2. 图结构解决“传递和依赖性”问题(判断是否存在环形结构)
 

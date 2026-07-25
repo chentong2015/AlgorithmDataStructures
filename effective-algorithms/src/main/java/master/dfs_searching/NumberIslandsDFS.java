@@ -33,11 +33,11 @@ public class NumberIslandsDFS {
         if (i < 0 || j < 0 || i >= grid.length || j >= grid[0].length) {
             return;
         }
+
         // 判断grid[i][j] != '1', 避免无限循环导致的栈溢出
         if (grid[i][j] != '1') {
             return;
         }
-
         // 修改二维数组的元素值来避免DFS无限循环
         grid[i][j] = '0';
 
