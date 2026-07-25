@@ -1,3 +1,3 @@
-DFS(Depth first search) 深度优先遍历
-- DFS本质上是一种特殊的递归，通过递归调用挖掘到最底层
-- DFS在挖掘/递归到最底层的过程中，选择Backtracking回溯数据或不修改数据 ！
+Depth first search (DFS) 深度优先遍历
+- 本质是一种特殊递归，通过递归挖掘到最底层
+- 在递归到最底层过程中，选择Backtracking回溯数据或不修改数据
