@@ -1,4 +1,4 @@
-package leetcode4;
+package google50.pair_points.left_right_process;
 
 // Sum of Beauty in the Array
 // You are given a 0-indexed integer array nums.

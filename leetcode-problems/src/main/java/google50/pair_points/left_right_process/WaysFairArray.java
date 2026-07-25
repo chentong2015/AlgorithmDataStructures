@@ -1,4 +1,4 @@
-package leetcode5;
+package google50.pair_points.left_right_process;
 
 // Ways to Make a Fair Array
 // You are given an integer array nums.

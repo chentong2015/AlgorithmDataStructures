@@ -1,4 +1,4 @@
-package live_coding.google.top50.combine_pair;
+package google50.pair_points.pair_path;
 
 // Best Sightseeing Pair
 // You are given an integer array values where values[i] represents the value of the ith sightseeing spot.
@@ -15,7 +15,6 @@ public class BestSightseeingPair {
     //
     // [8,1,5,2,6]
     //  0 1 2 3 4
-    //
     // 8+5+0-2 = (8+0)+(5-2) = 11
     //
     // O(N)

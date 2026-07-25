@@ -20,6 +20,7 @@ public class BestTimeBuySellStock {
             if (currentPrice > minBefore) {
                 maxGain = Math.max(maxGain, currentPrice - minBefore);
             } else {
+                // 如果当前位置更小，则重新记录更小的位置
                 minBefore = currentPrice;
             }
         }

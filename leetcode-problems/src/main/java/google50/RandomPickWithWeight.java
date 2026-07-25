@@ -1,4 +1,4 @@
-package live_coding.google.top50;
+package google50;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -13,7 +13,7 @@ import java.util.Random;
 // and the probability of picking index 1 is 3 / (1 + 3) = 0.75 (i.e., 75%).
 public class RandomPickWithWeight {
 
-    // TODO. 权重的本质是数据的范围区间
+    // TODO. Weight -> Range 权重问题本质是数据范围问题
     // 1   2   3   4
     // 10%  20%  30%  40% = 1000%
     // Index -> weight -> use a range ?
