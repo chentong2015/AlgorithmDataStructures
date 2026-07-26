@@ -1,0 +1,15 @@
+Excel Formula Validation 验证公式计算是否有效
+A00 -> B01
+       -> C05 -> C11
+    -> B08
+A01 -> K09
+    -> M99
+
+TODO. Graph图形问题:
+验证数据联通的关联关系是否存在Cycle, 只需遍历节点
+1. build Graph by mapping
+2. loop graph from the start node: BFS / DFS
+3. return yes if no cycle in the path
+
+TODO. 不构建Graph图形: 不推荐
+存储所有cell节点的映射关系(A00->B12), 在判断时通过二级缓存来判断是否有效
