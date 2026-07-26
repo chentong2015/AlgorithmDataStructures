@@ -1,4 +1,4 @@
-package data_structure.dynamic_program.one_dimension.subsequences_continue;
+package data_structure.dynamic_program.dimension1.subsequences_continue;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package data_structure.dynamic_program.two_dimension.subsequence;
+package data_structure.dynamic_program.subsequence;
 
 // Shortest Common SuperSequence
 // Given two strings str1 and str2, return the shortest string

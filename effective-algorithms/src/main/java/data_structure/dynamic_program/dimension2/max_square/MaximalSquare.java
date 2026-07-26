@@ -1,4 +1,4 @@
-package data_structure.dynamic_program.two_dimension.max_square;
+package data_structure.dynamic_program.dimension2.max_square;
 
 // Maximal Square
 // Given an m x n binary matrix filled with 0's and 1's,

@@ -1,4 +1,4 @@
-package data_structure.dynamic_program.one_dimension;
+package data_structure.dynamic_program.dimension1;
 
 import java.util.Arrays;
 

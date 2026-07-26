@@ -1,4 +1,4 @@
-package data_structure.dynamic_program.two_dimension.subsequence;
+package data_structure.dynamic_program.subsequence;
 
 // Longest Common Subsequence (LCP)
 // Given two strings text1 and text2, return the length of their longest common subsequence.

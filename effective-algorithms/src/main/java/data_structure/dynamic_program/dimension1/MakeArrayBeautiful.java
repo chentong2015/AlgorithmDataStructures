@@ -1,4 +1,4 @@
-package data_structure.dynamic_program.one_dimension;
+package data_structure.dynamic_program.dimension1;
 
 // Minimum Increment Operations to Make Array Beautiful
 // You are given a 0-indexed integer array nums having length n, and an integer k.

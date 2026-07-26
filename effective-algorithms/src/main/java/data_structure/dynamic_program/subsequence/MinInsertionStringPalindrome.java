@@ -1,4 +1,4 @@
-package data_structure.dynamic_program.two_dimension.subsequence;
+package data_structure.dynamic_program.subsequence;
 
 // Minimum Insertion Steps to Make a String Palindrome
 // In one step you can insert any character at any index of the string

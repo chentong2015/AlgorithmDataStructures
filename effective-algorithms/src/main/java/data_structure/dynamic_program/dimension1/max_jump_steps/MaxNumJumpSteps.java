@@ -1,4 +1,4 @@
-package data_structure.dynamic_program.one_dimension.max_jump_steps;
+package data_structure.dynamic_program.dimension1.max_jump_steps;
 
 import java.util.Arrays;
 
