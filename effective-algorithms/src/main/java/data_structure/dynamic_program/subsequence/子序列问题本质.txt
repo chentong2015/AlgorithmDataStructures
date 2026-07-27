@@ -1,9 +1,10 @@
-TODO. Subsequence 子序列不是连续的字符
-按照顺序排序的一串字符, 通过删除某些字符形成
-二维层次的问题, 需要N*N平方的对比次数
 A subsequence of a string is a new string generated from the original string
 with some characters (can be none) deleted
 without changing the relative order of the remaining characters.
+
+TODO. Subsequence 子序列不是连续的字符
+- 按照顺序排序的一串字符, 通过删除某些字符形成
+- 二维层次的问题, 需要N*N平方的对比次数
 
 TODO. Subsequence 应用场景
 - 数据比较与猜测(判断字符含义)
