@@ -3,7 +3,8 @@ Hiring Process:
 2. Hiring manager (2-3 days)
 2. Tech Phone Screen (1hour)
    google doc (20-30 lines) + 45m + 45m (2 rounds)
-3. loop (soft skills)
+3. System Design
+3. Soft skills
 
 interview accommodation 面试便利
 relative merits 相关优点
