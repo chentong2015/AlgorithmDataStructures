@@ -1,4 +1,4 @@
-package tree_binary.binary_indexed_tree;
+package tree.binary_tree.binary_indexed_tree;
 
 import java.util.ArrayList;
 import java.util.Collections;

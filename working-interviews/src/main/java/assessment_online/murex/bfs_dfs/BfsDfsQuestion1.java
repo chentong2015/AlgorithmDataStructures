@@ -1,4 +1,4 @@
-package interview_coding.murex;
+package assessment_online.murex.bfs_dfs;
 
 public class BfsDfsQuestion1 {
 

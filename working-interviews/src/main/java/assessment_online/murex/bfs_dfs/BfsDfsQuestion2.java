@@ -1,4 +1,4 @@
-package interview_coding.murex;
+package assessment_online.murex.bfs_dfs;
 
 // TODO: BFS-DFS，在递归遍历过程中增加判断的条件，使用两次BFS
 // 判断从(0,0)是否能在(m,n)的矩阵中找到4
