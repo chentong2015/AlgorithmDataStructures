@@ -1,13 +1,12 @@
 Hiring Process:
-1. HR Phone call
-2. Tech Phone Screen
-3. On-site loop (4 steps)
-4. Behavioral Questions
-5. Hiring Committee
+1. HR Phone call (30m)
+2. Tech Phone Screen (1hour)
+3. On-site loop (45m+45m+45m+45m)
+4. Hiring Committee
+5. Team/Project Match
 
 interview accommodation 面试便利
 relative merits 相关优点
-pros and cons 优缺点
 corner and edge cases 边界场景
 engage the problem 着手解决问题
 
