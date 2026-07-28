@@ -1,10 +1,8 @@
 Hiring Process:
-1. HR Phone call (30m)
-2. Hiring manager (2-3 days)
-2. Tech Phone Screen (1hour)
-   google doc (20-30 lines) + 45m + 45m (2 rounds)
-3. System Design
-3. Soft skills
+1. HR Phone call (30m) + Hiring manager
+2. Tech Phone Screen (1 hour / google doc (20-30 lines)
+3. On_site Loop (45 + 45 + System Design + 45)
+4. Soft skills
 
 interview accommodation 面试便利
 relative merits 相关优点
