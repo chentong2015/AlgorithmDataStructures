@@ -1,4 +1,4 @@
-package googleTop50;
+package googleTop50.tree_direction;
 
 // Step-By-Step Directions From a Binary Tree Node to Another
 // Find the shortest path starting from node s and ending at node t.
@@ -42,6 +42,7 @@ public class BinaryTreeNodesDirection {
         return directions.toString();
     }
 
+    // TODO. 推荐使用StringBuilder来累计递归路径的字符串
     // O(N)
     // O(N) stack memory
     private boolean findPath(TreeNode node, int target, StringBuilder path) {
@@ -64,6 +65,23 @@ public class BinaryTreeNodesDirection {
         }
         path.deleteCharAt(path.length() - 1); // Remove last character
         return false;
+    }
+
+    // TODO. 使用String重新构建字符串对象比较耗时
+    public String findPath(TreeNode node, int value, String currentPath) {
+        if (node == null) {
+            return null;
+        }
+        if (node.val == value) {
+            return currentPath;
+        }
+
+        String path = findPath(node.left, value, currentPath + "L");
+        if (path != null) {
+            return path;
+        } else {
+            return findPath(node.right, value, currentPath + "R");
+        }
     }
 
     class TreeNode {
