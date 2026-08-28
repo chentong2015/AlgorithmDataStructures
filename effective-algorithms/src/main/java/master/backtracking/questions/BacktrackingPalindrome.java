@@ -1,4 +1,4 @@
-package master.backtracking.palindrome;
+package master.backtracking.questions;
 
 import java.util.ArrayList;
 import java.util.List;

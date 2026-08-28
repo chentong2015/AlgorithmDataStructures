@@ -1,4 +1,4 @@
-package base_template.recursion;
+package master.backtracking;
 
 public class TargetSum {
 

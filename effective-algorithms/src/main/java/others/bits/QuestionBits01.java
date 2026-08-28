@@ -1,4 +1,4 @@
-package others.bit_operation;
+package others.bits;
 
 public class QuestionBits01 {
 

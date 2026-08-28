@@ -1,4 +1,4 @@
-package master.backtracking.parentheses;
+package master.backtracking.questions;
 
 import java.util.ArrayList;
 import java.util.List;

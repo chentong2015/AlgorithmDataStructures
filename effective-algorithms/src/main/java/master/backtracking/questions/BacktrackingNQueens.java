@@ -1,4 +1,4 @@
-package master.backtracking.nqueens;
+package master.backtracking.questions;
 
 // N-Queens II 回溯算法典型案例
 // Placing n queens on an n x n chessboard such that no two queens attack each other

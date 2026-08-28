@@ -1,4 +1,4 @@
-package others.math_theory;
+package others.math;
 
 // Count Good Numbers
 // A digit string is good if
