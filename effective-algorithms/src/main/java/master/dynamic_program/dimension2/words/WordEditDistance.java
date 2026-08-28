@@ -12,11 +12,7 @@ package master.dynamic_program.dimension2.words;
 // word1 and word2 consist of lowercase English letters
 public class WordEditDistance {
 
-    public static void main(String[] args) {
-        System.out.println(minDistance("horse", "ros"));
-    }
-
-    // TODO. 金典DB二维数组(多一行多一列), 自然推导其中规律
+    // TODO. 金典DB二维数组推导规律, 多创建一行一列用于累计计算
     // word1 = "horse", word2 = "ros" -> 3
     //       h  o  r  s  e
     //    0  1  2  3  4  5 /第一行直接计算
