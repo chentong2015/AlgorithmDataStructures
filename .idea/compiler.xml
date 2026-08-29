@@ -10,8 +10,8 @@
         <module name="data-structure-chararray" />
         <module name="data-structure-collection" />
         <module name="data-structure-nonlinear" />
-        <module name="leetcode-problems" />
         <module name="effective-algorithms" />
+        <module name="effective-leetcode" />
         <module name="working-interviews" />
       </profile>
     </annotationProcessing>

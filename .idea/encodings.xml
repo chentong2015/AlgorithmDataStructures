@@ -11,6 +11,8 @@
     <file url="file://$PROJECT_DIR$/data-structure-nonlinear/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/effective-algorithms/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/effective-algorithms/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/effective-leetcode/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/effective-leetcode/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/effective-other-algo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/effective-other-algorithms/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/exercise-amazon/src/main/java" charset="UTF-8" />
@@ -22,8 +24,6 @@
     <file url="file://$PROJECT_DIR$/interview-amazon/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/leetcode-problems-todo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/leetcode-problems-todo/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/leetcode-problems/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/leetcode-problems/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/other-problems/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/other-problems/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/working-interviews/src/main/java" charset="UTF-8" />
