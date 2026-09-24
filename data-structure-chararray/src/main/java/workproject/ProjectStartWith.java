@@ -1,4 +1,4 @@
-package string;
+package workproject;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -11,7 +11,7 @@ import java.util.Set;
 // LY = country code
 // LT = city code
 // 001 = code for agency
-public class ImplStartWith {
+public class ProjectStartWith {
 
     private static final int NORMAL_LENGTH = 8;
     private static final int LIMIT_LENGTH = 11;

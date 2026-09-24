@@ -1,4 +1,4 @@
-package strings;
+package strings.reversed;
 
 // Reverse Words in a String
 // Given an input string s, reverse the order of the words
@@ -16,7 +16,7 @@ public class ReverseStringWords {
         String[] words = str.trim().split(" ");
         StringBuilder sb = new StringBuilder();
 
-        // 从后往前组合结果，无需反转
+        // 从后往前组合Word结果，无需反转单词
         for (int i = words.length - 1; i >= 0; i--) {
             if(!words[i].isEmpty() && i > 0) {
                 sb.append(words[i]).append(" ");

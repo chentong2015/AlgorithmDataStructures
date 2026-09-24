@@ -1,11 +1,11 @@
-package string;
+package workproject;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-public class ImplSplitStr {
+public class ProjectSplitStr {
 
     // 字符的解析操作由业务逻辑所确定
     public static void main(String[] args) {

@@ -5,22 +5,20 @@ import java.util.*;
 public class BaseQueue {
 
     public static void main(String[] args) {
-        // 设置的队列存储元素的初始容量，并非存储量的限制
-        // 根据插入元素的数量进行动态的扩容
+        // 设置的队列存储元素的初始容量，后续根据插入元素数量动态扩容
         // 默认最大容量限制 MAX_ARRAY_SIZE = Integer.MAX_VALUE - 8;
         Queue<Integer> queue = new ArrayDeque<>(3);
 
-        // TODO: .add() vs .offer() 区别两种API
-        // .add()   在不违反容量限制的情况下，将元素追加到队列末尾
-        // .offer() 当使用容量限制的队列时，该方法会抛出Exception
+        // TODO: 当使用容量限制的队列时优先使用offer()
+        // add()方法在无空间时会抛出异常
+        // offer()在无空间时只返回false
         queue.add(10);
-
-        // 可以存储Null空值，但可能造成出队列时的异常
         queue.offer(5);
         queue.offer(15);
-        // queue.offer(null);
 
-        queue.remove();    // 从头部开始移除
+        queue.offer(null); // 存储空值可能造成出队后判断异常
+
+        queue.remove();     // 从头部开始移除
         queue.remove(5); // 移除队列中特定的元素
 
         // 查看出队列元素但不移除，可能返回null，不能赋值给值类型
