@@ -1,13 +1,15 @@
-package strings.impl;
+package workproject;
 
 // String.replace(subStr, targetStr) 源码实现
 // - 将字符串中匹配的subStr全部替换成targetStr
 // - 当出现重回的subStr位置时, 从head开始替换
-public class ImplReplaceStr {
+public class ProjectReplaceSubstring {
 
     //
     // aaaaa aaa bb -> bbaa
     // abdcsq bd mm -> ammcsq
+    //
+    // O(N*M)
     public static String replaceSubStr(String sourceStr, String subStr, String targetStr) {
         // 首先需要判断是否满足替换的条件
         int left = 0;
