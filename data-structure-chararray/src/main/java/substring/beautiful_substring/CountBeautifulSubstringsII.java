@@ -1,4 +1,4 @@
-package substring;
+package substring.beautiful_substring;
 
 import java.util.HashMap;
 

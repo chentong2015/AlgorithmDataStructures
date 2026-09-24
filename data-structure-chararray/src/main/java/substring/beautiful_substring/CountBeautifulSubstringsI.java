@@ -1,4 +1,4 @@
-package substring;
+package substring.beautiful_substring;
 
 // Count Beautiful Substrings I
 // You are given a string s and a positive integer k.

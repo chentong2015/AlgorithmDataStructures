@@ -1,4 +1,4 @@
-package substring.kmp_search;
+package substring;
 
 // TODO: KMP Pattern Matching(Substring Search)
 // 模式串匹配失败时，利用已经匹配的字符串的“最长相等前后缀”，把模式串指针跳过去，而不是让主串指针回退
