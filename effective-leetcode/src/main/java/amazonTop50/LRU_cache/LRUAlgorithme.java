@@ -1,4 +1,4 @@
-package basic.LRU;
+package amazonTop50.LRU_cache;
 
 import java.util.HashMap;
 import java.util.Map;

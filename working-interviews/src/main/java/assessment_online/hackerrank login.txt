@@ -1,3 +1,0 @@
-https://www.hackerrank.com/
-chen2015*/TCHong123&
-使用SOUT来检测方法的Input输入并Debug异常Case
