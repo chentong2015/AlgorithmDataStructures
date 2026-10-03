@@ -1,4 +1,4 @@
-package interview_coding.amazon.integer_to_roman;
+package interview_coding.entrust;
 
 // Integer to Roman
 // Given an integer, convert it to a Roman numeral.
@@ -21,6 +21,7 @@ public class IntegerToRoman {
             if (num == 0) {
                 break;
             }
+
             // 如果大于映射的值，则循环减值并取字母
             while (num >= values[i]) {
                 num -= values[i];

@@ -1,4 +1,4 @@
-package interview_coding.amazon.max_health_server;
+package assessment_online.amazon.max_health_server;
 
 import java.util.HashMap;
 import java.util.Map;
