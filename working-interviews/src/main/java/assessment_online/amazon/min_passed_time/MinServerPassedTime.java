@@ -3,13 +3,14 @@ package assessment_online.amazon.min_passed_time;
 import java.util.Collections;
 import java.util.List;
 
+// 统计遍历完所有Servers所花的最少时间
 public class MinServerPassedTime {
 
-    // 计算将servers中所有的为止遍历完成，最少需要的时间
+    // 统计每个server之间所有的间隔，最后将最大的间隔舍弃
     // total server = 8
     // servers:  2   6   8
     //            4    2   2
-    // 统计每个server之间所有的间隔，最后将最大的间隔舍弃
+
     public static int getMinServerPassedTime(int total_servers, List<Integer> servers) {
         if (servers.size() == 1) {
             return 0;

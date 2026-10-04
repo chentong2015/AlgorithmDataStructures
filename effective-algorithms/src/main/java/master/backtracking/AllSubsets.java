@@ -1,6 +1,7 @@
 package master.backtracking;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 // Subsets
@@ -19,15 +20,12 @@ public class AllSubsets {
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
         List<Integer> temp = new ArrayList<>();
-
         getSubset(ans, nums,0, temp);
-        // Collections.sort(ans);
         return ans;
     }
 
-    // Index位置的值可取可不取
     public void getSubset(List<List<Integer>> ans, int[] nums, int index, List<Integer> temp){
-        if(index == nums.length){
+        if (index == nums.length) {
             ans.add(new ArrayList<>(temp));
             return;
         }
@@ -35,6 +33,7 @@ public class AllSubsets {
         temp.add(nums[index]);
         getSubset(ans, nums,index + 1, temp);
 
+        // 撤销上一个添加的num后重新组合
         temp.remove(temp.size() - 1);
         getSubset(ans, nums,index + 1, temp);
     }

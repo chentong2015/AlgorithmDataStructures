@@ -15,12 +15,12 @@ public class WordEditDistance {
     // TODO. 金典DB二维数组推导规律, 多创建一行一列用于累计计算
     // word1 = "horse", word2 = "ros" -> 3
     //       h  o  r  s  e
-    //    0  1  2  3  4  5 /第一行直接计算
+    //    0  1  2  3  4  5 第一行直接计算,表示从空演变的操作数
     // r  1  1  2  2  3  4
     // o  2  2  1  2  3  4
     // s  3  3  2  2  2  3 > answer
-    //    /第一列直接计算
-    //
+    //    第一列直接计算
+    //    表示从0构建的操作数
     public static int minDistance(String word1, String word2) {
         int length1 = word1.length();
         int length2 = word2.length();
@@ -35,7 +35,7 @@ public class WordEditDistance {
         for (int row = 1; row <= length2; row++) {
             for (int col = 1; col <= length1; col++) {
                 if (word2.charAt(row - 1) == word1.charAt(col - 1)) {
-                    // 取左上角值(使用当前字符)，不做累加
+                    // 取左上角值不做累加，再使用当前字符
                     dp[row][col] = dp[row-1][col-1];
                 } else {
                     // 取三个周围最小值，做累加1
