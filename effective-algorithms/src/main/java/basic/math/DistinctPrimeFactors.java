@@ -1,4 +1,4 @@
-package others.math;
+package basic.math;
 
 import java.util.HashSet;
 import java.util.Set;

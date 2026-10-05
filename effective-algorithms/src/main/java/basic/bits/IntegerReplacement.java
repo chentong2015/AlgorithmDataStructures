@@ -1,4 +1,4 @@
-package others.bits;
+package basic.bits;
 
 // Integer Replacement
 // Given a positive integer n, you can apply one of the following operations:

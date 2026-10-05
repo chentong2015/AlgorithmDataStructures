@@ -1,4 +1,4 @@
-package others.math;
+package basic.math;
 
 public class BaseMath1 {
 

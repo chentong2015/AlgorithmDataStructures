@@ -1,4 +1,4 @@
-package others.random;
+package basic.random;
 
 import java.util.ArrayList;
 import java.util.HashMap;
