@@ -1,0 +1,16 @@
+Tech面试重点:
+Trees, Graphs, Hash Tables, Arrays, Linked List
+DFS/BFS, DP, Two Pointers, Sliding Windows
+
+Tips面试机巧:
+1. Ask clarification first, do not dive into code
+2. Think aloud throughout process
+3. Write clean, efficient code, and discuss trade-offs
+4. Test code before declaring it complete
+
+
+https://www.amazon.jobs/fr/software-development-interview-prep
+https://www.amazon.jobs/zh/landing_pages/in-software-development-topics
+
+https://www.scarletink.com/p/what-to-expect-amazon-interview-process
+https://www.amazon.jobs/content/en/how-we-hire/interview-loop
