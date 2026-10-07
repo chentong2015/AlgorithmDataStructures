@@ -1,4 +1,4 @@
-package assessment_online.societe_generale;
+package assessment_online.sgbank;
 
 public class CodingQuestion {
 
