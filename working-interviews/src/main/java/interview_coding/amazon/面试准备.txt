@@ -1,5 +1,5 @@
 Tech面试重点:
-Trees, Graphs, Hash Tables, Linked List
+Trees, Graphs, Hash Tables, Arrays, Linked List
 DFS/BFS, DP, Two Pointers, Sliding Windows
 
 Tips面试机巧:
