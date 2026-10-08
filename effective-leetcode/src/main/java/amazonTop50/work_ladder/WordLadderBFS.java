@@ -15,11 +15,18 @@ import java.util.*;
 // beginWord != endWord
 // endWord.length == beginWord.length
 // beginWord, endWord, and wordList[i] consist of lowercase English letters.
-public class WordLadderBfs {
+public class WordLadderBFS {
 
-    // TODO. 构建从开始单词到结果单词的通路
-    // Queue + for + for
+    // TODO. BFS从开始单词逐步构建(组合a-z字符)到目标单词的通路
+    // Queue + while/for 层级遍历 + for 组合所有字符
+    //
+    // "hit", "cog", ["hot","dot","dog","lot","log","cog"] -> 5
+    // "hit" -> "hot" -> "dot" -> "dog" -> cog"
+    //
+    // O(N+N*L*26) 单词的数量,单词的字符数,常量字符
+    // O(N)        存储全部单词
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+        // 使用HashSet快速判断是否存在
         Set<String> wordSet = new HashSet<>(wordList);
         if (!wordSet.contains(endWord)) {
             return 0;
@@ -27,19 +34,19 @@ public class WordLadderBfs {
 
         Queue<String> queue = new LinkedList<>();
         queue.offer(beginWord);
-
         int steps = 1;
-        while (!queue.isEmpty()) {
+        while (!queue.isEmpty()) { // 两层while的循环中次数O(N)级别
             int size = queue.size();
-            while (size-- > 0) {
+            while (size > 0) {
                 String word = queue.poll();
                 if (word.equals(endWord)) {
                     return steps;
                 }
 
+                // 组合成所有单词，如果在提供列表中则添加到下一层Queue中
+                char[] chars = word.toCharArray();
                 for (int i = 0; i < word.length(); i++) {
                     for (char c = 'a'; c <= 'z'; c++) {
-                        char[] chars = word.toCharArray();
                         chars[i] = c;
                         String newWord = new String(chars);
                         if (wordSet.contains(newWord)) {
@@ -48,7 +55,10 @@ public class WordLadderBfs {
                         }
                     }
                 }
+                size--;
             }
+
+            // 每一个层级增加延伸一步
             steps++;
         }
         return 0;

@@ -54,16 +54,18 @@ public class KLargestSumArray {
         minHeap.add(new Pair(nums[0],1));
 
         while (k > 1) {
-            Pair pair = minHeap.poll();       // 每一轮取一个最小损失
+            Pair pair = minHeap.poll(); // 取最小损失且自动出队
             long minSumReduction = pair.sum;
             k--;
             if (k==1) {
-                return sum - minSumReduction; // 返回损失最小和后的结果
+                return sum - minSumReduction; // 计算第K个最小损失后的值
             }
 
-            // Backtracking 撤销前一个最小折扣，构成更小折扣组合
+            // Backtracking ，构成更小折扣组合
             int idx = pair.idx;
             if (idx < nums.length) {
+                // 撤销前一个最小折扣:
+                // Backtracking组合构成所有最小折扣组合, 最小堆自动排序
                 minHeap.add(new Pair(minSumReduction + nums[idx],idx+1));
                 minHeap.add(new Pair(minSumReduction - nums[idx-1] + nums[idx],idx+1));
             }

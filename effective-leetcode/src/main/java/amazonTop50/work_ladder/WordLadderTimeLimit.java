@@ -25,11 +25,11 @@ public class WordLadderTimeLimit {
         for (int index = 0; index < wordList.size(); index++) {
             leftIdSet.add(index);
         }
-        recursion(wordList, leftIdSet, beginWord, endWord, 1);
+        dfs(wordList, leftIdSet, beginWord, endWord, 1);
         return minSteps == Integer.MAX_VALUE ? 0: minSteps;
     }
 
-    private void recursion(List<String> wordList, Set<Integer> leftIdSet, String currentWord, String endWord, int steps) {
+    private void dfs(List<String> wordList, Set<Integer> leftIdSet, String currentWord, String endWord, int steps) {
         if (currentWord.equals(endWord)) {
             minSteps = Math.min(minSteps, steps);
             return;
@@ -39,7 +39,7 @@ public class WordLadderTimeLimit {
             if (canTransform(currentWord, wordList.get(index))) {
                 HashSet<Integer> tempSet = new HashSet<>(leftIdSet);
                 tempSet.remove(index);
-                recursion(wordList, tempSet, wordList.get(index), endWord, steps + 1);
+                dfs(wordList, tempSet, wordList.get(index), endWord, steps + 1);
             }
         }
     }

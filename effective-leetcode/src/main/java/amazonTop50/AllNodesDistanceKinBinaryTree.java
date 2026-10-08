@@ -51,7 +51,8 @@ public class AllNodesDistanceKinBinaryTree {
                 return list; // 当前队列中节点的值就是结果
             }
 
-            for (int i = 0; i < queue.size(); i++) { // BFS 逐层遍历节点
+            // BFS 逐层遍历节点: 只循环一层Size数量
+            for (int i = 0; i < queue.size(); i++) {
                 TreeNode node = queue.poll();
                 if (node.left != null && !visited.contains(node.left)) {
                     visited.add(node.left);
