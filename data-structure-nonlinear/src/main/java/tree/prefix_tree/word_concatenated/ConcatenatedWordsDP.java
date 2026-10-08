@@ -1,4 +1,4 @@
-package master.dfs_searching.word_concatenated;
+package tree.prefix_tree.word_concatenated;
 
 import java.util.*;
 
@@ -8,7 +8,7 @@ import java.util.*;
 // -> "aaa", "aaaa", "aaaaa"
 // 时间复杂度一般
 // 空间复杂度较差
-public class WordsConcatenated {
+public class ConcatenatedWordsDP {
 
     // TODO. DP 动态编程: 记录历史操作的数据/结果
     // - set 记录离散的数据元素

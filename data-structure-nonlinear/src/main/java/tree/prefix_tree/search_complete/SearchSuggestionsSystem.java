@@ -1,4 +1,4 @@
-package tree.prefix_tree.word_autocomplete;
+package tree.prefix_tree.search_complete;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,7 +15,7 @@ import java.util.List;
 // return the three lexicographically minimums products.
 //
 // Return a list of lists of the suggested products after each character of searchWord is typed.
-public class PrefixTreeSearchComplete {
+public class SearchSuggestionsSystem {
 
     // TODO. 使用前缀树实现搜索自动补全的系统, 实时推荐可能的结果
     // products = ["mobile","mouse","moneypot","monitor","mousepad"],
@@ -79,31 +79,6 @@ public class PrefixTreeSearchComplete {
             if (pointer.containsChild(ch)) {
                 collectChildren(pointer.getChild(ch), suggestions);
             }
-        }
-    }
-
-    class TrieNode {
-        String word = null;
-        TrieNode[] children = new TrieNode[26]; // For lowercase English letters.
-
-        public void put(char ch, TrieNode node) {
-            children[ch - 'a'] = node;
-        }
-
-        public boolean containsChild(char ch) {
-            return children[ch - 'a'] != null;
-        }
-
-        public TrieNode getChild(char ch) {
-            return children[ch - 'a'];
-        }
-
-        public void setWord(String word) {
-            this.word = word;
-        }
-
-        public String getWord() {
-            return word;
         }
     }
 }

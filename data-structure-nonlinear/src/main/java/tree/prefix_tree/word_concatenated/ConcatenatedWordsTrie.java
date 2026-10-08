@@ -18,7 +18,7 @@ import java.util.*;
 // 将所有的字符串进行排序，有利于从短字符向长字符构建Trie树结构
 // - 时间复杂度最佳
 // - 空间复杂度最差
-public class ConcatenatedWords {
+public class ConcatenatedWordsTrie {
 
     private Trie trie = new Trie();
 

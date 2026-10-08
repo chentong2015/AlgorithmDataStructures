@@ -1,4 +1,4 @@
-package master.dfs_searching.tree_to_linked_list;
+package trees.tree_to_linked_list;
 
 import java.util.Stack;
 

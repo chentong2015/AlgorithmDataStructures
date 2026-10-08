@@ -1,0 +1,14 @@
+Prefix Tree / Trie Tree
+前缀树将相同Prefix Key前缀统一存储，降低内存空间占用
+前缀树适合字符串的查找，自动补全和推荐
+
+TODO. 使用场景: 搜索(字符串)，推荐(自动补全)
+- Searching Complete
+- Spell Checker
+- Solving word games
+- Text on key9 predictive text 手机9宫格输入器预测单词
+- Longest prefix matching algorithm in IP routing 最长前缀匹配算法
+
+TODO. PrefixTree VS HashTable
+- HashTable会将全部Prefix Key都存储一遍，占用内存较大
+- HashTable不适用于处理相同的公共Prefix前缀，补全和推荐较差

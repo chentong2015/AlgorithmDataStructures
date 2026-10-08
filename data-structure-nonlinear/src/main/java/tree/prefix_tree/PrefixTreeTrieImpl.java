@@ -1,14 +1,15 @@
 package tree.prefix_tree;
 
-import tree.prefix_tree.base.TrieNodeWithEnd;
-
-// 如果在当前root的指定位置有找到对应的字符, 则取下一个node child, 最后表明key的结束
-// O(m) O(m) 最差情况下需要添加m个node(造成的空间)
+// Implement Trie (Prefix Tree)
+//
 //      root
 //    c      l
 //   o         e -> end key "le" 共享的字符串只会存储一次(空间)
 //  d            e
 // e ->"code"      t -> end key "leet" 前面具有共享的字符段
+//
+// O(m) 最差情况下需要添加m个node(造成的空间)
+// O(m)
 public class PrefixTreeTrieImpl {
 
     // 整个Trie Tree的根节点位置
@@ -23,20 +24,27 @@ public class PrefixTreeTrieImpl {
             }
             node = node.get(currentChar);
         }
-        // 标记一个单词记录的结尾标志
-        node.setEnd();
+        node.setEnd(); // 标记完整单词结尾标志
     }
 
+    // 判断是否能找到之前插入的单词, 必须是完整单词(带End标志)
+    // Returns true if the string word is in the trie (was inserted before)
+    public boolean search(String word) {
+        TrieNodeWithEnd node = findTrieNode(word);
+        return node != null && node.isEnd();
+    }
+
+    // 判断之前插入的单词是否有相同的Prefix前缀
+    // Returns true if there is a previously inserted string word that has the prefix
     public boolean startsWith(String prefix) {
-        TrieNodeWithEnd node = searchPrefix(prefix);
-        return node != null;
+        TrieNodeWithEnd node = findTrieNode(prefix);
+        return node != null; // 非空则表示这个Prefix路径被构建过
     }
 
-    // 如果没有依次按照字符串的顺序往后找到end位置，则该word不在Prefix tree中
-    private TrieNodeWithEnd searchPrefix(String word) {
+    private TrieNodeWithEnd findTrieNode(String prefix) {
         TrieNodeWithEnd node = root;
-        for (int i = 0; i < word.length(); i++) {
-            char currentChar = word.charAt(i);
+        for (int i = 0; i < prefix.length(); i++) {
+            char currentChar = prefix.charAt(i);
             if (!node.containsKey(currentChar)) {
                 return null;
             }
