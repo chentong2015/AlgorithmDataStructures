@@ -50,8 +50,9 @@ public class OpenTheLock {
             for (int index = 0; index < size; index++) {
                 String current = queue.poll();
                 if (current.equals(target)) {
-                    return level;
+                    return level; // 在当前层便找到目标
                 }
+
                 addNextLocks(queue, deadSet, current);
             }
             level++;
