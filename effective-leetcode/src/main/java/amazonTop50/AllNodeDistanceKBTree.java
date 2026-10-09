@@ -10,7 +10,7 @@ import java.util.*;
 // All the values Node.val are unique
 // target is the value of one of the nodes in the tree
 // 目标节点一定能找到且唯一 !!
-public class AllNodesDistanceKinBinaryTree {
+public class AllNodeDistanceKBTree {
 
     // TODO. 将Tree转换成Graph图形问题: 补充child->parent的链接
     // root = [3,5,1,6,2,0,8,null,null,7,4], target = 5, k = 2 -> [7,4,1]
