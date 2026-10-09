@@ -13,12 +13,7 @@ package amazonTop50;
 public class SubstringLargestVariance {
 
     // TODO. 循环26种字符Pair组合, 降低计算的维度: 多字符很难统计比较
-    // a a b a b b b -> 3
-    // - Variance 0 "a", "aa", "ab", "abab", "aababb", "ba", "b", "bb", and "bbb".
-    // - Variance 1 "aab", "aba", "abb", "aabab", "ababb", "aababbb", and "bab".
-    // - Variance 2 "aaba", "ababbb", "abbb", and "babb".
-    // - Variance 3 "babbb".
-    //
+    // "aababbb"            -> 3
     // "lripaa"             -> 1
     // "icexiahccknibwuwgi" -> 3  最大差值来源整个字符串
     // "abbbaaaaaa"         -> 5  全取字符算法不一定保证最优解
@@ -55,7 +50,7 @@ public class SubstringLargestVariance {
                         globalMax = Math.max(globalMax, majorCount - minorCount);
                     }
 
-                    // TODO. bbaaaab: minor字符太多，应该被丢弃，且后面还有
+                    // TODO. bbaaaab: minor字符太多，应该被丢弃(不再有贡献)，且后面还有
                     if (majorCount < minorCount && restMinor > 0) {
                         majorCount = 0;
                         minorCount = 0;
