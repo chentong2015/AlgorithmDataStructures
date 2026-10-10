@@ -8,7 +8,7 @@ package interview_coding.byte_dance;
 // n == height.length
 // 1 <= n <= 2 * 10^4
 // 0 <= height[i] <= 10^5
-public class ByteQuestion {
+public class TrappingRainWater {
 
     // TODO. 储水量决定于左右"两个最大高度中的更小值"
     //  只有更小的那一侧需要计算并移动，在移动的过程中随时更新最大高度，避免往前的循环判断
@@ -21,6 +21,7 @@ public class ByteQuestion {
             return 0;
         }
         int sum = 0;
+
         int left = 0;
         int highestLeft = arr[left];
         int right = arr.length - 1;
