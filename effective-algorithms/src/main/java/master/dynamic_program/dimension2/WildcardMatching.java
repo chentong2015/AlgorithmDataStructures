@@ -41,8 +41,9 @@ public class WildcardMatching {
             for (int j = 1; j <= m; j++) {
                 char ch = s.charAt(i - 1);
                 char pCh = p.charAt(j - 1);
-                if (pCh == '*') {
-                    // TODO. "ab", "ab*" 或 "abc", "ab*" 两种模式
+                if (pCh == '*') { //
+                    // TODO. * 代表0次或任意序列字符,可用可不同
+                    // "ab" "ab*" 或 "abc" "ab*" 两种都匹配
                     dp[i][j] = dp[i-1][j] || dp[i][j-1];
                 } else {
                     if (ch == pCh || pCh == '?') {

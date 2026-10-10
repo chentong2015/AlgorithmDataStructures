@@ -3,7 +3,7 @@ package amazonTop50;
 // Substring With Largest Variance
 // The variance of a string is defined as the largest difference
 // between the number of occurrences of any 2 characters present in the string.
-// Note the two characters may or may not be the same. 相同字符没有差值
+// Note the two characters may or may not be the same.
 //
 // Given a string s consisting of lowercase English letters only,
 // return the largest variance possible among all substrings of s.
@@ -12,8 +12,8 @@ package amazonTop50;
 // s consists of lowercase English letters.
 public class SubstringLargestVariance {
 
-    // TODO. 循环26种字符Pair组合, 降低计算的维度: 多字符很难统计比较
-    // "aababbb"            -> 3
+    // TODO. 循环字符的两两组合, 降低计算的维度, 避免多字符统计
+    // "aababbb"            -> 3  相同字符没有差值
     // "lripaa"             -> 1
     // "icexiahccknibwuwgi" -> 3  最大差值来源整个字符串
     // "abbbaaaaaa"         -> 5  全取字符算法不一定保证最优解
@@ -50,7 +50,7 @@ public class SubstringLargestVariance {
                         globalMax = Math.max(globalMax, majorCount - minorCount);
                     }
 
-                    // TODO. bbaaaab: minor字符太多，应该被丢弃(不再有贡献)，且后面还有
+                    // TODO. 从左到右边minor字符太多则被丢弃(不再有贡献)，且后面还有
                     if (majorCount < minorCount && restMinor > 0) {
                         majorCount = 0;
                         minorCount = 0;

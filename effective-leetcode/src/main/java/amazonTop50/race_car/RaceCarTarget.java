@@ -36,8 +36,7 @@ public class RaceCarTarget {
     // O(S) 保存访问状态和队列中的状态
 
     public int racecar(int target) {
-        // TODO. 判断状态必须同时包含位置和速度
-        // 相同位置的不同速度，后续到达target的最短路径可能不同 !!
+        // TODO. 位置和速度一起才是一个状态, 同位不同速度达到的最短路径可能不同
         HashSet<String> visitedState = new HashSet<>();
 
         Queue<Integer[]> queue = new ArrayDeque<>();
@@ -59,8 +58,8 @@ public class RaceCarTarget {
                 queue.add(new Integer[]{moves+1, position+speed, speed*2});
 
                 // TODO. 使用R的两大条件
-                // 当下一步位置会超过target且还在加速时，使用R将速度设负数，减速处理
-                // 当下一步位置不会超过target且速度为负数，使用R将速度设正，往target靠拢
+                // 当下一步位置已超过target且还在加速时，使用R将速度设负数，减速处理
+                // 当下一步位置没超过target且速度为负数，使用R将速度设正，往target靠拢
                 if ((position+speed > target && speed > 0)
                     || (position+speed < target && speed < 0)) {
                     queue.add(new Integer[]{moves+1, position, speed > 0 ? -1: 1});
