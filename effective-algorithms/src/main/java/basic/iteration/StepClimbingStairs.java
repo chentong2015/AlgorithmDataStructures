@@ -3,7 +3,7 @@ package basic.iteration;
 // Climbing Stairs
 // It takes n steps to reach the top, each time you can either climb 1 or 2 steps.
 // how many distinct ways can you climb to the top ?
-public class ClimbingStairs {
+public class StepClimbingStairs {
 
     // TODO. 递归计算每个位置的来源可能性
     // n = 2

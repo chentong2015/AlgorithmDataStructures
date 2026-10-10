@@ -1,4 +1,4 @@
-package master.dynamic_program.subsequence;
+package amazonTop50.palindrome;
 
 // Longest Palindromic Subsequence (LPS)
 // Given a string s, find the longest palindromic subsequence's length in s

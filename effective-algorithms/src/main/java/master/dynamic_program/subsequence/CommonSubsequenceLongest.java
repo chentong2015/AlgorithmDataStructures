@@ -4,7 +4,7 @@ package master.dynamic_program.subsequence;
 // Given two strings text1 and text2, return the length of their longest common subsequence.
 // If there is no common subsequence, return 0.
 // A common subsequence of two strings is a subsequence that is common to both strings.
-public class LongestCommonSubsequence {
+public class CommonSubsequenceLongest {
 
     // TODO. 金典Longest Common Subsequence问题:
     // DP二维数组需要多出一行和一列的数据

@@ -1,15 +1,18 @@
 #1 Interview Senior: 2024/25
 - Online Assessment  两道Algo+工作决策
-- Phone Screen
-  - Tech: Linux, Git, RegularExp, Hard Algo
+- Phone Screen 60m
+  - Tech: Linux, Git, RegularExp,
+  - Coding: Hard Algo 30m
   - Situational: leadership principle example
 
 #2 Interview SDE: 2024/25
 - Online Assessment  两道Algo+工作决策
-- Phone Screen       Live Coding: Graph Algo
+- Phone Screen
+  Live Coding: Graph Algo 60m
 
 #3 Interview SDE: 2026/10
 - Online Assessment  Algo(5/15)+CodeRepo(4/6)+工作决策
-- Phone Screen
-  30 minutes Tech: code, algo, deployment, scalability
-  30 minutes Situational: leadership principle
+- Phone Screen 60m
+  Tech: code, deployment, scalability
+  Coding: Hard Algo 30m
+  Situational: leadership principle

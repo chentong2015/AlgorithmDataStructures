@@ -1,4 +1,4 @@
-package master.dynamic_program.subsequence;
+package amazonTop50.palindrome;
 
 // Minimum Insertion Steps to Make a String Palindrome
 // In one step you can insert any character at any index of the string
@@ -26,12 +26,11 @@ public class MinInsertionStringPalindrome {
         return str.length() - lcsLength;
     }
 
+    // TODO. 状态转移递推关系
+    // 如果相等，则在dp[i][j]的基础上累计公共长度+1
+    // 如果不等，则取左侧(拿掉char1)和取上侧(拿掉char2)的更大值
     public int longestCommonSubsequence(String str1, String str2) {
-        // DP二维数组需要多出一行和一列的数据
         int[][] dp = new int[str1.length() + 1][str2.length() + 1];
-
-        // 如果相等，则在dp[i][j]的基础上累计公共长度+1
-        // 如果不等，则取左侧(拿掉char1)和取上侧(拿掉char2)的更大值
         for (int i = 0; i < str1.length(); ++i) {
             for (int j = 0; j < str2.length(); ++j) {
                 if (str1.charAt(i) == str2.charAt(j)) {

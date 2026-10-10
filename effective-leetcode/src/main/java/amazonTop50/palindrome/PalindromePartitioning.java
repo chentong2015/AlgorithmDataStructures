@@ -1,4 +1,4 @@
-package master.backtracking.questions;
+package amazonTop50.palindrome;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
 // Return all possible palindrome partitioning of s
 // s = "aab"  -> [["a","a","b"],["aa","b"]]
 // s = "aabb" -> [["a","a","b","b"],["aa","b","b"],["a","a","bb"],["aa","bb"]]
-public class BacktrackingPalindrome {
+public class PalindromePartitioning {
 
     // 回溯算法返回所有组合的可能
     //

@@ -1,4 +1,4 @@
-package master.dynamic_program.subsequences_continue;
+package master.dynamic_program.subsequence;
 
 import java.util.Arrays;
 
@@ -37,7 +37,7 @@ public class LongestIncreasingSubsequence {
             }
             dp[index] = num;
 
-            // 如果在最后坐标插入，累加统计
+            // 如果在最后坐标插入，累加统计 => 有效的增长值
             if (index == length) {
                 length++;
             }
