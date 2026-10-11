@@ -11,38 +11,9 @@ import java.util.Stack;
 // 0 <= heights[i] <= 10^4
 public class LargestRectangleHistogram {
 
-    // TODO. Monotonic 单调栈问题: 使用栈存储前面计算过的数据
-    // 2,1,5,6,2,3 -> 5*2= 10
-    // 2,2,2,2,2,2 相同的数据如何处理
-    // 1,2,3,4,5,6 单调递增的数据如何处理
-    //
-    // O(N)
-    // O(N)
-    public int largestRectangleArea(int[] heights) {
-        int maxArea = 0;
-        Stack<Integer> stack = new Stack<>(); // 存index坐标
-
-        for (int i = 0; i <= heights.length; i++) {
-            int current = (i == heights.length) ? 0 : heights[i];
-            while (!stack.isEmpty() && heights[stack.peek()] > current) {
-                int height = heights[stack.pop()];
-                int width;
-                if (stack.isEmpty()) {
-                    width = i;
-                } else {
-                    width = i - stack.peek() - 1;
-                }
-
-                int area = height * width;
-                maxArea = Math.max(maxArea, area);
-            }
-            stack.push(i);
-        }
-        return maxArea;
-    }
-
-    // Brute Force 暴力破解
-    // 循环每个位置的值，以一个点往它的两侧扩散，计算它能组成的最大面积
+    // Brute Force
+    // 循环每个位置点往两侧扩散，把大于等于它的柱状体包含其中
+    // 可提前找到每个位置左右扩散的坐标，避免每个坐标的内部循环 !!
     // O(N*N)
     // O(1)
     public int largestRectangleAreaTLE(int[] heights) {
@@ -62,5 +33,47 @@ public class LargestRectangleHistogram {
             result = Math.max(result, sum);
         }
         return result;
+    }
+
+    // TODO. 先将Index位置左右两侧的最近低坐标找出来, 在遍历时直接计算宽度
+    // 2,1,5,6,2,3 -> 5*2= 10
+    // 2,2,2,2,2,2
+    // 1,2,3,4,5,6
+    //
+    // O(N)
+    // O(N)
+    public int largestRectangleArea(int[] heights) {
+        int n = heights.length;
+        int[] left = new int[n];
+        int[] right = new int[n];
+
+        // 使用栈存储单调递增的index位置
+        Stack<Integer> stack = new Stack<>();
+
+        // 左侧最近的较小值, 以index位置能延伸最左位置
+        for (int i = 0; i < n; i++) {
+            while (!stack.isEmpty() && heights[stack.peek()] >= heights[i]) {
+                stack.pop();
+            }
+            left[i] = stack.isEmpty() ? -1 : stack.peek();
+            stack.push(i);
+        }
+
+        // 右侧最近的较小值, 以index位置能延伸的最右位置
+        stack.clear();
+        for (int i = n - 1; i >= 0; i--) {
+            while (!stack.isEmpty() && heights[stack.peek()] >= heights[i]) {
+                stack.pop();
+            }
+            right[i] = stack.isEmpty() ? n : stack.peek();
+            stack.push(i);
+        }
+
+        int maxArea = 0;
+        for (int i = 0; i < n; i++) {
+            int width = right[i] - left[i] - 1;
+            maxArea = Math.max(maxArea, heights[i] * width);
+        }
+        return maxArea;
     }
 }
