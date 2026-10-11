@@ -53,7 +53,7 @@ public class MinNumberMovesPalindrome {
         arr[j] = temp;
     }
 
-    // 将arr[k]匹配字符通过相邻交换移动到arr[right]
+    // 将字符数组中start位置字符移动到end位置
     private int move(char[] arr, int start, int end) {
         int count = 0;
         while(start < end){
