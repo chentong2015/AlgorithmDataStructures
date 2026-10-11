@@ -1,10 +1,11 @@
 package array2d;
 
+// Diagonal Traverse
+// Given an m x n matrix mat, return an array of all the elements of the array in a diagonal order
+// 1 <= m, n <= 10^4,
+// -10^5 <= mat[i][j] <= 10^5
 public class DiagonalTraverse {
 
-    // Diagonal Traverse 
-    // Given an m x n matrix mat, return an array of all the elements of the array in a diagonal order
-    // 1 <= m, n <= 10^4, -10^5 <= mat[i][j] <= 10^5
     // mat = [[1,2,3],  -> [1,2,4,7,5,3,6,8,9]
     //        [4,5,6],  -> 位于同一个斜线上的数字，横纵坐标的和是相等的 i+j=level
     //        [7,8,9]]  -> 注意读取的方向每次需要颠倒 isUp
