@@ -1,4 +1,4 @@
-package array2d;
+package array2d.matrix;
 
 // Search a 2D Matrix II
 // Write an efficient algorithm that searches for a value target in an m x n integer matrix matrix.

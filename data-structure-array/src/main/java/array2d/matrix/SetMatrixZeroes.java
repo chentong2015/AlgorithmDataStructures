@@ -1,4 +1,4 @@
-package array2d;
+package array2d.matrix;
 
 import java.util.Arrays;
 

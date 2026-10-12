@@ -1,10 +1,10 @@
-package amazonTop50.boundray_tree;
+package amazonTop50.btree_boundray;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-// Boundary of a binary tree (Locked)
+// Boundary of Binary Tree (Locked)
 // The boundary of a binary tree is the concatenation of
 //   the root,
 //   the left boundary,
@@ -60,7 +60,7 @@ public class BoundaryBinaryTree {
         if (node == null) {
             return;
         }
-        if (node.left == node.right) { // 是叶子节点
+        if (node.left == node.right) { // 确定是叶子节点
             result.add(node.val);
         } else {                       // 同时往左右子树递归
             dfsLeftNode(result, node.left);
