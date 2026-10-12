@@ -15,9 +15,13 @@ package array2d.rectangle;
 // -10^4 <= by1 <= by2 <= 10^4
 public class RectangleArea {
 
-    // TODO. (X,Y)二维坐标的交集计算: 用小的右坐标 - 大的左坐标
+    // TODO. (X,Y)二维坐标的交集计算:
+    //  用小的右坐标 - 大的左坐标 (MinX2 - MaxX1) * (MinY2 - MaxY1)
     // (-3,0) - (3,4)
     //    (0,-1) - (9,2)
+    //
+    // (ax1,ay1) - (ax2,ay2)
+    //    (bx1,by1) - (bx2,by2)
     //
     // O(1)
     // O(1)
@@ -25,12 +29,11 @@ public class RectangleArea {
         int area1 = (ax2 - ax1) * (ay2 - ay1);
         int area2 = (bx2 - bx1) * (by2 - by1);
 
-        // TODO. 计算公式: (MinX2 - MaxX1) * (MinY2 - MaxY1)
-        int cx1 = Math.max(ax1, bx1);
-        int cx2 = Math.min(ax2, bx2);
-        int cy1 = Math.max(ay1, by1);
-        int cy2 = Math.min(ay2, by2);
-        int intersection = Math.max(0, cx2 - cx1) * Math.max(0, cy2 - cy1);
+        int maxX1 = Math.max(ax1, bx1);  // X1取大值
+        int minX2 = Math.min(ax2, bx2);  // X2取小值
+        int maxY1 = Math.max(ay1, by1);  // Y1取大值
+        int minY2 = Math.min(ay2, by2);  // Y2取小值
+        int intersection = Math.max(0, minX2 - maxX1) * Math.max(0, minY2 - maxY1); // 交叉区间
         return area1 + area2 - intersection;
     }
 }
