@@ -97,39 +97,4 @@ public class LearnArray4 {
         }
         return max;
     }
-
-    // Largest Number
-    // Given a list of non-negative integers nums, arrange them such that they form the largest number
-    // nums = [3,30,34,5,9,200]  -> "9534330200"
-    public String largestNumber(int[] nums) {
-        // 正确理解:  1. 本质上是需要做一个排序，换成字符串进行大小比较 !! 不需要比较"整数分位"上的值
-        //  9 > 5 > 34 > 3 > 30 > 200
-        //  O(nlog(n)) 由于数组排序带来的时间复杂度 O(n)
-        String[] strings = new String[nums.length];
-        for (int i = 0; i < nums.length; i++) {
-            strings[i] = String.valueOf(nums[i]);
-        }
-
-        Arrays.sort(strings, new LargerNumberComparator());
-        if (strings[0].equals("0")) {
-            return "0";
-        }
-        StringBuilder largestNumberStr = new StringBuilder();
-        for (String numAsStr : strings) {
-            largestNumberStr.append(numAsStr);
-        }
-        return largestNumberStr.toString();
-    }
-
-    // 自定义比较器，用于在Array数组排序时的元素之间比较
-    class LargerNumberComparator implements Comparator<String> {
-
-        // 直接比较两种字符串组合起来的大小，取更大的组合情况
-        @Override
-        public int compare(String str1, String str2) {
-            String order1 = str1 + str2;
-            String order2 = str2 + str1;
-            return order2.compareTo(order1);
-        }
-    }
 }

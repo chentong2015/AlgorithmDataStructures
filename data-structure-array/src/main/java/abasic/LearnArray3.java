@@ -28,36 +28,6 @@ public class LearnArray3 {
         return -1;
     }
 
-    // Largest Number At Least Twice of Others
-    // An integer array nums where the largest integer is unique
-    // Whether the largest element in the array is at least twice as much as every other number in the array
-    // If it is, return the index of the largest element, or return -1 otherwise
-    // nums = [3,6,1,0] -> index = 1 判断最大的值，是否是其他任意值的两倍以上
-    // nums = [1]       -> index = 0 1看做比其他的值(没有值)都大2倍以上
-    public int dominantIndex(int[] nums) {
-        // 测试理解：1. 使用2次遍历，第一次将最大值和他的index找出来，第二次判断是否都在两倍以上(除去index的其他位置)
-        //            O(n) O(1)
-
-        // 正确理解: 1. 一遍读取，判断最大时的同时，计算出第二大值的2倍是否是小于最大值的 ===> 只需要知道最大的前两个值
-        //            O(n) O(1)
-        if (nums.length == 1) return 0;
-        int foundIndex = 0;
-        int max = nums[0];
-        int secondMax = nums[0];
-        for (int index = 1; index < nums.length; index++) {
-            if (nums[index] > max) {
-                if (max > secondMax) secondMax = max;        // 注意更新第二大的值
-                max = nums[index];
-                foundIndex = index;
-            } else {
-                if (index == 1 || nums[index] > secondMax) { // 将第二个值赋值给secondIndex, 分开两个最大值
-                    secondMax = nums[index];
-                }
-            }
-        }
-        return max >= 2 * secondMax ? foundIndex : -1;
-    }
-
     // TODO: Array数组在初始化的时候，每个位置的初始值都是0，可以直接利用 !!
     // Plus One
     // Given a non-empty array of decimal digits representing a non-negative integer, increment one to the integer

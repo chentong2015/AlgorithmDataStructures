@@ -32,6 +32,7 @@ public class LongestIncreasingPathMatrix {
         return maxLength;
     }
 
+    // 本质上是递归方法, 需要带返回值, 每个Cell初始值为1
     private int dfs(int[][] matrix, int[][] matrixDP, int row, int col) {
         if (matrixDP[row][col] > 0) {
             return matrixDP[row][col]; // 直接返回计算过的位置
@@ -43,7 +44,8 @@ public class LongestIncreasingPathMatrix {
         for (int[] direction : directions) {
             int newRow = row + direction[0];
             int newCol = col + direction[1];
-            if (newRow >= 0 && newRow < n && newCol >=0 && newCol < m && matrix[newRow][newCol] > matrix[row][col]) {
+            if (newRow >= 0 && newRow < n && newCol >=0 && newCol < m
+                    && matrix[newRow][newCol] > matrix[row][col]) {
                 int newLength = dfs(matrix, matrixDP, newRow, newCol);
                 currentLength = Math.max(currentLength, 1 + newLength);
             }
