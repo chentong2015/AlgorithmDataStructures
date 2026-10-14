@@ -11,7 +11,7 @@ import java.util.PriorityQueue;
 // 0 <= nums[i] <= 10^9
 public class LargestNumber {
 
-    // TODO. 两个Num组合大小 = 两种结果字符串的大小比较
+    // TODO. Num两两比较 == Str字符串两两比较
     // [10,2] -> "210"
     // [3,30,34,5,9] -> "9534330"
     // [34323,3432]  -> "343234323"
@@ -19,12 +19,9 @@ public class LargestNumber {
     // O(N*logN) 在遍历的过程中动态排序
     // O(N+N)    所有0-9字符的存储
     public String largestNumber(int[] nums) {
-        PriorityQueue<String> maxHeap = new PriorityQueue<>((num1, num2) -> {
-            String str1 = String.valueOf(num1);
-            String str2 = String.valueOf(num2);
+        PriorityQueue<String> maxHeap = new PriorityQueue<>((str1, str2) -> {
             String result1 = str1 + str2;
             String result2 = str2 + str1;
-
             // 注意对比较的结果取反，组成最大堆
             if (result1.compareTo(result2) > 0) {
                 return -1;

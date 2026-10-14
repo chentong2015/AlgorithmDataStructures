@@ -15,7 +15,7 @@ public class PalindromePartitioning {
     // s = "aab" -> [["a","a","b"],["aa","b"]]
     // s = "a" -> [["a"]]
     //
-    // 复杂度取决于有多少种结果值
+    // 复杂度取决于字符串有多少种结果
     public List<List<String>> partition(String s) {
         List<List<String>> result = new ArrayList<>();
         recursion(result, new ArrayList<>(), s, 0);
@@ -32,7 +32,7 @@ public class PalindromePartitioning {
         copyList.add(String.valueOf(str.charAt(index)));
         recursion(result, copyList, str, index+1);
 
-        // 判断每多出来的一个字符
+        // 找到后面所有符合的位置
         int right = index + 1;
         while (right < str.length()) {
             if (isPalindrome(str, index, right)) {
