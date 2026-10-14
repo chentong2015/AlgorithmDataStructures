@@ -1,4 +1,4 @@
-package leetcode6.num_group;
+package leetcode6.num_province;
 
 import java.util.LinkedList;
 import java.util.Queue;

@@ -1,4 +1,4 @@
-package leetcode6.num_group;
+package leetcode6.num_province;
 
 // Number of Provinces
 // There are n cities. Some of them are connected, while some are not.
@@ -22,7 +22,6 @@ public class NumberOfProvincesDFS {
     // TODO. DFS Connected Component !!
     //  只关心有多少种Group集合, 不记录Group中有什么
     //
-    // 斜对角线表示第n个城市, 只关注非对角线的值
     // [1,0,0], -> 0 每个城市彼此独立
     // [0,1,0],
     // [0,0,1]
@@ -51,7 +50,7 @@ public class NumberOfProvincesDFS {
         return numberOfComponents;
     }
 
-    // TODO. 递归找出第iNode个节点联通所有节点，并标记以访问 !!
+    // TODO. 递归找出第iNode个节点联通所有节点，并标记 !! 注意坐标转换
     public void dfs(int[][] isConnected, boolean[] visit, int iNode) {
         visit[iNode] = true;
         for (int i = 0; i < isConnected.length; i++) {
