@@ -1,4 +1,4 @@
-package array2d.matrix;
+package leetcode6.matrix;
 
 import java.util.Arrays;
 

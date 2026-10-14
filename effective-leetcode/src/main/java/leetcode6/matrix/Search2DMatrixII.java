@@ -1,4 +1,4 @@
-package array2d.matrix;
+package leetcode6.matrix;
 
 // Search a 2D Matrix II
 // Write an efficient algorithm that searches for a value target in an m x n integer matrix matrix.
@@ -12,8 +12,7 @@ package array2d.matrix;
 // All the integers in each column are sorted in ascending order
 public class Search2DMatrixII {
 
-    // TODO. 需要从反斜角位置遍历, 才能根据值的大小判断位置移动
-    //  不能从正对角遍历, 因为无法判断位置的移动
+    // TODO. 从"右上角"开始遍历, 直接判断大小位置移动
     //
     // [1, 4, 7, 11,15],  target = 5  -> true
     // [2, 5, 8, 12,19],  target = 20 -> false

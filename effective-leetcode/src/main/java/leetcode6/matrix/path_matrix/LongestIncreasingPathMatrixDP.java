@@ -1,4 +1,4 @@
-package leetcode5.path_matrix;
+package leetcode6.matrix.path_matrix;
 
 import java.util.HashSet;
 import java.util.Set;
