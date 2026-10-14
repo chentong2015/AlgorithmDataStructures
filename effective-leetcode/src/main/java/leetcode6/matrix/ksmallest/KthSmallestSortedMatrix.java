@@ -1,7 +1,5 @@
 package leetcode6.matrix.ksmallest;
 
-import leetcode6.matrix.CountSortedMatrix;
-
 // Kth Smallest Element in a Sorted Matrix
 // Given an n x n matrix where each of the rows and columns is sorted in ascending order,
 // return the kth smallest element in the matrix.
@@ -14,7 +12,8 @@ import leetcode6.matrix.CountSortedMatrix;
 public class KthSmallestSortedMatrix {
 
     // TODO. 在Min和Max最值之间进行二分查找
-    // [1,,,K,,,N*N] 第k个最小，则前面有k-1个更小值
+    // [1,,,,,,K,,,,,N,,,N*N] 第k个最小，则前面有k-1个更小值
+    //    low       high
     //
     // [1,2], k=2 -> 1
     // [1,3]
@@ -38,7 +37,7 @@ public class KthSmallestSortedMatrix {
                 low = midValue + 1;
             }
         }
-        // 跳出条件low=high，此时low前面刚好有(k-1)个更小值
+        // 跳出条件low=high, 此时low前面刚好有(k-1)个更小值
         return low;
     }
 }
