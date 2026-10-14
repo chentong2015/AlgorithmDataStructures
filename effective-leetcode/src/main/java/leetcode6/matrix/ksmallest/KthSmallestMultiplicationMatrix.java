@@ -37,7 +37,7 @@ public class KthSmallestMultiplicationMatrix {
                 low = midValue + 1;
             }
         }
-        // 跳出条件low=high, 此时low的值 ？
+        // 跳出条件low=high, low是第一个满足count(x)>= k的整数
         return low;
     }
 }

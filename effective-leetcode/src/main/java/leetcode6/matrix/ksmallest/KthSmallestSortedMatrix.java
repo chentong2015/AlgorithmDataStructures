@@ -37,7 +37,7 @@ public class KthSmallestSortedMatrix {
                 low = midValue + 1;
             }
         }
-        // 跳出条件low=high, 此时low前面刚好有(k-1)个更小值
+        // 跳出条件low=high, low是第一个满足count>=k的值
         return low;
     }
 }

@@ -1,6 +1,7 @@
 package basic.binary_search.template1;
 
 import basic.binary_search.template2.BinarySearchTemplate2;
+import basic.binary_search.template2.FindMinRotatedSortedArray;
 
 // Search for an element or condition which can be determined
 // by accessing a single index
@@ -70,7 +71,7 @@ public class BinarySearchTemplate1 {
     public int search(int[] nums, int target) {
         if (nums == null || nums.length == 0) return -1;
 
-        int minIndex = BinarySearchTemplate2.findMinIndex(nums);
+        int minIndex = FindMinRotatedSortedArray.findMinIndex(nums);
         if (nums[minIndex] == target) return minIndex;
         int low = nums[minIndex] < target ? minIndex : 0;  // 只有两种可能区间[0, minIndex-1] & [minIndex, length-1]
         int high = nums[minIndex] < target ? nums.length - 1 : minIndex - 1; // 中间minIndex作为划分的分水岭，左边一个是最大值 !
