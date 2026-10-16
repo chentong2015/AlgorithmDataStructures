@@ -17,7 +17,9 @@ import java.util.*;
 //
 public class NetworkDelayTime {
 
-    // TODO. 本质是延迟时间的最小化，无所谓每个Node节点的访问路径 !!
+    // TODO. 计算所有节点相对于Start节点的延迟时间 => 总节点数N确定
+    // 每个节点的延迟时间(通路的计算)根据提供的times参数来构建
+    // 每个节点的延迟时间取最小化，无所谓每个节点的完整的访问路径 !!
     //
     // [2,1,1], n=4, k=2 -> 2
     // [2,3,1],
@@ -32,11 +34,12 @@ public class NetworkDelayTime {
     //   -------->   注意多条路径选择的图形
 
     public int networkDelayTime(int[][] times, int n, int k) {
+        // TODO. distDelay记录的是相对于K节点的延迟 !!
+        // 标记第k个起点位置，节点延迟为0
         int[] relativeDelay = new int[n + 1];
         Arrays.fill(relativeDelay, Integer.MAX_VALUE);
-        relativeDelay[k] = 0; // 标记第k个起点位置，节点延迟为0
+        relativeDelay[k] = 0;
 
-        // TODO. distDelay记录的是相对于K节点的延迟 !!
         // 循环N-1次的剩余节点数，至少每次联通一个节点Target
         for (int i = 1; i < n; i++) {
             for (int[] edge : times) {

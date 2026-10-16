@@ -19,8 +19,8 @@ package leetcode6.num_province;
 // isConnected[i][j] == isConnected[j][i] 联通一定是相互的
 public class NumberOfProvincesDFS {
 
-    // TODO. DFS Connected Component !!
-    //  只关心有多少种Group集合, 不记录Group中有什么
+    // TODO. DFS Connected Component 深度递归联通组件(图形思想)
+    // 只关心有多少种Group集合, 不记录Group中有什么
     //
     // [1,0,0], -> 0 每个城市彼此独立
     // [0,1,0],
@@ -50,7 +50,8 @@ public class NumberOfProvincesDFS {
         return numberOfComponents;
     }
 
-    // TODO. 递归找出第iNode个节点联通所有节点，并标记 !! 注意坐标转换
+    // TODO. 递归找出第iNode个节点联通所有节点，并标记
+    // 遍历的第i行则对应第i个Node节点, 等效的
     public void dfs(int[][] isConnected, boolean[] visit, int iNode) {
         visit[iNode] = true;
         for (int i = 0; i < isConnected.length; i++) {
