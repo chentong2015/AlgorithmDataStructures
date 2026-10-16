@@ -1,4 +1,4 @@
-package array.mountain_array;
+package array.mountain;
 
 // Peak Index in a Mountain Array
 //

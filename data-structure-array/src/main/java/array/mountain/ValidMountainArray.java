@@ -1,9 +1,9 @@
-package array.mountain_array;
+package array.mountain;
 
 // Valid Mountain Array
 // Given an array of integers arr,
 // return true if and only if it is a valid mountain array
-public class BaseValidMountainArray {
+public class ValidMountainArray {
 
     // TODO. 先While上升移动, 再While下降移动
     // arr = [0,3,2,1]     -> true
