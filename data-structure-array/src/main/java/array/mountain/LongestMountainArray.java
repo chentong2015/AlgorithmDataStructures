@@ -14,7 +14,7 @@ package array.mountain;
 // 0 <= arr[i] <= 10^4
 public class LongestMountainArray {
 
-    // TODO. 双指针: 先上山再下山, 标记上峰长度
+    // TODO. 双指针: 判断山峰的上升和下降, 标记长度
     // [2,1,4,7,3,2,5] -> [1,4,7,3,2] -> 5
     // [2,2,2] -> 0
     //
