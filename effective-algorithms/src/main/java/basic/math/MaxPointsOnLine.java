@@ -32,30 +32,33 @@ public class MaxPointsOnLine {
         for(int i = 0; i< points.length; i++){
             HashMap<Double, Integer> slopeCountMap = new HashMap<>();
             for(int j = i+1; j<points.length; j++){
-                int x1 = points[i][0];
-                int x2 = points[j][0];
-                int y1 = points[i][1];
-                int y2 = points[j][1];
-
-                // 以精确值作为分组Key键值 => 处理成字符串无法🈷约分 !!
-                double slope;
-                if(x1 == x2) {
-                    slope = Double.POSITIVE_INFINITY;
-                } else {
-                    slope = (double)(y1-y2)/(x2-x1);
-                    if(slope == -0.0) {
-                        slope = 0.0;
-                    }
-                }
-
+                double slope = calculateSlope(points, i, j);
                 int baseCount = slopeCountMap.getOrDefault(slope, 0);
                 slopeCountMap.put(slope, baseCount + 1);
             }
-
             for(int value: slopeCountMap.values()) {
                 max = Math.max(max, value+1);
             }
         }
         return max;
+    }
+
+    // 以Double值作为斜率Key键值，处理成字符串很难约分 !!
+    // - 考虑除数为0的情况
+    // - 考虑-0和+0的一致性
+    private double calculateSlope(int[][] points, int i, int j) {
+        int x1 = points[i][0];
+        int y1 = points[i][1];
+        int x2 = points[j][0];
+        int y2 = points[j][1];
+        if(x1 == x2) {
+            return Double.POSITIVE_INFINITY;
+        }
+
+        double slope = (double)(y1-y2)/(x2-x1);
+        if(slope == -0.0) {
+            slope = 0.0;
+        }
+        return slope;
     }
 }

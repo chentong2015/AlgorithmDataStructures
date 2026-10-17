@@ -42,9 +42,7 @@ public class LongestMountainArray {
                 right++;
             }
             result = Math.max(result, right-left);
-
-            // 重置上峰的左侧
-            left = right - 1;
+            left = right - 1; // 重置上峰的左侧
             index = right;
         }
         return result;

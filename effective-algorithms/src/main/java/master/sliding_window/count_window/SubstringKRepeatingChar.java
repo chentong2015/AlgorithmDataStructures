@@ -13,7 +13,7 @@ import java.util.Arrays;
 // 1 <= k <= 10^5
 public class SubstringKRepeatingChar {
 
-    // TODO. 滑动窗口加强版: 唯一性字符统计
+    // TODO. 滑动窗口加强版: 根据离散字符的统计来滑动
     //
     // "aaabb", k = 3    -> "aaa"   -> 3
     // "ababbc", k = 2   -> "ababb" -> 5
@@ -45,7 +45,7 @@ public class SubstringKRepeatingChar {
                     if (countMap[idx] == k) {  // 只在满足K频率点统计
                         countAtLeastK++;
                     }
-                    right++;
+                    right++; // right往前增大滑动窗口
                 } else {
                     int idx = str[left] - 'a';
                     if (countMap[idx] == k) {
@@ -55,9 +55,10 @@ public class SubstringKRepeatingChar {
                     if (countMap[idx] == 0) {
                         unique--;
                     }
-                    left++;
+                    left++; // left往前缩小滑动窗口
                 }
-                // TODO. 判断不同的字符数量，且每个字符都满足K频率的统计
+
+                // TODO. 判断离散字符数量，且离散字符都满足K频率
                 if (unique == currUnique && unique == countAtLeastK) {
                     result = Math.max(right - left, result);
                 }
