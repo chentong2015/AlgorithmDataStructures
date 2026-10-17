@@ -1,0 +1,7 @@
+分析问题的数据结构(Graph, Trees, Heap, Linked List)
+分析问题的算法类型(DP, BFS/DFS, Sliding Wind, Backtracking)
+从题目的特殊案例，推导算法适合的普遍案例
+
+不能使用暴力破解(无意义)
+不要记忆每道问题细节，理解算法的运用场景 !!
+当算法过于复杂时(超过100行)必须重新思考 !!
