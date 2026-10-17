@@ -1,4 +1,4 @@
-package array.mountain;
+package arrays.mountain;
 
 // Longest Mountain in Array
 // An array arr is a mountain array if and only if:

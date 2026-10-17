@@ -1,7 +1,7 @@
-package array.item_duplicate;
+package array.duplicate;
 
 // 对一组数据中的重复元素进行操作
-public class OtherQuestions {
+public class RemoveDuplicateItem {
 
     // Remove duplicates from sorted array
     // The input array is passed in by reference

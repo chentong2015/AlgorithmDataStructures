@@ -1,4 +1,4 @@
-package array2d;
+package array2;
 
 // 二维数组的初级算法
 //          0

@@ -1,4 +1,4 @@
-package array.mountain;
+package arrays.mountain;
 
 // Valid Mountain Array
 // Given an array of integers arr,

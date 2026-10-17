@@ -1,4 +1,4 @@
-package array2d.rectangle;
+package array2.rectangle;
 
 // Rectangle Area
 // Given the coordinates of two rectilinear rectangles in a 2D plane,

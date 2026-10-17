@@ -1,4 +1,4 @@
-package array;
+package array.duplicate;
 
 // Duplicate Zeros
 // Given a fixed-length integer array arr, duplicate each occurrence of zero,

@@ -1,4 +1,4 @@
-package abasic;
+package aarray;
 
 public class LearnArray2 {
 

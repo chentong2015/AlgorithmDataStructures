@@ -1,4 +1,4 @@
-package array.item_duplicate;
+package array.duplicate;
 
 import java.util.Arrays;
 import java.util.HashSet;

@@ -1,4 +1,4 @@
-package array2d;
+package array2;
 
 // Diagonal Traverse
 // Given an m x n matrix mat, return an array of all the elements of the array in a diagonal order
