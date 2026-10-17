@@ -7,7 +7,7 @@ package master.dynamic_program.subsequence;
 //
 // 1 <= str1.length, str2.length <= 1000
 // str1 and str2 consist of lowercase English letters.
-public class CommonSuperSequenceShortest {
+public class ShortestCommonSuperSequence {
 
     // TODO: 和LCS同样的算法，拿到最短公共SuperSequence的长度，并非字符组合的结果
     // str1 = "aaaaaaaa", str2 = "aaaaaaaa" -> "aaaaaaaa"
@@ -42,7 +42,7 @@ public class CommonSuperSequenceShortest {
     }
 
     // 根据两个原始的字符串来组成指定长度的Super Sequence
-    public String shortestCommonSupersequence(String str1, String str2) {
+    public String shortestCommonSuperSequence(String str1, String str2) {
         int i = str1.length();
         int j = str2.length();
         int[][] dp = getLengthOfShortestCommonSuperSequence(str1, str2);
