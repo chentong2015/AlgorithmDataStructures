@@ -1,18 +1,9 @@
 TODO: Sliding Windows 滑动窗口算法
 1. 所选的区间必须是一定范围内的连续区间，不能跳跃Index
 2. 所选的区间必须能够滑动，按条件往后移动
-3. 常见for+while算法逻辑
-for(item: items) {
-    // update value
-    while(condition) { // 特定的判断条件
-        // 滑动坐标或者重新计算
-    }
-    // refresh result
-}
+3. 常见for/while + while算法，通过内层while循环缩小窗口
 
-TODO. Sliding windows 滑动窗口算法不适用于负数, 无法判断滑动
+TODO. 滑动窗口不适用于负数(无法滑动) => 带负数考虑DP存储Max/Min
 nums = 1 2 5 -1 -1 -2, sum = 4
-here sliding window will fail, as moment we wish we found sum is > 4, i.e 1+2 +4 ,
-it will push i to next position, and will one case that is 1 2 5 -1 -1 -2 that sum to 4,
 Sliding window is used in cases when numbers are positive mostly in sum related ques,
 otherwise it won't cover all the cases.
