@@ -1,4 +1,4 @@
-package basic.binary_search.template1;
+package basic.searching.template1;
 
 // Koko Eating Bananas
 // Koko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas.

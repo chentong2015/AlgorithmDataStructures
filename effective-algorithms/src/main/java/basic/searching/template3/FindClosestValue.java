@@ -1,4 +1,4 @@
-package basic.binary_search.template3;
+package basic.searching.template3;
 
 public class FindClosestValue {
 

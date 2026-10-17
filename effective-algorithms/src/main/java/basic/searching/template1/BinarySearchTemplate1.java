@@ -1,7 +1,6 @@
-package basic.binary_search.template1;
+package basic.searching.template1;
 
-import basic.binary_search.template2.BinarySearchTemplate2;
-import basic.binary_search.template2.FindMinRotatedSortedArray;
+import basic.searching.template2.FindMinRotatedSortedArray;
 
 // Search for an element or condition which can be determined
 // by accessing a single index

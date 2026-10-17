@@ -1,4 +1,4 @@
-package basic.binary_search.template1;
+package basic.searching.template1;
 
 // Find First and Last Position of Element in Sorted Array
 // Given an array of integers nums sorted in non-decreasing order

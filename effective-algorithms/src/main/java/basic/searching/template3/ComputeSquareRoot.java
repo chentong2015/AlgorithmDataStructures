@@ -1,4 +1,4 @@
-package basic.binary_search.template3;
+package basic.searching.template3;
 
 // Sqrt(x)  0<=x<=2^31-1
 // Given a non-negative integer x, compute and return the square root of x

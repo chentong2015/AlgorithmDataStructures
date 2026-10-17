@@ -41,7 +41,7 @@ public class MinDeleteSumStrings {
             }
         }
 
-        // 最后计算被扣除的char的ASCII码值总和
+        // 计算被扣除ASCII码值总和, 两倍扣除
         int total = 0;
         for (char c : s1.toCharArray()) total += c;
         for (char c : s2.toCharArray()) total += c;

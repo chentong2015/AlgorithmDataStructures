@@ -1,4 +1,4 @@
-package basic.binary_search;
+package basic.searching;
 
 // Median of Two Sorted Arrays
 // Given two sorted arrays nums1 and nums2, return the median of the two sorted arrays

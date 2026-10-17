@@ -1,4 +1,4 @@
-package basic.binary_search.template1;
+package basic.searching.template1;
 
 public class SplitArrayLargestSum {
 

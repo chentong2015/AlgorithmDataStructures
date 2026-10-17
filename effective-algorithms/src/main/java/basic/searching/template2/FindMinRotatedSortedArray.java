@@ -1,4 +1,4 @@
-package basic.binary_search.template2;
+package basic.searching.template2;
 
 // Find Minimum in Rotated Sorted Array
 // Given the sorted rotated array nums of unique elements,

@@ -1,4 +1,4 @@
-package basic.binary_search.template2;
+package basic.searching.template2;
 
 // Find Peak Element
 // A peak element is an element that is strictly greater than its neighbors

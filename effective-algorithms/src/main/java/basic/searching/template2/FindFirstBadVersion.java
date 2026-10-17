@@ -1,4 +1,4 @@
-package basic.binary_search.template2;
+package basic.searching.template2;
 
 // First Bad Version
 // n versions [1, 2, ..., n] and find out the first bad one,
