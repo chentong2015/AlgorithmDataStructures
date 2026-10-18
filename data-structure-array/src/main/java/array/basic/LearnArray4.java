@@ -1,6 +1,6 @@
-package aarray;
+package array.basic;
 
-public class LearnArray5 {
+public class LearnArray4 {
 
     // 找出int类型的数组中最接近0的值，如果有两个同距离的值，则返回正数
     // [-2, 3, 2, 5, -1] => -1

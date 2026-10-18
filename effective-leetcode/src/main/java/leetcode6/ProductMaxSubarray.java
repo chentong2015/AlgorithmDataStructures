@@ -7,7 +7,7 @@ package leetcode6;
 //
 // 1 <= nums.length <= 2 * 10^4
 // -10 <= nums[i] <= 10
-public class MaxProductSubarray {
+public class ProductMaxSubarray {
 
     // TODO. DP存储极致的最大最小值, 遇到负数反转
     //
