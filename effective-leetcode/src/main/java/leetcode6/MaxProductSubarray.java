@@ -15,16 +15,17 @@ public class MaxProductSubarray {
     // [-2,0,-1]  -> 0
     //
     //       2  3  -2   4  0  2  1  -2  3
-    // dpMin 2  3  -12 -48 0  0  0  -4  -12  存储极致的小值
-    // dpMax 2  6  -2   4  0  2  2  0   3    存储极致的大值
-    //            index
+    // dpMin 2  3  -12 -48 0  0  0  -4  -12  存储最小值(有可能变成最大)
+    // dpMax 2  6  -2   4  0  2  2  0   3    存储最大值
+    //             带-2时的最大和最小值
+    //                  带4时的最大和最小值
+    //                     遇到0时最值归0
     // O(N)
     // O(1)
     public int maxProduct(int[] nums) {
         int result = nums[0];
         int dpMin = nums[0];
         int dpMax = nums[0];
-
         for (int i = 1; i < nums.length; ++i) {
             int num = nums[i]; // 当前位置的值参与最值判断，为0这刷新dpMin=dpMax=0值
             int prevMin = dpMin;

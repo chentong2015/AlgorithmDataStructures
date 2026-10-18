@@ -8,7 +8,7 @@ package master.dynamic_program.subsequence;
 // s1 and s2 consist of lowercase English letters.
 public class MinDeleteSumStrings {
 
-    // TODO. DP动态编程: 找最长的LCS公共序列，使得删除的字符最少(SUM最小)
+    // TODO. DP动态编程: 找LCS最长公共序列的SUM值，使得删除字符的SUM最小
     // s1 = "sea", s2 = "eat" -> 231
     // Deleting "s" from "sea" adds ASCII value of "s" (115)
     // Deleting "t" from "eat" adds ASCII value of "t" (116)
@@ -41,7 +41,7 @@ public class MinDeleteSumStrings {
             }
         }
 
-        // 计算被扣除ASCII码值总和, 两倍扣除
+        // 计算扣除的ASCII码值总和, 每个字符串都要扣公共序列累计值
         int total = 0;
         for (char c : s1.toCharArray()) total += c;
         for (char c : s2.toCharArray()) total += c;
