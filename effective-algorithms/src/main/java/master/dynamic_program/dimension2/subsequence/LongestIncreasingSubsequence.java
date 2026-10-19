@@ -1,4 +1,4 @@
-package master.dynamic_program.subsequence;
+package master.dynamic_program.dimension2.subsequence;
 
 import java.util.Arrays;
 

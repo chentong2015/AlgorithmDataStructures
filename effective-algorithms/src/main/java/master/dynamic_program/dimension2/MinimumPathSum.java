@@ -8,10 +8,12 @@ public class MinimumPathSum {
     // find a path from top left to bottom right, which minimizes the sum of all numbers along its path.
     // Note: You can only move either down or right at any point in time.
     //
-    // O(n & m) O(1)
     // 1 3 1     1 4 5
     // 1 5 1 =>  2 7 6
     // 4 2 1     6 8 7
+    //
+    // O(n & m)
+    // O(1)
     public static int minPathSum(int[][] grid) {
         int rows = grid.length;
         int cols = grid[0].length;

@@ -1,4 +1,4 @@
-package master.dynamic_program.dimension1;
+package master.dynamic_program.coin_change;
 
 import java.util.Arrays;
 
@@ -11,7 +11,6 @@ public class PerfectSquares {
     // n = 12 -> 4 + 4 + 4 -> 3
     // n = 13 -> 4 + 9 -> 2
     //
-
     //   1 2 3 4 5 6 7 8 9 10 11 12
     //   * * * * * * * * *  *  *  *
     // 0

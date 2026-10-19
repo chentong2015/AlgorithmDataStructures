@@ -1,4 +1,4 @@
-package master.dynamic_program.dimension1.word_break;
+package master.dynamic_program.word_break;
 
 import java.util.*;
 
@@ -23,16 +23,14 @@ public class WordBreakII {
     public List<String> wordBreak(String str, List<String> wordDict) {
         Set<String> set = new HashSet<>(wordDict);
         HashMap<Integer, List<String>> map = new HashMap<>();
-        // 初始化开头的空字符
-        map.put(0, List.of(""));
+        map.put(0, List.of("")); // 初始化开头的空字符
 
         for (int index = 1; index <= str.length(); index++) {
             map.put(index, new ArrayList<>());
             for (int left = 0; left < index; left++) {
                 String suffix = str.substring(left, index);
                 if (set.contains(suffix)) {
-                    // 用Left位置数据构建Index位置的组合数据
-                    for (String s: map.get(left)) {
+                    for (String s: map.get(left)) { // 用Left位置数据构建Index位置的组合数据
                         String subStr = s.isEmpty() ? suffix: s + " " + suffix;
                         map.get(index).add(subStr);
                     }

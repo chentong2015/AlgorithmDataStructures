@@ -1,4 +1,4 @@
-package master.dynamic_program.dimension1;
+package master.dynamic_program;
 
 // Minimum Increment Operations to Make Array Beautiful
 // You are given a 0-indexed integer array nums having length n, and an integer k.

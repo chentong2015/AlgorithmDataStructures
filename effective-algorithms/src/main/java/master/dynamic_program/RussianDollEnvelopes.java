@@ -1,4 +1,4 @@
-package master.dynamic_program.dimension1;
+package master.dynamic_program;
 
 import java.util.Arrays;
 

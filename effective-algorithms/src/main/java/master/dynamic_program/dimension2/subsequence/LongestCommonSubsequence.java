@@ -1,4 +1,4 @@
-package master.dynamic_program.subsequence;
+package master.dynamic_program.dimension2.subsequence;
 
 // Longest Common Subsequence (LCS)
 // Given two strings text1 and text2, return the length of their longest common subsequence.

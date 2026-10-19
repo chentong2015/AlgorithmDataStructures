@@ -1,4 +1,4 @@
-package master.dynamic_program.dimension1;
+package master.dynamic_program.coin_change;
 
 import java.util.Arrays;
 
@@ -15,25 +15,29 @@ import java.util.Arrays;
 // 0 <= amount <= 104
 public class CoinChange {
 
-    // TODO. DP从前面所有计算过的(i-coin)位置推理出i位置的最小交换方式
-    // {2, 5}, 6 -> Expected: 3 (2)
+    // TODO. DP存储前面计算过的位置, 再推理后面的位置
+    // {2, 5}, 6 -> 3 (2)
+    //
     // 0 1 2 3 4 5 6
     // 0 7 1 7 2 1 3
     //
-    // coins = {1, 3, 4, 5}, target = 7 -> Expected: 2 (3, 4)
+    // {1, 3, 4, 5}, target = 7 -> 2 (3, 4)
+    //
     // 0 1 2 3 4 5 6 7
     // 0 1 2 1 1 1 2 2
     //
+    //
     // O(N*A) A is amount value
     // O(A)
-    public static int coinChange(int[] coins, int amount) {
+    public int coinChange(int[] coins, int amount) {
         int[] dp = new int[amount+1];
         Arrays.fill(dp, amount+1);
+        dp[0] = 0; // 0不需要coin
 
-        dp[0] = 0;
-        for (int i = 1; i <= amount; i++) {
-            for (int coin : coins) {
+        for (int coin : coins) {
+            for (int i = 1; i <= amount; i++) {
                 if (coin <= i) {
+                    // 从前面(i-coin)位置计算过的最小值来累积
                     dp[i] = Math.min(dp[i], dp[i-coin] + 1);
                 }
             }

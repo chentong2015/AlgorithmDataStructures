@@ -1,4 +1,4 @@
-package master.dynamic_program.dimension1;
+package master.dynamic_program.coin_change;
 
 // Partition Array for Maximum Sum
 // Given an integer array arr, partition the array into (contiguous) subArrays of length at most k.

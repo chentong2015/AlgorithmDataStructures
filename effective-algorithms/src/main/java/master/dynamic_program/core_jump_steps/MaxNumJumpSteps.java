@@ -1,4 +1,4 @@
-package master.dynamic_program.dimension1.max_jump_steps;
+package master.dynamic_program.core_jump_steps;
 
 import java.util.Arrays;
 
@@ -36,7 +36,6 @@ public class MaxNumJumpSteps {
     //         i i  这条线也能跳到终点
     //           i
     public int maximumJumps(int[] nums, int target) {
-        // dp[i] represents max number of jumps from index 0 to i.
         int[] dp = new int[nums.length];
         Arrays.fill(dp, -1);
 
@@ -45,7 +44,7 @@ public class MaxNumJumpSteps {
         for (int index = 1; index < nums.length; index++) {
             for (int left = 0; left < index; left++) {
                 // 判断能否从index前面的位置跳到index位置
-                if(Math.abs(nums[left] - nums[index]) <= target) {
+                if (Math.abs(nums[left] - nums[index]) <= target) {
                     if (dp[left] != -1) {
                         dp[index] = Math.max(dp[index], dp[left] + 1);
                     }

@@ -1,14 +1,12 @@
 package master.dynamic_program.dimension2.unique_path;
 
+// Unique Paths
+// grid[0][0] -> grid[m - 1][n - 1]
+// The robot can only move either down or right at any point in time
 public class UniquePathQuestion {
 
-    // 数学解法: Total permutations = (m+n)! / (m! * n!)
-    // 使用dp数组来纪录之前走过的累积的步数, 每一个位置只有两种移动选择，同时有两种的来源
-    // Unique Paths
-    // grid[0][0] -> grid[m - 1][n - 1]
-    // The robot can only move either down or right at any point in time
-    //
-    // O(1) O(n^2) 可以去掉空间复杂度
+    // 使用dp数组来纪录之前走过的累积的步数
+    // 每一个位置只有两种移动选择，同时有两种的来源
     public static int countUniquePath(int row, int col) {
         int[][] dp = new int[row][col];
         for (int i = 0; i < row; i++) {

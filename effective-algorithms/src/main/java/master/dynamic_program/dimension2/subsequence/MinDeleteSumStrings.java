@@ -1,4 +1,4 @@
-package master.dynamic_program.subsequence;
+package master.dynamic_program.dimension2.subsequence;
 
 // Minimum ASCII Delete Sum for Two Strings
 // Given two strings s1 and s2,

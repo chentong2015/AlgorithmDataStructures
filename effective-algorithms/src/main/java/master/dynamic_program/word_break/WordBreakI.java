@@ -1,4 +1,4 @@
-package master.dynamic_program.dimension1.word_break;
+package master.dynamic_program.word_break;
 
 import java.util.HashSet;
 import java.util.List;
