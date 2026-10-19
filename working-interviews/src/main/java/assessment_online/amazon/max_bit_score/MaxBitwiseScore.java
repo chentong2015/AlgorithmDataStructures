@@ -1,4 +1,4 @@
-package assessment_online.amazon;
+package assessment_online.amazon.max_bit_score;
 
 import java.util.Arrays;
 import java.util.List;

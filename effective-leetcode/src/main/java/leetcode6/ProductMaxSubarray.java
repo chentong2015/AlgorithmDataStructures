@@ -10,7 +10,6 @@ package leetcode6;
 public class ProductMaxSubarray {
 
     // TODO. DP存储极致的最大最小值, 遇到负数反转
-    //
     // [2,3,-2,4] -> [2,3]
     // [-2,0,-1]  -> 0
     //
@@ -32,10 +31,10 @@ public class ProductMaxSubarray {
             int prevMax = dpMax;
             if (num < 0) {
                 dpMin = Math.min(prevMax * num, num); // 原来的最大值乘负数变成最小
-                dpMax = Math.max(prevMin * num, num); //
+                dpMax = Math.max(prevMin * num, num);
             } else {
                 dpMin = Math.min(prevMin * num, num); // 原来的最大值乘正数依然最大
-                dpMax = Math.max(prevMax * num, num); //
+                dpMax = Math.max(prevMax * num, num);
             }
             result = Math.max(result, dpMax);
         }

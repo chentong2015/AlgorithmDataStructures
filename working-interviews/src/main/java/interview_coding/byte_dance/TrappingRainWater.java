@@ -24,18 +24,19 @@ public class TrappingRainWater {
 
         int left = 0;
         int highestLeft = arr[left];
+
         int right = arr.length - 1;
         int highestRight = arr[right];
 
         while (left < right) {
-            if (highestLeft > highestRight) {
-                sum += highestRight - arr[right];
-                right--;
-                highestRight = Math.max(arr[right], highestRight);
-            } else {
+            if (highestLeft < highestRight) {
                 sum += highestLeft - arr[left];
                 left++;
                 highestLeft = Math.max(arr[left], highestLeft);
+            } else {
+                sum += highestRight - arr[right];
+                right--;
+                highestRight = Math.max(arr[right], highestRight);
             }
         }
         return sum;

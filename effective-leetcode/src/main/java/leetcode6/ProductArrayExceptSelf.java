@@ -22,28 +22,22 @@ public class ProductArrayExceptSelf {
     // right 24  12  4  1
     // =     24  12  8  6
     //
-    // O(3N)
-    // O(N)
+    // O(N+N) 只需要两遍循环
+    // O(N)   存储结果的数组
     public static int[] productExceptSelf(int[] nums) {
         int n = nums.length;
         int[] result = new int[n];
+
         int product = 1;
-        for (int index = n - 2; index >= 0; index--) {
-            result[index] = nums[index+1] * product;
-            product *= nums[index+1];
+        for (int index = n - 1; index >= 0; index--) {
+            result[index] = product;
+            product *= nums[index]; // right product
         }
 
-        product = nums[0];
-        for (int index = 1; index < n; index++) {
-            int temp = nums[index]; // 覆盖原值前需要暂存
-            nums[index] = product;
-            product *= temp;
-        }
-
-        nums[0] = 1;     // set leftmost value
-        result[n-1] = 1; // set rightmost value
+        product = 1;
         for (int index = 0; index < n; index++) {
-            result[index] = result[index] * nums[index];
+            result[index] = product * result[index]; // Left Product * Right Product
+            product *= nums[index]; // left product
         }
         return result;
     }
