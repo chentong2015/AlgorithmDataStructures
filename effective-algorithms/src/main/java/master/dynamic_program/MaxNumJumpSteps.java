@@ -1,4 +1,4 @@
-package master.dynamic_program.core_jump_steps;
+package master.dynamic_program;
 
 import java.util.Arrays;
 
@@ -18,32 +18,23 @@ import java.util.Arrays;
 public class MaxNumJumpSteps {
 
     // TODO. "递归判断"能够跳跃到终点的最长线路
-    // [1,3,6,4,1,2], target=2
-    //  i i   i   i
-    //
-    // [1,3,6,4,1,2], target=3
-    //  i i i i i i
-    //
     // [1,3,6,4,1,2], target=0
+    // [1,3,6,4,1,2], target=3
+    // [1,3,6,4,1,2], target=2
     //
-    // 如果跳入一个更低位置可能导致无法跳到最后
-    // [1,0,2], target=1
-    //  i ? ?
+    //  1  3  6   4   1  2   target=2
+    //  0  -1 -1  -1  -1 -1
+    //     1      2      3
+    //            只有4能跳到最后位置
     //
-    // 1,3,6,4,1,2, target=2
-    // i
-    //   i   i   i  这条线跳跃步数最长
-    //         i i  这条线也能跳到终点
-    //           i
     public int maximumJumps(int[] nums, int target) {
         int[] dp = new int[nums.length];
         Arrays.fill(dp, -1);
+        dp[0] = 0; // 设置启动起始点(能跳跃)
 
-        // dp[0] 启动位置的值不为-1才能往后跳跃
-        dp[0] = 0;
         for (int index = 1; index < nums.length; index++) {
             for (int left = 0; left < index; left++) {
-                // 判断能否从index前面的位置跳到index位置
+                // 判断能否从前面位置跳到index位置，且取最长步骤
                 if (Math.abs(nums[left] - nums[index]) <= target) {
                     if (dp[left] != -1) {
                         dp[index] = Math.max(dp[index], dp[left] + 1);

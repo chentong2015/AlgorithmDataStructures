@@ -1,4 +1,4 @@
-package master.dynamic_program.word_break;
+package master.dynamic_program.dimension2.word_break;
 
 import java.util.*;
 
