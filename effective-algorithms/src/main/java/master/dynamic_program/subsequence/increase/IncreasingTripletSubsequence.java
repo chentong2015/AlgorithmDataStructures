@@ -12,7 +12,7 @@ package master.dynamic_program.subsequence.increase;
 public class IncreasingTripletSubsequence {
 
     // TODO. 循环过程中记录"前面小值"和"中间值", 构成隐形比较关系
-    // 该算法属于特殊技巧，无法通过推理得到
+    // 该算法属于特殊技巧，无法通过推理得到，只是巧合解
     //
     // [1,2,3,4,5]   -> true
     // [5,4,3,2,1]   -> false

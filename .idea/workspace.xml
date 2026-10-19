@@ -5,50 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b5c9395-54e3-44d5-87d1-4a76d67ca167" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/effective-algorithms/src/main/java/master/dynamic_program/subsequence/increase/IncreasingTripletSubsequence.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/effective-algorithms/src/main/java/master/dynamic_program/dimension2/subsequence/LongestCommonSubsequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/effective-algorithms/src/main/java/master/dynamic_program/subsequence/LongestCommonSubsequence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/effective-algorithms/src/main/java/master/dynamic_program/dimension2/subsequence/LongestIncreasingSubsequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/effective-algorithms/src/main/java/master/dynamic_program/subsequence/increase/LongestIncreasingSubsequence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/effective-algorithms/src/main/java/master/dynamic_program/dimension2/subsequence/MinDeleteSumStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/effective-algorithms/src/main/java/master/dynamic_program/subsequence/MinDeleteSumStrings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/effective-algorithms/src/main/java/master/dynamic_program/dimension2/subsequence/ShortestCommonSuperSequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/effective-algorithms/src/main/java/master/dynamic_program/subsequence/ShortestCommonSuperSequence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/effective-algorithms/src/main/java/master/dynamic_program/dimension2/subsequence/子序列问题本质.txt" beforeDir="false" afterPath="$PROJECT_DIR$/effective-algorithms/src/main/java/master/dynamic_program/subsequence/子序列问题本质.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/OtherQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/OtherQuestions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/alibaba/MajorityElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/alibaba/MajorityElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/alibaba/MajorityElementII.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/alibaba/MajorityElementII.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/amazon/currency_exchange/GraphNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/amazon/currency_exchange/GraphNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/amazon/currency_exchange/GraphNodeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/amazon/currency_exchange/GraphNodeHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/amazon/currency_exchange/GraphNodeHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/amazon/currency_exchange/GraphNodeHandlerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/amazon/currency_exchange/汇率路径图.png" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/amazon/currency_exchange/汇率路径图.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/amazon/currency_exchange/汇率路径问题.txt" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/amazon/currency_exchange/汇率路径问题.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/amazon/integer_to_english/IntegerToEnglishWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/amazon/integer_to_english/IntegerToEnglishWord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/amazon/integer_to_english/IntegerToWord.png" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/amazon/integer_to_english/IntegerToWord.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/amazon/面试准备.txt" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/amazon/面试准备.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/amazon/面试经历.txt" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/amazon/面试经历.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/autocad/GraphConnectivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/autocad/GraphConnectivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/autocad/NodeD.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/autocad/NodeD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/autocad/NodeM.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/autocad/NodeM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/autocad/NodeP.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/autocad/NodeP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/autocad/图形关联关系.png" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/autocad/图形关联关系.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/byte_dance/TrappingRainWater.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/byte_dance/TrappingRainWater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/byte_dance/TrappingRainWater.png" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/byte_dance/TrappingRainWater.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/byte_dance/储水的本质.png" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/byte_dance/储水的本质.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/criteo/SlidingWindowQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/criteo/SlidingWindowQuestion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/criteo/T9ModelMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/criteo/T9ModelMapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/criteo/T9Model模型.txt" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/criteo/T9Model模型.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/entrust/IntegerToRoman.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/entrust/IntegerToRoman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/entrust/IntegerToRoman.png" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/entrust/IntegerToRoman.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/entrust/RomanToInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/entrust/RomanToInteger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/google/Google Career.txt" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/google/Google Career.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/google/Mock Question 1.png" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/google/Mock Question 1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/google/Mock Question 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/google/Mock Question 2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/microsoft/Excel Formula Validation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/microsoft/Excel Formula Validation.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/microsoft/cache/CircularDependency.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/microsoft/cache/CircularDependency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/microsoft/cache/CircularDependencyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/microsoft/cache/CircularDependencyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/microsoft/graph/FormulaValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/microsoft/graph/FormulaValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/microsoft/graph/FormulaValidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/microsoft/graph/FormulaValidationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/microsoft/graph/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/microsoft/graph/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/murex/LiveCodingQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/murex/LiveCodingQuestion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/interview_coding/tencent/PermutationInString.java" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/tencent/PermutationInString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/effective-algorithms/src/main/java/master/dynamic_program/subsequence/increase/IncreasingTripletSubsequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/effective-algorithms/src/main/java/master/dynamic_program/subsequence/increase/IncreasingTripletSubsequence.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,14 +272,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732628371153</updated>
-    </task>
-    <task id="LOCAL-00403" summary="refresh questions">
-      <option name="closed" value="true" />
-      <created>1791133308982</created>
-      <option name="number" value="00403" />
-      <option name="presentableId" value="LOCAL-00403" />
-      <option name="project" value="LOCAL" />
-      <updated>1791133308982</updated>
     </task>
     <task id="LOCAL-00404" summary="add K Closest Points to Origin">
       <option name="closed" value="true" />
@@ -707,7 +657,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792424006496</updated>
     </task>
-    <option name="localTasksCounter" value="452" />
+    <task id="LOCAL-00452" summary="add Increasing Triplet Subsequence question">
+      <option name="closed" value="true" />
+      <created>1792427318670</created>
+      <option name="number" value="00452" />
+      <option name="presentableId" value="LOCAL-00452" />
+      <option name="project" value="LOCAL" />
+      <updated>1792427318670</updated>
+    </task>
+    <option name="localTasksCounter" value="453" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -734,7 +692,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refresh trapping rain water" />
     <MESSAGE value="update coin change" />
     <MESSAGE value="update array 2d and Largest Rectangle question" />
     <MESSAGE value="refresh Largest Rectangle question" />
@@ -759,7 +716,8 @@
     <MESSAGE value="add Product of Array Except Self" />
     <MESSAGE value="update dynamic programming" />
     <MESSAGE value="update coin change problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="update coin change problems" />
+    <MESSAGE value="add Increasing Triplet Subsequence question" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Increasing Triplet Subsequence question" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
