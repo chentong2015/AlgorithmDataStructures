@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7b5c9395-54e3-44d5-87d1-4a76d67ca167" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/effective-algorithms/src/main/java/master/dynamic_program/subsequence/increase/IncreasingTripletSubsequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/effective-algorithms/src/main/java/master/dynamic_program/subsequence/increase/IncreasingTripletSubsequence.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,14 +271,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732628371153</updated>
-    </task>
-    <task id="LOCAL-00404" summary="add K Closest Points to Origin">
-      <option name="closed" value="true" />
-      <created>1791366246145</created>
-      <option name="number" value="00404" />
-      <option name="presentableId" value="LOCAL-00404" />
-      <option name="project" value="LOCAL" />
-      <updated>1791366246145</updated>
     </task>
     <task id="LOCAL-00405" summary="add Find the K-Sum of an Array">
       <option name="closed" value="true" />
@@ -665,7 +656,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792427318670</updated>
     </task>
-    <option name="localTasksCounter" value="453" />
+    <task id="LOCAL-00453" summary="refresh project">
+      <option name="closed" value="true" />
+      <created>1792427373524</created>
+      <option name="number" value="00453" />
+      <option name="presentableId" value="LOCAL-00453" />
+      <option name="project" value="LOCAL" />
+      <updated>1792427373524</updated>
+    </task>
+    <option name="localTasksCounter" value="454" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -712,12 +711,12 @@
     <MESSAGE value="update duplicate array" />
     <MESSAGE value="add majority element and excel title question" />
     <MESSAGE value="update searching" />
-    <MESSAGE value="refresh project" />
     <MESSAGE value="add Product of Array Except Self" />
     <MESSAGE value="update dynamic programming" />
     <MESSAGE value="update coin change problems" />
     <MESSAGE value="add Increasing Triplet Subsequence question" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Increasing Triplet Subsequence question" />
+    <MESSAGE value="refresh project" />
+    <option name="LAST_COMMIT_MESSAGE" value="refresh project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
