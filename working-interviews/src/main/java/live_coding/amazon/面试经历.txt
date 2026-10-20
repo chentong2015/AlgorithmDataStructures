@@ -14,5 +14,5 @@
 - Online Assessment  Algo(5/15)+CodeRepo(4/6)+工作决策
 - Phone Screen 60m
   Tech: code, deployment, scalability
-  Coding: Hard Algo 30m
+  Coding: feature (storage, searching)
   Situational: leadership principle

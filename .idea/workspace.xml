@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7b5c9395-54e3-44d5-87d1-4a76d67ca167" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/amazon/面试经历.txt" beforeDir="false" afterPath="$PROJECT_DIR$/working-interviews/src/main/java/live_coding/amazon/面试经历.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,6 +201,7 @@
     "Application.WordLadder.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ToolWindowGit.ShowToolbar": "false",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
@@ -208,7 +210,8 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog"
+    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog",
+    "settings.editor.splitter.proportion": "0.31942216"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -271,14 +274,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732628371153</updated>
-    </task>
-    <task id="LOCAL-00405" summary="add Find the K-Sum of an Array">
-      <option name="closed" value="true" />
-      <created>1791384240683</created>
-      <option name="number" value="00405" />
-      <option name="presentableId" value="LOCAL-00405" />
-      <option name="project" value="LOCAL" />
-      <updated>1791384240683</updated>
     </task>
     <task id="LOCAL-00406" summary="add word ladder bfs">
       <option name="closed" value="true" />
@@ -664,7 +659,15 @@
       <option name="project" value="LOCAL" />
       <updated>1792427373524</updated>
     </task>
-    <option name="localTasksCounter" value="454" />
+    <task id="LOCAL-00454" summary="add amazon feature test">
+      <option name="closed" value="true" />
+      <created>1792503710820</created>
+      <option name="number" value="00454" />
+      <option name="presentableId" value="LOCAL-00454" />
+      <option name="project" value="LOCAL" />
+      <updated>1792503710821</updated>
+    </task>
+    <option name="localTasksCounter" value="455" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -691,7 +694,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update coin change" />
     <MESSAGE value="update array 2d and Largest Rectangle question" />
     <MESSAGE value="refresh Largest Rectangle question" />
     <MESSAGE value="add largest number question" />
@@ -716,7 +718,8 @@
     <MESSAGE value="update coin change problems" />
     <MESSAGE value="add Increasing Triplet Subsequence question" />
     <MESSAGE value="refresh project" />
-    <option name="LAST_COMMIT_MESSAGE" value="refresh project" />
+    <MESSAGE value="add amazon feature test" />
+    <option name="LAST_COMMIT_MESSAGE" value="add amazon feature test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
